@@ -5,7 +5,7 @@ const COLS: { heading: string; links: { label: string; href: string }[] }[] = [
   {
     heading: "LEISTUNGEN",
     links: [
-      { label: "Websites", href: "/open-account" },
+      { label: "Websites", href: "/financing" },
       { label: "KI Workflows", href: "/open-account" },
       { label: "Autonome Agenten", href: "/open-account" },
       { label: "Social Media & Online Präsenz", href: "/open-account" },
@@ -18,7 +18,6 @@ const COLS: { heading: string; links: { label: string; href: string }[] }[] = [
     links: [
       { label: "Über uns", href: "/about" },
       { label: "Leistungen", href: "/open-account" },
-      { label: "Finanzierung", href: "/financing" },
     ],
   },
   {

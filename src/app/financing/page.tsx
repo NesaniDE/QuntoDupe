@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { SecuritySection } from "@/components/SecuritySection";
 import { FinHero } from "@/components/financing/FinHero";
 import { PayLater } from "@/components/financing/PayLater";
 import { FlexibleSolutions } from "@/components/financing/FlexibleSolutions";
@@ -11,9 +10,9 @@ import { PartnerCards } from "@/components/financing/PartnerCards";
 import { FinCta } from "@/components/financing/FinCta";
 
 export const metadata: Metadata = {
-  title: "Finanzierung – Qonto",
+  title: "Websites – Nesani",
   description:
-    "Smarte Finanzierung für Ihr Business – Qonto Ratenzahlung und ausgewählte Partnerangebote. Schnell, digital und ohne versteckte Kosten.",
+    "Moderne, schnelle und konvertierende Websites auf Next.js. Performance, Core Web Vitals, Conversion-Design und saubere Übergabe – von einem Ansprechpartner.",
 };
 
 export default function FinancingPage() {
@@ -27,7 +26,6 @@ export default function FinancingPage() {
         <FinTestimonial />
         <PartnersBanner />
         <PartnerCards />
-        <SecuritySection />
         <FinCta />
       </main>
       <Footer />

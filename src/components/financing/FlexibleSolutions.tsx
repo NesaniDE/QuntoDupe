@@ -3,18 +3,18 @@ import Image from "next/image";
 const FEATURES = [
   {
     icon: "/images/fin-27326-57d34c54dd.svg",
-    title: "Bis zu 50.000 €",
-    body: "Ratenkredit mit wenigen Klicks freischalten und bei Bedarf nutzen.",
+    title: "Next.js & TypeScript",
+    body: "Moderner Stack mit sauberem Code, typsicher und mobil-optimiert – bereit für alles, was danach kommt.",
   },
   {
     icon: "/images/fin-33263-b199afab8b.svg",
-    title: "3, 9 oder 12 Raten",
-    body: "Flexible Rückzahlung mit der Möglichkeit zur vorzeitigen Tilgung.",
+    title: "Core Web Vitals",
+    body: "Schnelle Ladezeiten und technische Qualität, die Google belohnt – ohne Performance-Tricksereien.",
   },
   {
     icon: "/images/fin-25603-f87b244df0.svg",
-    title: "Ab 0,62 %",
-    body: "Dynamische Gebühren je nach Laufzeit und Risikoprofil.",
+    title: "Conversion & SEO",
+    body: "Design folgt Funktion. Inhalte und Struktur sind auf Anfragen ausgelegt, nicht auf hübsche Screenshots.",
   },
 ];
 
@@ -23,7 +23,7 @@ export function FlexibleSolutions() {
     <section className="bg-white text-[#050505]">
       <div className="mx-auto max-w-[1344px] px-5 md:px-8 lg:px-12 py-16 md:py-20 lg:py-24">
         <h2 className="font-sans font-semibold text-[32px] md:text-[40px] lg:text-[48px] leading-[1.08] tracking-[-0.02em] max-w-[22ch]">
-          Flexible Lösungen für Ihre Finanzen
+          Was in jeder Website steckt
         </h2>
 
         <div className="mt-10 md:mt-14 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">

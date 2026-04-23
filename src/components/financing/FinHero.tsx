@@ -7,17 +7,19 @@ export function FinHero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           <div className="lg:col-span-6">
             <h1 className="font-sans font-semibold text-[40px] md:text-[56px] lg:text-[72px] leading-[1.03] tracking-[-0.02em] max-w-[15ch]">
-              Smarte Finanzierung für Ihr Business
+              Moderne, schnelle und konvertierende Websites.
             </h1>
             <p className="mt-6 md:mt-8 text-[17px] md:text-[19px] leading-[1.5] text-[#050505]/80 max-w-[54ch]">
-              In wenigen Klicks beantragen und direkt über Ihr Geschäftskonto
-              nutzen. <span className="font-semibold">Schnell, digital</span> und{" "}
-              <span className="font-semibold">ohne versteckte Kosten</span>.
+              Die Website ist Ihr erster Eindruck.{" "}
+              <span className="font-semibold">Technisch performant</span> und{" "}
+              <span className="font-semibold">inhaltlich überzeugend</span> –
+              zugeschnitten auf Zielgruppe und Positionierung, gebaut auf
+              Next.js.
             </p>
 
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
               <a
-                href="#paylater"
+                href="#process"
                 className="group rounded-2xl border border-black/10 bg-white p-5 flex items-center gap-4 hover:border-black/40 transition"
               >
                 <div className="w-10 h-10 rounded-lg bg-[#F5F2EB] flex items-center justify-center shrink-0">
@@ -31,15 +33,15 @@ export function FinHero() {
                 </div>
                 <div>
                   <div className="font-sans font-semibold text-[15px]">
-                    Ratenzahlung
+                    Next.js-Stack
                   </div>
                   <div className="text-[13px] text-[#050505]/70 mt-0.5">
-                    Pay Later – in bis zu 12 Raten
+                    Performance und Core Web Vitals
                   </div>
                 </div>
               </a>
               <a
-                href="#businessloans"
+                href="#process"
                 className="group rounded-2xl border border-black/10 bg-white p-5 flex items-center gap-4 hover:border-black/40 transition"
               >
                 <div className="w-10 h-10 rounded-lg bg-[#F5F2EB] flex items-center justify-center shrink-0">
@@ -53,10 +55,10 @@ export function FinHero() {
                 </div>
                 <div>
                   <div className="font-sans font-semibold text-[15px]">
-                    Firmenkredit
+                    Conversion-Design
                   </div>
                   <div className="text-[13px] text-[#050505]/70 mt-0.5">
-                    Bis zu 1.000.000 € finanzieren
+                    Design folgt Funktion
                   </div>
                 </div>
               </a>
@@ -67,7 +69,7 @@ export function FinHero() {
             <div className="relative overflow-hidden rounded-2xl md:rounded-3xl aspect-[4/3] lg:aspect-[5/4]">
               <Image
                 src="/images/fin-34369-x.avif"
-                alt="Frau prüft Finanzen am Telefon"
+                alt="Moderne Website in Entwicklung"
                 fill
                 priority
                 sizes="(min-width:1024px) 640px, 100vw"

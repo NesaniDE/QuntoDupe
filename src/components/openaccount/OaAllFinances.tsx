@@ -1,4 +1,12 @@
-import Image from "next/image";
+import { CheckIcon } from "@/components/icons";
+import { OrbitVisual } from "@/components/OrbitVisual";
+
+const ANALYSIS_POINTS = [
+  "Bestehende Abläufe sichten statt vorschnell zu bauen",
+  "Engpässe, Doppelarbeit und manuelle Schritte sichtbar machen",
+  "Klare Empfehlung, was sich lohnt zu automatisieren",
+  "Meilensteine und Aufwand transparent abgestimmt",
+];
 
 export function OaAllFinances() {
   return (
@@ -18,15 +26,19 @@ export function OaAllFinances() {
               Doppelarbeit und manuelle Schritte – und entscheiden gemeinsam,
               was sich wirklich automatisieren lässt.
             </p>
-            <div className="mt-8 relative aspect-[16/10] rounded-xl overflow-hidden">
-              <Image
-                src="/images/oa-33285-f045dd08ae.avif"
-                alt="Prozess-Analyse"
-                fill
-                sizes="(min-width:768px) 640px, 100vw"
-                className="object-contain"
-              />
-            </div>
+            <ul className="mt-8 space-y-3">
+              {ANALYSIS_POINTS.map((p) => (
+                <li
+                  key={p}
+                  className="flex items-start gap-3 text-[14px] md:text-[15px] leading-[1.5] text-[#050505]/85"
+                >
+                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#050505] text-white">
+                    <CheckIcon className="h-3.5 w-3.5" />
+                  </span>
+                  <span>{p}</span>
+                </li>
+              ))}
+            </ul>
           </article>
 
           <article className="rounded-2xl md:rounded-3xl bg-[#F4F1EA] p-6 md:p-10 flex flex-col">
@@ -38,14 +50,8 @@ export function OaAllFinances() {
               CRM über Kommunikations-Tools bis zu Drittanbieter-APIs. Saubere
               Schnittstellen statt Insellösungen.
             </p>
-            <div className="mt-8 relative aspect-[16/10] rounded-xl overflow-hidden">
-              <Image
-                src="/images/oa-33284-66a5090d64.avif"
-                alt="Tool-Integrationen"
-                fill
-                sizes="(min-width:768px) 640px, 100vw"
-                className="object-contain"
-              />
+            <div className="mt-6 flex-1 flex items-center justify-center">
+              <OrbitVisual size="compact" />
             </div>
           </article>
         </div>

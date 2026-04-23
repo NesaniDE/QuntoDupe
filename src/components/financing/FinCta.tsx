@@ -10,18 +10,24 @@ export function FinCta() {
           }}
         >
           <h2 className="font-sans font-semibold text-[40px] md:text-[56px] lg:text-[72px] leading-[1.03] tracking-[-0.02em] max-w-[16ch]">
-            Ihre Finanzen – einfach digital verwaltet.
+            Bereit für Ihre neue Website?
           </h2>
           <p className="mt-6 md:mt-8 text-[16px] md:text-[18px] leading-[1.5] text-[#050505]/80 max-w-[52ch]">
-            Das smarte Geschäftskonto, das Ihr Finanzmanagement vereinfacht –
-            und Raum für Wachstum schafft.
+            Ein unverbindliches Erstgespräch – wir klären Ziele, Umfang und
+            Zeitrahmen. Antwort innerhalb von 24 Stunden.
           </p>
-          <div className="mt-8">
+          <div className="mt-8 flex flex-wrap gap-3">
             <a
               href="#"
               className="inline-flex items-center rounded-full bg-[#050505] text-white text-[15px] font-semibold px-5 py-3 hover:bg-black/90 transition"
             >
-              Angebote entdecken
+              Projekt anfragen
+            </a>
+            <a
+              href="/open-account"
+              className="inline-flex items-center rounded-full border border-[#050505]/20 text-[#050505] text-[15px] font-semibold px-5 py-3 hover:bg-[#050505]/5 transition"
+            >
+              Weitere Leistungen
             </a>
           </div>
         </div>

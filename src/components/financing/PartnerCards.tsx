@@ -1,91 +1,82 @@
-import Image from "next/image";
-import { ArrowUpRightIcon } from "@/components/icons";
-
-type Partner = {
-  name: string;
-  logo: string;
-  intro: string;
-  amount: string;
-  tail: string;
+type Step = {
+  num: string;
+  title: string;
+  body: string;
+  bullets: string[];
 };
 
-const PARTNERS: Partner[] = [
+const STEPS: Step[] = [
   {
-    name: "Iwoca",
-    logo: "/images/fin-33271-x.avif",
-    intro: "Schneller Firmenkredit für KMU:",
-    amount: "Bis 500.000 €",
-    tail:
-      "mit Laufzeiten bis zu 60 Monaten – sofortige Kreditentscheidung und Option zur vorzeitigen Rückzahlung.",
+    num: "01",
+    title: "Analyse & Strategie",
+    body: "Wettbewerb, Zielgruppe und Positionierung werden gemeinsam geschärft – und daraus die Funktionen Ihrer Website abgeleitet.",
+    bullets: [
+      "Wettbewerbs- und Zielgruppen-Check",
+      "Positionierung und Kernbotschaften",
+      "Funktionsumfang und Seitenstruktur",
+    ],
   },
   {
-    name: "Banxware",
-    logo: "/images/fin-33268-x.avif",
-    intro: "Kredite für KMU aller Branchen:",
-    amount: "Bis 250.000 €",
-    tail:
-      "mit Laufzeiten bis zu 12 Monaten – speziell für Online- und Kartenumsätze, zu festen Konditionen.",
+    num: "02",
+    title: "Konzept & Design",
+    body: "Wireframes, UI-Entwurf und Tonalität nach dem Prinzip: Design folgt Funktion. Nichts Dekoratives – alles mit Zweck.",
+    bullets: [
+      "Wireframes für klare Nutzerführung",
+      "UI-Design mit Markenpersönlichkeit",
+      "Tonalität, Bildsprache, Content-Struktur",
+    ],
   },
   {
-    name: "Defacto",
-    logo: "/images/fin-33265-x.png",
-    intro: "Dynamische Kredite für KMU:",
-    amount: "Bis 1.000.000 €",
-    tail:
-      "mit Laufzeiten bis maximal 4 Monate – kurzfristig, 100 % flexibel und mit täglichem Zinssatz.",
+    num: "03",
+    title: "Entwicklung",
+    body: "Umsetzung mit Next.js und TypeScript. Performance-fokussiert, mobil-optimiert, sauber strukturiert.",
+    bullets: [
+      "Next.js-Stack, TypeScript, moderne Tools",
+      "Core Web Vitals und saubere Architektur",
+      "Integrationen und Schnittstellen",
+    ],
   },
   {
-    name: "YouLend",
-    logo: "/images/fin-33266-x.png",
-    intro: "Flexible Finanzierung:",
-    amount: "Bis 250.000 €",
-    tail:
-      "mit Laufzeiten bis zu 18 Monaten – feste Gebühr, keine Zinsen und automatische Rückzahlung per Kartenumsatz.",
-  },
-  {
-    name: "Fleet",
-    logo: "/images/fin-33267-x.png",
-    intro: "Leasing für IT-Ausstattung:",
-    amount: "Bis 1.000.000 €",
-    tail:
-      "für IT‑Equipment und Büromöbel mit Laufzeiten bis zu 36 Monaten – Zusage innerhalb von 48 Stunden.",
+    num: "04",
+    title: "Launch & Übergabe",
+    body: "Deployment, Dokumentation und optionales Training – die Website geht nicht nur live, sie bleibt auch betreibbar.",
+    bullets: [
+      "Deployment und Go-Live",
+      "Dokumentation und Übergabe",
+      "Optionales Training, laufende Betreuung",
+    ],
   },
 ];
 
 export function PartnerCards() {
   return (
-    <section id="partners" className="bg-[#050505] text-white">
+    <section id="process-cards" className="bg-[#050505] text-white">
       <div className="mx-auto max-w-[1344px] px-5 md:px-8 lg:px-12 pb-16 md:pb-24 lg:pb-32">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {PARTNERS.map((p) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          {STEPS.map((s) => (
             <article
-              key={p.name}
-              className="rounded-2xl md:rounded-3xl bg-[#0F0F0F] border border-white/5 p-6 md:p-8 flex flex-col gap-5"
+              key={s.num}
+              className="rounded-2xl md:rounded-3xl bg-[#0F0F0F] border border-white/5 p-6 md:p-8 lg:p-10 flex flex-col gap-5"
             >
-              <div className="h-10 flex items-center">
-                <Image
-                  src={p.logo}
-                  alt={p.name}
-                  width={140}
-                  height={36}
-                  className="h-8 md:h-10 w-auto max-w-[160px] object-contain"
-                />
+              <div className="flex items-center gap-4">
+                <span className="font-sans font-semibold text-[44px] md:text-[56px] leading-none text-white/20">
+                  {s.num}
+                </span>
+                <h3 className="font-sans font-semibold text-[22px] md:text-[26px] leading-[1.2]">
+                  {s.title}
+                </h3>
               </div>
-              <h3 className="font-sans font-semibold text-[20px] md:text-[22px] leading-[1.25]">
-                {p.name}
-              </h3>
-              <p className="text-[14px] md:text-[15px] leading-[1.55] text-white/80">
-                {p.intro}{" "}
-                <span className="font-semibold text-white">{p.amount}</span>{" "}
-                {p.tail}
+              <p className="text-[14px] md:text-[15px] leading-[1.55] text-white/75">
+                {s.body}
               </p>
-              <a
-                href="#"
-                className="mt-auto inline-flex items-center gap-1.5 text-[14px] font-medium text-white hover:opacity-80 transition"
-              >
-                Mehr erfahren
-                <ArrowUpRightIcon className="w-4 h-4" />
-              </a>
+              <ul className="mt-auto space-y-2 text-[13px] md:text-[14px] text-white/70">
+                {s.bullets.map((b) => (
+                  <li key={b} className="flex gap-2">
+                    <span className="mt-1.5 inline-block h-1 w-1 shrink-0 rounded-full bg-white/60" />
+                    <span>{b}</span>
+                  </li>
+                ))}
+              </ul>
             </article>
           ))}
         </div>
