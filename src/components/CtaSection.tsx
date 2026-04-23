@@ -22,7 +22,7 @@ export function CtaSection() {
                 href="#"
                 className="inline-flex items-center rounded-full bg-white text-[#050505] text-[15px] font-semibold px-5 py-3 hover:bg-white/90 transition"
               >
-                Idealen Preisplan finden
+                Projekt anfragen
               </a>
             </div>
           </div>
