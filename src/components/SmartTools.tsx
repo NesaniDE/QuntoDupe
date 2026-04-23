@@ -1,40 +1,45 @@
 "use client";
 
 import { useRef } from "react";
-import Image from "next/image";
-import { ChevronLeftIcon, ChevronRightIcon } from "@/components/icons";
+import { ChevronLeftIcon, ChevronRightIcon, CheckIcon } from "@/components/icons";
 
-type Tool = {
+type Step = {
+  number: string;
   title: string;
   body: string;
-  image: string;
-  alt: string;
+  bullets: string[];
 };
 
-const TOOLS: Tool[] = [
+const STEPS: Step[] = [
   {
-    title: "Cashflow-Management",
-    body: "Cashflow einfach unter Kontrolle – mit Analysen und Prognosen.",
-    image: "/images/asset-33556-867a6474ee.avif",
-    alt: "Cashflow-Management auf dem Smartphone",
+    number: "Schritt 01",
+    title: "Analyse & Audit",
+    body: "Wir analysieren bestehende Prozesse und identifizieren die größten Potenziale für Automatisierung und Sichtbarkeit.",
+    bullets: ["Prozess-Mapping", "Datenanalyse", "ROI-Kalkulation"],
   },
   {
-    title: "Rechnungen",
-    body: "Angebote und Rechnungen direkt erstellen und effizient verwalten.",
-    image: "/images/asset-33557-6af108a220.avif",
-    alt: "Rechnungen auf dem Smartphone",
+    number: "Schritt 02",
+    title: "Strategie",
+    body: "Wir definieren eine klare Roadmap mit messbaren Zielen — priorisiert nach Wirkung und Umsetzbarkeit.",
+    bullets: ["Zieldefinition", "Stack-Auswahl", "Priorisierung"],
   },
   {
-    title: "Ausgabenverwaltung",
-    body: "Belege und Erstattungen digital und zentral im Team managen.",
-    image: "/images/asset-33562-e3fe80533b.avif",
-    alt: "Ausgabenverwaltung",
+    number: "Schritt 03",
+    title: "Prototyping",
+    body: "In einem kurzen Sprint entsteht ein funktionsfähiger Prototyp, den du direkt testen kannst.",
+    bullets: ["MVP in 2–4 Wochen", "Iteratives Feedback", "Proof of Concept"],
   },
   {
-    title: "Buchhaltung",
-    body: "Prozesse automatisieren und direkt mit DATEV und Tools verbinden.",
-    image: "/images/asset-33570-fd6109162e.avif",
-    alt: "Buchhaltung",
+    number: "Schritt 04",
+    title: "Umsetzung",
+    body: "Wir bauen die finale Lösung — sauber integriert, skalierbar und auf deine Systeme abgestimmt.",
+    bullets: ["Integration", "Automatisierung", "Qualitätssicherung"],
+  },
+  {
+    number: "Schritt 05",
+    title: "Wachstum",
+    body: "Nach dem Launch optimieren wir kontinuierlich auf Basis echter Daten und skalieren, wo es wirkt.",
+    bullets: ["Monitoring", "Optimierung", "Skalierung"],
   },
 ];
 
@@ -50,19 +55,19 @@ export function SmartTools() {
       <div className="mx-auto max-w-[1344px] px-5 lg:px-12">
         <div className="flex items-end justify-between gap-4 mb-10 md:mb-14">
           <h2 className="font-sans font-semibold text-[36px] sm:text-[48px] lg:text-[56px] leading-[1.05] tracking-[-0.02em] max-w-[900px]">
-            Smarte Finanztools für Ihr Business
+            In 5 Schritten zur Lösung
           </h2>
           <div className="hidden md:flex items-center gap-2">
             <button
               onClick={() => scrollBy(-400)}
-              aria-label="Vorheriges Tool"
+              aria-label="Vorheriger Schritt"
               className="w-10 h-10 rounded-full border border-black/15 flex items-center justify-center hover:bg-black/5 transition"
             >
               <ChevronLeftIcon className="w-4 h-4" />
             </button>
             <button
               onClick={() => scrollBy(400)}
-              aria-label="Nächstes Tool"
+              aria-label="Nächster Schritt"
               className="w-10 h-10 rounded-full border border-black/15 flex items-center justify-center hover:bg-black/5 transition"
             >
               <ChevronRightIcon className="w-4 h-4" />
@@ -76,29 +81,31 @@ export function SmartTools() {
         className="no-scrollbar overflow-x-auto scroll-smooth snap-x snap-mandatory"
       >
         <ul className="flex gap-4 md:gap-6 px-5 lg:px-12 pb-1">
-          {TOOLS.map((t) => (
+          {STEPS.map((s) => (
             <li
-              key={t.title}
-              className="snap-start shrink-0 w-[80%] sm:w-[60%] md:w-[45%] lg:w-[31%] max-w-[420px]"
+              key={s.number}
+              className="snap-start shrink-0 w-[85%] sm:w-[60%] md:w-[45%] lg:w-[32%] max-w-[420px]"
             >
-              <article className="flex flex-col gap-5">
-                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[28px] bg-[#d6d4ca]">
-                  <Image
-                    src={t.image}
-                    alt={t.alt}
-                    fill
-                    sizes="(max-width: 768px) 80vw, 32vw"
-                    className="object-cover"
-                  />
+              <article className="flex h-full flex-col gap-5 rounded-[28px] border border-black/10 bg-[#f7f6f2] p-7 md:p-8">
+                <div className="text-[13px] font-semibold tracking-widest uppercase text-[#050505]/55">
+                  {s.number}
                 </div>
-                <div className="px-1">
-                  <h3 className="font-sans font-semibold text-[22px] md:text-[24px] leading-tight">
-                    {t.title}
-                  </h3>
-                  <p className="mt-2 text-[#050505]/70 text-[15px] leading-relaxed max-w-xs">
-                    {t.body}
-                  </p>
-                </div>
+                <h3 className="font-sans font-semibold text-[24px] md:text-[28px] leading-tight">
+                  {s.title}
+                </h3>
+                <p className="text-[#050505]/70 text-[15px] leading-relaxed">
+                  {s.body}
+                </p>
+                <ul className="mt-auto flex flex-col gap-3 pt-2">
+                  {s.bullets.map((b) => (
+                    <li key={b} className="flex items-start gap-3 text-[15px]">
+                      <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#050505] text-white">
+                        <CheckIcon className="h-3 w-3" />
+                      </span>
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
               </article>
             </li>
           ))}
