@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { QontoLogo, StarIcon } from "@/components/icons";
+import { StarIcon } from "@/components/icons";
 
 const COLS: { heading: string; links: string[] }[] = [
   {
@@ -153,7 +153,13 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-[1344px] px-5 lg:px-12 py-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
           <div className="flex items-center gap-8">
-            <QontoLogo className="h-7 w-auto text-white" />
+            <Image
+              src="/images/shm-logo-white.png"
+              alt="SHM"
+              width={40}
+              height={40}
+              className="h-9 w-9 object-contain"
+            />
             <div className="flex items-center gap-3 text-white/80">
               {[
                 { src: "/images/asset-33603-e6d618444c.svg", alt: "Facebook" },

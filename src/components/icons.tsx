@@ -1,23 +1,5 @@
 import type { SVGProps } from "react";
 
-export function QontoLogo(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 360 96" fill="none" aria-hidden {...props}>
-      <text
-        x="0"
-        y="76"
-        fontFamily="QontoSans, PolySans, sans-serif"
-        fontWeight="700"
-        fontSize="96"
-        letterSpacing="-3"
-        fill="currentColor"
-      >
-        Qonto
-      </text>
-    </svg>
-  );
-}
-
 export function QontoMark(props: SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 48 48" fill="none" aria-hidden {...props}>

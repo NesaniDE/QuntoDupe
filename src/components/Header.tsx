@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { QontoLogo } from "@/components/icons";
+import Image from "next/image";
 
 const NAV_ITEMS = [
   { label: "Geschäftskonto", href: "/open-account" },
@@ -31,8 +31,15 @@ export function Header() {
     >
       <nav className="flex h-full items-center justify-between px-5 lg:px-12">
         <div className="flex items-center gap-x-10">
-          <Link href="/" aria-label="Qonto" className="flex items-center">
-            <QontoLogo className="h-7 w-auto" />
+          <Link href="/" aria-label="SHM" className="flex items-center">
+            <Image
+              src="/images/shm-logo-white.png"
+              alt="SHM"
+              width={40}
+              height={40}
+              priority
+              className="h-9 w-9 object-contain"
+            />
           </Link>
           <ul className="hidden lg:flex items-center gap-x-7 text-[15px] font-normal">
             {NAV_ITEMS.map((item) => (
