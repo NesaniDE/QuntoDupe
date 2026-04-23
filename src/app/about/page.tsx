@@ -5,7 +5,6 @@ import { AboutHero } from "@/components/about/AboutHero";
 import { StatsStrip } from "@/components/about/StatsStrip";
 import { MissionBanner } from "@/components/about/MissionBanner";
 import { Founders } from "@/components/about/Founders";
-import { Timeline } from "@/components/about/Timeline";
 import { AtYourSide } from "@/components/about/AtYourSide";
 import { AboutTestimonials } from "@/components/about/AboutTestimonials";
 import { Sustainability } from "@/components/about/Sustainability";
@@ -26,7 +25,6 @@ export default function AboutPage() {
         <StatsStrip />
         <MissionBanner />
         <Founders />
-        <Timeline />
         <AtYourSide />
         <AboutTestimonials />
         <Sustainability />
