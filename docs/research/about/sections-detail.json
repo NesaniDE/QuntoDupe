@@ -1,0 +1,430 @@
+[
+  {
+    "idx": 0,
+    "class": "relative col-span-6 w-full min-h-svh lg:min-h-screen md:col-span-9 lg:col-span-12 bg-emphasis darkmode text-dark-primary",
+    "bgColor": "rgb(5, 5, 5)",
+    "html": "<section class=\"relative col-span-6 w-full min-h-svh lg:min-h-screen md:col-span-9 lg:col-span-12 bg-emphasis darkmode text-dark-primary\" data-q-id=\"3931988\" data-q-page-id=\"322249\" data-q-type=\"wr_hero_full_width\" data-video-playing=\"true\" id=\"section-1\">\n<picture class=\"block lg:hidden w-full lg:h-screen h-svh object-cover absolute inset-0 z-10\" aria_hidden=\"true\"><source srcset=\"      https://qonto.com/blog/images/asset/33407/image/xs_avif-70072ce8d6591a099cdfdb13b660f652.avif 320w,\n      https://qonto.com/blog/images/asset/33407/image/sm_avif-a8565d3aa8e9191788461ed08a2ef169.avif 920w,\n      https://qonto.com/blog/images/asset/33407/image/md_avif-1e204e4e243c6a32c72e5c0296350832.avif 1366w,\n      https://qonto.com/blog/images/asset/33407/image/lg_avif-fbec6d67b9e8108d3ea525bb82781e55.avif 1727w,\n      https://qonto.com/blog/images/asset/33407/image/xl_avif-c61070fad41ca0a771947236ae5d4c6d.avif 2683w\n\" sizes=\"(max-width: 2683px) 100vw, 2683px\" type=\"image/avif\"><source srcset=\"      https://qonto.com/blog/images/asset/33407/image/xs_original-004555543edf4520b7482e8f16e1dbd3.jpg 320w,\n      https://qonto.com/blog/images/asset/33407/image/sm_original-4f2f565152296f6bc50e12675e8d2f62.jpg 920w,\n      https://qonto.com/blog/images/asset/33407/image/md_original-e7f378e46fe2bd552c64f0195fb28b85.jpg 1366w,\n      https://qonto.com/blog/images/asset/33407/image/lg_original-75d4bd6a24dd99c5d37f09075efcf7c0.jpg 1727w,\n      https://qonto.com/blog/images/asset/33407/image/xl_original-e3b13457dc2cd5084d9f626574b8ca21.jpg 2683w,\n\" sizes=\"(max-width: 2683px) 100vw, 2683px\" type=\"image/jpeg\"><img src=\"https://qonto.com/blog/images/asset/33407/image/cac65f6216d5aa1a4218195530cae0a7.jpg\" decoding=\"async\" loading=\"eager\" fetchpriority=\"high\" width=\"720\" height=\"1280\" alt=\"WEB Verschiedene HeroFullWidth-Kundengeschichten Deutschland Statisch Mobil WbRvmp\" class=\"h-full w-full object-cover\"></picture>\n<picture class=\"hidden lg:block w-full lg:h-screen h-svh object-cover absolute inset-0 z-10\" aria_hidden=\"true\"><source srcset=\"      https://qonto.com/blog/images/asset/33406/image/xs_avif-461fb0ea7e319577008407ac1c03ec68.avif 320w,\n      https://qonto.com/blog/images/asset/33406/image/sm_avif-2af970a3f247200bf38f0597ca675f86.avif 920w,\n      https://qonto.com/blog/images/asset/33406/image/md_avif-9193b230ed90cae54a4954060d36172e.avif 1366w,\n      https://qonto.com/blog/images/asset/33406/image/lg_avif-c662b4a618e99a207840059d70fb11c8.avif 1727w,\n      https://qonto.com/blog/images/asset/33406/image/xl_avif-a9dd461d397e9a10135c5a7d06a48a08.avif 2683w\n\" sizes=\"(max-width: 2683px) 100vw, 2683px\" type=\"image/avif\"><source srcset=\"      https://qonto.com/blog/images/asset/33406/image/xs_original-7be89a9179c2b8a5ea77f64e2f64417a.jpg 320w,\n      https://qonto.com/blog/images/asset/33406/image/sm_original-8b4e289c884e614431ce7dce95a43a47.jpg 920w,\n      https://qonto.com/blog/images/asset/33406/image/md_original-10529eb7b00cc4b5fd50e204459c2ea6.jpg 1366w,\n      https://qonto.com/blog/images/asset/33406/image/lg_original-12e1f67ab1c1b2275993b3702f214c55.jpg 1727w,\n      https://qonto.com/blog/images/asset/33406/image/xl_original-d7950a6b3b7b6a295a6f0aae04539a4a.jpg 2683w,\n\" sizes=\"(max-width: 2683px) 100vw, 2683px\" type=\"image/jpeg\"><img src=\"https://qonto.com/blog/images/asset/33406/image/68dfa68bcddff7b17d0b2b709df4e622.jpg\" decoding=\"async\" loading=\"eager\" fetchpriority=\"high\" width=\"1920\" height=\"1080\" alt=\"WEB Verschiedene HeroFullWidth-Kundengeschichten Deutschland Statischer Desktop WbRvmp\" class=\"h-full w-full object-cover\"></picture>\n<video autoplay=\"\" class=\"object-cover absolute inset-0 z-20 w-full lg:h-screen h-svh opacity-100\" data-adaptive-video-sources-value=\"{&quot;mobile&quot;:{&quot;webm&quot;:[],&quot;mp4&quot;:[{&quot;size&quot;:&quot;xl&quot;,&quot;url&quot;:&quot;https://qonto.com/blog/images/cg%20-%20vertical%20customer%20website.mp4&quot;,&quot;bytes&quot;:null},{&quot;size&quot;:&quot;lg&quot;,&quot;url&quot;:&quot;https://qonto.com/blog/images/down-net_http20260204-40-zee76x_lg_original.mp4&quot;,&quot;bytes&quot;:null},{&quot;size&quot;:&quot;md&quot;,&quot;url&quot;:&quot;https://qonto.com/blog/images/cg%20-%20vertical%20customer%20website.mp4&quot;,&quot;bytes&quot;:null},{&quot;size&quot;:&quot;sm&quot;,&quot;url&quot;:&quot;https://qonto.com/blog/images/cg%20-%20vertical%20customer%20website.mp4&quot;,&quot;bytes&quot;:null},{&quot;size&quot;:&quot;xs&quot;,&quot;url&quot;:&quot;https://qonto.com/blog/images/down-net_http20260204-40-zee76x_xs_original.mp4&quot;,&quot;bytes&quot;:null}]},&quot;desktop&quot;:{&quot;webm&quot;:[],&quot;mp4&quot;:[{&quot;size&quot;:&quot;xl&quot;,&quot;url&quot;:&quot;https://qonto.com/blog/images/cg%20-%20website%20customers%20horizontal.mp4&quot;,&quot;bytes&quot;:null},{&quot;size&quot;:&quot;lg&quot;,&quot;url&quot;:&quot;https://qonto.com/blog/images/down-net_http20260204-40-r9bqx3_lg_original.mp4&quot;,&quot;bytes&quot;:null},{&quot;size&quot;:&quot;md&quot;,&quot;url&quot;:&quot;https://qonto.com/blog/images/down-net_http20260204-40-r9bqx3_md_original.mp4&quot;,&quot;bytes&quot;:null},{&quot;size&quot;:&quot;sm&quot;,&quot;url&quot;:&quot;https://qonto.com/blog/images/down-net_http20260204-40-r9bqx3_sm_original.mp4&quot;,&quot;bytes&quot;:null},{&quot;size&quot;:&quot;xs&quot;,&quot;url&quot;:&quot;https://qonto.com/blog/images/down-net_http20260204-40-r9bqx3_xs_original.mp4&quot;,&quot;bytes&quot;:null}]}}\" data-controller=\"adaptive-video\" id=\"hero-video\" loop=\"\" muted=\"\" playsinline=\"true\" preload=\"auto\" src=\"https://qonto.com/blog/images/cg%20-%20website%20customers%20horizontal.mp4\"></video>\n<div class=\"absolute inset-0 z-30 pointer-events-none lg:h-screen h-svh scrim-dark-photo-overlay-gradient\"></div>\n<div class=\"grid relative z-40 grid-cols-6 col-span-12 gap-x-24 gap-y-24 content-end px-16 pb-48 mx-auto min-h-full lg:h-screen lg:max-h-1264 website-revamp content-wrapper md:grid-cols-9 lg:grid-cols-12 md:px-32 lg:px-48 pt-88 md:pt-96 lg:pt-128 md:pb-72 lg:pb-48 max-w-1600 md:gap-y-32 lg:gap-y-48\">\n<div class=\"flex flex-col col-span-6 justify-end pb-48 main-hero-homepage md:col-span-9 lg:col-span-12 md:pb-72 lg:pb-0\">\n<div class=\"flex flex-col gap-y-16 lg:gap-y-24 lg:w-870\">\n<h1><span class=\"block\">Kleine Unternehmen schaffen Großes.</span><span class=\"block\"> Wir unterstützen Sie dabei.</span></h1>\n</div>\n<div class=\"flex gap-x-16 mt-32 lg:mt-48\">\n<div class=\"flex flex-wrap gap-16 darkmode\">\n<a target=\"\" data-location=\"wr_hero_full_width_section\" data-turbo=\"false\" data-turbo-frame=\"_top\" href=\"#story\" data-tracked=\"true\"><div class=\"block text-center whitespace-nowrap btn btn-primary text-16 leading-26 md:text-18 md:leading-28 md:inline-block\">\n<span>Mehr erfahren</span>\n</div>\n</a></div>\n\n</div>\n</div>\n</div>\n</section>",
+    "images": [
+      {
+        "src": "https://qonto.com/blog/images/asset/33407/image/lg_avif-fbec6d67b9e8108d3ea525bb82781e55.avif",
+        "alt": "WEB Verschiedene HeroFullWidth-Kundengeschichten Deutschland Statisch Mobil WbRvmp",
+        "w": 600,
+        "h": 1067
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/33406/image/lg_avif-c662b4a618e99a207840059d70fb11c8.avif",
+        "alt": "WEB Verschiedene HeroFullWidth-Kundengeschichten Deutschland Statischer Desktop WbRvmp",
+        "w": 1440,
+        "h": 809
+      }
+    ],
+    "videos": [
+      {
+        "src": "https://qonto.com/blog/images/cg%20-%20website%20customers%20horizontal.mp4"
+      }
+    ]
+  },
+  {
+    "idx": 1,
+    "class": "bg-emphasis darkmode text-dark-primary",
+    "bgColor": "rgb(5, 5, 5)",
+    "html": "<section class=\"bg-emphasis darkmode text-dark-primary\" data-controller=\"accordion\" data-q-id=\"3931993\" data-q-page-id=\"322249\" data-q-type=\"items\" id=\"items\">\n<div class=\"px-16 py-40 website-revamp md:px-32 lg:px-48 md:py-64 lg:py-80 text-center\">\n<div class=\"grid grid-cols-6 mb-32 md:grid-cols-9 lg:grid-cols-12 md:gap-x-16 lg:gap-x-24 lg:mb-48 divide-grey-600\">\n<!-- / BLOCKS LESS THAN 5 FOR ALL SCREENS -->\n<!-- / BLOCKS MORE THAN 5 FOR WIDE SCREENS ONLY -->\n<div class=\"col-span-full lg:pb-0 lg:flex-1 lg:col-span-3 pb-24\">\n<div class=\"flex flex-col items-center h-full\">\n<div class=\"mb-12\">\n<div class=\"flex justify-center items-center w-40 h-40 rounded-lg md:w-48 md:h-48 lg:w-56 lg:h-56 shrink-0 bg-dark-neutral\">\n<img src=\"https://qonto.com/blog/images/asset/33294/image/2d7204a11918d85d9a2583e5339e53fe.svg\" decoding=\"async\" loading=\"lazy\" fetchpriority=\"low\" width=\"32\" height=\"32\" alt=\"Web-Ikonografie Schwarze Mitarbeiter\" class=\"h-24 w-24 md:h-28 md:w-28 lg:h-32 lg:w-32 brightness-0 invert\">\n</div>\n</div>\n<div class=\"flex flex-col flex-1 gap-y-16 lg:grow\">\n<h3 class=\"h3-small\">600.000+<p>Unternehmen</p></h3>\n<div class=\"body-slim lg:grow\"></div>\n</div>\n</div>\n</div>\n<!-- / BLOCKS MORE THAN 5 FOR SMALL SCREENS ONLY -->\n<div class=\"col-span-full py-24 accordion-dropdown first:pt-0 last:pb-0 hidden\" data-accordion-target=\"accordion\" data-open=\"open\">\n<button name=\"button\" type=\"button\" class=\"accordion-title w-full flex items-center justify-between open\" data-accordion-target=\"title\" data-action=\"click-&gt;accordion#clickTitle\" aria-expanded=\"true\" aria-controls=\"item-0\"><div class=\"flex gap-x-16 items-center\">\n<div class=\"flex justify-center items-center w-40 h-40 rounded-lg md:w-48 md:h-48 lg:w-56 lg:h-56 shrink-0 bg-dark-neutral\">\n<img src=\"https://qonto.com/blog/images/asset/33294/image/2d7204a11918d85d9a2583e5339e53fe.svg\" decoding=\"async\" loading=\"lazy\" fetchpriority=\"low\" width=\"32\" height=\"32\" alt=\"Web-Ikonografie Schwarze Mitarbeiter\" class=\"h-24 w-24 md:h-28 md:w-28 lg:h-32 lg:w-32 brightness-0 invert\">\n</div>\n<h3 class=\"h3-small\">600.000+<p>Unternehmen</p></h3>\n</div>\n<span class=\"leading-27\"><svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" height=\"16\" viewBox=\"0 0 16 10\" width=\"16\" aria-hidden=\"true\" class=\"ml-16 accordion-arrow brightness-0 invert rotate-180 duration-500 ease-out\"><path clip-rule=\"evenodd\" d=\"m.0000001 1.54122 1.3014899-1.339021 6.67764 6.915361 6.72367-6.917557 1.2972 1.343407-8.02512 8.25659z\" fill=\"#1d1d1b\" fill-rule=\"evenodd\"></path></svg></span>\n</button><div class=\"accordion-menu\" id=\"item-0\" style=\"max-height: 0px;\">\n<div class=\"pt-16 body-slim\"></div>\n</div>\n</div>\n\n<!-- / BLOCKS LESS THAN 5 FOR ALL SCREENS -->\n<!-- / BLOCKS MORE THAN 5 FOR WIDE SCREENS ONLY -->\n<div class=\"col-span-full lg:pb-0 lg:flex-1 lg:col-span-3 pb-24\">\n<div class=\"flex flex-col items-center h-full\">\n<div class=\"mb-12\">\n<div class=\"flex justify-center items-center w-40 h-40 rounded-lg md:w-48 md:h-48 lg:w-56 lg:h-56 shrink-0 bg-dark-neutral\">\n<img src=\"https://qonto.com/blog/images/asset/26584/image/7025a75b1daa090a79e7c4aaf7cec8bf.svg\" decoding=\"async\" loading=\"lazy\" fetchpriority=\"low\" width=\"32\" height=\"32\" alt=\"WEB-Ikonographie Schwarz 100 % Online\" class=\"h-24 w-24 md:h-28 md:w-28 lg:h-32 lg:w-32 brightness-0 invert\">\n</div>\n</div>\n<div class=\"flex flex-col flex-1 gap-y-16 lg:grow\">\n<h3 class=\"h3-small\">In 8 europäischen<p>Märkten</p></h3>\n<div class=\"body-slim lg:grow\"></div>\n</div>\n</div>\n</div>\n<!-- / BLOCKS MORE THAN 5 FOR SMALL SCREENS ONLY -->\n<div class=\"col-span-full py-24 accordion-dropdown first:pt-0 last:pb-0 hidden\" data-accordion-target=\"accordion\" data-open=\"\">\n<button name=\"button\" type=\"button\" class=\"accordion-title w-full flex items-center justify-between\" data-accordion-target=\"title\" data-action=\"click-&gt;accordion#clickTitle\" aria-expanded=\"false\" aria-controls=\"item-1\"><div class=\"flex gap-x-16 items-center\">\n<div class=\"flex justify-center items-center w-40 h-40 rounded-lg md:w-48 md:h-48 lg:w-56 lg:h-56 shrink-0 bg-dark-neutral\">\n<img src=\"https://qonto.com/blog/images/asset/26584/image/7025a75b1daa090a79e7c4aaf7cec8bf.svg\" decoding=\"async\" loading=\"lazy\" fetchpriority=\"low\" width=\"32\" height=\"32\" alt=\"WEB-Ikonographie Schwarz 100 % Online\" class=\"h-24 w-24 md:h-28 md:w-28 lg:h-32 lg:w-32 brightness-0 invert\">\n</div>\n<h3 class=\"h3-small\">In 8 europäischen<p>Märkten</p></h3>\n</div>\n<span class=\"leading-27\"><svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" height=\"16\" viewBox=\"0 0 16 10\" width=\"16\" aria-hidden=\"true\" class=\"ml-16 accordion-arrow brightness-0 invert ml-16 accordion-arrow brightness-0 invert\"><path clip-rule=\"evenodd\" d=\"m.0000001 1.54122 1.3014899-1.339021 6.67764 6.915361 6.72367-6.917557 1.2972 1.343407-8.02512 8.25659z\" fill=\"#1d1d1b\" fill-rule=\"evenodd\"></path></svg></span>\n</button><div class=\"accordion-menu\" id=\"item-1\">\n<div class=\"pt-16 body-slim\"></div>\n</div>\n</div>\n\n<!-- / BLOCKS LESS THAN 5 FOR ALL SCREENS -->\n<!-- / BLOCKS MORE THAN 5 FOR WIDE SCREENS ONLY -->\n<div class=\"col-span-full lg:pb-0 lg:flex-1 lg:col-span-3 pb-24\">\n<div class=\"flex flex-col items-center h-full\">\n<div class=\"mb-12\">\n<div class=\"flex justify-center items-center w-40 h-40 rounded-lg md:w-48 md:h-48 lg:w-56 lg:h-56 shrink-0 bg-dark-neutral\">\n<img src=\"https://qonto.com/blog/images/asset/27327/image/dce71827939f3fff2ccf1975fc42b6a9.svg\" decoding=\"async\" loading=\"lazy\" fetchpriority=\"low\" width=\"32\" height=\"32\" alt=\"WEB-Ikonographie Schwarze Unternehmen\" class=\"h-24 w-24 md:h-28 md:w-28 lg:h-32 lg:w-32 brightness-0 invert\">\n</div>\n</div>\n<div class=\"flex flex-col flex-1 gap-y-16 lg:grow\">\n<h3 class=\"h3-small\">250.000+<p>Gründungen</p></h3>\n<div class=\"body-slim lg:grow\"></div>\n</div>\n</div>\n</div>\n<!-- / BLOCKS MORE THAN 5 FOR SMALL SCREENS ONLY -->\n<div class=\"col-span-full py-24 accordion-dropdown first:pt-0 last:pb-0 hidden\" data-accordion-target=\"accordion\" data-open=\"\">\n<button name=\"button\" type=\"button\" class=\"accordion-title w-full flex items-center justify-between\" data-accordion-target=\"title\" data-action=\"click-&gt;accordion#clickTitle\" aria-expanded=\"false\" aria-controls=\"item-2\"><div class=\"flex gap-x-16 items-center\">\n<div class=\"flex justify-center items-center w-40 h-40 rounded-lg md:w-48 md:h-48 lg:w-56 lg:h-56 shrink-0 bg-dark-neutral\">\n<img src=\"https://qonto.com/blog/images/asset/27327/image/dce71827939f3fff2ccf1975fc42b6a9.svg\" decoding=\"async\" loading=\"lazy\" fetchpriority=\"low\" width=\"32\" height=\"32\" alt=\"WEB-Ikonographie Schwarze Unternehmen\" class=\"h-24 w-24 md:h-28 md:w-28 lg:h-32 lg:w-32 brightness-0 invert\">\n</div>\n<h3 class=\"h3-small\">250.000+<p>Gründungen</p></h3>\n</div>\n<span class=\"leading-27\"><svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" height=\"16\" viewBox=\"0 0 16 10\" width=\"16\" aria-hidden=\"true\" class=\"ml-16 accordion-arrow brightness-0 invert ml-16 accordion-arrow brightness-0 invert\"><path clip-rule=\"evenodd\" d=\"m.0000001 1.54122 1.3014899-1.339021 6.67764 6.915361 6.72367-6.917557 1.2972 1.343407-8.02512 8.25659z\" fill=\"#1d1d1b\" fill-rule=\"evenodd\"></path></svg></span>\n</button><div class=\"accordion-menu\" id=\"item-2\">\n<div class=\"pt-16 body-slim\"></div>\n</div>\n</div>\n\n<!-- / BLOCKS LESS THAN 5 FOR ALL SCREENS -->\n<!-- / BLOCKS MORE THAN 5 FOR WIDE SCREENS ONLY -->\n<div class=\"col-span-full lg:pb-0 lg:flex-1 lg:col-span-3\">\n<div class=\"flex flex-col items-center h-full\">\n<div class=\"mb-12\">\n<div class=\"flex justify-center items-center w-40 h-40 rounded-lg md:w-48 md:h-48 lg:w-56 lg:h-56 shrink-0 bg-dark-neutral\">\n<img src=\"https://qonto.com/blog/images/asset/27326/image/e457d34c54dd4f66edc5709e1b56548d.svg\" decoding=\"async\" loading=\"lazy\" fetchpriority=\"low\" width=\"32\" height=\"32\" alt=\"WEB-Ikonographie Schwarzgeld\" class=\"h-24 w-24 md:h-28 md:w-28 lg:h-32 lg:w-32 brightness-0 invert\">\n</div>\n</div>\n<div class=\"flex flex-col flex-1 gap-y-16 lg:grow\">\n<h3 class=\"h3-small\">100 Mio. €<p>finanziert</p></h3>\n<div class=\"body-slim lg:grow\"></div>\n</div>\n</div>\n</div>\n<!-- ",
+    "images": [
+      {
+        "src": "https://qonto.com/blog/images/asset/33294/image/2d7204a11918d85d9a2583e5339e53fe.svg",
+        "alt": "Web-Ikonografie Schwarze Mitarbeiter",
+        "w": 32,
+        "h": 32
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/33294/image/2d7204a11918d85d9a2583e5339e53fe.svg",
+        "alt": "Web-Ikonografie Schwarze Mitarbeiter",
+        "w": 32,
+        "h": 32
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/26584/image/7025a75b1daa090a79e7c4aaf7cec8bf.svg",
+        "alt": "WEB-Ikonographie Schwarz 100 % Online",
+        "w": 32,
+        "h": 32
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/26584/image/7025a75b1daa090a79e7c4aaf7cec8bf.svg",
+        "alt": "WEB-Ikonographie Schwarz 100 % Online",
+        "w": 32,
+        "h": 32
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/27327/image/dce71827939f3fff2ccf1975fc42b6a9.svg",
+        "alt": "WEB-Ikonographie Schwarze Unternehmen",
+        "w": 32,
+        "h": 32
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/27327/image/dce71827939f3fff2ccf1975fc42b6a9.svg",
+        "alt": "WEB-Ikonographie Schwarze Unternehmen",
+        "w": 32,
+        "h": 32
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/27326/image/e457d34c54dd4f66edc5709e1b56548d.svg",
+        "alt": "WEB-Ikonographie Schwarzgeld",
+        "w": 32,
+        "h": 32
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/27326/image/e457d34c54dd4f66edc5709e1b56548d.svg",
+        "alt": "WEB-Ikonographie Schwarzgeld",
+        "w": 32,
+        "h": 32
+      }
+    ],
+    "videos": []
+  },
+  {
+    "idx": 2,
+    "class": "website-content seo-content bg-subtle pt-40 md:max-lg:pt-56 xl:pt-56 pb-40 md:max-lg:pb-56 xl:pb-56",
+    "bgColor": "rgb(245, 245, 245)",
+    "html": "<section class=\"website-content seo-content bg-subtle pt-40 md:max-lg:pt-56 xl:pt-56 pb-40 md:max-lg:pb-56 xl:pb-56\" data-q-id=\"3931994\" data-q-page-id=\"322249\" data-q-type=\"seo_content\" id=\"section-3\">\n<div class=\"website-revamp\">\n<div class=\"flex flex-col justify-between items-center mb-40 md:flex-row md:mb-64\">\n<div class=\"h2 mb-32 md:mb-0\">KMU treiben Europas Wirtschaft an. Veraltetes Banking bremst sie aus.  <p>Unsere Mission: Ihre Wirkung zu vervielfachen – mit Finanztools, die für Sie arbeiten.</p></div>\n<div class=\"w-full md:w-auto\">\n<div class=\"block \">\n</div>\n\n</div>\n</div>\n<div class=\"grid grid-cols-12 gap-x-8 gap-y-40 md:gap-x-16 md:gap-y-64\">\n</div>\n</div>\n</section>",
+    "images": [],
+    "videos": []
+  },
+  {
+    "idx": 3,
+    "class": "py-48 lg:py-64 bg-default",
+    "bgColor": "rgb(255, 255, 255)",
+    "html": "<section class=\"py-48 lg:py-64 bg-default\" data-controller=\"accordion global-animation live-photos\" data-global-animation-target=\"section\" data-live-photos-target=\"section\" data-q-id=\"3931995\" data-q-page-id=\"322249\" data-q-type=\"topic_highlight\" id=\"section-4\">\n<div class=\"website-revamp\">\n<div class=\"flex flex-col gap-16 lg:grid lg:grid-cols-12 lg:gap-0\">\n<div class=\"order-1 lg:hidden\">\n<h2 class=\"text-light-primary\">\nVon Unternehmern. <p>Für Unternehmer.\n</p></h2>\n</div>\n<div class=\"order-2 -mx-16 md:-mx-32 lg:mx-0 lg:order-none lg:col-span-5 lg:flex lg:items-center w-[calc(100%+32px)] md:w-[calc(100%+64px)] lg:w-full\">\n<div class=\"flex overflow-hidden relative justify-center items-center w-full h-430 md:h-780 lg:h-auto lg:max-h-650 lg:aspect-[613/650]\" data-controller=\"hero-asset-scroll\" data-hero-asset-scroll-target=\"asset\" style=\"transition: height 150ms ease-out\">\n<div class=\"relative w-full h-full opacity-0\" data-global-animation-target=\"animatedFadeinUpShortDelay\">\n<div class=\"relative w-full h-full\">\n<picture><source srcset=\"      https://qonto.com/blog/images/asset/33673/image/xs_avif-8c61feae8b04035e436945ebcbb642de.avif 320w,\n      https://qonto.com/blog/images/asset/33673/image/sm_avif-95530106ac764259a03e27b7998d74f2.avif 920w,\n      https://qonto.com/blog/images/asset/33673/image/md_avif-b3a7944465f2560e0608fc7791db3fab.avif 1366w,\n      https://qonto.com/blog/images/asset/33673/image/lg_avif-b8fd9a64f033854853f190be1b677cce.avif 1727w,\n      https://qonto.com/blog/images/asset/33673/image/xl_avif-f44dcb01f28a5fc0820428b257f3e2b6.avif 2683w\n\" sizes=\"(max-width: 2683px) 100vw, 2683px\" type=\"image/avif\"><source srcset=\"      https://qonto.com/blog/images/asset/33673/image/xs_original-4505f20400d5818c4c50987f6964afed.jpg 320w,\n      https://qonto.com/blog/images/asset/33673/image/sm_original-1e1328e0c15fb8f0e97ca335fb721d1e.jpg 920w,\n      https://qonto.com/blog/images/asset/33673/image/md_original-f9bab7e6049adb2fa6569f44b14645c0.jpg 1366w,\n      https://qonto.com/blog/images/asset/33673/image/lg_original-8acdf7d9ba1f2a20e07216da91b28537.jpg 1727w,\n      https://qonto.com/blog/images/asset/33673/image/xl_original-0e4f5b3a74f99ea97b5bc8ca517ed15a.jpg 2683w,\n\" sizes=\"(max-width: 2683px) 100vw, 2683px\" type=\"image/jpeg\"><img src=\"https://qonto.com/blog/images/asset/33673/image/ab577272ef1b2af0127a563444796c7b.jpg\" decoding=\"async\" loading=\"lazy\" fetchpriority=\"low\" width=\"2160\" height=\"2160\" alt=\"Static asset\" class=\"lg:rounded-3xl w-full h-full object-cover\"></picture>\n</div>\n</div>\n</div>\n\n</div>\n<div class=\"order-3 lg:order-none lg:col-span-6 lg:col-start-7 lg:flex lg:items-center lg:px-0\">\n<div class=\"flex flex-col gap-16\">\n<div class=\"hidden lg:block\">\n<h2 class=\"text-light-primary\">\nVon Unternehmern. <p>Für Unternehmer.\n</p></h2>\n</div>\n<div class=\"flex flex-col gap-32\">\n<div class=\"list-contained text-light-primary\">\n<p>Hinter Qonto steht ein Team um die Gründer Alexandre Prot und Steve Anavi, das Unternehmen geführt, Cashflow‑Herausforderungen gemeistert und die Hürden traditionellen Bankings erlebt hat. Wir haben die Lösung gebaut, die wir uns selbst gewünscht hätten: transparent, effizient und&nbsp;für unsere Bedürfnisse gemacht – nicht die der Banken.&nbsp;</p>\n</div>\n\n</div>\n</div>\n</div>\n</div>\n</div>\n</section>",
+    "images": [
+      {
+        "src": "https://qonto.com/blog/images/asset/33673/image/lg_avif-b8fd9a64f033854853f190be1b677cce.avif",
+        "alt": "Static asset",
+        "w": 1440,
+        "h": 1440
+      }
+    ],
+    "videos": []
+  },
+  {
+    "idx": 4,
+    "class": "py-48 md:py-64 lg:py-80 bg-default",
+    "bgColor": "rgb(255, 255, 255)",
+    "html": "<section class=\"py-48 md:py-64 lg:py-80 bg-default\" data-controller=\"card-animations wr-live-photos\" data-q-id=\"3931996\" data-q-page-id=\"322249\" data-q-type=\"wr_cards\" data-wr-live-photos-target=\"section\" id=\"story\">\n<div class=\"pr-0 website-revamp\">\n<div class=\"flex flex-col gap-24 justify-between w-full lg:flex-row lg:items-end md:gap-32 lg:gap-8\">\n<h2 class=\"text-light-primary\">\nQonto in Deutschland: Unsere Geschichte\n</h2>\n<div class=\"flex lg:mb-8\">\n</div>\n</div>\n\n</div>\n<div class=\"swiper swiper-initialized swiper-horizontal swiper-backface-hidden\" data-controller=\"wr-swiper\" data-wr-swiper-target=\"wrCarousel\">\n<div class=\"pt-24 swiper-wrapper md:pt-32 lg:pt-56\" data-wr-swiper-target=\"swiperWrapper\" style=\"cursor: grab; transition-duration: 0ms; transition-delay: 0ms; transform: translate3d(48px, 0px, 0px);\">\n<div class=\"flex self-stretch wr-cards-swiper swiper-slide swiper-slide-active\" style=\"width: 419.636px; margin-right: 24px;\">\n<div class=\"relative col-span-6 w-full rounded-2xl card-content md:col-span-9 md:rounded-3xl group lg:col-span-4 bg-subtle\">\n<div class=\"flex flex-col justify-between h-full\">\n<div class=\"flex z-10 flex-col gap-12 justify-start items-start p-16 lg:gap-16 md:p-24\" data-wr-swiper-target=\"contentWrapper\">\n<div class=\"flex gap-4 justify-between items-start w-full\">\n<div class=\"flex\">\n<picture><source srcset=\"      https://qonto.com/blog/images/asset/33681/image/xs_avif-db84f6e014586bbd143875c4cfe19678.avif 320w,\n      https://qonto.com/blog/images/asset/33681/image/sm_avif-209c99b8bc667dd531f85869f25d2527.avif 920w,\n      https://qonto.com/blog/images/asset/33681/image/md_avif-9cfb069a80fbf71dbc43410156f85b32.avif 1366w,\n      https://qonto.com/blog/images/asset/33681/image/lg_avif-81f349c22ef1f7fa5d0f4a347d549b5a.avif 1727w,\n      https://qonto.com/blog/images/asset/33681/image/xl_avif-4892336ca5a13ed6618ead079220efc8.avif 2683w\n\" sizes=\"(max-width: 2683px) 100vw, 2683px\" type=\"image/avif\"><source srcset=\"      https://qonto.com/blog/images/asset/33681/image/xs_original-6f896d89ae76224e3119c141d5c64ddb.png 320w,\n      https://qonto.com/blog/images/asset/33681/image/sm_original-1693692246b819f60dbff97ec800cde3.png 920w,\n      https://qonto.com/blog/images/asset/33681/image/md_original-b50e67ab9724c87c242a59b7d5a5042d.png 1366w,\n      https://qonto.com/blog/images/asset/33681/image/lg_original-234ffea402a16fb64ec7561fd53d6d94.png 1727w,\n      https://qonto.com/blog/images/asset/33681/image/xl_original-94b9d7c49ced29c499cfa4ca5aee1f2d.png 2683w,\n\" sizes=\"(max-width: 2683px) 100vw, 2683px\" type=\"image/png\"><img src=\"https://qonto.com/blog/images/asset/33681/image/d4c54976e8cedec1f20424704c8e99a7.png\" decoding=\"async\" loading=\"lazy\" fetchpriority=\"low\" width=\"384\" height=\"384\" alt=\"WEB-Badge-Timeline 2025 WbRvmp\" class=\"w-auto md:h-56 h-48\"></picture>\n</div>\n</div>\n<div class=\"flex gap-4 justify-between items-start w-full\">\n<h3 class=\"wr-card-title h3-small text-light-primary\" style=\"font-family: QontoSans, sans-serif;font-weight: 600;word-break: break-word;\">\nGemeinsam auf Erfolgskurs\n</h3>\n</div>\n<div class=\"wr-card-text body-regular text-light-primary\" style=\"font-family: QontoSans, sans-serif;\">\n<p>Qonto unterstützt mehr als&nbsp;600.000 Geschäftskund:innen&nbsp;und hat&nbsp;250.000 Unternehmensgründungen&nbsp;ermöglicht.</p>\n</div>\n</div>\n</div>\n</div>\n\n</div>\n<div class=\"flex self-stretch wr-cards-swiper swiper-slide swiper-slide-next\" style=\"width: 419.636px; margin-right: 24px;\">\n<div class=\"relative col-span-6 w-full rounded-2xl card-content md:col-span-9 md:rounded-3xl group lg:col-span-4 bg-subtle\">\n<div class=\"flex flex-col justify-between h-full\">\n<div class=\"flex z-10 flex-col gap-12 justify-start items-start p-16 lg:gap-16 md:p-24\" data-wr-swiper-target=\"contentWrapper\">\n<div class=\"flex gap-4 justify-between items-start w-full\">\n<div class=\"flex\">\n<picture><source srcset=\"      https://qonto.com/blog/images/asset/33680/image/xs_avif-8db215c74489fea311c523fce8368d12.avif 320w,\n      https://qonto.com/blog/images/asset/33680/image/sm_avif-be578e9d56778707309deff1a1f31881.avif 920w,\n      https://qonto.com/blog/images/asset/33680/image/md_avif-1ff78d99177cc8d62f4e1d41ec66fbee.avif 1366w,\n      https://qonto.com/blog/images/asset/33680/image/lg_avif-2898d9a7b84ef7f5b3c2e3945c2afc13.avif 1727w,\n      https://qonto.com/blog/images/asset/33680/image/xl_avif-84538bdbcd844a12e463f694344602c7.avif 2683w\n\" sizes=\"(max-width: 2683px) 100vw, 2683px\" type=\"image/avif\"><source srcset=\"      https://qonto.com/blog/images/asset/33680/image/xs_original-5d0112289098751be342adcb3d46eda5.png 320w,\n      https://qonto.com/blog/images/asset/33680/image/sm_original-49215f7bc94b9a2909a5afe1e91d7706.png 920w,\n      https://qonto.com/blog/images/asset/33680/image/md_original-81a6766eb365a3c742791275b1ae1a15.png 1366w,\n      https://qonto.com/blog/images/asset/33680/image/lg_original-daac0d77c7d343d53c296c0fafc9aa38.png 1727w,\n      https://qonto.com/blog/images/asset/33680/image/xl_original-46f06da3a3a75c1671576fb74761e8ca.png 2683w,\n\" sizes=\"(max-width: 2683px) 100vw, 2683px\" type=\"image/png\"><img src=\"https://qonto.com/blog/images/asset/33680/image/8234d3de68e7ea1520d08f4a534f0d8c.png\" decoding=\"async\" loading=\"lazy\" fetchpriority=\"low\" width=\"384\" height=\"384\" alt=\"WEB Badge Timeline 2024 WbRvmp\" class=\"w-auto md:h-56 h-48\"></picture>\n</div>\n</div>\n<div class=\"flex gap-4 justify-between items-start w-full\">\n<h3 class=\"wr-card-title h3-small text-light-primary\" style=\"font-family: QontoSans, sans-serif;font-weight: 600;word-break: break-word;\">\nNeue Märkte\n</h3>\n</div>\n<div class=\"wr-card-text body-regular text-light-primary\" style=\"font-family: QontoSans, sans-serif;\">\n<p>Qonto wächst weiter in Europa und unterstützt Unternehmen jetzt auch in&nbsp;Österreich, Belgien, Portugal und den Niederlanden.</p>\n</div>\n</div>\n</div>\n</div>\n\n</div>\n<div class=\"flex self-stretch wr-cards-swiper swiper-slide\" style=\"width: 419.636px; margin-right: 24px;\">\n<div class=\"relative col-span-6 w-full rounded-2xl card-content md:col-span-9 md:rounded-3xl group lg:col-span-4 bg-subtle\">\n<div class=\"flex flex-col justify-between h-full\">\n<div class=\"flex z-10 flex-col gap-12 justify-start items-start p-16 lg:gap-16 md:p-24\" data-wr-swiper-target=\"contentWrapper\">\n<div class=\"flex gap-4 justify-between items-start w-full\">\n<div class=\"flex\">\n<picture><source srcset=\"      https://qonto.com/blog/images/asset/33679/image/xs_avif-9660b06b9dd8d1cbfa7f2b54a9098856.avif 320w,\n      https://qonto.com/blog/images/asset/33679/image/sm_avif-bb9c4aee9c58c21566b653e6a8ccb84e.avif 920w,\n      https://qonto.com/blog/images/asset/33679/image/md_avif-9ab4ee63103bb60099e02320593a4be2.avif 1366w,\n      https://qonto.com/blog/images/asset/33679/image/lg_avif-8ff0e3941ee77db5ad0ff3fd36962de3.avif 1727w,\n      https://qonto.com/blog/images/asset/33679/image/xl_avif-b9790659477579faa1b85905006c384a.avif 2683w\n\" sizes=\"(max-width: 2683px) 100vw, 2683px\" type=\"image/avif\"><source srcset=\"      https://qonto.com/blog/images/asset/33679/image/xs_original-9b986b0705d098c45237556579b9d8c5.png 320w,\n      https://qonto.com/blog/images/asset/33679/image/sm_original-0d204681c4d55c7bd36e4898e0a27b9a.png 920w,\n      https://qonto.com/blog/images/asset/33679/image/md_original-20ffe953231aed7fe304c67edafea844.png 1366w,\n      https://qonto.com/blog/images/asset/33679/image/lg_original-e27019ff2f73c0a9aa41843d3720b720.png 1727w,\n      https://qonto.com/blog/images/asset/33679/image/xl_original-cf95eed024a943ede709348829d8eae1.png 2683w,\n\" sizes=\"(max-width: 2683px) 100vw, 2683px\" type=\"image/png\"><img src=\"https://qonto.com/blog/images/asset/33679/image/5fac0f0b3b99fe0298a24b019f85a413.png\" decoding=\"async\" loading=\"lazy\" fetchpriority=\"low\" width=\"728\" height=\"384\" alt=\"WEB Badge Timeline 2023 DATEV WbRvmp\" class=\"w-auto md:h-56 h-48\"></picture>\n</div>\n</div>\n<div class=\"flex gap-4 justify-between items-start w-full\">\n<h3 class=\"wr-card-title h3-small text-light-primary\" style=\"font-fami",
+    "images": [
+      {
+        "src": "https://qonto.com/blog/images/asset/33681/image/lg_avif-81f349c22ef1f7fa5d0f4a347d549b5a.avif",
+        "alt": "WEB-Badge-Timeline 2025 WbRvmp",
+        "w": 320,
+        "h": 320
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/33680/image/lg_avif-2898d9a7b84ef7f5b3c2e3945c2afc13.avif",
+        "alt": "WEB Badge Timeline 2024 WbRvmp",
+        "w": 320,
+        "h": 320
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/33679/image/lg_avif-8ff0e3941ee77db5ad0ff3fd36962de3.avif",
+        "alt": "WEB Badge Timeline 2023 DATEV WbRvmp",
+        "w": 607,
+        "h": 320
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/33678/image/lg_avif-2ef926a82f47b91dad6c688c36fcedb3.avif",
+        "alt": "WEB Badge Timeline 2022 TÜV DeutscherB2B WbRvmp",
+        "w": 893,
+        "h": 320
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/33677/image/lg_avif-f30083a4971eac9ed406f5420388ac42.avif",
+        "alt": "WEB Badge Timeline 2021 WbRvmp",
+        "w": 320,
+        "h": 320
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/33676/image/lg_avif-ec8159574be8a51cd9c7b67204fa045a.avif",
+        "alt": "WEB-Badge-Timeline 2020 Deutschland WbRvmp",
+        "w": 607,
+        "h": 320
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/33675/image/lg_avif-83c1914b666d0fb534aeba75a1e6d3fa.avif",
+        "alt": "WEB-Badge-Zeitleiste 2017 Frankreich WbRvmp",
+        "w": 607,
+        "h": 320
+      }
+    ],
+    "videos": []
+  },
+  {
+    "idx": 5,
+    "class": "bg-emphasis darkmode",
+    "bgColor": "rgb(5, 5, 5)",
+    "html": "<section class=\"bg-emphasis darkmode\" data-controller=\"card-animations wr-live-photos\" data-q-id=\"3931997\" data-q-page-id=\"322249\" data-q-type=\"wr_cards\" data-wr-live-photos-target=\"section\" id=\"section-6\">\n<div class=\"py-48 website-revamp md:py-64 lg:py-80\">\n<div class=\"flex flex-col gap-24 justify-between w-full lg:flex-row lg:items-end md:gap-32 lg:gap-8\">\n<h2 class=\"text-dark-primary\">\nAn Ihrer Seite. Tag für Tag.&nbsp;\n</h2>\n<div class=\"flex lg:mb-8\">\n</div>\n</div>\n\n<div class=\"grid grid-cols-6 gap-16 pt-24 md:grid-cols-9 lg:grid-cols-12 md:gap-24 md:pt-32 lg:pt-56\">\n<div class=\"relative col-span-6 w-full rounded-2xl card-content md:col-span-9 md:rounded-3xl group lg:col-span-4 h-592\">\n<div class=\"absolute inset-0 rounded-2xl pointer-events-none md:rounded-3xl z-1 scrim-dark-photo-overlay\"></div>\n<div class=\"block\">\n<picture class=\"flex justify-center\"><source srcset=\"      https://qonto.com/blog/images/asset/33623/image/xs_avif-2085c00e92e9b1ebd6ce41f269f12cd4.avif 320w,\n      https://qonto.com/blog/images/asset/33623/image/sm_avif-f434e0fd24c1115715f99e7208e592be.avif 920w,\n      https://qonto.com/blog/images/asset/33623/image/md_avif-320dacb59c3f35d327bb5f0197aa7ddb.avif 1366w,\n      https://qonto.com/blog/images/asset/33623/image/lg_avif-09acf18feebf318342eb66f071588bee.avif 1727w,\n      https://qonto.com/blog/images/asset/33623/image/xl_avif-fd77491765a35d4d2ad0a59f0b437b6a.avif 2683w\n\" sizes=\"(max-width: 2683px) 100vw, 2683px\" type=\"image/avif\"><source srcset=\"      https://qonto.com/blog/images/asset/33623/image/xs_original-37f95dc53362f226e88300b043809342.jpg 320w,\n      https://qonto.com/blog/images/asset/33623/image/sm_original-d465f2dc5ad33627fc5d769ef08b3e3e.jpg 920w,\n      https://qonto.com/blog/images/asset/33623/image/md_original-66887559d8f7d9ff730d72622f851d46.jpg 1366w,\n      https://qonto.com/blog/images/asset/33623/image/lg_original-5240c42bc7e70898975dfa31c3a92d78.jpg 1727w,\n      https://qonto.com/blog/images/asset/33623/image/xl_original-397a2247d51f711acfd898988b82b27c.jpg 2683w,\n\" sizes=\"(max-width: 2683px) 100vw, 2683px\" type=\"image/jpeg\"><img src=\"https://qonto.com/blog/images/asset/33623/image/f355a2de2a28e2b870ed8b4d5fa03250.jpg\" decoding=\"async\" loading=\"lazy\" fetchpriority=\"low\" width=\"2160\" height=\"2160\" alt=\"WEB BrandPhoto Hero TopicHighlight Bento Headline Cards Tiles Qontoer Berlin WbRvmp\" class=\"absolute inset-0 object-cover w-full h-full rounded-2xl md:rounded-3xl\"></picture>\n\n</div>\n\n<div class=\"flex flex-col justify-between h-full\">\n<div class=\"flex z-10 flex-col gap-12 justify-start items-start p-16 lg:gap-16 md:p-24\" data-wr-swiper-target=\"\">\n<div class=\"flex gap-4 justify-between items-start w-full\">\n<h3 class=\"wr-card-title h3-small text-dark-primary\" style=\"font-family: QontoSans, sans-serif;font-weight: 600;word-break: break-word;\">\nIhre Bedürfnisse im Blick\n</h3>\n</div>\n<div class=\"wr-card-text body-regular text-dark-primary\" style=\"font-family: QontoSans, sans-serif;\">\n<p>Unser Deutschlandgeschäft wird von unserem Berliner Hauptsitz aus geführt – mit lokalen Teams, die Ihren Markt verstehen.</p>\n</div>\n</div>\n</div>\n</div>\n\n<div class=\"relative col-span-6 w-full rounded-2xl card-content md:col-span-9 md:rounded-3xl group lg:col-span-4 h-592\">\n<div class=\"absolute inset-0 rounded-2xl pointer-events-none md:rounded-3xl z-1 scrim-dark-photo-overlay\"></div>\n<div class=\"block\">\n<picture class=\"flex justify-center\"><source srcset=\"      https://qonto.com/blog/images/asset/33365/image/xs_avif-6d335e4b04705d85d4e0e80b19957c41.avif 320w,\n      https://qonto.com/blog/images/asset/33365/image/sm_avif-0323e57f3ff620aa97e7d67a2767c784.avif 920w,\n      https://qonto.com/blog/images/asset/33365/image/md_avif-503656c45ccf91f2a9573b2ef0478c9a.avif 1366w,\n      https://qonto.com/blog/images/asset/33365/image/lg_avif-0ec2489834f9f72c6255e09b1c555a2d.avif 1727w,\n      https://qonto.com/blog/images/asset/33365/image/xl_avif-d654c3e38679dd9fc745399df0231253.avif 2683w\n\" sizes=\"(max-width: 2683px) 100vw, 2683px\" type=\"image/avif\"><source srcset=\"      https://qonto.com/blog/images/asset/33365/image/xs_original-a5e54667a3338329c72d6d2ef74dd1ae.jpg 320w,\n      https://qonto.com/blog/images/asset/33365/image/sm_original-30be04d2b05de2657634dab43ccf37c9.jpg 920w,\n      https://qonto.com/blog/images/asset/33365/image/md_original-884425429bea3e584ff2fd09f9861ae2.jpg 1366w,\n      https://qonto.com/blog/images/asset/33365/image/lg_original-3ecda9a4555fe48a108fd4e66e2c9607.jpg 1727w,\n      https://qonto.com/blog/images/asset/33365/image/xl_original-f461d298e7475b63cb24a0a0ec35131f.jpg 2683w,\n\" sizes=\"(max-width: 2683px) 100vw, 2683px\" type=\"image/jpeg\"><img src=\"https://qonto.com/blog/images/asset/33365/image/3e8eeeb6204f0a9cfcb7c9a8154454c8.jpg\" decoding=\"async\" loading=\"lazy\" fetchpriority=\"low\" width=\"2160\" height=\"2160\" alt=\"WEB BrandPhoto Hero TopicHighlight Bento Headline Cards Tiles Customer Service WbRvmp\" class=\"absolute inset-0 object-cover w-full h-full rounded-2xl md:rounded-3xl\"></picture>\n\n</div>\n\n<div class=\"flex flex-col justify-between h-full\">\n<div class=\"flex z-10 flex-col gap-12 justify-start items-start p-16 lg:gap-16 md:p-24\" data-wr-swiper-target=\"\">\n<div class=\"flex gap-4 justify-between items-start w-full\">\n<h3 class=\"wr-card-title h3-small text-dark-primary\" style=\"font-family: QontoSans, sans-serif;font-weight: 600;word-break: break-word;\">\nPersönlicher Support – 24/7\n</h3>\n</div>\n<div class=\"wr-card-text body-regular text-dark-primary\" style=\"font-family: QontoSans, sans-serif;\">\n<p>Fragen zu DATEV? Zum Start mit Qonto? Wir sind für Sie da – 7 Tage die Woche, 24 Stunden am Tag.&nbsp;</p>\n</div>\n</div>\n</div>\n</div>\n\n<div class=\"relative col-span-6 w-full rounded-2xl card-content md:col-span-9 md:rounded-3xl group lg:col-span-4 h-592\">\n<div class=\"absolute inset-0 rounded-2xl pointer-events-none md:rounded-3xl z-1 scrim-dark-photo-overlay\"></div>\n<div class=\"block\">\n<picture class=\"flex justify-center\"><source srcset=\"      https://qonto.com/blog/images/asset/33621/image/xs_avif-e41e1fd2e82d91f267bfc4ddab3fa849.avif 320w,\n      https://qonto.com/blog/images/asset/33621/image/sm_avif-02fc724aa572a4724b455138a8b673ab.avif 920w,\n      https://qonto.com/blog/images/asset/33621/image/md_avif-fc78d5ef1255af2960ef0ec26c9eaa24.avif 1366w,\n      https://qonto.com/blog/images/asset/33621/image/lg_avif-64c59d7e34ef8ad2cd3c277a7d189539.avif 1727w,\n      https://qonto.com/blog/images/asset/33621/image/xl_avif-a172c38a07b9f9e167f1c05d33009381.avif 2683w\n\" sizes=\"(max-width: 2683px) 100vw, 2683px\" type=\"image/avif\"><source srcset=\"      https://qonto.com/blog/images/asset/33621/image/xs_original-78959ba9fda511f73d24b9036a416faf.jpg 320w,\n      https://qonto.com/blog/images/asset/33621/image/sm_original-2eb78139f0e979aab8d1e0b49149ee90.jpg 920w,\n      https://qonto.com/blog/images/asset/33621/image/md_original-55f2aeff3776b6f1bc41303dbe0c4b80.jpg 1366w,\n      https://qonto.com/blog/images/asset/33621/image/lg_original-a692b6f82b45a477ca708f50baa59808.jpg 1727w,\n      https://qonto.com/blog/images/asset/33621/image/xl_original-d3e1394dc1bf273d78410e6603be13c5.jpg 2683w,\n\" sizes=\"(max-width: 2683px) 100vw, 2683px\" type=\"image/jpeg\"><img src=\"https://qonto.com/blog/images/asset/33621/image/3991b2f7696d574364f9ea944a8fb93d.jpg\" decoding=\"async\" loading=\"lazy\" fetchpriority=\"low\" width=\"2160\" height=\"2160\" alt=\"WEB AT BrandMockup Cards Bento Headline SCA Authentication BM08 WbRvmp\" class=\"absolute inset-0 object-cover w-full h-full rounded-2xl md:rounded-3xl\"></picture>\n\n</div>\n\n<div class=\"flex flex-col justify-between h-full\">\n<div class=\"flex z-10 flex-col gap-12 justify-start items-start p-16 lg:gap-16 md:p-24\" data-wr-swiper-target=\"\">\n<div class=\"flex gap-4 justify-between items-start w-full\">\n<h3 class=\"wr-card-title h3-small text-dark-primary\" style=\"font-family: QontoSans, sans-serif;font-weight: 600;word-break: break-word;\">\nSicher &amp; zuverlässig\n</h3>\n</div>\n<div class=\"wr-card-text body-regular text-dark-pri",
+    "images": [
+      {
+        "src": "https://qonto.com/blog/images/asset/33623/image/lg_avif-09acf18feebf318342eb66f071588bee.avif",
+        "alt": "WEB BrandPhoto Hero TopicHighlight Bento Headline Cards Tiles Qontoer Berlin WbRvmp",
+        "w": 1440,
+        "h": 1440
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/33365/image/lg_avif-0ec2489834f9f72c6255e09b1c555a2d.avif",
+        "alt": "WEB BrandPhoto Hero TopicHighlight Bento Headline Cards Tiles Customer Service WbRvmp",
+        "w": 1440,
+        "h": 1440
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/33621/image/lg_avif-64c59d7e34ef8ad2cd3c277a7d189539.avif",
+        "alt": "WEB AT BrandMockup Cards Bento Headline SCA Authentication BM08 WbRvmp",
+        "w": 1440,
+        "h": 1440
+      }
+    ],
+    "videos": []
+  },
+  {
+    "idx": 6,
+    "class": "py-48 md:py-64 lg:py-80 swiper-carousel bg-default",
+    "bgColor": "rgb(255, 255, 255)",
+    "html": "<section class=\"py-48 md:py-64 lg:py-80 swiper-carousel bg-default\" data-q-id=\"3931998\" data-q-page-id=\"322249\" data-q-type=\"testimonial_carousel\" id=\"section-6\">\n<div class=\"grid grid-cols-6 gap-x-8 md:grid-cols-9 lg:grid-cols-12 website-revamp md:gap-x-24 swiper-fade swiper-initialized swiper-horizontal swiper-watch-progress swiper-backface-hidden\" data-controller=\"swiper\" data-nb-slide-mobile=\"1\" data-swiper-target=\"cardsTestimonial\">\n<div class=\"col-span-full lg:hidden\">\n<h2 class=\"mb-32\">Was unsere Kunden zur Erfahrung mit Qonto sagen</h2>\n</div>\n<div class=\"col-span-full swiper-wrapper md:-z-1\">\n<div class=\"swiper-slide swiper-slide-visible swiper-slide-fully-visible swiper-slide-active\" style=\"width: 1344px; opacity: 1; transform: translate3d(0px, 0px, 0px);\">\n<div class=\"grid grid-cols-6 gap-x-8 h-full md:grid-cols-9 lg:grid-cols-12 md:gap-x-24\">\n<div class=\"order-first col-span-full mb-32 lg:col-span-4 lg:col-start-9 lg:order-last lg:mb-0 lg:relative lg:min-h-500\">\n<div class=\"h-318 md:h-560 lg:h-full lg:absolute lg:inset-0\">\n<picture class=\"w-full h-full\"><source srcset=\"      https://qonto.com/blog/images/asset/9896/image/xs_avif-3502853fa5bc29171f12f3cecd05caba.avif 320w,\n      https://qonto.com/blog/images/asset/9896/image/sm_avif-c5e69b729e0f790d85f0e905b86e411e.avif 920w,\n      https://qonto.com/blog/images/asset/9896/image/md_avif-49e2da4daff4556efa972798f19c11b6.avif 1366w,\n      https://qonto.com/blog/images/asset/9896/image/lg_avif-3efee2b581fa30d43f1cacf7582599d3.avif 1727w,\n      https://qonto.com/blog/images/asset/9896/image/xl_avif-93a4e24f1edc5430ab30f822fad77025.avif 2683w\n\" sizes=\"(max-width: 2683px) 100vw, 2683px\" type=\"image/avif\"><source srcset=\"      https://qonto.com/blog/images/asset/9896/image/xs_original-79ab90f8901e09491d3c57e086b030fb.jpg 320w,\n      https://qonto.com/blog/images/asset/9896/image/sm_original-8f6c412a7005fbad3720679c194a95bc.jpg 920w,\n      https://qonto.com/blog/images/asset/9896/image/md_original-2f4e3f7c728b07508a8e0e8120702aba.jpg 1366w,\n      https://qonto.com/blog/images/asset/9896/image/lg_original-310811f6b9da5149134a52c6b276173f.jpg 1727w,\n      https://qonto.com/blog/images/asset/9896/image/xl_original-3113945d42dca807c9e312a5d3e01b55.jpg 2683w,\n\" sizes=\"(max-width: 2683px) 100vw, 2683px\" type=\"image/jpeg\"><img src=\"https://qonto.com/blog/images/asset/9896/image/c515c472255feed8717daf325d93b61b.jpg\" decoding=\"async\" loading=\"lazy\" fetchpriority=\"low\" width=\"3840\" height=\"2160\" alt=\"WEB-Foto-Testimonial Marc Peter Dauter Le Wagon WbRvmp\" class=\"rounded-2xl md:rounded-3xl w-full h-full object-cover object-top\"></picture>\n</div>\n</div>\n<div class=\"flex flex-col col-span-full justify-between lg:col-span-7\">\n<div class=\"hidden lg:block\">\n<h2 class=\"mb-32\">Was unsere Kunden zur Erfahrung mit Qonto sagen</h2>\n</div>\n<div class=\"flex flex-col gap-y-24 lg:gap-y-32\">\n<div class=\"flex flex-col gap-y-24\">\n<div class=\"lead\">\n<span>“</span>Zu Qonto zu wechseln, war eine der besten Entscheidungen für unsere Finanzverwaltung. Qonto hat unseren Zahlungsverkehr rationalisiert und uns eine umfassende Kontrolle über unsere Finanzen gegeben.<span>”</span>\n</div>\n<div class=\"flex flex-wrap justify-between gap-y-8 gap-x-16\">\n<div class=\"flex flex-wrap gap-y-4 gap-x-8 body-slim\">\nMarc Peter Dauter,\nGF Le Wagon Germany  \n</div>\n<div class=\"hidden md:block shrink-0\">\n<a target=\"\" class=\"pointer-events-auto btn-tertiary  inline-flex items-center text-16 leading-26 md:text-18 md:leading-28 font-normal text-18\" data-controller=\"arrow-animation\" data-action=\"mouseenter-&gt;arrow-animation#trigger\" data-location=\"testimonial_carousel_section\" data-turbo=\"false\" href=\"https://qonto.com/de/customers/lewagon\" data-tracked=\"true\"><span class=\"relative\">Testimonial ansehen</span>\n<div class=\"invert-svg ml-4\">\n<div class=\"btn-tertiary-arrow-wrapper\">\n<div class=\"btn-tertiary-arrow-container\" data-arrow-animation-target=\"container\">\n<div class=\"arrow-primary\">\n<!-- Generator: Adobe Illustrator 27.4.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"1.1\" id=\"Layer_1\" x=\"0px\" y=\"0px\" viewBox=\"0 0 18 18\" style=\"enable-background:new 0 0 18 18;\" xml:space=\"preserve\" aria-hidden=\"true\" class=\"rotate-135 rotate-135\" width=\"18\" height=\"18\">\n<style type=\"text/css\">\n\t.st0{fill:none;stroke:#1D1D1B;stroke-width:1.5;}\n\t.st1{fill:none;}\n</style>\n<path class=\"st0\" d=\"M15.8,9H2.2 M8.2,2.2L2.2,9l5.9,6.8\"></path>\n<rect class=\"st1\" width=\"18\" height=\"18\"></rect>\n</svg>\n</div>\n<div class=\"arrow-secondary\">\n<!-- Generator: Adobe Illustrator 27.4.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"1.1\" id=\"Layer_1\" x=\"0px\" y=\"0px\" viewBox=\"0 0 18 18\" style=\"enable-background:new 0 0 18 18;\" xml:space=\"preserve\" aria-hidden=\"true\" class=\"rotate-135 rotate-135\" width=\"18\" height=\"18\">\n<style type=\"text/css\">\n\t.st0{fill:none;stroke:#1D1D1B;stroke-width:1.5;}\n\t.st1{fill:none;}\n</style>\n<path class=\"st0\" d=\"M15.8,9H2.2 M8.2,2.2L2.2,9l5.9,6.8\"></path>\n<rect class=\"st1\" width=\"18\" height=\"18\"></rect>\n</svg>\n</div>\n</div>\n</div>\n</div>\n</a>\n</div>\n</div>\n<div class=\"md:hidden\">\n<a target=\"\" class=\"pointer-events-auto btn-tertiary  inline-flex items-center text-16 leading-26 md:text-18 md:leading-28 font-normal text-18\" data-controller=\"arrow-animation\" data-action=\"mouseenter-&gt;arrow-animation#trigger\" data-location=\"testimonial_carousel_section\" data-turbo=\"false\" href=\"https://qonto.com/de/customers/lewagon\" data-tracked=\"true\"><span class=\"relative\">Testimonial ansehen</span>\n<div class=\"invert-svg ml-4\">\n<div class=\"btn-tertiary-arrow-wrapper\">\n<div class=\"btn-tertiary-arrow-container\" data-arrow-animation-target=\"container\">\n<div class=\"arrow-primary\">\n<!-- Generator: Adobe Illustrator 27.4.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"1.1\" id=\"Layer_1\" x=\"0px\" y=\"0px\" viewBox=\"0 0 18 18\" style=\"enable-background:new 0 0 18 18;\" xml:space=\"preserve\" aria-hidden=\"true\" class=\"rotate-135 rotate-135\" width=\"18\" height=\"18\">\n<style type=\"text/css\">\n\t.st0{fill:none;stroke:#1D1D1B;stroke-width:1.5;}\n\t.st1{fill:none;}\n</style>\n<path class=\"st0\" d=\"M15.8,9H2.2 M8.2,2.2L2.2,9l5.9,6.8\"></path>\n<rect class=\"st1\" width=\"18\" height=\"18\"></rect>\n</svg>\n</div>\n<div class=\"arrow-secondary\">\n<!-- Generator: Adobe Illustrator 27.4.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" version=\"1.1\" id=\"Layer_1\" x=\"0px\" y=\"0px\" viewBox=\"0 0 18 18\" style=\"enable-background:new 0 0 18 18;\" xml:space=\"preserve\" aria-hidden=\"true\" class=\"rotate-135 rotate-135\" width=\"18\" height=\"18\">\n<style type=\"text/css\">\n\t.st0{fill:none;stroke:#1D1D1B;stroke-width:1.5;}\n\t.st1{fill:none;}\n</style>\n<path class=\"st0\" d=\"M15.8,9H2.2 M8.2,2.2L2.2,9l5.9,6.8\"></path>\n<rect class=\"st1\" width=\"18\" height=\"18\"></rect>\n</svg>\n</div>\n</div>\n</div>\n</div>\n</a>\n</div>\n</div>\n\n</div>\n</div>\n</div>\n</div>\n\n<div class=\"swiper-slide swiper-slide-next\" style=\"width: 1344px; opacity: 0; transform: translate3d(-1344px, 0px, 0px);\">\n<div class=\"grid grid-cols-6 gap-x-8 h-full md:grid-cols-9 lg:grid-cols-12 md:gap-x-24\">\n<div class=\"order-first col-span-full mb-32 lg:col-span-4 lg:col-start-9 lg:order-last lg:mb-0 lg:relative lg:min-h-500\">\n<div class=\"h-318 md:h-560 lg:h-full lg:absolute lg:inset-0\">\n<picture class=\"w-full h-full\"><source srcset=\"      https://qonto.com/blog/images/asset/26236/image/xs_avif-c05e66d999f61a83ff0983d528ae51ac.avif 320w,\n      https://qonto.com/blog/images/asset/26236/image/sm_avif-54fc185762c61311b0c30d3fcf5120b4.avif 920w,\n      https://qonto.com/blog/images/asset/26236/image/md_avif-e900a0cf41acb8498b89a7cff724e95f.avif 1366w,\n      https://qonto.com/blog/images/asset/26236/image/lg_avif-a30714dfda63acf1",
+    "images": [
+      {
+        "src": "https://qonto.com/blog/images/asset/9896/image/c515c472255feed8717daf325d93b61b.jpg",
+        "alt": "WEB-Foto-Testimonial Marc Peter Dauter Le Wagon WbRvmp",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/26236/image/c55db35c92e7f18fc4be53a083e29e72.jpg",
+        "alt": "WEB Foto-Testimonial Madeleine von Hohenthal Tatzenstreu WbRvmp",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/26191/image/1c8b84e99659e262e305a0efc8e6860b.jpg",
+        "alt": "WEB-Foto-Testimonial Ege Gunduz LiftOS WbRvmp",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/9511/image/70709654dc2bcedc932113a1c0fa9690.jpg",
+        "alt": "Webfoto-Testimonial Simon Norman onGRID WbRvmp",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/12132/image/f2ca3e75a6a035d6ca63571f45c09895.jpg",
+        "alt": "schwarz-weiß Foto Testimonial Marius Hanke Insight Tax",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/26195/image/7a432da10667436f3f6ab9eedb3091b7.jpg",
+        "alt": "WEB-Foto-Testimonial Charlotte Piller Lotta Ludwigson WbRvmp",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/9508/image/a5b4cb23ad68d85372e0965f9a305e70.jpg",
+        "alt": "Webfoto-Testimonial Klemens Witte GreenHomeNow WbRvmp",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/10061/image/73f2e59a2c783a5e6ccb39083993b70c.jpg",
+        "alt": "WEB-Foto-Testimonial Peter Frank Fleet WbRvmp",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "src": "https://qonto.com/blog/assets/icons/arrow-left-white-67f02d51c324f55cc91707ee864dec596a690bae9962d314c1661b76867316ec.svg",
+        "alt": "",
+        "w": 139,
+        "h": 150
+      },
+      {
+        "src": "https://qonto.com/blog/assets/icons/arrow-right-white-e85003dcdb03c5b96f71b9bad592e612b3d07a636cb834659eb34ecfb35f5738.svg",
+        "alt": "",
+        "w": 139,
+        "h": 150
+      }
+    ],
+    "videos": []
+  },
+  {
+    "idx": 7,
+    "class": "bg-default",
+    "bgColor": "rgb(255, 255, 255)",
+    "html": "<section class=\"bg-default\" data-q-id=\"3931999\" data-q-page-id=\"322249\" data-q-type=\"wr_trust\" id=\"section-8\">\n<div class=\"grid grid-cols-6 gap-x-8 px-16 py-48 mx-auto website-revamp md:grid-cols-9 lg:grid-cols-12 md:gap-x-16 lg:gap-x-24 md:px-32 lg:px-48 md:py-64 lg:py-80\">\n<div class=\"col-span-12 lg:col-span-5 flex flex-col justify-center\">\n<h3 class=\"mb-16 md:mb-12 lg:mb-16 only:mb-0\">Sie investieren in Qonto.</h3>\n\n</div>\n<div class=\"col-span-12 lg:col-span-7\" style=\"\">\n<div class=\"relative overflow-hidden flex flex-col justify-center mt-24 md:mt-32 lg:mt-0 lg:h-full\">\n<div class=\"absolute left-0 top-0 bottom-0 w-40 md:w-60 bg-gradient-to-r to-transparent z-10 pointer-events-none from-white\"></div>\n<div class=\"absolute right-0 top-0 bottom-0 w-40 md:w-60 bg-gradient-to-l to-transparent z-10 pointer-events-none from-white\"></div>\n<div class=\"swiper-carousel my-auto swiper-initialized swiper-horizontal\" data-controller=\"swiper\" data-swiper-options-value=\"{&quot;loop&quot;:true,&quot;spaceBetween&quot;:32,&quot;slidesPerView&quot;:2,&quot;autoplay&quot;:{&quot;delay&quot;:false},&quot;speed&quot;:6000,&quot;noSwiping&quot;:true,&quot;noSwipingClass&quot;:&quot;swiper-slide&quot;,&quot;breakpoints&quot;:{&quot;768&quot;:{&quot;slidesPerView&quot;:4,&quot;spaceBetween&quot;:64},&quot;1024&quot;:{&quot;slidesPerView&quot;:4,&quot;spaceBetween&quot;:96}}}\">\n<div class=\"swiper-wrapper linear\" style=\"transition-duration: 6000ms; transform: translate3d(-652.5px, 0px, 0px);\">\n<div class=\"swiper-slide w-64 md:w-96 m-auto flex justify-center align-center h-32\" data-swiper-slide-index=\"0\" style=\"width: 121.5px; margin-right: 96px;\">\n<div class=\"flex flex-col justify-center align-center items-center.md:items-start invert-svg\">\n<img src=\"https://qonto.com/blog/images/asset/8701/image/76b3fd2728636419fca9020f5596d69d.svg\" decoding=\"async\" loading=\"lazy\" fetchpriority=\"low\" width=\"132\" height=\"40\" alt=\"WEB Logo Black Valar\" class=\"h-32 w-auto flex-shrink-0 object-contain \">\n</div>\n</div>\n<div class=\"hidden line-bullets swiper-pagination flex swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal\" data-swiper-target=\"pagination\"><span class=\"swiper-pagination-bullet\"></span><span class=\"swiper-pagination-bullet\"></span><span class=\"swiper-pagination-bullet\"></span><span class=\"swiper-pagination-bullet swiper-pagination-bullet-active\"></span><span class=\"swiper-pagination-bullet\"></span><span class=\"swiper-pagination-bullet\"></span><span class=\"swiper-pagination-bullet\"></span><span class=\"swiper-pagination-bullet\"></span><span class=\"swiper-pagination-bullet\"></span><span class=\"swiper-pagination-bullet\"></span><span class=\"swiper-pagination-bullet\"></span><span class=\"swiper-pagination-bullet\"></span><span class=\"swiper-pagination-bullet\"></span><span class=\"swiper-pagination-bullet\"></span><span class=\"swiper-pagination-bullet\"></span><span class=\"swiper-pagination-bullet\"></span><span class=\"swiper-pagination-bullet\"></span><span class=\"swiper-pagination-bullet\"></span><span class=\"swiper-pagination-bullet\"></span><span class=\"swiper-pagination-bullet\"></span><span class=\"swiper-pagination-bullet\"></span><span class=\"swiper-pagination-bullet\"></span><span class=\"swiper-pagination-bullet\"></span><span class=\"swiper-pagination-bullet\"></span></div>\n<div class=\"swiper-slide w-64 md:w-96 m-auto flex justify-center align-center h-32\" data-swiper-slide-index=\"1\" style=\"width: 121.5px; margin-right: 96px;\">\n<div class=\"flex flex-col justify-center align-center items-center.md:items-start invert-svg\">\n<img src=\"https://qonto.com/blog/images/asset/26255/image/9b5fb8d3a257b83cba862938e0899237.svg\" decoding=\"async\" loading=\"lazy\" fetchpriority=\"low\" width=\"100\" height=\"40\" alt=\"Schwarzes Logo TCV\" class=\"h-32 w-auto flex-shrink-0 object-contain \">\n</div>\n</div>\n<div class=\"hidden line-bullets swiper-pagination flex\" data-swiper-target=\"pagination\"></div>\n<div class=\"swiper-slide w-64 md:w-96 m-auto flex justify-center align-center h-32 swiper-slide-prev\" data-swiper-slide-index=\"2\" style=\"width: 121.5px; margin-right: 96px;\">\n<div class=\"flex flex-col justify-center align-center items-center.md:items-start invert-svg\">\n<img src=\"https://qonto.com/blog/images/asset/8705/image/784c3c5e919588801012d5d81c80a279.svg\" decoding=\"async\" loading=\"lazy\" fetchpriority=\"low\" width=\"146\" height=\"40\" alt=\"WEB Logo Black Alven\" class=\"h-32 w-auto flex-shrink-0 object-contain \">\n</div>\n</div>\n<div class=\"hidden line-bullets swiper-pagination flex\" data-swiper-target=\"pagination\"></div>\n<div class=\"swiper-slide w-64 md:w-96 m-auto flex justify-center align-center h-32 swiper-slide-active\" data-swiper-slide-index=\"3\" style=\"width: 121.5px; margin-right: 96px;\">\n<div class=\"flex flex-col justify-center align-center items-center.md:items-start invert-svg\">\n<img src=\"https://qonto.com/blog/images/asset/33544/image/8de73d770b0dad5f8e4906907c73345a.svg\" decoding=\"async\" loading=\"lazy\" fetchpriority=\"low\" width=\"156\" height=\"40\" alt=\"Web-Logo Europäischer Investitionsfonds\" class=\"h-32 w-auto flex-shrink-0 object-contain \">\n</div>\n</div>\n<div class=\"hidden line-bullets swiper-pagination flex\" data-swiper-target=\"pagination\"></div>\n<div class=\"swiper-slide w-64 md:w-96 m-auto flex justify-center align-center h-32 swiper-slide-next\" data-swiper-slide-index=\"4\" style=\"width: 121.5px; margin-right: 96px;\">\n<div class=\"flex flex-col justify-center align-center items-center.md:items-start invert-svg\">\n<img src=\"https://qonto.com/blog/images/asset/8722/image/947ea93b3a897bb9b9ac21093bbe8819.svg\" decoding=\"async\" loading=\"lazy\" fetchpriority=\"low\" width=\"180\" height=\"40\" alt=\"WEB Logo Schwarz Tencent\" class=\"h-32 w-auto flex-shrink-0 object-contain \">\n</div>\n</div>\n<div class=\"hidden line-bullets swiper-pagination flex\" data-swiper-target=\"pagination\"></div>\n<div class=\"swiper-slide w-64 md:w-96 m-auto flex justify-center align-center h-32\" data-swiper-slide-index=\"5\" style=\"width: 121.5px; margin-right: 96px;\">\n<div class=\"flex flex-col justify-center align-center items-center.md:items-start invert-svg\">\n<img src=\"https://qonto.com/blog/images/asset/8703/image/6083213f4ad7931c29e097de9114e672.svg\" decoding=\"async\" loading=\"lazy\" fetchpriority=\"low\" width=\"68\" height=\"40\" alt=\"WEB Logo Schwarz DST Global\" class=\"h-32 w-auto flex-shrink-0 object-contain \">\n</div>\n</div>\n<div class=\"hidden line-bullets swiper-pagination flex\" data-swiper-target=\"pagination\"></div>\n<div class=\"swiper-slide w-64 md:w-96 m-auto flex justify-center align-center h-32\" data-swiper-slide-index=\"6\" style=\"width: 121.5px; margin-right: 96px;\">\n<div class=\"flex flex-col justify-center align-center items-center.md:items-start invert-svg\">\n<img src=\"https://qonto.com/blog/images/asset/4567/image/cc23878469d051bc2d9adf983c14af33.svg\" decoding=\"async\" loading=\"lazy\" fetchpriority=\"low\" width=\"180\" height=\"40\" alt=\"WEB Logo Black Tiger Global\" class=\"h-32 w-auto flex-shrink-0 object-contain \">\n</div>\n</div>\n<div class=\"hidden line-bullets swiper-pagination flex\" data-swiper-target=\"pagination\"></div>\n<div class=\"swiper-slide w-64 md:w-96 m-auto flex justify-center align-center h-32\" data-swiper-slide-index=\"7\" style=\"width: 121.5px; margin-right: 96px;\">\n<div class=\"flex flex-col justify-center align-center items-center.md:items-start invert-svg\">\n<img src=\"https://qonto.com/blog/images/asset/4416/image/e721d2e6e9f4364e2cfb2c77211044b3.svg\" decoding=\"async\" loading=\"lazy\" fetchpriority=\"low\" width=\"159\" height=\"40\" alt=\"WEB Logo Schwarz Eurazeo\" class=\"h-32 w-auto flex-shrink-0 object-contain \">\n</div>\n</div>\n<div class=\"hidden line-bullets swiper-pagination flex\" data-swiper-target=\"pagination\"></div>\n<div class=\"swiper-slide w-64 md:w-96 m-auto flex justify-center align-center h-32\" data-swiper-slide-index=\"8\" style=\"width: 121.5px; margin-right: 96px;\">\n<div class=\"flex flex-col justify-center align-center items-center.md:items-start invert-svg\">\n<img src=\"https://qonto.com/blog/images/asset/8698/image/8f",
+    "images": [
+      {
+        "src": "https://qonto.com/blog/images/asset/8701/image/76b3fd2728636419fca9020f5596d69d.svg",
+        "alt": "WEB Logo Black Valar",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/26255/image/9b5fb8d3a257b83cba862938e0899237.svg",
+        "alt": "Schwarzes Logo TCV",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/8705/image/784c3c5e919588801012d5d81c80a279.svg",
+        "alt": "WEB Logo Black Alven",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/33544/image/8de73d770b0dad5f8e4906907c73345a.svg",
+        "alt": "Web-Logo Europäischer Investitionsfonds",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/8722/image/947ea93b3a897bb9b9ac21093bbe8819.svg",
+        "alt": "WEB Logo Schwarz Tencent",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/8703/image/6083213f4ad7931c29e097de9114e672.svg",
+        "alt": "WEB Logo Schwarz DST Global",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/4567/image/cc23878469d051bc2d9adf983c14af33.svg",
+        "alt": "WEB Logo Black Tiger Global",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/4416/image/e721d2e6e9f4364e2cfb2c77211044b3.svg",
+        "alt": "WEB Logo Schwarz Eurazeo",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/8698/image/8fda4672e908029394a4361f246f81df.svg",
+        "alt": "WEB-Logo Schwarz Kohlberg Kravis Roberts KKR",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/8704/image/94d2d59fe48f8f5e0249d08d254d66b0.svg",
+        "alt": "WEB Logo Black Insight Partners",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/8702/image/d83eb11cc336e9d7e9b680859e193cae.svg",
+        "alt": "Weblogo ExorSeeds",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/8699/image/cc5861e67a5f942c8360028547c36ec9.svg",
+        "alt": "WEB-Logo Black Gaingels",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/8701/image/76b3fd2728636419fca9020f5596d69d.svg",
+        "alt": "WEB Logo Black Valar",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/26255/image/9b5fb8d3a257b83cba862938e0899237.svg",
+        "alt": "Schwarzes Logo TCV",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/8705/image/784c3c5e919588801012d5d81c80a279.svg",
+        "alt": "WEB Logo Black Alven",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/33544/image/8de73d770b0dad5f8e4906907c73345a.svg",
+        "alt": "Web-Logo Europäischer Investitionsfonds",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/8722/image/947ea93b3a897bb9b9ac21093bbe8819.svg",
+        "alt": "WEB Logo Schwarz Tencent",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/8703/image/6083213f4ad7931c29e097de9114e672.svg",
+        "alt": "WEB Logo Schwarz DST Global",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/4567/image/cc23878469d051bc2d9adf983c14af33.svg",
+        "alt": "WEB Logo Black Tiger Global",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/4416/image/e721d2e6e9f4364e2cfb2c77211044b3.svg",
+        "alt": "WEB Logo Schwarz Eurazeo",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/8698/image/8fda4672e908029394a4361f246f81df.svg",
+        "alt": "WEB-Logo Schwarz Kohlberg Kravis Roberts KKR",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/8704/image/94d2d59fe48f8f5e0249d08d254d66b0.svg",
+        "alt": "WEB Logo Black Insight Partners",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/8702/image/d83eb11cc336e9d7e9b680859e193cae.svg",
+        "alt": "Weblogo ExorSeeds",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "src": "https://qonto.com/blog/images/asset/8699/image/cc5861e67a5f942c8360028547c36ec9.svg",
+        "alt": "WEB-Logo Black Gaingels",
+        "w": 0,
+        "h": 0
+      }
+    ],
+    "videos": []
+  },
+  {
+    "idx": 8,
+    "class": "py-48 lg:py-64 bg-default",
+    "bgColor": "rgb(255, 255, 255)",
+    "html": "<section class=\"py-48 lg:py-64 bg-default\" data-controller=\"accordion global-animation live-photos\" data-global-animation-target=\"section\" data-live-photos-target=\"section\" data-q-id=\"3932000\" data-q-page-id=\"322249\" data-q-type=\"topic_highlight\" id=\"section-9\">\n<div class=\"website-revamp\">\n<div class=\"flex flex-col gap-16 lg:grid lg:grid-cols-12 lg:gap-0\">\n<div class=\"order-1 lg:hidden\">\n<h2 class=\"text-light-primary\">\nUnternehmen stärken. Die Umwelt schützen.\n</h2>\n</div>\n<div class=\"order-2 -mx-16 md:-mx-32 lg:mx-0 lg:order-none lg:col-span-5 lg:flex lg:items-center w-[calc(100%+32px)] md:w-[calc(100%+64px)] lg:w-full\">\n<div class=\"flex overflow-hidden relative justify-center items-center w-full h-430 md:h-780 lg:h-auto lg:max-h-650 lg:aspect-[613/650]\" data-controller=\"hero-asset-scroll\" data-hero-asset-scroll-target=\"asset\" style=\"transition: height 150ms ease-out\">\n<div class=\"relative w-full h-full opacity-0\" data-global-animation-target=\"animatedFadeinUpShortDelay\">\n<div class=\"relative w-full h-full\">\n<picture><source srcset=\"      https://qonto.com/blog/images/asset/33672/image/xs_avif-ff999b2fca0f91c61b09130773961af3.avif 320w,\n      https://qonto.com/blog/images/asset/33672/image/sm_avif-a95e4de3417d608300f1917ecdf4ecdf.avif 920w,\n      https://qonto.com/blog/images/asset/33672/image/md_avif-c613c48de9f0701ddf5709c905141fed.avif 1366w,\n      https://qonto.com/blog/images/asset/33672/image/lg_avif-3b8385da429e542fd7a477a9e42f4013.avif 1727w,\n      https://qonto.com/blog/images/asset/33672/image/xl_avif-f6fa2bc742b901e69d3e6963c19fcf6d.avif 2683w\n\" sizes=\"(max-width: 2683px) 100vw, 2683px\" type=\"image/avif\"><source srcset=\"      https://qonto.com/blog/images/asset/33672/image/xs_original-7f9b70a351b67ab6de50def888f32d53.jpg 320w,\n      https://qonto.com/blog/images/asset/33672/image/sm_original-fc8019abe3ea4acab88ea56b09496c29.jpg 920w,\n      https://qonto.com/blog/images/asset/33672/image/md_original-51686bf25904a9ac9a51864de71e1e2f.jpg 1366w,\n      https://qonto.com/blog/images/asset/33672/image/lg_original-c13e2a257a0c887098ba23f009fe1625.jpg 1727w,\n      https://qonto.com/blog/images/asset/33672/image/xl_original-a8613834bdc9af33292c059b81d300e8.jpg 2683w,\n\" sizes=\"(max-width: 2683px) 100vw, 2683px\" type=\"image/jpeg\"><img src=\"https://qonto.com/blog/images/asset/33672/image/35e22ac359ea12446cd06b37bafadfc7.jpg\" decoding=\"async\" loading=\"lazy\" fetchpriority=\"low\" width=\"2160\" height=\"2160\" alt=\"Static asset\" class=\"lg:rounded-3xl w-full h-full object-cover\"></picture>\n</div>\n</div>\n</div>\n\n</div>\n<div class=\"order-3 lg:order-none lg:col-span-6 lg:col-start-7 lg:flex lg:items-center lg:px-0\">\n<div class=\"flex flex-col gap-16\">\n<div class=\"hidden lg:block\">\n<h2 class=\"text-light-primary\">\nUnternehmen stärken. Die Umwelt schützen.\n</h2>\n</div>\n<div class=\"flex flex-col gap-32\">\n<div class=\"list-contained text-light-primary\">\n<p>Eine bessere Welt entsteht gemeinsam – als Team, jeden Tag. Deshalb übernehmen wir bei Qonto Verantwortung und leisten unseren Beitrag: für einen nachhaltigeren Planeten und eine gerechtere Gesellschaft.</p>\n</div>\n<div class=\"flex flex-wrap gap-16 \">\n<a target=\"\" data-location=\"topic_highlight_section\" data-turbo=\"true\" data-turbo-frame=\"_top\" href=\"https://qonto.com/de/impact\" data-tracked=\"true\"><div class=\"block text-center whitespace-nowrap btn btn-primary text-16 leading-26 md:text-18 md:leading-28 md:inline-block\">\n<span>Mehr erfahren</span>\n</div>\n</a><a target=\"\" data-location=\"topic_highlight_section\" data-turbo=\"true\" data-turbo-frame=\"_top\" href=\"https://qonto.com/de/ethics-charter\" data-tracked=\"true\"><div class=\"block text-center btn-secondary btn text-16 leading-26 md:text-18 md:leading-28 md:inline-block\">\n<span>Unsere Ethik-Charta</span>\n</div>\n</a></div>\n\n\n</div>\n</div>\n</div>\n</div>\n</div>\n</section>",
+    "images": [
+      {
+        "src": "https://qonto.com/blog/images/asset/33672/image/35e22ac359ea12446cd06b37bafadfc7.jpg",
+        "alt": "Static asset",
+        "w": 0,
+        "h": 0
+      }
+    ],
+    "videos": []
+  },
+  {
+    "idx": 9,
+    "class": "overflow-hidden relative bg-default",
+    "bgColor": "rgb(255, 255, 255)",
+    "html": "<section class=\"overflow-hidden relative bg-default\" data-controller=\"scroll-clip\" data-q-id=\"3932001\" data-q-page-id=\"322249\" data-q-type=\"wr_headline\" id=\"section-10\">\n<div class=\"absolute top-0 left-0 w-full h-full bg-center bg-cover pointer-events-none bg-responsive-wr-headline-3932001\" data-scroll-clip-target=\"clipElement\" style=\"clip-path: inset(0px); will-change: clip-path;\"></div>\n<div class=\"absolute top-0 left-0 w-full h-full pointer-events-none scrim-dark-photo-overlay\" data-scroll-clip-target=\"clipElement\" style=\"clip-path: inset(0px); will-change: clip-path;\"></div>\n<div class=\"grid grid-cols-6 gap-x-8 px-16 py-48 mx-auto website-revamp md:grid-cols-9 lg:grid-cols-12 md:gap-x-16 lg:gap-x-24 md:px-32 lg:px-48 md:py-64 lg:py-80\">\n<div class=\"flex flex-col col-span-6 items-center px-24 pt-32 mx-auto w-full text-center lg:grid lg:grid-cols-12 lg:content-center lg:gap-x-24 md:col-span-7 md:col-start-2 lg:col-span-12 lg:px-0 md:pt-48 lg:py-64 lg:min-h-504 max-lg:pb-460 lg:text-left rounded-[24px]\" data-scroll-clip-target=\"patternElement\">\n<h2 class=\"relative z-10 col-span-6 lg:pl-64 text-dark-primary\">Gemeinsam stark. </h2>\n<div class=\"relative z-10 col-span-5 col-start-1 mt-12 lg:pl-64 body-slim md:mt-16 text-dark-primary\">\n<p>KMU sind Europas wirtschaftlicher Motor. Qonto entwickelt Finanztools, die Prozesse vereinfachen und Kontrolle zurückgeben – in Ihre Hände.</p>\n</div>\n<div class=\"flex relative z-10 flex-col col-span-5 col-start-1 gap-16 items-center mt-32 lg:flex-row lg:pl-64 lg:mt-48\">\n<div class=\"flex flex-wrap gap-16 justify-center lg:justify-start darkmode\">\n<a target=\"\" data-location=\"wr_headline_section\" data-turbo=\"true\" data-turbo-frame=\"_top\" href=\"https://qonto.com/de/pricing/\" data-tracked=\"true\"><div class=\"block text-center whitespace-nowrap btn btn-primary text-16 leading-26 md:text-18 md:leading-28 md:inline-block\">\n<span>Preise einsehen</span>\n</div>\n</a><a target=\"\" data-location=\"wr_headline_section\" data-turbo=\"true\" data-turbo-frame=\"_top\" href=\"https://qonto.com/de/press\" data-tracked=\"true\"><div class=\"block text-center btn-secondary btn text-16 leading-26 md:text-18 md:leading-28 md:inline-block\">\n<span>Qonto in den Medien</span>\n</div>\n</a></div>\n\n</div>\n</div>\n</div>\n</section>",
+    "images": [],
+    "videos": []
+  }
+]

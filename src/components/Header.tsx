@@ -10,7 +10,7 @@ const NAV_ITEMS = [
   { label: "Finanztools", href: "#" },
   { label: "Finanzierung", href: "#" },
   { label: "Preise", href: "#" },
-  { label: "Über uns", href: "#" },
+  { label: "Über uns", href: "/about" },
 ];
 
 export function Header() {

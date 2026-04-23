@@ -1,0 +1,79 @@
+[
+  {
+    "idx": 0,
+    "class": "relative col-span-6 w-full min-h-svh lg:min-h-screen md:col-span-9 lg:col-span-12 bg-emphasis darkmode text-dark-primary",
+    "h1": "Kleine Unternehmen schaffen Großes. Wir unterstützen Sie dabei.",
+    "top": 0,
+    "height": 900,
+    "text": "Kleine Unternehmen schaffen Großes. Wir unterstützen Sie dabei.\n\n\n\n\nMehr erfahren"
+  },
+  {
+    "idx": 1,
+    "class": "bg-emphasis darkmode text-dark-primary",
+    "top": 900,
+    "height": 388,
+    "text": "600.000+Unternehmen\n\n\n\n\n\n\n\n\n\n\n600.000+Unternehmen\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIn 8 europäischenMärkten\n\n\n\n\n\n\n\n\n\n\nIn 8 europäischenMärkten\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n250.000+Gründungen\n\n\n\n\n\n\n\n\n\n\n250.000+Gründungen\n\n\n\n\n\n\n\n\n"
+  },
+  {
+    "idx": 2,
+    "class": "website-content seo-content bg-subtle pt-40 md:max-lg:pt-56 xl:pt-56 pb-40 md:max-lg:pb-56 xl:pb-56",
+    "top": 1288,
+    "height": 424,
+    "text": "KMU treiben Europas Wirtschaft an. Veraltetes Banking bremst sie aus.  Unsere Mission: Ihre Wirkung zu vervielfachen – mit Finanztools, die für Sie arbeiten."
+  },
+  {
+    "idx": 3,
+    "class": "py-48 lg:py-64 bg-default",
+    "h2": "Von Unternehmern. Für Unternehmer.",
+    "top": 1712,
+    "height": 722,
+    "text": "Von Unternehmern. Für Unternehmer.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVon Unternehmern. Für Unternehmer.\n\n\n\n\nHinter Qonto steht ein Team um die Gründer Alexandre Prot und Steve Anavi, das Unternehmen geführt, Cashflow‑H"
+  },
+  {
+    "idx": 4,
+    "class": "py-48 md:py-64 lg:py-80 bg-default",
+    "h2": "Qonto in Deutschland: Unsere Geschichte",
+    "top": 2434,
+    "height": 644,
+    "text": "Qonto in Deutschland: Unsere Geschichte\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGemeinsam auf Erfolgskurs\n\n\n\nQonto unterstützt mehr als 600.000 Geschäftskund:innen und hat 250.000 Unternehmensgründungen ermöglicht.\n\n\n\n\n\n\n"
+  },
+  {
+    "idx": 5,
+    "class": "bg-emphasis darkmode",
+    "h2": "An Ihrer Seite. Tag für Tag.",
+    "top": 3078,
+    "height": 872,
+    "text": "An Ihrer Seite. Tag für Tag. \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIhre Bedürfnisse im Blick\n\n\n\nUnser Deutschlandgeschäft wird von unserem Berliner Hauptsitz aus geführt – mit lokalen Teams, die Ihren Markt verstehen.\n\n\n"
+  },
+  {
+    "idx": 6,
+    "class": "py-48 md:py-64 lg:py-80 swiper-carousel bg-default",
+    "h2": "Was unsere Kunden zur Erfahrung mit Qonto sagen",
+    "top": 3950,
+    "height": 744,
+    "text": "Was unsere Kunden zur Erfahrung mit Qonto sagen\n\n\n\n\n\n\n\n\n\n\n\nWas unsere Kunden zur Erfahrung mit Qonto sagen\n\n\n\n\n“Zu Qonto zu wechseln, war eine der besten Entscheidungen für unsere Finanzverwaltung. Qo"
+  },
+  {
+    "idx": 7,
+    "class": "bg-default",
+    "top": 4694,
+    "height": 196,
+    "text": "Sie investieren in Qonto."
+  },
+  {
+    "idx": 8,
+    "class": "py-48 lg:py-64 bg-default",
+    "h2": "Unternehmen stärken. Die Umwelt schützen.",
+    "top": 4890,
+    "height": 722,
+    "text": "Unternehmen stärken. Die Umwelt schützen.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUnternehmen stärken. Die Umwelt schützen.\n\n\n\n\nEine bessere Welt entsteht gemeinsam – als Team, jeden Tag. Deshalb übernehmen wir bei Qonto Ver"
+  },
+  {
+    "idx": 9,
+    "class": "overflow-hidden relative bg-default",
+    "h2": "Gemeinsam stark.",
+    "top": 5612,
+    "height": 664,
+    "text": "Gemeinsam stark. \n\nKMU sind Europas wirtschaftlicher Motor. Qonto entwickelt Finanztools, die Prozesse vereinfachen und Kontrolle zurückgeben – in Ihre Hände.\n\n\n\n\nPreise einsehen\n\n\nQonto in den Medien"
+  }
+]

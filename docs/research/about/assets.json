@@ -1,0 +1,712 @@
+{
+  "images": [
+    {
+      "src": "https://t.teads.tv/track?action=pageView&env=js-gtm&tag_version=8.11.0_bdb3a9b&provider=tag&buyer_pixel_id=1423&referer=https%3A%2F%2Fqonto.com%2Fde%2Fabout&user_session_id=8cbb7162-eb0d-497d-8169-361117415fc0&hasConsent=true&cht=di",
+      "alt": "",
+      "w": 1,
+      "h": 1,
+      "displayW": 0,
+      "displayH": 0,
+      "top": 0
+    },
+    {
+      "src": "https://qonto.com/blog/assets/navigation/revamp_assets/nav-company-creation-a80c329e955a1eb275e5a6ed364dc11003bc8732c9e8340a747ce68c6d43d115.jpg",
+      "alt": "Gründungsleitfaden",
+      "w": 898,
+      "h": 624,
+      "displayW": 898,
+      "displayH": 624,
+      "top": 0
+    },
+    {
+      "src": "https://qonto.com/blog/assets/navigation/revamp_assets/nav-business-account-cfa4958432660692d6eaf836dc5c65bb280f9d77e7a9c9302dc7ee9e57d153fc.png",
+      "alt": "Ihre Business Kreditkarte",
+      "w": 898,
+      "h": 718,
+      "displayW": 898,
+      "displayH": 718,
+      "top": 0
+    },
+    {
+      "src": "https://qonto.com/blog/assets/navigation/revamp_assets/nav-financial-tools-c0c1fb4becfef9febb687f937379e0d936d2c277766d171fcf3838d5abe77c84.jpg",
+      "alt": "E-Rechnung-Software",
+      "w": 898,
+      "h": 656,
+      "displayW": 898,
+      "displayH": 656,
+      "top": 0
+    },
+    {
+      "src": "https://qonto.com/blog/assets/navigation/revamp_assets/nav-smart-business-de-b591d4e6a71626a40f286964b67c83ba81b4feddfba7e8fda5d139c6a08fa7d9.jpg",
+      "alt": "Geschäftskonto ab 0 €",
+      "w": 1804,
+      "h": 1444,
+      "displayW": 1804,
+      "displayH": 1444,
+      "top": 0
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/33407/image/lg_avif-fbec6d67b9e8108d3ea525bb82781e55.avif",
+      "alt": "WEB Verschiedene HeroFullWidth-Kundengeschichten Deutschland Statisch Mobil WbRvmp",
+      "w": 600,
+      "h": 1067,
+      "displayW": 720,
+      "displayH": 1280,
+      "top": 0
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/33406/image/lg_avif-c662b4a618e99a207840059d70fb11c8.avif",
+      "alt": "WEB Verschiedene HeroFullWidth-Kundengeschichten Deutschland Statischer Desktop WbRvmp",
+      "w": 1440,
+      "h": 809,
+      "displayW": 1440,
+      "displayH": 900,
+      "top": 0
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/33294/image/2d7204a11918d85d9a2583e5339e53fe.svg",
+      "alt": "Web-Ikonografie Schwarze Mitarbeiter",
+      "w": 32,
+      "h": 32,
+      "displayW": 32,
+      "displayH": 32,
+      "top": 1072
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/33294/image/2d7204a11918d85d9a2583e5339e53fe.svg",
+      "alt": "Web-Ikonografie Schwarze Mitarbeiter",
+      "w": 32,
+      "h": 32,
+      "displayW": 32,
+      "displayH": 32,
+      "top": 0
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/26584/image/7025a75b1daa090a79e7c4aaf7cec8bf.svg",
+      "alt": "WEB-Ikonographie Schwarz 100 % Online",
+      "w": 32,
+      "h": 32,
+      "displayW": 32,
+      "displayH": 32,
+      "top": 1072
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/26584/image/7025a75b1daa090a79e7c4aaf7cec8bf.svg",
+      "alt": "WEB-Ikonographie Schwarz 100 % Online",
+      "w": 32,
+      "h": 32,
+      "displayW": 32,
+      "displayH": 32,
+      "top": 0
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/27327/image/dce71827939f3fff2ccf1975fc42b6a9.svg",
+      "alt": "WEB-Ikonographie Schwarze Unternehmen",
+      "w": 32,
+      "h": 32,
+      "displayW": 32,
+      "displayH": 32,
+      "top": 1072
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/27327/image/dce71827939f3fff2ccf1975fc42b6a9.svg",
+      "alt": "WEB-Ikonographie Schwarze Unternehmen",
+      "w": 32,
+      "h": 32,
+      "displayW": 32,
+      "displayH": 32,
+      "top": 0
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/27326/image/e457d34c54dd4f66edc5709e1b56548d.svg",
+      "alt": "WEB-Ikonographie Schwarzgeld",
+      "w": 32,
+      "h": 32,
+      "displayW": 32,
+      "displayH": 32,
+      "top": 1072
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/27326/image/e457d34c54dd4f66edc5709e1b56548d.svg",
+      "alt": "WEB-Ikonographie Schwarzgeld",
+      "w": 32,
+      "h": 32,
+      "displayW": 32,
+      "displayH": 32,
+      "top": 0
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/33673/image/lg_avif-b8fd9a64f033854853f190be1b677cce.avif",
+      "alt": "Static asset",
+      "w": 1440,
+      "h": 1440,
+      "displayW": 560,
+      "displayH": 594,
+      "top": 1776
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/33681/image/lg_avif-81f349c22ef1f7fa5d0f4a347d549b5a.avif",
+      "alt": "WEB-Badge-Timeline 2025 WbRvmp",
+      "w": 320,
+      "h": 320,
+      "displayW": 56,
+      "displayH": 56,
+      "top": 2658
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/33680/image/lg_avif-2898d9a7b84ef7f5b3c2e3945c2afc13.avif",
+      "alt": "WEB Badge Timeline 2024 WbRvmp",
+      "w": 320,
+      "h": 320,
+      "displayW": 56,
+      "displayH": 56,
+      "top": 2658
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/33679/image/lg_avif-8ff0e3941ee77db5ad0ff3fd36962de3.avif",
+      "alt": "WEB Badge Timeline 2023 DATEV WbRvmp",
+      "w": 607,
+      "h": 320,
+      "displayW": 106,
+      "displayH": 56,
+      "top": 2658
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/33678/image/lg_avif-2ef926a82f47b91dad6c688c36fcedb3.avif",
+      "alt": "WEB Badge Timeline 2022 TÜV DeutscherB2B WbRvmp",
+      "w": 893,
+      "h": 320,
+      "displayW": 156,
+      "displayH": 56,
+      "top": 2658
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/33677/image/lg_avif-f30083a4971eac9ed406f5420388ac42.avif",
+      "alt": "WEB Badge Timeline 2021 WbRvmp",
+      "w": 320,
+      "h": 320,
+      "displayW": 56,
+      "displayH": 56,
+      "top": 2658
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/33676/image/lg_avif-ec8159574be8a51cd9c7b67204fa045a.avif",
+      "alt": "WEB-Badge-Timeline 2020 Deutschland WbRvmp",
+      "w": 607,
+      "h": 320,
+      "displayW": 106,
+      "displayH": 56,
+      "top": 2658
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/33675/image/lg_avif-83c1914b666d0fb534aeba75a1e6d3fa.avif",
+      "alt": "WEB-Badge-Zeitleiste 2017 Frankreich WbRvmp",
+      "w": 607,
+      "h": 320,
+      "displayW": 106,
+      "displayH": 56,
+      "top": 2658
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/33623/image/lg_avif-09acf18feebf318342eb66f071588bee.avif",
+      "alt": "WEB BrandPhoto Hero TopicHighlight Bento Headline Cards Tiles Qontoer Berlin WbRvmp",
+      "w": 1440,
+      "h": 1440,
+      "displayW": 432,
+      "displayH": 592,
+      "top": 3278
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/33365/image/lg_avif-0ec2489834f9f72c6255e09b1c555a2d.avif",
+      "alt": "WEB BrandPhoto Hero TopicHighlight Bento Headline Cards Tiles Customer Service WbRvmp",
+      "w": 1440,
+      "h": 1440,
+      "displayW": 432,
+      "displayH": 592,
+      "top": 3278
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/33621/image/lg_avif-64c59d7e34ef8ad2cd3c277a7d189539.avif",
+      "alt": "WEB AT BrandMockup Cards Bento Headline SCA Authentication BM08 WbRvmp",
+      "w": 1440,
+      "h": 1440,
+      "displayW": 432,
+      "displayH": 592,
+      "top": 3278
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/9896/image/lg_avif-3efee2b581fa30d43f1cacf7582599d3.avif",
+      "alt": "WEB-Foto-Testimonial Marc Peter Dauter Le Wagon WbRvmp",
+      "w": 1440,
+      "h": 809,
+      "displayW": 432,
+      "displayH": 500,
+      "top": 4030
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/26236/image/lg_avif-a30714dfda63acf1bbd0e93354a76561.avif",
+      "alt": "WEB Foto-Testimonial Madeleine von Hohenthal Tatzenstreu WbRvmp",
+      "w": 1440,
+      "h": 809,
+      "displayW": 432,
+      "displayH": 500,
+      "top": 4030
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/26191/image/1c8b84e99659e262e305a0efc8e6860b.jpg",
+      "alt": "WEB-Foto-Testimonial Ege Gunduz LiftOS WbRvmp",
+      "w": 0,
+      "h": 0,
+      "displayW": 432,
+      "displayH": 500,
+      "top": 4030
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/9511/image/70709654dc2bcedc932113a1c0fa9690.jpg",
+      "alt": "Webfoto-Testimonial Simon Norman onGRID WbRvmp",
+      "w": 0,
+      "h": 0,
+      "displayW": 432,
+      "displayH": 500,
+      "top": 4030
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/12132/image/f2ca3e75a6a035d6ca63571f45c09895.jpg",
+      "alt": "schwarz-weiß Foto Testimonial Marius Hanke Insight Tax",
+      "w": 0,
+      "h": 0,
+      "displayW": 432,
+      "displayH": 500,
+      "top": 4030
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/26195/image/7a432da10667436f3f6ab9eedb3091b7.jpg",
+      "alt": "WEB-Foto-Testimonial Charlotte Piller Lotta Ludwigson WbRvmp",
+      "w": 0,
+      "h": 0,
+      "displayW": 432,
+      "displayH": 500,
+      "top": 4030
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/9508/image/a5b4cb23ad68d85372e0965f9a305e70.jpg",
+      "alt": "Webfoto-Testimonial Klemens Witte GreenHomeNow WbRvmp",
+      "w": 0,
+      "h": 0,
+      "displayW": 432,
+      "displayH": 500,
+      "top": 4030
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/10061/image/73f2e59a2c783a5e6ccb39083993b70c.jpg",
+      "alt": "WEB-Foto-Testimonial Peter Frank Fleet WbRvmp",
+      "w": 0,
+      "h": 0,
+      "displayW": 432,
+      "displayH": 500,
+      "top": 4030
+    },
+    {
+      "src": "https://qonto.com/blog/assets/icons/arrow-left-white-67f02d51c324f55cc91707ee864dec596a690bae9962d314c1661b76867316ec.svg",
+      "alt": "",
+      "w": 139,
+      "h": 150,
+      "displayW": 18,
+      "displayH": 19,
+      "top": 4578
+    },
+    {
+      "src": "https://qonto.com/blog/assets/icons/arrow-right-white-e85003dcdb03c5b96f71b9bad592e612b3d07a636cb834659eb34ecfb35f5738.svg",
+      "alt": "",
+      "w": 139,
+      "h": 150,
+      "displayW": 18,
+      "displayH": 19,
+      "top": 4578
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/8701/image/76b3fd2728636419fca9020f5596d69d.svg",
+      "alt": "WEB Logo Black Valar",
+      "w": 0,
+      "h": 0,
+      "displayW": 106,
+      "displayH": 32,
+      "top": 4776
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/26255/image/9b5fb8d3a257b83cba862938e0899237.svg",
+      "alt": "Schwarzes Logo TCV",
+      "w": 0,
+      "h": 0,
+      "displayW": 80,
+      "displayH": 32,
+      "top": 4776
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/8705/image/784c3c5e919588801012d5d81c80a279.svg",
+      "alt": "WEB Logo Black Alven",
+      "w": 0,
+      "h": 0,
+      "displayW": 117,
+      "displayH": 32,
+      "top": 4776
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/33544/image/8de73d770b0dad5f8e4906907c73345a.svg",
+      "alt": "Web-Logo Europäischer Investitionsfonds",
+      "w": 0,
+      "h": 0,
+      "displayW": 122,
+      "displayH": 32,
+      "top": 4776
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/8722/image/947ea93b3a897bb9b9ac21093bbe8819.svg",
+      "alt": "WEB Logo Schwarz Tencent",
+      "w": 0,
+      "h": 0,
+      "displayW": 122,
+      "displayH": 32,
+      "top": 4776
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/8703/image/6083213f4ad7931c29e097de9114e672.svg",
+      "alt": "WEB Logo Schwarz DST Global",
+      "w": 0,
+      "h": 0,
+      "displayW": 54,
+      "displayH": 32,
+      "top": 4776
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/4567/image/cc23878469d051bc2d9adf983c14af33.svg",
+      "alt": "WEB Logo Black Tiger Global",
+      "w": 0,
+      "h": 0,
+      "displayW": 122,
+      "displayH": 32,
+      "top": 4776
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/4416/image/e721d2e6e9f4364e2cfb2c77211044b3.svg",
+      "alt": "WEB Logo Schwarz Eurazeo",
+      "w": 0,
+      "h": 0,
+      "displayW": 122,
+      "displayH": 32,
+      "top": 4776
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/8698/image/8fda4672e908029394a4361f246f81df.svg",
+      "alt": "WEB-Logo Schwarz Kohlberg Kravis Roberts KKR",
+      "w": 0,
+      "h": 0,
+      "displayW": 115,
+      "displayH": 32,
+      "top": 4776
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/8704/image/94d2d59fe48f8f5e0249d08d254d66b0.svg",
+      "alt": "WEB Logo Black Insight Partners",
+      "w": 0,
+      "h": 0,
+      "displayW": 94,
+      "displayH": 32,
+      "top": 4776
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/8702/image/d83eb11cc336e9d7e9b680859e193cae.svg",
+      "alt": "Weblogo ExorSeeds",
+      "w": 0,
+      "h": 0,
+      "displayW": 66,
+      "displayH": 32,
+      "top": 4776
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/8699/image/cc5861e67a5f942c8360028547c36ec9.svg",
+      "alt": "WEB-Logo Black Gaingels",
+      "w": 0,
+      "h": 0,
+      "displayW": 122,
+      "displayH": 32,
+      "top": 4776
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/8701/image/76b3fd2728636419fca9020f5596d69d.svg",
+      "alt": "WEB Logo Black Valar",
+      "w": 0,
+      "h": 0,
+      "displayW": 106,
+      "displayH": 32,
+      "top": 4776
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/26255/image/9b5fb8d3a257b83cba862938e0899237.svg",
+      "alt": "Schwarzes Logo TCV",
+      "w": 0,
+      "h": 0,
+      "displayW": 80,
+      "displayH": 32,
+      "top": 4776
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/8705/image/784c3c5e919588801012d5d81c80a279.svg",
+      "alt": "WEB Logo Black Alven",
+      "w": 0,
+      "h": 0,
+      "displayW": 117,
+      "displayH": 32,
+      "top": 4776
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/33544/image/8de73d770b0dad5f8e4906907c73345a.svg",
+      "alt": "Web-Logo Europäischer Investitionsfonds",
+      "w": 0,
+      "h": 0,
+      "displayW": 122,
+      "displayH": 32,
+      "top": 4776
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/8722/image/947ea93b3a897bb9b9ac21093bbe8819.svg",
+      "alt": "WEB Logo Schwarz Tencent",
+      "w": 0,
+      "h": 0,
+      "displayW": 122,
+      "displayH": 32,
+      "top": 4776
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/8703/image/6083213f4ad7931c29e097de9114e672.svg",
+      "alt": "WEB Logo Schwarz DST Global",
+      "w": 0,
+      "h": 0,
+      "displayW": 54,
+      "displayH": 32,
+      "top": 4776
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/4567/image/cc23878469d051bc2d9adf983c14af33.svg",
+      "alt": "WEB Logo Black Tiger Global",
+      "w": 0,
+      "h": 0,
+      "displayW": 122,
+      "displayH": 32,
+      "top": 4776
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/4416/image/e721d2e6e9f4364e2cfb2c77211044b3.svg",
+      "alt": "WEB Logo Schwarz Eurazeo",
+      "w": 0,
+      "h": 0,
+      "displayW": 122,
+      "displayH": 32,
+      "top": 4776
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/8698/image/8fda4672e908029394a4361f246f81df.svg",
+      "alt": "WEB-Logo Schwarz Kohlberg Kravis Roberts KKR",
+      "w": 0,
+      "h": 0,
+      "displayW": 115,
+      "displayH": 32,
+      "top": 4776
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/8704/image/94d2d59fe48f8f5e0249d08d254d66b0.svg",
+      "alt": "WEB Logo Black Insight Partners",
+      "w": 0,
+      "h": 0,
+      "displayW": 94,
+      "displayH": 32,
+      "top": 4776
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/8702/image/d83eb11cc336e9d7e9b680859e193cae.svg",
+      "alt": "Weblogo ExorSeeds",
+      "w": 0,
+      "h": 0,
+      "displayW": 66,
+      "displayH": 32,
+      "top": 4776
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/8699/image/cc5861e67a5f942c8360028547c36ec9.svg",
+      "alt": "WEB-Logo Black Gaingels",
+      "w": 0,
+      "h": 0,
+      "displayW": 122,
+      "displayH": 32,
+      "top": 4776
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/33672/image/35e22ac359ea12446cd06b37bafadfc7.jpg",
+      "alt": "Static asset",
+      "w": 0,
+      "h": 0,
+      "displayW": 560,
+      "displayH": 594,
+      "top": 4954
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/30497/image/141c131a420ffdedbd377d25d3a46f88.png",
+      "alt": "Badge Asset",
+      "w": 0,
+      "h": 0,
+      "displayW": 64,
+      "displayH": 64,
+      "top": 6696
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/30379/image/78e754601e375810276a314d7f30a28f.png",
+      "alt": "Badge Asset",
+      "w": 0,
+      "h": 0,
+      "displayW": 64,
+      "displayH": 64,
+      "top": 6696
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/33290/image/4d716bc1d461fd886072aa69f72a27a9.svg",
+      "alt": "Badge Asset",
+      "w": 0,
+      "h": 0,
+      "displayW": 64,
+      "displayH": 64,
+      "top": 7327
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/33292/image/2fc03ed3ce6ae6a41d5a48d3a28d2a16.svg",
+      "alt": "Badge Asset",
+      "w": 0,
+      "h": 0,
+      "displayW": 64,
+      "displayH": 64,
+      "top": 7327
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/33288/image/be9db9bbb1ec622eb1ff60f50068225d.svg",
+      "alt": "Badge Asset",
+      "w": 0,
+      "h": 0,
+      "displayW": 112,
+      "displayH": 64,
+      "top": 7327
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/33603/image/28fdb1711ea2f916e3bec2e6d618444c.svg",
+      "alt": "Facebook",
+      "w": 0,
+      "h": 0,
+      "displayW": 30,
+      "displayH": 30,
+      "top": 7297
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/33596/image/7bdc8481de0e4f2d4de7573b366e881b.svg",
+      "alt": "X",
+      "w": 0,
+      "h": 0,
+      "displayW": 30,
+      "displayH": 30,
+      "top": 7297
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/33598/image/ad73479e4a1febdc452fdc6b38103c57.svg",
+      "alt": "LinkedIn",
+      "w": 0,
+      "h": 0,
+      "displayW": 30,
+      "displayH": 30,
+      "top": 7297
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/33599/image/a15c6e786f3f8023ccad013037a91b99.svg",
+      "alt": "Instagram",
+      "w": 0,
+      "h": 0,
+      "displayW": 30,
+      "displayH": 30,
+      "top": 7297
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/33600/image/7e2829066f618f1ba81bb0b432749c52.svg",
+      "alt": "Medium",
+      "w": 0,
+      "h": 0,
+      "displayW": 30,
+      "displayH": 30,
+      "top": 7297
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/33597/image/881e0baa2430a366b2216103c1ef40ad.png",
+      "alt": "App Store",
+      "w": 0,
+      "h": 0,
+      "displayW": 0,
+      "displayH": 40,
+      "top": 7351
+    },
+    {
+      "src": "https://qonto.com/blog/images/asset/33601/image/88388e4f3b8841c069a0d761e4cd41f6.svg",
+      "alt": "Play Store",
+      "w": 0,
+      "h": 0,
+      "displayW": 0,
+      "displayH": 40,
+      "top": 7351
+    },
+    {
+      "src": "https://qonto.com/blog/assets/chatbot/qonto_chatbot-56b8c3650e8bb3982228c66ffcb0f9c7fff70352c8a74017efd59b5eb0401ad7.png",
+      "alt": "Qonto chatbot",
+      "w": 200,
+      "h": 200,
+      "displayW": 56,
+      "displayH": 56,
+      "top": 0
+    },
+    {
+      "src": "https://qonto.com/blog/assets/chatbot/qonto_chatbot-56b8c3650e8bb3982228c66ffcb0f9c7fff70352c8a74017efd59b5eb0401ad7.png",
+      "alt": "Qonto chatbot",
+      "w": 200,
+      "h": 200,
+      "displayW": 32,
+      "displayH": 32,
+      "top": 0
+    },
+    {
+      "src": "https://verifi.podscribe.com/tag?action=view&user_id=30a6f746-1c4d-44d2-8996-3528316e9313&advertiser=qonto&referrer=_&session_referrer=_&session_landing_url=https%3A%2F%2Fqonto.com%2Fde%2Fabout&device_id=pscrb_0bb12707-abe8-447d-adcb-6fb6f7c104d8&first_visited_at=1776968324340&stid=&ipv4=37.123.120.39&url=https%3A%2F%2Fqonto.com%2Fde%2Fabout&event_url=https%3A%2F%2Fqonto.com%2Fde%2Fabout&source=js-tag+v1.0.8&cachebust=1776968324695",
+      "alt": "",
+      "w": 1,
+      "h": 1,
+      "displayW": 1,
+      "displayH": 1,
+      "top": 0
+    },
+    {
+      "src": "https://id.rlcdn.com/464526.gif",
+      "alt": "",
+      "w": 0,
+      "h": 0,
+      "displayW": 0,
+      "displayH": 0,
+      "top": 0
+    },
+    {
+      "src": "https://bat.bing.com/action/0?ti=6001655&Ver=2&mid=16ddd71d-f277-4a1f-a164-7a1636c24103&bo=3&sid=dee85da03f4011f1b6c55f103a5bcbc1&vid=dee87f303f4011f19cd9f76871db3b22&vids=0&msclkid=N&pi=0&lg=de-DE&sw=1440&sh=900&sc=24&nwd=1&tl=%C3%9Cber%20Qonto%3A%20Ziele%20%26%20Hintergr%C3%BCnde%20jetzt%20entdecken&p=https%3A%2F%2Fqonto.com%2Fde%2Fabout&r=&lt=3316&evt=pageLoad&sv=2&asc=G&cdb=ARoT&rn=804598",
+      "alt": "",
+      "w": 0,
+      "h": 0,
+      "displayW": 0,
+      "displayH": 0,
+      "top": 0
+    }
+  ],
+  "videos": [
+    {
+      "src": "https://qonto.com/blog/images/cg%20-%20website%20customers%20horizontal.mp4",
+      "top": 0
+    }
+  ]
+}

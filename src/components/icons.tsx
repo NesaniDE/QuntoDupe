@@ -53,6 +53,14 @@ export function ArrowRightIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
+export function ArrowLeftIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden {...props}>
+      <path d="M16 10H4m0 0l5-5m-5 5l5 5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 export function ArrowUpRightIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden {...props}>
