@@ -7,24 +7,24 @@ type Item = { q: string; a: string };
 
 const ITEMS: Item[] = [
   {
-    q: "Was ist ein Geschäftskonto?",
-    a: "Ein Firmen- oder Geschäftskonto ist ein Konto, das speziell für Unternehmen und Selbstständige gedacht ist. Über ein Geschäftskonto werden ausschließlich betriebliche Einnahmen und Ausgaben transferiert. Es entspricht einem Konto für Privatleute, enthält allerdings meist umfangreichere Funktionen. Somit sind geschäftliche und private Finanzen des Unternehmers klar voneinander getrennt.",
+    q: "Welche Leistungen bietet Nesani?",
+    a: "Nesani bietet drei Leistungsstufen: Digitale Präsenz (Websites + Social Media), KI-Integration (KI-Workflows und KI-Assistenten) sowie Autonome Systeme (Autonome Agenten und individuelle Systemarchitektur). Jede Stufe baut auf der vorherigen auf und kann einzeln oder kombiniert umgesetzt werden.",
   },
   {
-    q: "Was kostet ein Firmenkonto?",
-    a: "Jedes Unternehmen ist anders und die Anforderungen an ein Geschäftskonto hängen stark von der Anzahl der Mitarbeitenden und dem Transaktionsvolumen ab. Qonto bietet daher skalierbare Pläne ab 0 € pro Monat für Einzelunternehmen bis hin zu Enterprise-Tarifen für größere Teams.",
+    q: "Wie läuft die Zusammenarbeit ab?",
+    a: "Erstgespräch, gemeinsame Analyse von Zielen und Rahmenbedingungen, klares Angebot, anschließend Umsetzung mit direktem Draht zum Entwickler. Keine Projektmanager-Ketten, keine Agentur-Overhead – ein Ansprechpartner von Anfang bis nach dem Launch.",
   },
   {
-    q: "Welche Vorteile bietet ein Qonto Geschäftskonto?",
-    a: "Qonto überzeugt mit schnellem und einfachem Online Banking und innovativen Finanztools für Unternehmer:innen, Gründer:innen, Selbstständige und Freiberufler:innen. Zu den Leistungen zählen Zahlungskarten, SEPA-Echtzeitüberweisungen, Auslandszahlungen, Apple Pay, Google Pay, digitale Spesenverwaltung, Budgetierungssoftware und Finanzreporting.",
+    q: "Welche Unternehmen arbeiten mit Nesani?",
+    a: "Unternehmen verschiedener Größen und Branchen – von Einzelunternehmern und Selbstständigen bis zu mittelständischen Betrieben. Gemeinsam ist ihnen der Anspruch, digitale Systeme nicht nur zu haben, sondern wirtschaftlich nutzbar zu machen.",
   },
   {
-    q: "Kann ich mit Qonto mein bisheriges Geschäftskonto wechseln?",
-    a: "Ja. Qonto bietet einen kostenlosen Kontowechselservice: Dauerauftragsdaten und wiederkehrende Zahlungen übertragen Sie unkompliziert zu Ihrem neuen Qonto Geschäftskonto.",
+    q: "Sind die Systeme auch ohne Nesani wartbar?",
+    a: "Ja. Jedes Projekt wird dokumentiert und so gebaut, dass Ihr Team (oder ein anderer Entwickler) die Systeme selbst weiterpflegen kann. Keine Blackbox, keine künstliche Abhängigkeit – das ist bewusste Grundhaltung.",
   },
   {
-    q: "Ist das Qonto Geschäftskonto sicher?",
-    a: "Ja. Qonto ist ein reguliertes Finanzinstitut, Kundengelder sind gesetzlich abgesichert und es gelten Top-Standards für IT-Sicherheit und Datenschutz.",
+    q: "Kann ich mit einer kleinen Leistung starten und später erweitern?",
+    a: "Unbedingt. Viele Unternehmen beginnen mit einer Website oder einem einzelnen Workflow und erweitern später um KI-Assistenten oder autonome Agenten. Die Stufen sind modular gedacht, nicht als festes Paket.",
   },
 ];
 
@@ -35,7 +35,7 @@ export function OaFaq() {
     <section className="bg-white text-[#050505]">
       <div className="mx-auto max-w-[1120px] px-5 md:px-8 lg:px-12 py-20 md:py-28 lg:py-32">
         <h2 className="font-sans font-semibold text-[36px] md:text-[48px] lg:text-[56px] leading-[1.05] tracking-[-0.02em] max-w-[22ch]">
-          Häufig gestellte Fragen zum Geschäftskonto
+          Häufig gestellte Fragen zur Zusammenarbeit
         </h2>
 
         <div className="mt-10 divide-y divide-[#050505]/10 border-y border-[#050505]/10">

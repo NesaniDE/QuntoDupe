@@ -14,24 +14,24 @@ type Tab = {
 
 const TABS: Tab[] = [
   {
-    key: "klein",
-    label: "Kleinunternehmen",
-    title: "Passgenaues Firmenkonto für Kleinunternehmen",
-    copy: "Digitales Kontomanagement, integrierte Rechnungsstellung und ein erstklassiger Kundenservice – alles in einem.",
+    key: "stufe1",
+    label: "Stufe 01 · Digitale Präsenz",
+    title: "Sichtbar werden, bevor es skaliert.",
+    copy: "Website und Markenauftritt als Fundament: moderne, schnelle Umsetzung und eine konsistente Online-Präsenz, auf der alles Weitere aufbauen kann.",
     img: "/images/oa-33408-829a09d824.avif",
   },
   {
-    key: "solo",
-    label: "Selbstständige",
-    title: "Das Geschäftskonto für Selbstständige",
-    copy: "Steueroptimierung, DATEV-Schnittstelle und automatisierte Belegverwaltung – Zeit sparen, Fokus auf Ihr Business.",
+    key: "stufe2",
+    label: "Stufe 02 · KI-Integration",
+    title: "Wiederkehrende Arbeit verschwindet.",
+    copy: "KI-Workflows und Assistenten übernehmen Routine – strukturiert, messbar und integriert in die Tools, die Ihr Team ohnehin nutzt.",
     img: "/images/oa-33412-a33120a38f.avif",
   },
   {
-    key: "kmu",
-    label: "KMU",
-    title: "Die richtige Lösung für wachsende KMU",
-    copy: "Teambudgets, Firmenkarten, Ausgabenmanagement und Cashflow-Übersicht – skalierbare Finanzprozesse für Ihr Team.",
+    key: "stufe3",
+    label: "Stufe 03 · Autonome Systeme",
+    title: "Systeme, die eigenständig liefern.",
+    copy: "Autonome Agenten und individuelle Systemarchitektur: maßgeschneiderte Software, die selbstständig beobachtet, entscheidet und handelt – mit sauberer Dokumentation und voller Kontrolle.",
     img: "/images/oa-33280-7d5866da7f.avif",
   },
 ];
@@ -45,13 +45,13 @@ export function OaIndividual() {
       <div className="mx-auto max-w-[1344px] px-5 md:px-8 lg:px-12 py-20 md:py-28 lg:py-32">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
           <h2 className="font-sans font-semibold text-[36px] md:text-[48px] lg:text-[56px] leading-[1.05] tracking-[-0.02em] max-w-[20ch]">
-            Ein Firmenkonto, so individuell wie Ihr Business.
+            Drei Stufen, so individuell wie Ihr Business.
           </h2>
           <a
             href="#"
             className="inline-flex items-center gap-1.5 rounded-full bg-white text-[#050505] text-[15px] font-semibold px-5 py-3 hover:bg-white/90 transition self-start"
           >
-            Konto eröffnen
+            Projekt anfragen
             <ArrowUpRightIcon className="w-4 h-4" />
           </a>
         </div>

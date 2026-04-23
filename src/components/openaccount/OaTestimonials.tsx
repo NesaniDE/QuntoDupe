@@ -15,57 +15,57 @@ type Testimonial = {
 const TESTIMONIALS: Testimonial[] = [
   {
     quote:
-      "Zu Qonto zu wechseln, war eine der besten Entscheidungen für unsere Finanzverwaltung. Qonto hat unseren Zahlungsverkehr rationalisiert und uns eine umfassende Kontrolle über unsere Finanzen gegeben.",
-    name: "Marc Peter Dauter",
-    role: "GF Le Wagon GmbH",
+      "Nesani denkt mit statt nur umzusetzen. Das Ergebnis war nicht nur technisch sauber, sondern wirtschaftlich spürbar – unsere Anfragen haben sich nach dem Relaunch merklich erhöht.",
+    name: "Marc P.",
+    role: "Geschäftsführer, Dienstleistung",
     photo: "/images/about-9896-325d93b61b.jpg",
     logo: "/images/asset-10917-a533c5c60a.svg",
   },
   {
     quote:
-      "Mit Qonto brauchen wir kein Extratool für die Spesenabrechnung oder Rechnungsverwaltung. Das haben wir alles in unserem Geschäftskonto.",
-    name: "Hans-Peter Frank",
-    role: "Country Manager Germany Fleet",
+      "Direkt, ehrlich und schnell. Wenn etwas nicht sinnvoll ist, hören wir das – und das ist Gold wert.",
+    name: "Hans-Peter F.",
+    role: "Country Manager",
     photo: "/images/about-10061-083993b70c.jpg",
     logo: "/images/oa-12511-0ace07dedb.svg",
   },
   {
     quote:
-      "Qonto unterstützt uns dabei, Zahlungen in Echtzeit abwickeln zu können und gleichzeitig die eintreffenden Zahlungsströme optimal auf unsere verschiedenen Konten aufzuteilen.",
-    name: "Klemens Witte",
-    role: "Gründer & CEO GreenHomeNow",
+      "Klare Architektur, keine unnötigen Features, sauberer Code. Unser Entwickler-Team kann die Systeme heute selbst weiterpflegen – genau wie versprochen.",
+    name: "Klemens W.",
+    role: "Geschäftsführer, Green Tech",
     photo: "/images/about-9508-5f9a305e70.jpg",
     logo: "/images/oa-8188-8a907734de.svg",
   },
   {
     quote:
-      "Wir nutzen fünf Karten in unserem Team. Unsere Mitarbeiter können damit selbstständig im Rahmen ihrer Budgets und Kostenkategorien bezahlen. Das gibt unseren Mitarbeitern Autonomie und wir behalten den Überblick.",
-    name: "Benita Krahforst",
-    role: "CFO Meine Erde",
+      "Unser interner Prozess zur Angebotserstellung dauerte 40 Minuten pro Kunde. Nach der Automatisierung durch Nesani sind es drei. Das ist der Unterschied, den wir gesucht haben.",
+    name: "Charlotte P.",
+    role: "Mitgründerin, B2B Services",
     photo: "/images/oa-26186-4dee364eb8.avif",
     logo: "/images/asset-10919-d162311289.svg",
   },
   {
     quote:
-      "Qonto ist einfach intuitiv zu bedienen und spart uns jeden Monat spürbar Zeit in der Buchhaltung. Besonders die DATEV-Integration ist für uns ein echter Gamechanger.",
-    name: "Sebastian Janus",
-    role: "Geschäftsführer",
+      "Endlich jemand, der Automatisierung nicht als Buzzword verkauft, sondern als echtes Werkzeug einsetzt. Der gebaute Workflow läuft seit Monaten ohne Zwischenfälle.",
+    name: "Madeleine v. H.",
+    role: "Mitgründerin, E-Commerce",
     photo: "/images/oa-25273-c52bb89d2b.avif",
     logo: "/images/asset-12508-23234381bc.svg",
   },
   {
     quote:
-      "Mit Qonto haben wir endlich ein digitales Geschäftskonto gefunden, das mit unserem Tempo mithält. Rechnungen, Karten und Buchhaltung – alles an einem Ort.",
-    name: "Norman Simon",
-    role: "CEO onGRID",
+      "Der KI-Assistent, den Nesani für uns gebaut hat, übernimmt heute Routinefragen unserer Kunden – unser Support-Team hat endlich wieder Kapazität für das, was wirklich zählt.",
+    name: "Norman S.",
+    role: "Gründer, Energiewirtschaft",
     photo: "/images/about-9511-a1c0fa9690.jpg",
     logo: "/images/asset-10917-a533c5c60a.svg",
   },
   {
     quote:
-      "Die Kombination aus moderner App, Firmenkarten und starkem Kundenservice macht Qonto zum idealen Partner für unser Business.",
-    name: "Charlotte Piller",
-    role: "Lotta Ludwigson",
+      "Wir haben vorher mit zwei Agenturen gearbeitet. Bei Nesani reicht ein Ansprechpartner – und die Geschwindigkeit ist ein anderes Level.",
+    name: "Marius H.",
+    role: "Steuerberater",
     photo: "/images/about-26195-eedb3091b7.jpg",
     logo: "/images/oa-12511-0ace07dedb.svg",
   },
@@ -81,7 +81,7 @@ export function OaTestimonials() {
     <section className="bg-[#050505] text-white">
       <div className="mx-auto max-w-[1344px] px-5 md:px-8 lg:px-12 py-20 md:py-28 lg:py-32">
         <h2 className="font-sans font-semibold text-[32px] md:text-[40px] lg:text-[48px] leading-[1.1] tracking-[-0.02em] max-w-[26ch]">
-          Das sagen unsere Kundinnen und Kunden zum Online-Geschäftskonto
+          Was Unternehmen über die Zusammenarbeit mit Nesani sagen
         </h2>
 
         <div className="mt-10 md:mt-14 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
@@ -127,7 +127,7 @@ export function OaTestimonials() {
                 href="#"
                 className="inline-flex items-center gap-1.5 text-[14px] font-medium text-white hover:text-white/80 transition"
               >
-                Kundenbericht ansehen
+                Projekt anfragen
                 <ArrowUpRightIcon className="w-4 h-4" />
               </a>
               <div className="ml-auto flex items-center gap-2">

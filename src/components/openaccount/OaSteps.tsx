@@ -1,18 +1,18 @@
 const STEPS = [
   {
     num: "Schritt 1",
-    title: "Kontoeröffnung online starten",
-    copy: "Geben Sie die alle nötigen Informationen zu Ihnen und Ihrem Unternehmen an.",
+    title: "Erstgespräch & Analyse",
+    copy: "Wir klären Ziele, Rahmen und Engpässe – ehrlich, ohne Verkaufsshow und mit klarer Empfehlung, welche Stufe zu Ihnen passt.",
   },
   {
     num: "Schritt 2",
-    title: "Wir überprüfen Ihre Identität",
-    copy: "Reichen Sie einen Identitätsnachweis ein und verifizieren Sie sich per Videocall.",
+    title: "Umsetzung mit direktem Draht",
+    copy: "Entwicklung mit kurzen Abstimmungen statt langer Briefings. Ein Ansprechpartner, klare Meilensteine, sichtbarer Fortschritt.",
   },
   {
     num: "Schritt 3",
-    title: "Geschäftskonto ist eröffnet",
-    copy: "Wählen Sie eine Firmenkarte und erhalten Sie eine IBAN für Ihr Geschäftskonto.",
+    title: "Launch & Weiterbetrieb",
+    copy: "Sauberer Go-Live mit Dokumentation, Übergabe und langfristiger Betreuung – damit das System mit Ihrem Unternehmen mitwächst.",
   },
 ];
 
@@ -21,7 +21,7 @@ export function OaSteps() {
     <section className="bg-[#050505] text-white">
       <div className="mx-auto max-w-[1344px] px-5 md:px-8 lg:px-12 py-20 md:py-28 lg:py-32">
         <h2 className="font-sans font-semibold text-[40px] md:text-[56px] lg:text-[64px] leading-[1.05] tracking-[-0.02em] max-w-[16ch]">
-          Geschäftskonto in nur 3 Schritten eröffnen
+          In drei Schritten zum Ergebnis.
         </h2>
 
         <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">

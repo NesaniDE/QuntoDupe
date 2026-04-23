@@ -2,9 +2,9 @@ import Image from "next/image";
 import { StarIcon } from "@/components/icons";
 
 const RATINGS = [
-  { name: "Trustpilot", value: "4,8" },
-  { name: "Capterra", value: "4,5" },
-  { name: "G2", value: "4,8" },
+  { name: "Eigenentwicklung", value: "100 %" },
+  { name: "Direkter Kontakt", value: "1:1" },
+  { name: "Zwischenagenturen", value: "0" },
 ];
 
 export function OaHero() {
@@ -19,7 +19,6 @@ export function OaHero() {
                   <span className="font-semibold text-[#050505]">
                     {r.value}
                   </span>
-                  <span className="hidden sm:inline">von 5</span>
                   <StarIcon className="w-4 h-4 text-[#050505]" />
                   <span className="font-medium">{r.name}</span>
                 </div>
@@ -27,42 +26,41 @@ export function OaHero() {
             </div>
 
             <h1 className="font-sans font-semibold text-[44px] md:text-[60px] lg:text-[80px] leading-[1.02] tracking-[-0.025em] max-w-[15ch]">
-              Geschäftskonto online eröffnen
+              Drei Stufen. Sechs Leistungen.
             </h1>
             <p className="mt-6 md:mt-8 text-[16px] md:text-[18px] leading-[1.55] text-[#050505]/80 max-w-[52ch]">
-              Eröffnen Sie ein{" "}
+              Von der{" "}
               <span className="font-semibold">
-                digitales Geschäftskonto mit deutscher IBAN online in nur 10
-                Minuten
+                digitalen Präsenz bis zu autonomen Systemen
               </span>
-              . Physische & virtuelle Firmenkarten, SEPA-Echtzeit- und
-              internationale Überweisungen im Firmenkonto inklusive. Schnelle
-              Geschäftskredite zu maßgeschneiderten Konditionen.
+              . Websites, KI-Workflows und maßgeschneiderte Software – gebaut
+              von einem Ansprechpartner, direkt aus Schwäbisch Gmünd. Klarer
+              Stack, wartbarer Code, messbare Wirkung.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href="#"
                 className="inline-flex items-center rounded-full bg-[#050505] text-white text-[15px] font-semibold px-5 py-3 hover:bg-black/90 transition"
               >
-                Geschäftskonto eröffnen
+                Projekt anfragen
               </a>
               <a
                 href="#pricing"
                 className="inline-flex items-center rounded-full border border-[#050505]/20 text-[#050505] text-[15px] font-semibold px-5 py-3 hover:bg-[#050505]/5 transition"
               >
-                Preise einsehen
+                Leistungen ansehen
               </a>
             </div>
 
             <div className="mt-10 flex items-center gap-3 text-[13px] text-[#050505]/70">
               <Image
                 src="/images/oa-33279-a0d1dc7b5b.png"
-                alt="DATEV Partner und TÜV SÜD"
+                alt="Nesani Qualitätsversprechen"
                 width={120}
                 height={36}
                 className="h-8 w-auto object-contain"
               />
-              <span>Wir sind DATEV Partner und TÜV SÜD-zertifiziert.</span>
+              <span>Sauberer Code, klare Architektur, langfristig wartbar.</span>
             </div>
           </div>
 
@@ -70,7 +68,7 @@ export function OaHero() {
             <div className="relative aspect-[5/4]">
               <Image
                 src="/images/oa-33411-7f630c368e.avif"
-                alt="Qonto Geschäftskonto UI"
+                alt="Nesani Leistungen"
                 fill
                 priority
                 sizes="(min-width:1024px) 640px, 100vw"

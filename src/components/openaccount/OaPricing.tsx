@@ -15,151 +15,106 @@ type Plan = {
 };
 
 const SEGMENTS = [
-  { key: "solo", label: "Selbstständige" },
-  { key: "sme", label: "1-9 Mitarbeiter" },
-  { key: "team", label: "10-250+ Mitarbeiter" },
+  { key: "stufe1", label: "Stufe 01 · Digitale Präsenz" },
+  { key: "stufe2", label: "Stufe 02 · KI-Integration" },
+  { key: "stufe3", label: "Stufe 03 · Autonome Systeme" },
 ] as const;
 
 type SegmentKey = (typeof SEGMENTS)[number]["key"];
 
 const PLANS: Record<SegmentKey, Plan[]> = {
-  solo: [
+  stufe1: [
     {
-      name: "Starter",
-      badge: "Neu",
-      price: "0 €",
-      sub: "Für Freiberufler:innen & Einzelunternehmen",
+      name: "Websites",
+      badge: "Einstieg",
+      price: "Stufe 01",
+      sub: "Moderne, performante Websites – technisch sauber und auf Conversion ausgelegt.",
       bullets: [
-        "1 Konto mit DE-IBAN",
-        "1 virtuelle Karte (physische Karte zubuchbar)",
-        "5 Transaktionen / Monat",
+        "Individuelles Design statt Baukasten",
+        "SEO-Grundlagen und schnelle Ladezeiten",
+        "Wartbarer Code mit klarer Dokumentation",
       ],
-      cta: "Wählen",
-      ctaNote: "Ohne Vertragsbindung",
+      cta: "Projekt anfragen",
+      ctaNote: "Unverbindliches Erstgespräch",
     },
     {
-      name: "Basic",
-      price: "Ab 9 €",
-      priceNote: "/ Monat (exkl. MwSt.)",
-      sub: "Mit E-Rechnungsfunktionen, integrierter Buchhaltung & einer physischen Karte.",
+      name: "Social Media & Online-Präsenz",
+      price: "Stufe 01",
+      sub: "Konsistente Markenpräsenz über Kanäle hinweg – sichtbar und anschlussfähig.",
       bullets: [
-        "1 Konto mit DE-IBAN",
-        "1 One Card Mastercard + 2 virtuelle Karten",
-        "30 Transaktionen / Monat",
+        "Kanal-Strategie statt Zufallsposts",
+        "Inhalte, die zur Marke passen",
+        "Messbare Reichweite und Kontakte",
       ],
-      cta: "Kostenlos testen",
-      ctaNote: "30 Tage unverbindlich",
-    },
-    {
-      name: "Smart",
-      badge: "Bestseller",
-      price: "Ab 19 €",
-      priceNote: "/ Monat (exkl. MwSt.)",
-      sub: "Das erweiterte Geschäftskonto mit direktem Buchhaltungszugriff, Rechnungs- & Buchhaltungstools.",
-      bullets: [
-        "1 Konto mit DE-IBAN",
-        "1 Plus Card + 2 virtuelle Karten",
-        "100 Transaktionen / Monat",
-      ],
-      cta: "Wählen",
-      ctaNote: "1 Monat kostenlos testen.",
+      cta: "Projekt anfragen",
+      ctaNote: "Unverbindliches Erstgespräch",
     },
   ],
-  sme: [
+  stufe2: [
     {
-      name: "Basic",
-      price: "Ab 9 €",
-      priceNote: "/ Monat (exkl. MwSt.)",
-      sub: "Das Geschäftskonto mit integrierten Rechnungstools vereinfacht Ihr tägliches Finanzmanagement.",
-      bullets: [
-        "1 Konto mit DE-IBAN",
-        "1 One Card Mastercard + 2 virtuelle Karten",
-        "30 Transaktionen / Monat",
-      ],
-      cta: "Wählen",
-      ctaNote: "1 Monat kostenlos testen.",
-    },
-    {
-      name: "Smart",
+      name: "KI-Workflows & Automatisierung",
       badge: "Bestseller",
-      price: "Ab 19 €",
-      priceNote: "/ Monat (exkl. MwSt.)",
-      sub: "Das erweiterte Geschäftskonto mit direktem Buchhaltungszugriff, Rechnungs- & Buchhaltungstools.",
+      price: "Stufe 02",
+      sub: "Wiederkehrende Prozesse in klare, wartbare Automatisierungen überführen.",
       bullets: [
-        "1 Konto mit DE-IBAN",
-        "1 Plus Card + 2 virtuelle Karten",
-        "100 Transaktionen / Monat",
+        "Analyse vor Aufbau – kein Overengineering",
+        "Schnittstellen zu bestehenden Tools",
+        "Dokumentierte, nachvollziehbare Workflows",
       ],
-      cta: "Wählen",
-      ctaNote: "1 Monat kostenlos testen.",
+      cta: "Projekt anfragen",
+      ctaNote: "Unverbindliches Erstgespräch",
     },
     {
-      name: "Premium",
-      price: "Ab 39 €",
-      priceNote: "/ Monat (exkl. MwSt.)",
-      sub: "Das leistungsstarke Geschäftskonto mit Premium Kundenservice, Rechnungs- & Buchhaltungstools.",
+      name: "KI-Assistenten & Chatbots",
+      price: "Stufe 02",
+      sub: "Eigene Assistenten, die Routineanfragen übernehmen und Ihr Team entlasten.",
       bullets: [
-        "1 Konto mit DE-IBAN",
-        "1 Metal Card + unlimitierte virtuelle Karten",
-        "500 Transaktionen / Monat",
+        "Trainiert auf Ihre Inhalte und Prozesse",
+        "Integriert in bestehende Kanäle",
+        "Überwachbar, anpassbar, messbar",
       ],
-      cta: "Wählen",
-      ctaNote: "1 Monat kostenlos testen.",
+      cta: "Projekt anfragen",
+      ctaNote: "Unverbindliches Erstgespräch",
     },
   ],
-  team: [
+  stufe3: [
     {
-      name: "Essential",
-      price: "Ab 49 €",
-      priceNote: "/ Monat (exkl. MwSt.)",
-      sub: "Vereinfachte Finanzverwaltung im Team, mit Ausgabenmanagement, Buchhaltungs- und Cashflow-Tools.",
+      name: "Autonome Agenten",
+      price: "Stufe 03",
+      sub: "Systeme, die selbstständig beobachten, entscheiden und ausführen.",
       bullets: [
-        "2 Konten mit DE-IBAN",
-        "5 One Cards Mastercard enthalten",
-        "500 Transaktionen / Monat",
+        "Klare Ziele, klare Leitplanken",
+        "Modulare Agenten-Architektur",
+        "Protokollierung und Kontrolle inklusive",
       ],
-      cta: "Wählen",
-      ctaNote: "1 Monat kostenlos testen.",
+      cta: "Projekt anfragen",
+      ctaNote: "Unverbindliches Erstgespräch",
     },
     {
-      name: "Business",
-      badge: "Bestseller",
-      price: "Ab 99 €",
-      priceNote: "/ Monat (exkl. MwSt.)",
-      sub: "Die integrierte Finanzmanagement-Lösung passt sich Ihren Abläufen an, mit Premium-Kundenservice.",
+      name: "Individuelle Systemarchitektur",
+      badge: "Premium",
+      price: "Stufe 03",
+      sub: "Maßgeschneiderte Softwarelösungen für anspruchsvolle Anforderungen.",
       bullets: [
-        "5 Konten mit DE-IBAN",
-        "15 Plus Cards enthalten",
-        "2.000 Transaktionen / Monat",
+        "Architektur, die zu Ihrem Business passt",
+        "Saubere Trennung, sauberer Code",
+        "Gebaut für Skalierung und Wartbarkeit",
       ],
-      cta: "Wählen",
-      ctaNote: "1 Monat kostenlos testen.",
-    },
-    {
-      name: "Enterprise",
-      price: "Ab 199 €",
-      priceNote: "/ Monat (exkl. MwSt.)",
-      sub: "Die ultimative Finanzlösung für Teams, mit den höchsten Limits und Premium Kundenservice.",
-      bullets: [
-        "25 Konten mit DE-IBAN",
-        "30 Metal Cards enthalten",
-        "Unlimitierte Transaktionen",
-      ],
-      cta: "Wählen",
-      ctaNote: "1 Monat kostenlos testen.",
+      cta: "Projekt anfragen",
+      ctaNote: "Unverbindliches Erstgespräch",
     },
   ],
 };
 
 export function OaPricing() {
-  const [seg, setSeg] = useState<SegmentKey>("solo");
+  const [seg, setSeg] = useState<SegmentKey>("stufe1");
   const plans = PLANS[seg];
 
   return (
     <section id="pricing" className="bg-white text-[#050505]">
       <div className="mx-auto max-w-[1344px] px-5 md:px-8 lg:px-12 py-20 md:py-28 lg:py-32">
         <h2 className="font-sans font-semibold text-[36px] md:text-[48px] lg:text-[56px] leading-[1.05] tracking-[-0.02em] text-center max-w-[22ch] mx-auto">
-          Preise, die zu Ihrem Business passen
+          Leistungen, die zu Ihrem Business passen
         </h2>
 
         <div className="mt-10 flex justify-center">
@@ -186,7 +141,7 @@ export function OaPricing() {
           </div>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[880px] mx-auto">
           {plans.map((p) => {
             const highlight = p.badge === "Bestseller";
             return (
@@ -217,7 +172,7 @@ export function OaPricing() {
                   )}
                 </div>
                 <div className="mt-4 flex items-baseline gap-2">
-                  <span className="font-sans font-semibold text-[36px] md:text-[44px] leading-none">
+                  <span className="font-sans font-semibold text-[28px] md:text-[32px] leading-none">
                     {p.price}
                   </span>
                   {p.priceNote && (

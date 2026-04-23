@@ -9,26 +9,26 @@ type Feature = {
 
 const FEATURES: Feature[] = [
   {
-    title: "Rechnungsverwaltung",
-    copy: "Automatisiert sammeln und auslesen, GoBD-konform speichern: Verwalten Sie Ihre Rechnungen digital, direkt in Ihrem Qonto Geschäftskonto!",
+    title: "Moderne Web-Entwicklung",
+    copy: "Schnell ladende Websites und Web-Apps auf Basis moderner Stacks – sauber strukturiert, SEO-freundlich und bereit zu wachsen.",
     img: "/images/oa-33319-03e993664a.avif",
     span: "lg:col-span-7",
   },
   {
-    title: "Cashflow Management",
-    copy: "Analysefähige Diagramme, Echtzeit-Warnungen und automatisch kategorisierte Transaktionen.",
+    title: "Automatisierte Prozesse",
+    copy: "Wiederkehrende Abläufe in klare, wartbare Workflows überführen – messbar, dokumentiert und mit Übergabe.",
     img: "/images/oa-33315-400d5133a8.avif",
     span: "lg:col-span-5",
   },
   {
-    title: "Finanzierung",
-    copy: "Geschäftskredite bis zu 1 Mio. € online beantragen und flexible Pay-Later-Optionen nutzen.",
+    title: "KI-Assistenten",
+    copy: "Eigene Assistenten, die Routineanfragen übernehmen – trainiert auf Ihre Inhalte, integriert in Ihre Kanäle.",
     img: "/images/oa-33317-272cbaceb8.avif",
     span: "lg:col-span-5",
   },
   {
-    title: "Ausgabenmanagement",
-    copy: "Teambudgets, Genehmigungen und Zahlungslimits für Firmenkarten.",
+    title: "Individuelle Systeme",
+    copy: "Maßgeschneiderte Softwarelösungen mit klarer Architektur – gebaut für Skalierung, Wartbarkeit und volle Kontrolle.",
     img: "/images/oa-33314-0773e7fc1a.avif",
     span: "lg:col-span-7",
   },
@@ -39,7 +39,7 @@ export function OaFeatures() {
     <section className="bg-white text-[#050505]">
       <div className="mx-auto max-w-[1344px] px-5 md:px-8 lg:px-12 py-20 md:py-28 lg:py-32">
         <h2 className="font-sans font-semibold text-[36px] md:text-[48px] lg:text-[56px] leading-[1.05] tracking-[-0.02em] max-w-[22ch]">
-          Umfassende Funktionen im Qonto Firmenkonto
+          Alles, was Unternehmen digital wirklich brauchen.
         </h2>
 
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-5 md:gap-6">
