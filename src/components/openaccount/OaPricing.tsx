@@ -53,7 +53,6 @@ const PLANS: Record<SegmentKey, Plan[]> = {
   stufe2: [
     {
       name: "KI-Workflows & Automatisierung",
-      badge: "Bestseller",
       price: "Stufe 02",
       sub: "Wiederkehrende Prozesse in klare, wartbare Automatisierungen überführen.",
       bullets: [

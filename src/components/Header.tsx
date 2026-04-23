@@ -9,31 +9,45 @@ const NAV_ITEMS = [
   { label: "Über uns", href: "/about" },
 ];
 
-export function Header() {
+type HeaderProps = {
+  variant?: "transparent" | "solid";
+};
+
+export function Header({ variant = "solid" }: HeaderProps) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    if (variant !== "transparent") return;
     const on = () => setScrolled(window.scrollY > 40);
     on();
     window.addEventListener("scroll", on, { passive: true });
     return () => window.removeEventListener("scroll", on);
-  }, []);
+  }, [variant]);
+
+  const isLight =
+    variant === "transparent" ? !scrolled : false;
 
   return (
     <header
       className={[
         "fixed inset-x-0 top-0 z-[100] h-20 transition-all duration-300",
-        scrolled
-          ? "backdrop-blur-md bg-black/70 text-white"
-          : "bg-transparent text-white",
+        variant === "transparent"
+          ? scrolled
+            ? "backdrop-blur-md bg-black/70 text-white"
+            : "bg-transparent text-white"
+          : "backdrop-blur-md bg-white/85 text-[#050505] border-b border-black/5",
       ].join(" ")}
     >
       <nav className="flex h-full items-center justify-between px-5 lg:px-12">
         <div className="flex items-center gap-x-10">
-          <Link href="/" aria-label="SHM" className="flex items-center">
+          <Link href="/" aria-label="Nesani" className="flex items-center">
             <Image
-              src="/images/shm-logo-white.png"
-              alt="SHM"
+              src={
+                isLight || variant === "transparent"
+                  ? "/images/shm-logo-white.png"
+                  : "/images/shm-logo-black.png"
+              }
+              alt="Nesani"
               width={40}
               height={40}
               priority
@@ -56,9 +70,14 @@ export function Header() {
 
         <Link
           href="#"
-          className="inline-flex items-center justify-center rounded-full bg-white text-black text-sm font-semibold px-4 py-2.5 hover:bg-white/90 transition"
+          className={[
+            "inline-flex items-center justify-center rounded-full text-sm font-semibold px-4 py-2.5 transition",
+            variant === "transparent"
+              ? "bg-white text-black hover:bg-white/90"
+              : "bg-[#050505] text-white hover:bg-black/90",
+          ].join(" ")}
         >
-          Projektanfragen
+          Projekt anfragen
         </Link>
       </nav>
     </header>

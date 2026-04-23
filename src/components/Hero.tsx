@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { StarIcon } from "@/components/icons";
 
 export function Hero() {
   return (
@@ -37,10 +36,7 @@ export function Hero() {
 
       {/* Content grid */}
       <div className="relative z-40 flex h-full min-h-[100svh] flex-col justify-end pb-12 pt-28 px-5 lg:px-12">
-        {/* Top-left rating */}
-        <div className="flex-1 flex items-start pt-6">
-          <TrustpilotBadge />
-        </div>
+        <div className="flex-1" />
 
         {/* Headline + CTA */}
         <div className="flex flex-col gap-y-6 lg:max-w-[870px]">
@@ -61,19 +57,5 @@ export function Hero() {
         </div>
       </div>
     </section>
-  );
-}
-
-function TrustpilotBadge() {
-  return (
-    <div className="inline-flex items-center gap-2 text-[13px] font-medium text-white/95">
-      <span className="text-white">4,8 von 5</span>
-      <span className="flex items-center gap-[2px]">
-        {Array.from({ length: 5 }).map((_, i) => (
-          <StarIcon key={i} className="w-3.5 h-3.5 text-[#2ac27a]" />
-        ))}
-      </span>
-      <span className="text-white/90">Trustpilot</span>
-    </div>
   );
 }

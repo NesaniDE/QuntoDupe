@@ -12,7 +12,7 @@ import { Footer } from "@/components/Footer";
 export default function Home() {
   return (
     <>
-      <Header />
+      <Header variant="transparent" />
       <main className="website">
         <Hero />
         <FeaturesBento />

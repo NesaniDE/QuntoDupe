@@ -52,14 +52,7 @@ export function OaHero() {
               </a>
             </div>
 
-            <div className="mt-10 flex items-center gap-3 text-[13px] text-[#050505]/70">
-              <Image
-                src="/images/oa-33279-a0d1dc7b5b.png"
-                alt="Nesani Qualitätsversprechen"
-                width={120}
-                height={36}
-                className="h-8 w-auto object-contain"
-              />
+            <div className="mt-10 text-[13px] text-[#050505]/70">
               <span>Sauberer Code, klare Architektur, langfristig wartbar.</span>
             </div>
           </div>
