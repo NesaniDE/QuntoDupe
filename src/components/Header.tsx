@@ -7,6 +7,7 @@ import Image from "next/image";
 const NAV_ITEMS = [
   { label: "Leistungen", href: "/open-account" },
   { label: "Über uns", href: "/about" },
+  { label: "Blog", href: "/blog" },
 ];
 
 type HeaderProps = {

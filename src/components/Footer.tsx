@@ -18,6 +18,7 @@ const COLS: { heading: string; links: { label: string; href: string }[] }[] = [
     links: [
       { label: "Über uns", href: "/about" },
       { label: "Leistungen", href: "/open-account" },
+      { label: "Blog", href: "/blog" },
     ],
   },
   {
