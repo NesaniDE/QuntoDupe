@@ -1,10 +1,10 @@
 import Image from "next/image";
 
 const STATS: { icon: string; number: string; label: string }[] = [
-  { icon: "/images/about-33294-e5339e53fe.svg", number: "600.000+", label: "Unternehmen" },
-  { icon: "/images/about-26584-7025a75b1d.svg", number: "In 8 europäischen", label: "Märkten" },
-  { icon: "/images/about-27327-75fc42b6a9.svg", number: "250.000+", label: "Gründungen" },
-  { icon: "/images/about-27326-9e1b56548d.svg", number: "100 Mio. €", label: "finanziert" },
+  { icon: "/images/about-33294-e5339e53fe.svg", number: "100%", label: "Eigenentwicklung" },
+  { icon: "/images/about-26584-7025a75b1d.svg", number: "1:1", label: "Direkter Kontakt" },
+  { icon: "/images/about-27327-75fc42b6a9.svg", number: "∞", label: "Wartbarkeit" },
+  { icon: "/images/about-27326-9e1b56548d.svg", number: "0", label: "Zwischenagenturen" },
 ];
 
 export function StatsStrip() {

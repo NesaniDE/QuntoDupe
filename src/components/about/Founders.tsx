@@ -8,7 +8,7 @@ export function Founders() {
           <div className="relative overflow-hidden rounded-2xl md:rounded-3xl aspect-[4/3]">
             <Image
               src="/images/about-33673-be1b677cce.avif"
-              alt="Gründer Alexandre Prot und Steve Anavi"
+              alt="Nedim Hasani — Gründer von Nesani"
               fill
               sizes="(min-width:1024px) 640px, 100vw"
               className="object-cover"
@@ -17,17 +17,17 @@ export function Founders() {
         </div>
         <div className="lg:col-span-6 lg:pl-6">
           <h2 className="font-sans font-semibold text-[36px] md:text-[48px] lg:text-[56px] leading-[1.05] tracking-[-0.02em]">
-            Von Unternehmern.
+            Von einem Entwickler.
             <br />
-            Für Unternehmer.
+            Für echte Unternehmen.
           </h2>
           <p className="mt-6 text-[16px] md:text-[18px] leading-[1.55] text-[#050505]/80 max-w-[52ch]">
-            Hinter Qonto steht ein Team um die Gründer Alexandre Prot und Steve
-            Anavi, das Unternehmen geführt, Cashflow‑Herausforderungen
-            gemeistert und die Hürden traditionellen Bankings erlebt hat. Wir
-            haben die Lösung gebaut, die wir uns selbst gewünscht hätten:
-            transparent, effizient und für unsere Bedürfnisse gemacht – nicht
-            die der Banken.
+            Hinter Nesani steht Nedim Hasani — Gründer, Geschäftsführer und
+            Entwickler mit Fokus auf Automatisierung und KI. Aus Informatik,
+            Softwareentwicklung und echter Projekterfahrung entsteht das, was
+            Unternehmen heute brauchen: saubere Systeme, direkte Kommunikation
+            und Lösungen, die wirtschaftlich funktionieren — statt ästhetischer
+            Experimente ohne Wirkung.
           </p>
         </div>
       </div>

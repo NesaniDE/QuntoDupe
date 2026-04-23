@@ -8,14 +8,13 @@ import { Founders } from "@/components/about/Founders";
 import { Timeline } from "@/components/about/Timeline";
 import { AtYourSide } from "@/components/about/AtYourSide";
 import { AboutTestimonials } from "@/components/about/AboutTestimonials";
-import { Investors } from "@/components/about/Investors";
 import { Sustainability } from "@/components/about/Sustainability";
 import { AboutCta } from "@/components/about/AboutCta";
 
 export const metadata: Metadata = {
-  title: "Über uns – Qonto",
+  title: "Über uns – Nesani",
   description:
-    "Kleine Unternehmen schaffen Großes. Wir unterstützen Sie dabei. Erfahren Sie mehr über Qonto.",
+    "Nesani macht Unternehmen digital sichtbarer und leistungsfähiger — mit klaren Systemen, Automatisierung und KI-Integrationen.",
 };
 
 export default function AboutPage() {
@@ -30,7 +29,6 @@ export default function AboutPage() {
         <Timeline />
         <AtYourSide />
         <AboutTestimonials />
-        <Investors />
         <Sustainability />
         <AboutCta />
       </main>

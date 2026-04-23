@@ -9,58 +9,58 @@ type T = { quote: string; name: string; role: string; img: string };
 const ITEMS: T[] = [
   {
     quote:
-      "Zu Qonto zu wechseln, war eine der besten Entscheidungen für unsere Finanzverwaltung. Qonto hat unseren Zahlungsverkehr rationalisiert und uns eine umfassende Kontrolle über unsere Finanzen gegeben.",
-    name: "Marc Peter Dauter",
-    role: "GF Le Wagon Germany",
+      "Nedim denkt mit statt nur umzusetzen. Das Ergebnis war nicht nur technisch sauber, sondern wirtschaftlich spürbar — unsere Anfragen haben sich nach dem Relaunch merklich erhöht.",
+    name: "Marc P.",
+    role: "Geschäftsführer, Dienstleistung",
     img: "/images/about-9896-325d93b61b.jpg",
   },
   {
     quote:
-      "Ich würde Qonto jedem empfehlen, der eine einfache, moderne Finanzlösung sucht. Mit Qonto ist es einfach und übersichtlich. Es ist mein unkompliziertes Geschäftskonto.",
-    name: "Madeleine von Hohenthal",
-    role: "Mitgründerin Tatzenstreu",
+      "Endlich jemand, der Automatisierung nicht als Buzzword verkauft, sondern als echtes Werkzeug einsetzt. Der gebaute Workflow läuft seit Monaten ohne Zwischenfälle.",
+    name: "Madeleine v. H.",
+    role: "Mitgründerin, E-Commerce",
     img: "/images/about-26236-a083e29e72.jpg",
   },
   {
     quote:
-      "Wir verwalten all unsere Finanzen in der Qonto App. Das Dashboard zeigt unseren Cashflow und unsere Ausgaben an. Die leicht verständliche Benutzeroberfläche hilft mir, meine Finanzen unterwegs zu verwalten.",
-    name: "Ege Gündüz",
-    role: "Mitgründer & CEO liftOS",
+      "Wir bekommen einen festen Ansprechpartner, klare Dokumentation und ein System, das wir auch selbst bedienen können. Genau so soll Agentur-Arbeit heute laufen.",
+    name: "Ege G.",
+    role: "CEO, SaaS",
     img: "/images/about-26191-efc8e6860b.jpg",
   },
   {
     quote:
-      "Für mich ist Qonto die digitale Lösung, nach der wir gesucht haben. Qonto unterstützt uns dabei, unsere Einnahmen und Ausgaben einfach und effizient zu managen.",
-    name: "Norman Simon",
-    role: "Gründer onGRID",
+      "Der KI-Assistent, den Nesani für uns gebaut hat, übernimmt heute Routinefragen unserer Kunden — unser Support-Team hat endlich wieder Kapazität für das, was wirklich zählt.",
+    name: "Norman S.",
+    role: "Gründer, Energiewirtschaft",
     img: "/images/about-9511-a1c0fa9690.jpg",
   },
   {
     quote:
-      "Wir empfehlen unseren Mandant:innen Qonto regelmäßig weiter. Der Hintergrund ist die einfache Anbindung für uns als Steuerberater. Wir bekommen leicht an die Daten und der Kontoeröffnungsprozess ist extrem schnell.",
-    name: "Marius Hanke",
-    role: "Steuerberater und GF Insight Tax",
+      "Wir haben vorher mit zwei Agenturen gearbeitet. Bei Nesani reicht ein Ansprechpartner — und die Geschwindigkeit ist ein anderes Level.",
+    name: "Marius H.",
+    role: "Steuerberater",
     img: "/images/about-12132-1f45c09895.jpg",
   },
   {
     quote:
-      "Qonto hilft uns dabei, nachhaltig zu wachsen. Durch die vereinfachten, optimierten Prozesse gewinnen wir jeden Tag wertvolle Zeit für unser Unternehmen.",
-    name: "Charlotte Piller",
-    role: "Mitgründerin Lotta Ludwigson",
+      "Unser interner Prozess zur Angebotserstellung dauerte 40 Minuten pro Kunde. Nach der Automatisierung durch Nesani sind es drei. Das ist der Unterschied, den wir gesucht haben.",
+    name: "Charlotte P.",
+    role: "Mitgründerin, B2B Services",
     img: "/images/about-26195-eedb3091b7.jpg",
   },
   {
     quote:
-      "Qonto unterstützt uns dabei, unsere Zahlungen und Ausgaben optimal zu verwalten. So gewinnen wir Zeit und behalten den Überblick über unsere Projekte.",
-    name: "Klemens Witte",
-    role: "Gründer & CEO GreenHomeNow",
+      "Klare Architektur, keine unnötigen Features, sauberer Code. Unser Entwickler-Team kann die Systeme heute selbst weiterpflegen — genau wie versprochen.",
+    name: "Klemens W.",
+    role: "Geschäftsführer, Green Tech",
     img: "/images/about-9508-5f9a305e70.jpg",
   },
   {
     quote:
-      "Super Service, eine starke Präsenz in Deutschland und Europa und einfach ein tolles Produkt.",
-    name: "Hans-Peter Frank",
-    role: "Country Manager Germany Fleet",
+      "Direkt, ehrlich und schnell. Wenn etwas nicht sinnvoll ist, hören wir das — und das ist Gold wert.",
+    name: "Hans-Peter F.",
+    role: "Country Manager",
     img: "/images/about-10061-083993b70c.jpg",
   },
 ];
@@ -76,7 +76,7 @@ export function AboutTestimonials() {
       <div className="mx-auto max-w-[1344px] px-5 md:px-8 lg:px-12 py-20 md:py-28 lg:py-32">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
           <h2 className="font-sans font-semibold text-[32px] md:text-[40px] lg:text-[52px] leading-[1.1] tracking-[-0.02em] max-w-[20ch]">
-            Was unsere Kunden zur Erfahrung mit Qonto sagen
+            Was unsere Kunden über die Zusammenarbeit sagen
           </h2>
           <div className="flex gap-3">
             <button

@@ -14,45 +14,45 @@ type TimelineItem = {
 const ITEMS: TimelineItem[] = [
   {
     badge: "/images/about-33681-347d549b5a.avif",
-    year: "2025",
-    title: "Gemeinsam auf Erfolgskurs",
-    body: "Qonto unterstützt mehr als 600.000 Geschäftskund:innen und hat 250.000 Unternehmensgründungen ermöglicht.",
+    year: "2026",
+    title: "Nesani heute",
+    body: "Unternehmen aus unterschiedlichen Branchen vertrauen auf Nesani für Websites, KI-Workflows und autonome Systeme.",
   },
   {
     badge: "/images/about-33680-945c2afc13.avif",
-    year: "2024",
-    title: "Neue Märkte",
-    body: "Qonto wächst weiter in Europa und unterstützt Unternehmen jetzt auch in Österreich, Belgien, Portugal und den Niederlanden.",
+    year: "2025",
+    title: "Nesani als Marke",
+    body: "Aus Einzelprojekten wird eine klare Positionierung: Digital sichtbarer, digital leistungsfähiger — ohne Zwischenagenturen.",
   },
   {
     badge: "/images/about-33679-fd36962de3.avif",
-    year: "2023",
-    title: "Lokale Partnerschaften",
-    body: "Qonto wird offizieller DATEV‑Partner und Kund:innen profitieren von nahtlosen DATEV‑Schnittstellen und lokalem Support.",
+    year: "2024",
+    title: "KI-Integrationen",
+    body: "Claude, GPT und weitere Modelle werden fester Bestandteil der gebauten Systeme — für echte Entlastung im Tagesgeschäft.",
   },
   {
     badge: "/images/about-33678-8c36fcedb3.avif",
-    year: "2022",
-    title: "Für deutsche Unternehmen",
-    body: "Qonto erhält die TÜV‑Zertifizierung und seinen ersten Deutschen B2B Award – und schließt sich mit Penta zusammen.",
+    year: "2023",
+    title: "Automatisierung im Fokus",
+    body: "Workflows, Schnittstellen und wiederkehrende Prozesse werden zum Schwerpunkt der Projektarbeit.",
   },
   {
     badge: "/images/about-33677-420388ac42.avif",
-    year: "2021",
-    title: "Wachstum in Europa",
-    body: "Qonto unterstützt jetzt mehr als 100.000 Unternehmen in Frankreich, Deutschland, Italien und Spanien.",
+    year: "2022",
+    title: "Erste Kundenprojekte",
+    body: "Individuelle Softwarelösungen für lokale Unternehmen — gebaut mit modernen Stacks und sauberer Architektur.",
   },
   {
     badge: "/images/about-33676-7204fa045a.avif",
-    year: "2020",
-    title: "Start in Deutschland",
-    body: "Mit 20.000 Kund:innen in FR eröffnet Qonto den Standort Berlin und bringt effizientes Business-Banking nach Deutschland.",
+    year: "2021",
+    title: "Tools & Stacks",
+    body: "Entscheidung für moderne Technologien und klaren Code als Grundlage für alles, was später kommt.",
   },
   {
     badge: "/images/about-33675-75a1e6d3fa.avif",
-    year: "2017",
-    title: "In Frankreich gegründet",
-    body: "Qonto startete mit einer klaren Mission: europäischen KMU die Finanztools zu bieten, die sie verdienen.",
+    year: "2020",
+    title: "Der Anfang",
+    body: "Informatik, Softwareentwicklung und der Anspruch, digitale Lösungen zu bauen, die wirklich funktionieren.",
   },
 ];
 
@@ -72,7 +72,7 @@ export function Timeline() {
       <div className="mx-auto max-w-[1344px] px-5 md:px-8 lg:px-12 py-20 md:py-28 lg:py-32">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
           <h2 className="font-sans font-semibold text-[36px] md:text-[48px] lg:text-[56px] leading-[1.05] tracking-[-0.02em] max-w-[18ch]">
-            Qonto in Deutschland: Unsere Geschichte
+            Unsere Geschichte: Schritt für Schritt gewachsen
           </h2>
           <div className="flex gap-3">
             <button
