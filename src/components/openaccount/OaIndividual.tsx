@@ -18,21 +18,21 @@ const TABS: Tab[] = [
     label: "Stufe 01 · Digitale Präsenz",
     title: "Sichtbar werden, bevor es skaliert.",
     copy: "Website und Markenauftritt als Fundament: moderne, schnelle Umsetzung und eine konsistente Online-Präsenz, auf der alles Weitere aufbauen kann.",
-    img: "/images/oa-hero-nesani.png",
+    img: "/images/services/leistung-websites.png",
   },
   {
     key: "stufe2",
     label: "Stufe 02 · KI-Integration",
     title: "Wiederkehrende Arbeit verschwindet.",
     copy: "KI-Workflows und Assistenten übernehmen Routine – strukturiert, messbar und integriert in die Tools, die Ihr Team ohnehin nutzt.",
-    img: "/images/oa-hero-nesani.png",
+    img: "/images/services/leistung-ki-workflows.png",
   },
   {
     key: "stufe3",
     label: "Stufe 03 · Autonome Systeme",
     title: "Systeme, die eigenständig liefern.",
     copy: "Autonome Agenten und individuelle Systemarchitektur: maßgeschneiderte Software, die selbstständig beobachtet, entscheidet und handelt – mit sauberer Dokumentation und voller Kontrolle.",
-    img: "/images/oa-hero-nesani.png",
+    img: "/images/services/leistung-autonome-agenten.png",
   },
 ];
 
