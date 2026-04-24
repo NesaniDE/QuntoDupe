@@ -26,7 +26,7 @@ export function BlogCta() {
               <ArrowUpRightIcon className="w-4 h-4" />
             </a>
             <a
-              href="/open-account"
+              href="/leistungen"
               className="inline-flex items-center rounded-full border border-white/25 text-white text-[15px] font-semibold px-5 py-3 hover:bg-white/10 transition"
             >
               Leistungen ansehen

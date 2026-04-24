@@ -34,7 +34,7 @@ export function Sustainability() {
               Projekt anfragen
             </a>
             <a
-              href="/open-account"
+              href="/leistungen"
               className="inline-flex items-center gap-1.5 text-[15px] font-medium text-[#050505] hover:opacity-80 transition"
             >
               Leistungen ansehen

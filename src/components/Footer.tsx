@@ -16,8 +16,8 @@ const COLS: { heading: string; links: { label: string; href: string }[] }[] = [
   {
     heading: "UNTERNEHMEN",
     links: [
-      { label: "Über uns", href: "/about" },
-      { label: "Leistungen", href: "/open-account" },
+      { label: "Über uns", href: "/ueber-uns" },
+      { label: "Leistungen", href: "/leistungen" },
       { label: "Projekte", href: "/projekte" },
       { label: "Blog", href: "/blog" },
     ],
@@ -26,7 +26,7 @@ const COLS: { heading: string; links: { label: string; href: string }[] }[] = [
     heading: "KONTAKT",
     links: [
       { label: "Projekt anfragen", href: "/kontakt" },
-      { label: "E-Mail", href: "mailto:kontakt@nesani.de" },
+      { label: "E-Mail", href: "mailto:info@nesani.de" },
     ],
   },
 ];

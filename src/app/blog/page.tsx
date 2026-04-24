@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BASE_URL } from "@/lib/site";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { BlogHero } from "@/components/blog/BlogHero";
@@ -8,9 +9,17 @@ import { BlogCta } from "@/components/blog/BlogCta";
 import { POSTS } from "@/data/blog";
 
 export const metadata: Metadata = {
-  title: "Blog – Nesani",
+  title: "Blog — KI, Digitale Präsenz & Automatisierung",
   description:
-    "Perspektiven zu Websites, KI und digitaler Reife. Klare Beiträge ohne Buzzwords – für Unternehmen, die digital substanzvoll wachsen wollen.",
+    "Artikel zu digitaler Präsenz, Prozessautomatisierung, KI und modernen Unternehmensstrukturen. Praxis statt Hype.",
+  alternates: { canonical: `${BASE_URL}/blog` },
+  openGraph: {
+    title: "Blog — KI, Digitale Präsenz & Automatisierung | NESANI",
+    description:
+      "Praxisnahe Artikel zu Website, KI-Integration und autonomen Unternehmensprozessen.",
+    url: `${BASE_URL}/blog`,
+    images: [{ url: "/og-image.svg", width: 1200, height: 630 }],
+  },
 };
 
 export default function BlogPage() {

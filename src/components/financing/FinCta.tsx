@@ -24,7 +24,7 @@ export function FinCta() {
               Projekt anfragen
             </a>
             <a
-              href="/open-account"
+              href="/leistungen"
               className="inline-flex items-center rounded-full border border-[#050505]/20 text-[#050505] text-[15px] font-semibold px-5 py-3 hover:bg-[#050505]/5 transition"
             >
               Weitere Leistungen

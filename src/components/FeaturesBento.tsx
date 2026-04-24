@@ -65,7 +65,7 @@ export function FeaturesBento() {
             Leistungen
           </h2>
           <a
-            href="/open-account"
+            href="/leistungen"
             className="inline-flex items-center self-start lg:self-auto rounded-full border border-white/30 text-white text-[15px] font-semibold px-5 py-3 hover:bg-white/10 transition whitespace-nowrap"
           >
             Leistungen ansehen
