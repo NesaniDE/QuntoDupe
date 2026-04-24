@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { BASE_URL } from "@/lib/site";
 import { CookieBanner } from "@/components/CookieBanner";
 import { RouteTransition } from "@/components/RouteTransition";
@@ -153,6 +155,8 @@ export default function RootLayout({
         {children}
         <RouteTransition />
         <CookieBanner />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

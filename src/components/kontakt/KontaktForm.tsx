@@ -41,24 +41,46 @@ const INPUT_CLASSES =
 const LABEL_CLASSES =
   "block text-[13px] font-semibold text-[#050505]/80 mb-2";
 
-export function KontaktForm() {
-  const [submitted, setSubmitted] = useState(false);
+type Status = "idle" | "sending" | "success" | "error";
 
-  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+export function KontaktForm() {
+  const [status, setStatus] = useState<Status>("idle");
+  const [errorMsg, setErrorMsg] = useState<string>("");
+
+  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (status === "sending") return;
+
     const form = e.currentTarget;
     const data = new FormData(form);
-    const params = new URLSearchParams();
+    const payload: Record<string, string> = {};
     data.forEach((value, key) => {
-      if (typeof value === "string" && value.trim()) params.append(key, value);
+      if (typeof value === "string") payload[key] = value.trim();
     });
-    const subject = `Projektanfrage: ${data.get("name") ?? ""}`.trim();
-    const body = Array.from(params.entries())
-      .map(([k, v]) => `${k}: ${v}`)
-      .join("\n");
-    const href = `mailto:info@nesani.de?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = href;
-    setSubmitted(true);
+
+    setStatus("sending");
+    setErrorMsg("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const json = (await res.json().catch(() => ({}))) as {
+        error?: string;
+      };
+      if (!res.ok) {
+        setStatus("error");
+        setErrorMsg(json.error ?? "Senden fehlgeschlagen.");
+        return;
+      }
+      setStatus("success");
+      form.reset();
+    } catch {
+      setStatus("error");
+      setErrorMsg("Netzwerkfehler. Bitte später erneut versuchen.");
+    }
   };
 
   return (
@@ -276,19 +298,31 @@ export function KontaktForm() {
               </p>
               <button
                 type="submit"
-                className="inline-flex items-center gap-1.5 rounded-full bg-[#050505] text-white text-[15px] font-semibold px-6 py-3 hover:bg-black/90 transition self-start sm:self-auto"
+                disabled={status === "sending"}
+                className="inline-flex items-center gap-1.5 rounded-full bg-[#050505] text-white text-[15px] font-semibold px-6 py-3 hover:bg-black/90 transition self-start sm:self-auto disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                Anfrage senden
-                <ArrowUpRightIcon className="w-4 h-4" />
+                {status === "sending" ? "Wird gesendet…" : "Anfrage senden"}
+                {status !== "sending" && (
+                  <ArrowUpRightIcon className="w-4 h-4" />
+                )}
               </button>
             </div>
 
-            {submitted ? (
-              <p className="mt-6 text-[14px] text-[#050505]/70">
-                E-Mail-Programm geöffnet. Falls nichts passiert ist, schreib
-                direkt an info@nesani.de.
+            {status === "success" && (
+              <p className="mt-6 rounded-xl bg-[#050505] text-white px-4 py-3 text-[14px]">
+                Danke, deine Anfrage ist angekommen. Wir melden uns in der
+                Regel innerhalb von 24 Stunden.
               </p>
-            ) : null}
+            )}
+            {status === "error" && (
+              <p className="mt-6 rounded-xl bg-red-50 border border-red-200 text-red-700 px-4 py-3 text-[14px]">
+                {errorMsg || "Senden fehlgeschlagen."} Alternativ per Mail an{" "}
+                <a href="mailto:info@nesani.de" className="underline">
+                  info@nesani.de
+                </a>
+                .
+              </p>
+            )}
           </form>
         </div>
       </div>
