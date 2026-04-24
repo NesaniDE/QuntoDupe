@@ -17,7 +17,7 @@ export function ProjectsGrid() {
                     alt={p.title}
                     fill
                     sizes="(min-width:1024px) 420px, (min-width:768px) 50vw, 100vw"
-                    className="object-cover"
+                    className="object-contain"
                   />
                   {!p.available && (
                     <span className="absolute top-3 right-3 rounded-full bg-white/95 text-[11px] font-medium px-2.5 py-1 text-[#050505]/70">

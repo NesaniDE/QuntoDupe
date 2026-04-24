@@ -13,7 +13,7 @@ type Props = {
 export function BlogArticle({ post, children, related }: Props) {
   return (
     <>
-      <section className="bg-[#F4F1EA] text-[#050505] pt-28 md:pt-32 lg:pt-36 pb-14 md:pb-20">
+      <section className="bg-[#F4F1EA] text-[#050505] pt-28 md:pt-32 lg:pt-36 pb-10 md:pb-14">
         <div className="mx-auto max-w-[1344px] px-5 md:px-8 lg:px-12">
           <nav className="text-[13px] text-[#050505]/60">
             <Link href="/blog" className="hover:text-[#050505] transition">
@@ -46,7 +46,7 @@ export function BlogArticle({ post, children, related }: Props) {
       </section>
 
       <section className="bg-white text-[#050505]">
-        <div className="mx-auto max-w-[1344px] px-5 md:px-8 lg:px-12 -mt-10 md:-mt-16 lg:-mt-20 relative z-10">
+        <div className="mx-auto max-w-[1344px] px-5 md:px-8 lg:px-12 mt-6 md:mt-10 relative z-10">
           <div className="relative aspect-[21/9] rounded-2xl md:rounded-3xl overflow-hidden bg-[#F5F2EB]">
             <Image
               src={post.image}
