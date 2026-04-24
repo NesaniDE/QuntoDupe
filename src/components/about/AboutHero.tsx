@@ -19,7 +19,7 @@ export function AboutHero() {
         playsInline
         poster="/images/about-33406-9d70fb11c8.avif"
       >
-        <source src="/videos/about-customers.mp4" type="video/mp4" />
+        <source src="/videos/hero.mp4" type="video/mp4" />
       </video>
 
       <div className="absolute inset-0 z-30 bg-gradient-to-t from-black/70 via-black/15 to-black/30" />

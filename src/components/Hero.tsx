@@ -1,27 +1,12 @@
-import Image from "next/image";
-
 export function Hero() {
   return (
     <section className="relative w-full min-h-[100svh] overflow-hidden bg-[#050505] text-white">
-      {/* Background image fallback (z-10) */}
-      <div className="absolute inset-0 z-10">
-        <Image
-          src="/images/asset-33449-ecc13c3565.avif"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
-      </div>
-      {/* Video overlay (z-20) */}
       <video
-        className="absolute inset-0 z-20 w-full h-full object-cover"
+        className="absolute inset-0 z-10 w-full h-full object-cover"
         autoPlay
         loop
         muted
         playsInline
-        poster="/images/asset-33449-ecc13c3565.avif"
       >
         <source src="/videos/hero.mp4" type="video/mp4" />
       </video>
