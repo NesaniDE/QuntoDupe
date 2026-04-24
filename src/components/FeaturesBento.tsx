@@ -17,7 +17,7 @@ const CARDS: BentoCard[] = [
     image: "/images/services/leistung-websites.png",
     imageAlt: "Websites",
     className: "md:col-span-4 lg:col-span-4 md:row-span-2",
-    imagePos: "top",
+    imagePos: "bottom",
   },
   {
     title: "KI Workflows",
@@ -84,11 +84,6 @@ export function FeaturesBento() {
                 "min-h-[260px]",
               ].join(" ")}
             >
-              {c.imagePos === "top" && c.image && (
-                <div className="relative h-40 md:h-48 w-full">
-                  <Image src={c.image} alt={c.imageAlt ?? ""} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
-                </div>
-              )}
               <div className="p-6 md:p-7 flex flex-col gap-2">
                 <h3 className="font-sans font-semibold text-[20px] md:text-[22px] leading-tight">
                   {c.title}
@@ -99,9 +94,15 @@ export function FeaturesBento() {
                   </p>
                 )}
               </div>
-              {c.imagePos === "bottom" && c.image && (
-                <div className="relative h-44 md:h-52 w-full mt-auto">
-                  <Image src={c.image} alt={c.imageAlt ?? ""} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
+              {c.image && (
+                <div className="relative aspect-square w-full mt-auto">
+                  <Image
+                    src={c.image}
+                    alt={c.imageAlt ?? ""}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-contain p-6"
+                  />
                 </div>
               )}
             </article>
