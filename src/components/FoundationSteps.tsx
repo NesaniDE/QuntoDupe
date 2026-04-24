@@ -1,4 +1,5 @@
 import { GlobeIcon, HeadsetIcon, StopwatchIcon } from "@/components/icons";
+import { Reveal } from "@/components/Reveal";
 
 const STEPS = [
   {
@@ -22,13 +23,21 @@ export function FoundationSteps() {
   return (
     <section className="bg-white text-[#050505] py-20 md:py-28">
       <div className="mx-auto max-w-[1200px] px-5 lg:px-12">
-        <h2 className="font-sans font-semibold text-center text-[36px] sm:text-[48px] lg:text-[56px] leading-[1.05] tracking-[-0.02em] max-w-[1000px] mx-auto">
+        <Reveal
+          as="h2"
+          className="font-sans font-semibold text-center text-[36px] sm:text-[48px] lg:text-[56px] leading-[1.05] tracking-[-0.02em] max-w-[1000px] mx-auto"
+        >
           Ihr Business auf die nächste Stufe bringen
-        </h2>
+        </Reveal>
 
         <div className="mt-14 md:mt-20 grid md:grid-cols-3 gap-10 md:gap-8 text-center">
-          {STEPS.map(({ icon: Icon, title, body }) => (
-            <div key={title} className="flex flex-col items-center">
+          {STEPS.map(({ icon: Icon, title, body }, i) => (
+            <Reveal
+              key={title}
+              direction="left"
+              delay={i * 120}
+              className="flex flex-col items-center"
+            >
               <div className="w-14 h-14 rounded-xl bg-[#f5f3ec] flex items-center justify-center">
                 <Icon className="w-7 h-7" />
               </div>
@@ -38,18 +47,18 @@ export function FoundationSteps() {
               <p className="mt-4 text-[#050505]/75 text-[16px] leading-relaxed max-w-xs">
                 {body}
               </p>
-            </div>
+            </Reveal>
           ))}
         </div>
 
-        <div className="mt-14 flex justify-center">
+        <Reveal delay={300} className="mt-14 flex justify-center">
           <a
             href="/kontakt"
             className="inline-flex items-center rounded-full border border-black/20 text-[15px] font-semibold px-6 py-3 hover:bg-black/5 transition"
           >
             Projekt anfragen
           </a>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

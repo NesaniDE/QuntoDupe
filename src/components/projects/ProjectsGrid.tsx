@@ -1,13 +1,14 @@
 import Image from "next/image";
 import { PROJECTS } from "@/data/projects";
 import { ArrowUpRightIcon } from "@/components/icons";
+import { Reveal } from "@/components/Reveal";
 
 export function ProjectsGrid() {
   return (
     <section className="bg-[#F4F1EA] text-[#050505]">
       <div className="mx-auto max-w-[1344px] px-5 md:px-8 lg:px-12 pb-20 md:pb-28 lg:pb-32">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-          {PROJECTS.map((p) => {
+          {PROJECTS.map((p, i) => {
             const card = (
               <article className="group h-full rounded-2xl bg-white border border-[#050505]/5 overflow-hidden flex flex-col hover:border-[#050505]/20 hover:shadow-[0_12px_32px_-16px_rgba(0,0,0,0.2)] transition">
                 <div className="relative aspect-[16/10] bg-[#F5F2EB] overflow-hidden">
@@ -51,18 +52,23 @@ export function ProjectsGrid() {
 
             if (p.available && p.href) {
               return (
-                <a
-                  key={p.slug}
-                  href={p.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block"
-                >
-                  {card}
-                </a>
+                <Reveal key={p.slug} delay={(i % 3) * 100}>
+                  <a
+                    href={p.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    {card}
+                  </a>
+                </Reveal>
               );
             }
-            return <div key={p.slug}>{card}</div>;
+            return (
+              <Reveal key={p.slug} delay={(i % 3) * 100}>
+                {card}
+              </Reveal>
+            );
           })}
         </div>
       </div>

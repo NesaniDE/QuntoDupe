@@ -1,3 +1,5 @@
+import { Reveal } from "@/components/Reveal";
+
 const STEPS = [
   {
     num: "Schritt 1",
@@ -20,13 +22,18 @@ export function OaSteps() {
   return (
     <section className="bg-[#050505] text-white">
       <div className="mx-auto max-w-[1344px] px-5 md:px-8 lg:px-12 py-20 md:py-28 lg:py-32">
-        <h2 className="font-sans font-semibold text-[40px] md:text-[56px] lg:text-[64px] leading-[1.05] tracking-[-0.02em] max-w-[16ch]">
+        <Reveal as="h2" className="font-sans font-semibold text-[40px] md:text-[56px] lg:text-[64px] leading-[1.05] tracking-[-0.02em] max-w-[16ch]">
           In drei Schritten zum Ergebnis.
-        </h2>
+        </Reveal>
 
         <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           {STEPS.map((s, i) => (
-            <div key={s.num} className="flex flex-col">
+            <Reveal
+              key={s.num}
+              direction="left"
+              delay={i * 120}
+              className="flex flex-col"
+            >
               <div className="flex items-center gap-3 mb-4">
                 <span className="font-sans font-semibold text-[56px] md:text-[72px] leading-none text-white/20">
                   {String(i + 1).padStart(2, "0")}
@@ -41,7 +48,7 @@ export function OaSteps() {
               <p className="mt-3 text-[15px] leading-[1.55] text-white/70 max-w-[40ch]">
                 {s.copy}
               </p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>
