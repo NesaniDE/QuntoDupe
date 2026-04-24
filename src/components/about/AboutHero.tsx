@@ -2,7 +2,7 @@ export function AboutHero() {
   return (
     <section className="relative h-svh min-h-[640px] lg:h-screen lg:min-h-[780px] bg-[#050505] text-white overflow-hidden">
       <video
-        className="absolute inset-0 z-10 w-full h-full object-cover object-right md:object-center"
+        className="absolute inset-0 z-10 w-full h-full object-cover [object-position:85%_center] md:[object-position:center]"
         autoPlay
         loop
         muted
