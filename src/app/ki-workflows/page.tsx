@@ -34,7 +34,7 @@ export default function KiWorkflowsPage() {
             icon: "/images/fin-33263-b199afab8b.svg",
           }}
           image={{
-            src: "/images/fin-34369-x.avif",
+            src: "/images/services/leistung-ki-workflows.png",
             alt: "KI-Workflows und Automatisierung",
           }}
         />

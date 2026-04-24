@@ -14,21 +14,21 @@ type BentoCard = {
 const CARDS: BentoCard[] = [
   {
     title: "Websites",
-    image: "/images/asset-33384-9e183c4e9f.avif",
+    image: "/images/services/leistung-websites.png",
     imageAlt: "Websites",
     className: "md:col-span-4 lg:col-span-4 md:row-span-2",
     imagePos: "top",
   },
   {
     title: "KI Workflows",
-    image: "/images/asset-33381-4bacb4a640.avif",
+    image: "/images/services/leistung-ki-workflows.png",
     imageAlt: "KI Workflows",
     className: "md:col-span-4 lg:col-span-4 md:row-span-2",
     imagePos: "bottom",
   },
   {
     title: "Autonome Agenten",
-    image: "/images/asset-33382-9648825624.avif",
+    image: "/images/services/leistung-autonome-agenten.png",
     imageAlt: "Autonome Agenten",
     className: "md:col-span-4 lg:col-span-4 md:row-span-2",
     imagePos: "bottom",
@@ -42,14 +42,14 @@ const CARDS: BentoCard[] = [
   },
   {
     title: "KI Assistenten",
-    image: "/images/asset-33379-6ad140c5ee.avif",
+    image: "/images/services/leistung-ki-assistenten.png",
     imageAlt: "KI Assistenten",
     className: "md:col-span-4 lg:col-span-4 md:row-span-2",
     imagePos: "bottom",
   },
   {
     title: "Individuelle Systeme",
-    image: "/images/asset-33570-fd6109162e.avif",
+    image: "/images/services/leistung-systemarchitektur.png",
     imageAlt: "Individuelle Systeme",
     className: "md:col-span-4 lg:col-span-4 md:row-span-2",
     imagePos: "bottom",

@@ -34,7 +34,7 @@ export default function SystemarchitekturPage() {
             icon: "/images/fin-33263-b199afab8b.svg",
           }}
           image={{
-            src: "/images/fin-34369-x.avif",
+            src: "/images/services/leistung-systemarchitektur.png",
             alt: "Individuelle Systemarchitektur",
           }}
         />
@@ -48,7 +48,7 @@ export default function SystemarchitekturPage() {
             "Teams, die Skalierbarkeit und Wartbarkeit langfristig sichern wollen.",
           ]}
           image={{
-            src: "/images/fin-33386-x.avif",
+            src: "/images/services/leistung-sicherheit.png",
             alt: "Digitale Infrastruktur",
           }}
         />

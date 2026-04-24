@@ -68,7 +68,7 @@ export function FinHero() {
           <div className="lg:col-span-6">
             <div className="relative overflow-hidden rounded-2xl md:rounded-3xl aspect-[4/3] lg:aspect-[5/4]">
               <Image
-                src="/images/fin-34369-x.avif"
+                src="/images/services/leistung-websites.png"
                 alt="Moderne Website in Entwicklung"
                 fill
                 priority
