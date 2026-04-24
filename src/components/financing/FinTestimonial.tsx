@@ -27,7 +27,7 @@ export function FinTestimonial() {
               </div>
             </div>
             <a
-              href="#"
+              href="/kontakt"
               className="inline-flex items-center gap-1.5 text-[15px] font-medium text-[#050505] hover:opacity-80 transition"
             >
               Projekt anfragen

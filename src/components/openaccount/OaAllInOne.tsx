@@ -111,7 +111,7 @@ export function OaAllInOne() {
               </h3>
             </div>
             <a
-              href="#"
+              href="/kontakt"
               className="inline-flex items-center gap-1.5 rounded-full bg-white text-[#050505] text-[15px] font-semibold px-5 py-3 hover:bg-white/90 transition"
             >
               Jetzt starten

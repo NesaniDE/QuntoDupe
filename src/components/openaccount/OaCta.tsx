@@ -17,7 +17,7 @@ export function OaCta() {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
-              href="#"
+              href="/kontakt"
               className="inline-flex items-center rounded-full bg-[#050505] text-white text-[15px] font-semibold px-5 py-3 hover:bg-black/90 transition"
             >
               Projekt anfragen

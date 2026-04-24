@@ -48,7 +48,7 @@ export function Hero() {
 
           <div className="mt-6 lg:mt-10">
             <a
-              href="#"
+              href="/kontakt"
               className="inline-flex items-center justify-center rounded-full bg-white text-black text-[15px] font-semibold px-5 py-3 hover:bg-white/90 transition"
             >
               Projekt anfragen

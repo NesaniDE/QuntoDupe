@@ -69,7 +69,7 @@ export function Header({ variant = "solid" }: HeaderProps) {
         </ul>
 
         <Link
-          href="#"
+          href="/kontakt"
           className={[
             "inline-flex items-center justify-center rounded-full text-sm font-semibold px-4 py-2.5 transition",
             variant === "transparent"

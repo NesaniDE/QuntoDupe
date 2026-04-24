@@ -28,7 +28,7 @@ export function OaAccounting() {
             ))}
           </ul>
           <a
-            href="#"
+            href="/kontakt"
             className="mt-8 inline-flex items-center gap-1.5 rounded-full bg-[#050505] text-white text-[15px] font-semibold px-5 py-3 hover:bg-black/90 transition"
           >
             Projekt anfragen

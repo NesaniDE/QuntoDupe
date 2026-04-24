@@ -124,7 +124,7 @@ export function OaTestimonials() {
 
             <div className="mt-10 flex items-center gap-4">
               <a
-                href="#"
+                href="/kontakt"
                 className="inline-flex items-center gap-1.5 text-[14px] font-medium text-white hover:text-white/80 transition"
               >
                 Projekt anfragen

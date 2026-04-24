@@ -44,7 +44,7 @@ export function FoundationSteps() {
 
         <div className="mt-14 flex justify-center">
           <a
-            href="#"
+            href="/kontakt"
             className="inline-flex items-center rounded-full border border-black/20 text-[15px] font-semibold px-6 py-3 hover:bg-black/5 transition"
           >
             Projekt anfragen
