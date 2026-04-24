@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { ArrowUpRightIcon, ChevronLeftIcon, ChevronRightIcon, PauseIcon } from "@/components/icons";
+import { Reveal } from "@/components/Reveal";
 
 type Quote = {
   quote: string;
@@ -65,11 +66,11 @@ export function Testimonials() {
   return (
     <section className="bg-[#050505] text-white py-20 md:py-28">
       <div className="mx-auto max-w-[1344px] px-5 lg:px-12">
-        <div className="mb-10 md:mb-14">
+        <Reveal as="div" className="mb-10 md:mb-14">
           <h2 className="font-sans font-semibold text-[36px] sm:text-[48px] lg:text-[56px] leading-[1.05] tracking-[-0.02em] max-w-[900px]">
             Das sagen unsere Kundinnen<br />und Kunden
           </h2>
-        </div>
+        </Reveal>
 
         <div className="relative overflow-hidden rounded-3xl aspect-[16/11] md:aspect-[16/9] lg:aspect-[16/8]">
           <Image

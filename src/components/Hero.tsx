@@ -1,8 +1,10 @@
+import { Reveal } from "@/components/Reveal";
+
 export function Hero() {
   return (
     <section className="relative w-full min-h-[100svh] overflow-hidden bg-[#050505] text-white">
       <video
-        className="absolute inset-0 z-10 w-full h-full object-cover"
+        className="absolute inset-0 z-10 w-full h-full object-cover object-right md:object-center"
         autoPlay
         loop
         muted
@@ -25,20 +27,25 @@ export function Hero() {
 
         {/* Headline + CTA */}
         <div className="flex flex-col gap-y-6 lg:max-w-[870px]">
-          <h1 className="font-sans font-bold text-[44px] sm:text-[56px] lg:text-[72px] leading-[1.05] tracking-[-0.02em]">
+          <Reveal
+            as="h1"
+            direction="up"
+            distance={18}
+            className="font-sans font-bold text-[44px] sm:text-[56px] lg:text-[72px] leading-[1.05] tracking-[-0.02em]"
+          >
             Sichtbarer.<br />
             Effizienter.<br />
             Autonomer.
-          </h1>
+          </Reveal>
 
-          <div className="mt-6 lg:mt-10">
+          <Reveal delay={200} className="mt-6 lg:mt-10">
             <a
               href="/kontakt"
               className="inline-flex items-center justify-center rounded-full bg-white text-black text-[15px] font-semibold px-5 py-3 hover:bg-white/90 transition"
             >
               Projekt anfragen
             </a>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

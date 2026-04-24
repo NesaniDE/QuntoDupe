@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { BlogPost } from "@/data/blog";
+import { Reveal } from "@/components/Reveal";
 
 type Props = {
   posts: BlogPost[];
@@ -20,7 +21,7 @@ export function BlogGrid({ posts }: Props) {
         </div>
 
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-          {posts.map((p) => {
+          {posts.map((p, i) => {
             const card = (
               <article className="group h-full rounded-2xl bg-white border border-[#050505]/5 overflow-hidden flex flex-col hover:border-[#050505]/20 hover:shadow-[0_12px_32px_-16px_rgba(0,0,0,0.2)] transition">
                 <div className="relative aspect-[16/10] bg-[#F5F2EB]">
@@ -57,11 +58,15 @@ export function BlogGrid({ posts }: Props) {
               </article>
             );
             return p.available ? (
-              <Link key={p.slug} href={`/blog/${p.slug}`} className="block">
-                {card}
-              </Link>
+              <Reveal key={p.slug} delay={(i % 3) * 100}>
+                <Link href={`/blog/${p.slug}`} className="block">
+                  {card}
+                </Link>
+              </Reveal>
             ) : (
-              <div key={p.slug}>{card}</div>
+              <Reveal key={p.slug} delay={(i % 3) * 100}>
+                {card}
+              </Reveal>
             );
           })}
         </div>
