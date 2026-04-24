@@ -18,13 +18,14 @@ const COLS: { heading: string; links: { label: string; href: string }[] }[] = [
     links: [
       { label: "Über uns", href: "/about" },
       { label: "Leistungen", href: "/open-account" },
+      { label: "Projekte", href: "/projekte" },
       { label: "Blog", href: "/blog" },
     ],
   },
   {
     heading: "KONTAKT",
     links: [
-      { label: "Projekt anfragen", href: "#" },
+      { label: "Projekt anfragen", href: "/kontakt" },
       { label: "E-Mail", href: "mailto:kontakt@nesani.de" },
     ],
   },

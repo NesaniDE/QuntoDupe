@@ -6,6 +6,7 @@ import Image from "next/image";
 
 const NAV_ITEMS = [
   { label: "Leistungen", href: "/open-account" },
+  { label: "Projekte", href: "/projekte" },
   { label: "Über uns", href: "/about" },
   { label: "Blog", href: "/blog" },
 ];
