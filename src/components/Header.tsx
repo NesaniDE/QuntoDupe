@@ -66,10 +66,10 @@ export function Header({ variant = "solid" }: HeaderProps) {
                   : "/images/shm-logo-black.png"
               }
               alt="Nesani"
-              width={40}
-              height={40}
+              width={56}
+              height={56}
               priority
-              className="h-9 w-9 object-contain"
+              className="h-12 w-12 md:h-14 md:w-14 object-contain"
             />
             <span
               className={[
