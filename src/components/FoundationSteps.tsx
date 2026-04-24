@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { GlobeIcon, HeadsetIcon, StopwatchIcon } from "@/components/icons";
 
 const STEPS = [
@@ -25,6 +26,16 @@ export function FoundationSteps() {
         <h2 className="font-sans font-semibold text-center text-[36px] sm:text-[48px] lg:text-[56px] leading-[1.05] tracking-[-0.02em] max-w-[1000px] mx-auto">
           Ihr Business auf die nächste Stufe bringen
         </h2>
+
+        <div className="mt-10 md:mt-14 relative overflow-hidden rounded-2xl md:rounded-3xl aspect-[21/9] md:aspect-[21/7]">
+          <Image
+            src="/images/breit/business-stufe-banner.png"
+            alt=""
+            fill
+            sizes="(max-width: 1200px) 100vw, 1200px"
+            className="object-cover"
+          />
+        </div>
 
         <div className="mt-14 md:mt-20 grid md:grid-cols-3 gap-10 md:gap-8 text-center">
           {STEPS.map(({ icon: Icon, title, body }) => (

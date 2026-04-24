@@ -6,8 +6,8 @@ export function CtaSection() {
       <div className="mx-auto max-w-[1344px] px-5 lg:px-12">
         <div className="relative overflow-hidden rounded-[28px] aspect-[16/9] md:aspect-[21/9] min-h-[360px] md:min-h-[480px]">
           <Image
-            src="/images/asset-33283-3dc84a708e.avif"
-            alt="Qonto Karte in der Hand"
+            src="/images/breit/cta-kompliziert.png"
+            alt="Nesani"
             fill
             sizes="100vw"
             className="object-cover"

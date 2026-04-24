@@ -19,7 +19,7 @@ const QUOTES: Quote[] = [
       "Wir empfehlen Qonto aktiv Mandant:innen und nutzen es auch für unsere Steuerberatungsholding. Besonders die schnelle Kontoeröffnung und DATEV-Anbindung haben uns überzeugt.",
     author: "Jan Dittscheid",
     role: "Steuerberater und GF Insight Tax",
-    image: "/images/asset-33513-242e083a43.jpg",
+    image: "/images/breit/portrait-1.png",
     logoLabel: "INSIGHT",
   },
   {
@@ -27,7 +27,7 @@ const QUOTES: Quote[] = [
       "Ich bin viel unterwegs und schätze die Flexibilität, die mir Qonto bietet – egal ob über die Apple Watch oder mein iPhone. Effizient, digital und schnell: Das beschreibt Qonto perfekt!",
     author: "Julia Kounlavong",
     role: "Gründerin & CEO unwind your mind",
-    image: "/images/asset-33514-ad6b2e3349.jpg",
+    image: "/images/breit/portrait-2.png",
     logoLabel: "unwind your mind",
   },
   {
@@ -35,7 +35,7 @@ const QUOTES: Quote[] = [
       "Unser Geschäftskonto ist direkt über eine Schnittstelle mit DATEV verbunden. Dadurch kann unsere Steuerberatung sämtliche Abrechnungsdaten direkt abrufen, ohne dass wir etwas tun müssen.",
     author: "Norman Simon",
     role: "Gründer & CEO onGRID",
-    image: "/images/asset-33509-b8db35035d.jpg",
+    image: "/images/breit/portrait-3.png",
     logoLabel: "onGRID",
   },
   {
@@ -43,7 +43,7 @@ const QUOTES: Quote[] = [
       "Zu Qonto zu wechseln, war eine der besten Entscheidungen für unsere Finanzverwaltung. Qonto hat unseren Zahlungsverkehr rationalisiert und uns umfassende Kontrolle über unsere Finanzen gegeben.",
     author: "Marc Peter Dauter",
     role: "GF Le Wagon GmbH",
-    image: "/images/asset-33508-e7528a81cc.jpg",
+    image: "/images/breit/portrait-4.png",
     logoLabel: "Le Wagon",
   },
   {
@@ -51,7 +51,7 @@ const QUOTES: Quote[] = [
       "Mit Qonto ist alles super einfach und schnell. Von der Online Kontoeröffnung bis zu den Echtzeitüberweisungen und einem super Kundenservice.",
     author: "Charlotte",
     role: "Gründerin",
-    image: "/images/asset-33512-b2606835e0.jpg",
+    image: "/images/breit/portrait-5.png",
     logoLabel: "Lotta Ludwigson",
   },
 ];
