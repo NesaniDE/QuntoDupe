@@ -86,18 +86,20 @@ export function AboutTestimonials() {
 
         <div className="mt-10 md:mt-14 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
           <div className="lg:col-span-6 order-2 lg:order-1">
-            <div className="text-[56px] md:text-[80px] leading-none text-[#050505]/15 font-serif">
-              &ldquo;
-            </div>
-            <blockquote className="text-[20px] md:text-[26px] lg:text-[28px] leading-[1.4] tracking-[-0.01em] max-w-[38ch]">
-              {t.quote}
-            </blockquote>
-            <div className="mt-8">
-              <div className="font-sans font-semibold text-[17px] md:text-[18px]">
-                {t.name}
+            <div key={`t-${i}`} className="testimonial-fade">
+              <div className="text-[56px] md:text-[80px] leading-none text-[#050505]/15 font-serif">
+                &ldquo;
               </div>
-              <div className="text-[14px] md:text-[15px] text-[#050505]/70">
-                {t.role}
+              <blockquote className="text-[20px] md:text-[26px] lg:text-[28px] leading-[1.4] tracking-[-0.01em] max-w-[38ch]">
+                {t.quote}
+              </blockquote>
+              <div className="mt-8">
+                <div className="font-sans font-semibold text-[17px] md:text-[18px]">
+                  {t.name}
+                </div>
+                <div className="text-[14px] md:text-[15px] text-[#050505]/70">
+                  {t.role}
+                </div>
               </div>
             </div>
             <div className="mt-6 flex gap-1.5">
@@ -123,7 +125,7 @@ export function AboutTestimonials() {
                 alt={t.name}
                 fill
                 sizes="(min-width:1024px) 640px, 100vw"
-                className="object-cover object-[70%_center]"
+                className="object-cover object-[70%_center] testimonial-image"
               />
             </div>
           </div>

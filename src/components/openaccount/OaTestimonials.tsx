@@ -93,32 +93,34 @@ export function OaTestimonials() {
                 alt={t.name}
                 fill
                 sizes="(min-width:1024px) 420px, 100vw"
-                className="object-cover"
+                className="object-cover testimonial-image"
               />
             </div>
           </div>
 
           <div className="lg:col-span-7 order-1 lg:order-2">
-            <p className="text-[22px] md:text-[28px] lg:text-[32px] leading-[1.35] font-sans max-w-[40ch]">
-              <span className="text-white/40">&ldquo;</span>
-              {t.quote}
-              <span className="text-white/40">&rdquo;</span>
-            </p>
+            <div key={`oa-${i}`} className="testimonial-fade">
+              <p className="text-[22px] md:text-[28px] lg:text-[32px] leading-[1.35] font-sans max-w-[40ch]">
+                <span className="text-white/40">&ldquo;</span>
+                {t.quote}
+                <span className="text-white/40">&rdquo;</span>
+              </p>
 
-            <div className="mt-8 flex items-center gap-6">
-              <div>
-                <p className="font-semibold text-[15px]">{t.name}</p>
-                <p className="text-[13px] text-white/60">{t.role}</p>
-              </div>
-              <div className="h-8 flex items-center">
-                <Image
-                  key={t.logo}
-                  src={t.logo}
-                  alt=""
-                  width={100}
-                  height={32}
-                  className="h-7 md:h-8 w-auto opacity-90"
-                />
+              <div className="mt-8 flex items-center gap-6">
+                <div>
+                  <p className="font-semibold text-[15px]">{t.name}</p>
+                  <p className="text-[13px] text-white/60">{t.role}</p>
+                </div>
+                <div className="h-8 flex items-center">
+                  <Image
+                    key={t.logo}
+                    src={t.logo}
+                    alt=""
+                    width={100}
+                    height={32}
+                    className="h-7 md:h-8 w-auto opacity-90"
+                  />
+                </div>
               </div>
             </div>
 

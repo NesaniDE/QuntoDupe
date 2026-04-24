@@ -74,11 +74,12 @@ export function Testimonials() {
 
         <div className="relative overflow-hidden rounded-3xl aspect-[16/11] md:aspect-[16/9] lg:aspect-[16/8]">
           <Image
+            key={current.image}
             src={current.image}
             alt={current.author}
             fill
             sizes="(min-width: 1024px) 1344px, 100vw"
-            className="object-cover"
+            className="object-cover testimonial-image"
             priority={idx === 0}
           />
           <div
@@ -98,10 +99,13 @@ export function Testimonials() {
           </button>
 
           <div className="absolute inset-0 flex flex-col justify-between p-6 md:p-10 lg:p-14">
-            <div className="text-white/85 text-[12px] md:text-[13px] uppercase tracking-[0.18em] font-semibold">
+            <div
+              key={`label-${idx}`}
+              className="testimonial-fade text-white/85 text-[12px] md:text-[13px] uppercase tracking-[0.18em] font-semibold"
+            >
               {current.label}
             </div>
-            <div className="max-w-[640px]">
+            <div key={`quote-${idx}`} className="testimonial-fade max-w-[640px]">
               <blockquote className="text-[22px] md:text-[30px] lg:text-[36px] leading-[1.25] font-sans tracking-[-0.01em]">
                 &ldquo;{current.quote}&rdquo;
               </blockquote>

@@ -309,3 +309,21 @@
 .rt-logo {
   animation: rt-pulse 1.4s ease-in-out infinite;
 }
+
+/* Testimonial swap: soft fade + slight rise */
+@keyframes testimonial-fade {
+  0%   { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.testimonial-fade {
+  animation: testimonial-fade 500ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Testimonial image swap: crossfade + gentle zoom */
+@keyframes testimonial-image {
+  0%   { opacity: 0; transform: scale(1.04); }
+  100% { opacity: 1; transform: scale(1); }
+}
+.testimonial-image {
+  animation: testimonial-image 600ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
