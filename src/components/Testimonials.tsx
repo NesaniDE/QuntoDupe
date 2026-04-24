@@ -16,43 +16,43 @@ type Quote = {
 const QUOTES: Quote[] = [
   {
     quote:
-      "Wir empfehlen Qonto aktiv Mandant:innen und nutzen es auch für unsere Steuerberatungsholding. Besonders die schnelle Kontoeröffnung und DATEV-Anbindung haben uns überzeugt.",
-    author: "Jan Dittscheid",
-    role: "Steuerberater und GF Insight Tax",
+      "Wir haben rund 40 % unserer manuellen Arbeit automatisiert — ohne, dass Kunden etwas davon merken. Nur die Reaktionszeit ist deutlich kürzer.",
+    author: "Jens B.",
+    role: "Geschäftsführer, Beratung",
     image: "/images/breit/portrait-1.png",
-    logoLabel: "INSIGHT",
+    logoLabel: "BERATUNG",
   },
   {
     quote:
-      "Ich bin viel unterwegs und schätze die Flexibilität, die mir Qonto bietet – egal ob über die Apple Watch oder mein iPhone. Effizient, digital und schnell: Das beschreibt Qonto perfekt!",
-    author: "Julia Kounlavong",
-    role: "Gründerin & CEO unwind your mind",
+      "Der neue Auftritt wirkt nicht wie ein Template, sondern wie unser Unternehmen. Genau das war der Punkt.",
+    author: "Laura K.",
+    role: "Gründerin, Studio",
     image: "/images/breit/portrait-2.png",
-    logoLabel: "unwind your mind",
+    logoLabel: "STUDIO",
   },
   {
     quote:
-      "Unser Geschäftskonto ist direkt über eine Schnittstelle mit DATEV verbunden. Dadurch kann unsere Steuerberatung sämtliche Abrechnungsdaten direkt abrufen, ohne dass wir etwas tun müssen.",
-    author: "Norman Simon",
-    role: "Gründer & CEO onGRID",
+      "Von der ersten Skizze bis zum Livegang war der Prozess klar und ohne Reibung. Wir haben nur noch entschieden, nicht mehr verwaltet.",
+    author: "Tobias M.",
+    role: "CEO, B2B Software",
     image: "/images/breit/portrait-3.png",
-    logoLabel: "onGRID",
+    logoLabel: "B2B SOFTWARE",
   },
   {
     quote:
-      "Zu Qonto zu wechseln, war eine der besten Entscheidungen für unsere Finanzverwaltung. Qonto hat unseren Zahlungsverkehr rationalisiert und uns umfassende Kontrolle über unsere Finanzen gegeben.",
-    author: "Marc Peter Dauter",
-    role: "GF Le Wagon GmbH",
+      "Wir waren skeptisch, ob KI in unserem Umfeld wirklich greift. Heute übernimmt der Assistent rund 70 % der Erstanfragen — 24/7.",
+    author: "Sarah H.",
+    role: "Geschäftsführerin, Online-Handel",
     image: "/images/breit/portrait-4.png",
-    logoLabel: "Le Wagon",
+    logoLabel: "ONLINE-HANDEL",
   },
   {
     quote:
-      "Mit Qonto ist alles super einfach und schnell. Von der Online Kontoeröffnung bis zu den Echtzeitüberweisungen und einem super Kundenservice.",
-    author: "Charlotte",
-    role: "Gründerin",
+      "Individuelle Entwicklung statt Baukasten — genau das hat bei uns den Unterschied gemacht. Die Lösung wächst jetzt mit dem Geschäft mit.",
+    author: "Andreas V.",
+    role: "Geschäftsführer, Industrie",
     image: "/images/breit/portrait-5.png",
-    logoLabel: "Lotta Ludwigson",
+    logoLabel: "INDUSTRIE",
   },
 ];
 

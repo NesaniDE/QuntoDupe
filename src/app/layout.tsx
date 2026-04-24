@@ -2,17 +2,17 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Qonto | Das Geschäftskonto für Unternehmen in Europa",
+  title: "Nesani | Websites, KI-Workflows und autonome Agenten",
   description:
-    "Qonto ist die All-in-One-Finanzlösung für Selbständige und KMU: Geschäftskonto, Finanzmanagement, Gründung und mehr – alles digital, in wenigen Minuten.",
+    "Nesani baut individuelle Websites, KI-Workflows und autonome Agenten für Unternehmen — sichtbar, effizient, autonom.",
   icons: {
     icon: "/seo/favicon.png",
     apple: "/seo/apple-touch-icon.png",
   },
   openGraph: {
-    title: "Qonto – Das Geschäftskonto für Unternehmen in Europa",
+    title: "Nesani – Sichtbarer. Effizienter. Autonomer.",
     description:
-      "Geschäftskonto. Finanzmanagement. Unternehmensgründung. Alles in einer Plattform.",
+      "Websites, KI-Workflows und autonome Agenten aus einer Hand.",
     locale: "de_DE",
     type: "website",
   },

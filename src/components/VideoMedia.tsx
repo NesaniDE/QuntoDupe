@@ -6,8 +6,8 @@ export function VideoMedia() {
       <div className="mx-auto max-w-[1344px] px-5 md:px-8 lg:px-12">
         <div className="relative overflow-hidden rounded-2xl lg:rounded-3xl aspect-[1440/463]">
           <Image
-            src="/images/asset-33385-209240df8e.png"
-            alt="Unternehmen digital gründen — Qonto"
+            src="/images/breit/business-stufe-banner.png"
+            alt="Ihr Business auf die nächste Stufe bringen"
             fill
             sizes="(min-width: 1024px) 1344px, 100vw"
             className="object-cover"

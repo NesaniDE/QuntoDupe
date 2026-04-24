@@ -1,24 +1,5 @@
 import type { SVGProps } from "react";
 
-export function QontoMark(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 48 48" fill="none" aria-hidden {...props}>
-      <circle cx="24" cy="24" r="24" fill="currentColor" />
-      <text
-        x="24"
-        y="32"
-        textAnchor="middle"
-        fontFamily="QontoSans, PolySans, sans-serif"
-        fontWeight="700"
-        fontSize="20"
-        fill="#fff"
-      >
-        Q
-      </text>
-    </svg>
-  );
-}
-
 export function ChevronDownIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden {...props}>
