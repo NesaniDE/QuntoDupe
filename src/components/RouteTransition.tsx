@@ -4,16 +4,17 @@ import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
-type Phase = "idle" | "covering" | "held" | "revealing";
+type Phase = "idle" | "splash" | "covering" | "held" | "revealing";
 
+const SPLASH_HOLD_MS = 650;
 const COVER_MS = 520;
-const HOLD_MS = 280;
+const HOLD_MS = 320;
 const REVEAL_MS = 520;
 
 export function RouteTransition() {
   const router = useRouter();
   const pathname = usePathname();
-  const [phase, setPhase] = useState<Phase>("idle");
+  const [phase, setPhase] = useState<Phase>("splash");
   const pendingHref = useRef<string | null>(null);
   const reduceMotion = useRef(false);
 
@@ -21,7 +22,16 @@ export function RouteTransition() {
     reduceMotion.current = window.matchMedia(
       "(prefers-reduced-motion: reduce)",
     ).matches;
+    if (reduceMotion.current) {
+      setPhase("idle");
+    }
   }, []);
+
+  useEffect(() => {
+    if (phase !== "splash") return;
+    const id = window.setTimeout(() => setPhase("revealing"), SPLASH_HOLD_MS);
+    return () => window.clearTimeout(id);
+  }, [phase]);
 
   useEffect(() => {
     const onClick = (e: MouseEvent) => {
@@ -77,57 +87,73 @@ export function RouteTransition() {
       const id = window.setTimeout(() => setPhase("revealing"), HOLD_MS);
       return () => window.clearTimeout(id);
     }
-    if (phase === "revealing") {
-      const id = window.setTimeout(() => setPhase("idle"), REVEAL_MS);
-      return () => window.clearTimeout(id);
-    }
   }, [phase, router]);
 
+  useEffect(() => {
+    if (phase !== "revealing") return;
+    if (pendingHref.current !== null) return;
+    const id = window.setTimeout(() => setPhase("idle"), REVEAL_MS);
+    return () => window.clearTimeout(id);
+  }, [phase]);
+
   const active = phase !== "idle";
+  const showLogo =
+    phase === "splash" || phase === "covering" || phase === "held";
 
-  let translate = "translate-y-full";
-  if (phase === "covering" || phase === "held") translate = "translate-y-0";
-  if (phase === "revealing") translate = "-translate-y-full";
+  let translate: string;
+  let transitionDuration: number;
 
-  const logoVisible = phase === "covering" || phase === "held";
+  switch (phase) {
+    case "splash":
+    case "covering":
+    case "held":
+      translate = "translate-y-0";
+      transitionDuration = phase === "splash" ? 0 : COVER_MS;
+      break;
+    case "revealing":
+      translate = "-translate-y-full";
+      transitionDuration = REVEAL_MS;
+      break;
+    default:
+      translate = "translate-y-full";
+      transitionDuration = 0;
+  }
 
   return (
     <div
       aria-hidden={!active}
       className={[
         "fixed inset-0 z-[150] bg-[#050505] flex items-center justify-center",
-        "transition-transform ease-[cubic-bezier(0.76,0,0.24,1)]",
+        "ease-[cubic-bezier(0.76,0,0.24,1)]",
         translate,
-        phase === "covering" || phase === "held"
-          ? `duration-[${COVER_MS}ms]`
-          : `duration-[${REVEAL_MS}ms]`,
         active ? "pointer-events-auto" : "pointer-events-none",
       ].join(" ")}
       style={{
-        transitionDuration:
-          phase === "covering" || phase === "held"
-            ? `${COVER_MS}ms`
-            : `${REVEAL_MS}ms`,
+        transitionProperty: "transform",
+        transitionDuration: `${transitionDuration}ms`,
       }}
     >
       <div
         className={[
           "transition-all duration-500 ease-out",
-          logoVisible ? "opacity-100 scale-100" : "opacity-0 scale-90",
+          showLogo ? "opacity-100 scale-100" : "opacity-0 scale-90",
         ].join(" ")}
         style={{
-          transitionDelay: logoVisible ? "120ms" : "0ms",
+          transitionDelay: showLogo ? "80ms" : "0ms",
         }}
       >
-        <Image
-          src="/images/shm-logo-white.png"
-          alt="NESANI"
-          width={96}
-          height={96}
-          priority
-          className="w-16 h-16 md:w-20 md:h-20 object-contain"
-        />
+        <div className="rt-logo w-20 h-20 md:w-24 md:h-24 relative">
+          <Image
+            src="/images/shm-logo-white.png"
+            alt="NESANI"
+            fill
+            priority
+            sizes="96px"
+            className="object-contain"
+          />
+        </div>
       </div>
+
     </div>
   );
 }
