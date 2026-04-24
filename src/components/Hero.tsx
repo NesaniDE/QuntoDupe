@@ -14,16 +14,16 @@ export function Hero() {
           className="object-cover"
         />
       </div>
-      {/* Video overlay (z-20) — plays on desktop */}
+      {/* Video overlay (z-20) */}
       <video
-        className="hidden lg:block absolute inset-0 z-20 w-full h-full object-cover"
+        className="absolute inset-0 z-20 w-full h-full object-cover"
         autoPlay
         loop
         muted
         playsInline
         poster="/images/asset-33449-ecc13c3565.avif"
       >
-        <source src="/videos/asset-33748-fcca3f3bf8.webm" type="video/webm" />
+        <source src="/videos/hero.mp4" type="video/mp4" />
       </video>
       {/* Bottom scrim gradient (z-30) */}
       <div
