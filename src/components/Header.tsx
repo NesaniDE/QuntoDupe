@@ -58,7 +58,7 @@ export function Header({ variant = "solid" }: HeaderProps) {
         ].join(" ")}
       >
         <nav className="relative flex h-full items-center justify-between px-5 lg:px-12">
-          <Link href="/" aria-label="Nesani" className="flex items-center">
+          <Link href="/" aria-label="Nesani" className="flex items-center gap-2.5">
             <Image
               src={
                 menuOpen || isLight || variant === "transparent"
@@ -71,6 +71,16 @@ export function Header({ variant = "solid" }: HeaderProps) {
               priority
               className="h-9 w-9 object-contain"
             />
+            <span
+              className={[
+                "font-sans font-semibold text-[18px] tracking-[0.08em]",
+                menuOpen || isLight || variant === "transparent"
+                  ? "text-white"
+                  : "text-[#050505]",
+              ].join(" ")}
+            >
+              NESANI
+            </span>
           </Link>
 
           <ul className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center gap-x-8 text-[15px] font-normal">
