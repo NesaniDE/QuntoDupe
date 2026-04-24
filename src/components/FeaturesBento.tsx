@@ -16,6 +16,7 @@ type BentoCard = {
 const CARDS: BentoCard[] = [
   {
     title: "Websites",
+    body: "Moderne, schnell ladende Websites – technisch sauber, auf Conversion ausgerichtet und bereit für SEO.",
     image: "/images/services/leistung-websites.png",
     imageAlt: "Websites",
     href: "/leistungen/websites",
@@ -24,6 +25,7 @@ const CARDS: BentoCard[] = [
   },
   {
     title: "KI Workflows",
+    body: "Wiederkehrende Prozesse in automatisierte Abläufe überführen. Weniger Fleißarbeit, mehr Kapazität fürs Kerngeschäft.",
     image: "/images/services/leistung-ki-workflows.png",
     imageAlt: "KI Workflows",
     href: "/leistungen/ki-workflows",
@@ -32,6 +34,7 @@ const CARDS: BentoCard[] = [
   },
   {
     title: "Autonome Agenten",
+    body: "Systeme, die selbstständig handeln: beobachten, entscheiden, ausführen. Aus klaren Zielen werden messbare Resultate.",
     image: "/images/services/leistung-autonome-agenten.png",
     imageAlt: "Autonome Agenten",
     href: "/leistungen/autonome-agenten",
@@ -39,25 +42,28 @@ const CARDS: BentoCard[] = [
     imagePos: "bottom",
   },
   {
-    title: "Social Media & Online Präsenz",
+    title: "Social Media & Online-Präsenz",
+    body: "Konsistente Markenpräsenz über Kanäle hinweg – mit Inhalten, die ziehen, statt nur sichtbar zu sein.",
     image: "/images/oa-hero-nesani.png",
-    imageAlt: "Social Media & Online Präsenz",
+    imageAlt: "Social Media & Online-Präsenz",
     href: "/leistungen/social-media",
     className: "md:col-span-4 lg:col-span-4 md:row-span-2",
     imagePos: "bottom",
   },
   {
-    title: "KI Assistenten",
+    title: "KI-Assistenten & Chatbots",
+    body: "Eigene Assistenten und Chatbots, die Routineanfragen übernehmen, 24/7 antworten und Ihr Team entlasten.",
     image: "/images/services/leistung-ki-assistenten.png",
-    imageAlt: "KI Assistenten",
+    imageAlt: "KI-Assistenten & Chatbots",
     href: "/leistungen/ki-assistenten",
     className: "md:col-span-4 lg:col-span-4 md:row-span-2",
     imagePos: "bottom",
   },
   {
-    title: "Individuelle Systeme",
+    title: "Individuelle Systemarchitektur",
+    body: "Maßgeschneiderte Softwarelösungen mit klarer Architektur – dokumentiert, wartbar und gebaut, um zu skalieren.",
     image: "/images/services/leistung-systemarchitektur.png",
-    imageAlt: "Individuelle Systeme",
+    imageAlt: "Individuelle Systemarchitektur",
     href: "/leistungen/systemarchitektur",
     className: "md:col-span-4 lg:col-span-4 md:row-span-2",
     imagePos: "bottom",
