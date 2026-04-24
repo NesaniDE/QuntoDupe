@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { ArrowUpRightIcon } from "@/components/icons";
-import type { BlogPost } from "@/data/blog";
+import type { BlogPost, BlogSection } from "@/data/blog";
 
 type Props = {
   post: BlogPost;
-  children: ReactNode;
+  children?: ReactNode;
   related: BlogPost[];
 };
 
@@ -22,7 +22,7 @@ export function BlogArticle({ post, children, related }: Props) {
             <span className="mx-2">/</span>
             <span className="text-[#050505]/80">{post.category}</span>
           </nav>
-          <div className="mt-6 flex items-center gap-3 text-[12px]">
+          <div className="mt-6 flex flex-wrap items-center gap-3 text-[12px]">
             <span className="rounded-full bg-white text-[#050505] px-3 py-1 font-medium">
               {post.category}
             </span>
@@ -31,6 +31,10 @@ export function BlogArticle({ post, children, related }: Props) {
             </time>
             <span className="text-[#050505]/35">·</span>
             <span className="text-[#050505]/65">{post.readingTime} Lesezeit</span>
+            <span className="text-[#050505]/35">·</span>
+            <span className="text-[#050505]/65">
+              Von <span className="text-[#050505]/85 font-medium">{post.author}</span>
+            </span>
           </div>
           <h1 className="mt-6 font-sans font-semibold text-[36px] md:text-[52px] lg:text-[64px] leading-[1.05] tracking-[-0.02em] max-w-[22ch]">
             {post.title}
@@ -57,7 +61,7 @@ export function BlogArticle({ post, children, related }: Props) {
 
         <div className="mx-auto max-w-[760px] px-5 md:px-8 py-14 md:py-20 lg:py-24">
           <article className="space-y-7 text-[17px] md:text-[18px] leading-[1.7] text-[#050505]/85">
-            {children}
+            {children ?? renderSections(post.sections)}
           </article>
         </div>
       </section>
@@ -116,6 +120,28 @@ export function BlogArticle({ post, children, related }: Props) {
       </section>
     </>
   );
+}
+
+function renderSections(sections: BlogSection[]): ReactNode {
+  return sections.map((section, index) => {
+    const key = `${section.type}-${index}`;
+    switch (section.type) {
+      case "paragraph":
+        return <BlogParagraph key={key}>{section.content}</BlogParagraph>;
+      case "heading":
+        return <BlogHeading key={key}>{section.content}</BlogHeading>;
+      case "quote":
+        return <BlogQuote key={key}>{section.content}</BlogQuote>;
+      case "list":
+        return (
+          <BlogList key={key}>
+            {section.items.map((item, i) => (
+              <BlogListItem key={i}>{item}</BlogListItem>
+            ))}
+          </BlogList>
+        );
+    }
+  });
 }
 
 export function BlogParagraph({ children }: { children: ReactNode }) {
