@@ -19,7 +19,7 @@ export const PROJECTS: Project[] = [
     year: "2026",
     summary:
       "Eigene Marken- und Leistungsseite: performant, SEO-ready, auf Conversion ausgerichtet. Entwickelt mit Next.js, Tailwind und sauberer Komponentenarchitektur.",
-    image: "/images/services/leistung-websites.png",
+    image: "/images/projects/nesani.png",
     href: "https://www.nesani.de",
     available: true,
   },
@@ -31,8 +31,8 @@ export const PROJECTS: Project[] = [
     year: "2026",
     summary:
       "Aufbau einer konsistenten Online-Präsenz und Content-Strategie über mehrere Kanäle – mit Fokus auf Wiedererkennung, Reichweite und echten Berührungspunkten mit der Zielgruppe.",
-    image: "/images/breit/portrait-2.png",
-    available: true,
+    image: "/images/projects/demnaechst.png",
+    available: false,
   },
   {
     slug: "ki-workflows-case",
@@ -42,7 +42,7 @@ export const PROJECTS: Project[] = [
     year: "2026",
     summary:
       "Ein Kundenprojekt zu automatisierten Abläufen und integrierten KI-Workflows. Details folgen nach Freigabe durch den Kunden.",
-    image: "/images/services/leistung-ki-workflows.png",
+    image: "/images/projects/demnaechst.png",
     available: false,
   },
   {
@@ -53,7 +53,7 @@ export const PROJECTS: Project[] = [
     year: "2026",
     summary:
       "Ein eigener Assistent, der Routineanfragen übernimmt und das Team spürbar entlastet. Details folgen nach Freigabe durch den Kunden.",
-    image: "/images/services/leistung-ki-assistenten.png",
+    image: "/images/projects/demnaechst.png",
     available: false,
   },
   {
@@ -64,7 +64,7 @@ export const PROJECTS: Project[] = [
     year: "2026",
     summary:
       "Ein System, das beobachtet, entscheidet und eigenständig handelt. Details folgen nach Freigabe durch den Kunden.",
-    image: "/images/services/leistung-autonome-agenten.png",
+    image: "/images/projects/demnaechst.png",
     available: false,
   },
   {
@@ -75,7 +75,7 @@ export const PROJECTS: Project[] = [
     year: "2026",
     summary:
       "Maßgeschneiderte Software mit klarer Architektur, sauberer Dokumentation und langfristiger Wartbarkeit. Details folgen nach Freigabe durch den Kunden.",
-    image: "/images/services/leistung-systemarchitektur.png",
+    image: "/images/projects/demnaechst.png",
     available: false,
   },
 ];

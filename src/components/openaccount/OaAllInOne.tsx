@@ -21,7 +21,7 @@ const SERVICES: Service[] = [
   {
     title: "Social Media & Online-Präsenz",
     body: "Konsistente Markenpräsenz über Kanäle hinweg – mit Inhalten, die ziehen, statt nur sichtbar zu sein.",
-    img: "/images/oa-hero-nesani.png",
+    img: "/images/services/leistung-social-media.png",
     span: "lg:col-span-4",
     href: "/leistungen/social-media",
   },

@@ -44,7 +44,7 @@ const CARDS: BentoCard[] = [
   {
     title: "Social Media & Online-Präsenz",
     body: "Konsistente Markenpräsenz über Kanäle hinweg – mit Inhalten, die ziehen, statt nur sichtbar zu sein.",
-    image: "/images/oa-hero-nesani.png",
+    image: "/images/services/leistung-social-media.png",
     imageAlt: "Social Media & Online-Präsenz",
     href: "/leistungen/social-media",
     className: "md:col-span-4 lg:col-span-4 md:row-span-2",

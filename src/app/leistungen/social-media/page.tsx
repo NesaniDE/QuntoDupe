@@ -41,7 +41,7 @@ export default function SocialMediaPage() {
             icon: LayersIcon,
           }}
           image={{
-            src: "/images/oa-hero-nesani.png",
+            src: "/images/services/leistung-social-media.png",
             alt: "Strategische Online-Präsenz",
           }}
         />
@@ -55,7 +55,7 @@ export default function SocialMediaPage() {
             "Brands, die ihre Positionierung schärfen wollen.",
           ]}
           image={{
-            src: "/images/oa-hero-nesani.png",
+            src: "/images/services/leistung-social-media.png",
             alt: "Konsistente Markenpräsenz",
           }}
         />
