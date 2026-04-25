@@ -27,62 +27,6 @@ export function ChatWidget() {
   const bodyRef = useRef<HTMLDivElement>(null);
   const abortRef = useRef<AbortController | null>(null);
 
-  // Eindeutige, nicht personalisierbare Conversation-ID für Logs.
-  // Bleibt nur im RAM — kein Cookie, kein localStorage, keine User-Bindung.
-  const conversationRef = useRef<{ id: string; startedAt: number } | null>(
-    null,
-  );
-  const loggedRef = useRef(false);
-  const messagesRef = useRef<ChatMessage[]>([]);
-  useEffect(() => {
-    messagesRef.current = messages;
-  }, [messages]);
-
-  function ensureConversation() {
-    if (!conversationRef.current) {
-      conversationRef.current = { id: newId(), startedAt: Date.now() };
-      loggedRef.current = false;
-    }
-    return conversationRef.current;
-  }
-
-  function flushLog(reason: "close" | "unload") {
-    const convo = conversationRef.current;
-    if (!convo || loggedRef.current) return;
-    const msgs = messagesRef.current;
-    if (!msgs.some((m) => m.role === "user")) return;
-
-    loggedRef.current = true;
-    const payload = JSON.stringify({
-      conversationId: convo.id,
-      startedAt: convo.startedAt,
-      messages: msgs.map((m) => ({ role: m.role, content: m.content })),
-    });
-
-    try {
-      if (
-        reason === "unload" &&
-        typeof navigator !== "undefined" &&
-        "sendBeacon" in navigator
-      ) {
-        navigator.sendBeacon(
-          "/api/chat-log",
-          new Blob([payload], { type: "application/json" }),
-        );
-        return;
-      }
-    } catch {
-      // fall through to fetch
-    }
-
-    fetch("/api/chat-log", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: payload,
-      keepalive: true,
-    }).catch(() => {});
-  }
-
   // Mount + open animation lifecycle
   useEffect(() => {
     if (open) {
@@ -119,37 +63,19 @@ export function ChatWidget() {
     if (el) el.scrollTop = el.scrollHeight;
   }, [messages, status]);
 
-  // Cancel any in-flight request + flush log when the widget closes
+  // Cancel any in-flight request when the widget closes
   useEffect(() => {
     if (!open && abortRef.current) {
       abortRef.current.abort();
       abortRef.current = null;
     }
-    if (!open) {
-      flushLog("close");
-      // Beim nächsten Öffnen neue Conversation
-      conversationRef.current = null;
-      loggedRef.current = false;
-    }
   }, [open]);
-
-  // Flush log when the page is closed/refreshed mid-conversation
-  useEffect(() => {
-    const handler = () => flushLog("unload");
-    window.addEventListener("pagehide", handler);
-    window.addEventListener("beforeunload", handler);
-    return () => {
-      window.removeEventListener("pagehide", handler);
-      window.removeEventListener("beforeunload", handler);
-    };
-  }, []);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     const value = draft.trim();
     if (value.length === 0 || status !== "idle") return;
 
-    ensureConversation();
     const userMsg: ChatMessage = {
       id: newId(),
       role: "user",
@@ -317,22 +243,8 @@ export function ChatWidget() {
             </div>
           </div>
 
-          {/* Privacy hint */}
-          <div className="px-5 py-2 bg-[#FAF7F0] text-[11px] text-[#050505]/65 leading-snug border-b border-black/5">
-            Konversationen werden zur Qualitätssicherung anonym gespeichert.
-            Mehr dazu im{" "}
-            <Link
-              href="/datenschutz"
-              onClick={() => setOpen(false)}
-              className="underline underline-offset-2 hover:text-[#050505]"
-            >
-              Datenschutz
-            </Link>
-            .
-          </div>
-
           {/* Body */}
-          <div ref={bodyRef} className="px-5 py-5 max-h-[55vh] overflow-y-auto">
+          <div ref={bodyRef} className="px-5 py-5 max-h-[60vh] overflow-y-auto">
             {/* Intro bubble (always visible) */}
             <BotRow>
               <div className="bg-[#F4F1EA] rounded-2xl rounded-tl-md px-3.5 py-2.5 text-[14px] leading-[1.45] max-w-[260px] chat-pop">

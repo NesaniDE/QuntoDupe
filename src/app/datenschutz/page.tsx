@@ -134,20 +134,9 @@ export default function DatenschutzPage() {
               zertifiziert.
             </p>
             <p>
-              Zur Qualitätssicherung und Verbesserung des Assistenten speichern
-              wir am Ende einer Konversation das Transkript. Dabei werden
-              ausschließlich die Nachrichten-Inhalte sowie eine zufällig
-              generierte, nicht personalisierbare Konversations-ID
-              gespeichert.{" "}
-              <strong>
-                Wir erheben in diesem Zusammenhang weder IP-Adressen,
-                Gerätekennungen noch Cookies oder andere Tracking-Daten.
-              </strong>{" "}
-              Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes
-              Interesse an der Verbesserung unseres Service). Transkripte
-              werden spätestens nach 30 Tagen gelöscht. Eingaben in den Chat
-              sind freiwillig — bitte geben Sie keine sensiblen Daten ein. Bei
-              konkreten Anliegen empfehlen wir das Kontaktformular.
+              Wir speichern keine Konversations-Transkripte. Eingaben in den
+              Chat sind freiwillig — bitte geben Sie keine sensiblen Daten
+              ein. Bei konkreten Anliegen empfehlen wir das Kontaktformular.
             </p>
           </LegalSection>
 
