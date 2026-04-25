@@ -1415,6 +1415,1372 @@ export const POSTS: BlogPost[] = [
     ],
   },
   {
+    slug: "nextjs-astro-wordpress-stack-vergleich",
+    title:
+      "Next.js, Astro oder WordPress: Welcher Stack passt zu welchem Mittelstand?",
+    category: "Websites",
+    date: "25. April 2026",
+    dateIso: "2026-04-25",
+    readingTime: "6 min",
+    excerpt:
+      "Drei beliebte Web-Stacks – drei sehr unterschiedliche Profile. Wann sich Next.js wirklich lohnt, wo Astro punktet und warum WordPress trotz allem nicht tot ist.",
+    image: "/images/projects/demnaechst.png",
+    author: AUTHOR,
+    available: true,
+    sections: [
+      {
+        type: "paragraph",
+        content:
+          "Die Wahl des Web-Stacks ist selten eine technische Entscheidung allein – sie ist eine Entscheidung über Wartbarkeit, Geschwindigkeit, Kosten und langfristige Unabhängigkeit. Drei Stacks decken aktuell den Großteil ernsthafter Mittelstands-Websites ab: Next.js, Astro und WordPress.",
+      },
+      { type: "heading", content: "Next.js – wenn Performance und Logik zählen" },
+      {
+        type: "paragraph",
+        content:
+          "Next.js ist das React-Framework, das hinter sehr vielen modernen Websites steht. Stark bei dynamischen Inhalten, Integrationen, sehr guter Performance ab Werk und einer extrem aktiven Community. Schwächer bei reiner Inhaltspflege durch Nicht-Entwickler – ohne Headless-CMS landet die Redaktion schnell beim Code.",
+      },
+      { type: "heading", content: "Astro – wenn die Website primär Inhalt ist" },
+      {
+        type: "paragraph",
+        content:
+          "Astro liefert HTML, das fast komplett statisch ist und nur dort JavaScript lädt, wo wirklich Interaktion stattfindet. Ideal für Inhalts-getriebene Websites, Blogs und Dokumentationen. Kein React-Overhead, exzellente Lighthouse-Werte, einfaches Mental Model.",
+      },
+      { type: "heading", content: "WordPress – wenn Redaktion und Plugins entscheiden" },
+      {
+        type: "paragraph",
+        content:
+          "WordPress ist nicht tot, aber häufig falsch eingesetzt. Stark, wenn Mehrere Personen ohne Entwicklerkenntnisse Inhalte pflegen sollen oder ein E-Commerce-Plugin wie WooCommerce gefragt ist. Schwächer bei Performance, Sicherheit und langfristiger Codequalität.",
+      },
+      { type: "heading", content: "Faustregel zur Auswahl" },
+      {
+        type: "list",
+        items: [
+          "Hoher Anteil an dynamischen Funktionen, KI-Integration, individuelle Logik → Next.js.",
+          "Reine Inhalts-/Marketing-Site mit Fokus auf Performance → Astro.",
+          "Mehrere redaktionelle Stakeholder ohne Entwickler-Backup → WordPress mit gepflegter Architektur.",
+        ],
+      },
+      {
+        type: "quote",
+        content:
+          "Der beste Stack ist der, den das Team in zwei Jahren noch sinnvoll betreiben kann.",
+      },
+    ],
+  },
+  {
+    slug: "conversion-orientierte-leistungsseiten",
+    title:
+      "Conversion-orientierte Leistungsseiten: Vier Bausteine, die jede Anfrage qualifizieren",
+    category: "Websites",
+    date: "25. April 2026",
+    dateIso: "2026-04-25",
+    readingTime: "5 min",
+    excerpt:
+      "Eine Leistungsseite ist mehr als eine schöne Beschreibung. Vier strukturelle Bausteine, die aus Besuchern qualifizierte Anfragen machen – ohne Verkaufsdruck.",
+    image: "/images/projects/demnaechst.png",
+    author: AUTHOR,
+    available: true,
+    sections: [
+      {
+        type: "paragraph",
+        content:
+          "Eine Leistungsseite hat eine einzige Aufgabe: einen Besucher mit einem konkreten Bedarf in eine qualifizierte Anfrage zu überführen. Das gelingt nicht über Hochglanz-Texte, sondern über vier strukturelle Bausteine, die meistens fehlen.",
+      },
+      { type: "heading", content: "Baustein 1: Klares Problemversprechen ganz oben" },
+      {
+        type: "paragraph",
+        content:
+          "Innerhalb von 5 Sekunden muss klar sein, welches Problem die Seite löst – nicht welches Produkt sie beschreibt. Eine Headline wie 'Websites, die Anfragen bringen' funktioniert besser als 'Professionelles Webdesign mit Liebe zum Detail'.",
+      },
+      { type: "heading", content: "Baustein 2: Sichtbarer Prozess" },
+      {
+        type: "paragraph",
+        content:
+          "Wer einen Anbieter beauftragen will, will wissen, was passiert. Eine Schritt-für-Schritt-Übersicht in drei bis fünf Phasen reduziert die Unsicherheit. Wichtig: Realistisch bleiben, keine Marketing-Phrasen ('Wir hören zu, wir gestalten, wir liefern' ist zu generisch).",
+      },
+      { type: "heading", content: "Baustein 3: Echte Referenzen oder Zitate" },
+      {
+        type: "paragraph",
+        content:
+          "Konkrete, nachprüfbare Hinweise schlagen jede Selbstbeschreibung. Wenige echte Stimmen mit Name, Funktion und Branche wirken stärker als zehn anonyme Sterne-Bewertungen.",
+      },
+      { type: "heading", content: "Baustein 4: Vorqualifizierte Kontaktstrecke" },
+      {
+        type: "list",
+        items: [
+          "Drei kurze Felder reichen oft: Name, Mail, Vorhaben in zwei Sätzen.",
+          "Reaktionszeit-Versprechen ('Antwort innerhalb 24 Stunden') reduziert Absprung.",
+          "Eine ehrliche 'Was wir nicht machen'-Liste qualifiziert vor.",
+        ],
+      },
+      {
+        type: "quote",
+        content:
+          "Eine gute Leistungsseite filtert in beide Richtungen – sie zieht passende Anfragen an und schreckt unpassende ab.",
+      },
+    ],
+  },
+  {
+    slug: "headless-cms-2026-mittelstand",
+    title:
+      "Headless CMS in 2026: Wann Mittelständler tatsächlich profitieren – und wann nicht",
+    category: "Websites",
+    date: "25. April 2026",
+    dateIso: "2026-04-25",
+    readingTime: "5 min",
+    excerpt:
+      "Headless CMS ist die Standardantwort vieler Agenturen – aber nicht jede Mittelstandswebsite profitiert. Eine ehrliche Einordnung, ohne Hype.",
+    image: "/images/projects/demnaechst.png",
+    author: AUTHOR,
+    available: true,
+    sections: [
+      {
+        type: "paragraph",
+        content:
+          "Headless CMS – also die Trennung von Inhaltsverwaltung und Frontend-Auslieferung – ist seit Jahren in den Web-Diskussionen prominent. Sanity, Strapi, Contentful, Storyblok, Payload: die Optionen sind zahlreich. Trotzdem brauchen viele Mittelständler kein Headless CMS.",
+      },
+      { type: "heading", content: "Wann ein Headless CMS sich wirklich lohnt" },
+      {
+        type: "list",
+        items: [
+          "Mehrere Frontends greifen auf dieselben Inhalte zu (Web, App, Newsletter).",
+          "Mehrsprachigkeit mit komplexer Übersetzungs-Workflow.",
+          "Ein größeres redaktionelles Team mit Rollen und Freigabeprozessen.",
+          "Inhalte werden außerhalb des Webs auch maschinell weiterverwendet.",
+        ],
+      },
+      { type: "heading", content: "Wann es nur Komplexität ohne Nutzen bringt" },
+      {
+        type: "paragraph",
+        content:
+          "Eine klassische Mittelstands-Website mit 5 bis 15 Seiten, einer Person für die Inhaltspflege und keinerlei App-Anbindung braucht kein Headless CMS. Der Setup-Aufwand, die Wartung, das zweite Login, die Wissensaufteilung – das alles bringt operativ nichts ein, wenn der Use-Case ein Editor und eine Seite sind.",
+      },
+      { type: "heading", content: "Pragmatische Alternativen" },
+      {
+        type: "paragraph",
+        content:
+          "Markdown-Dateien im Repo plus saubere Architektur reichen für viele Mittelstands-Websites. Wer dennoch Komfort möchte, kann mit einem Lite-CMS oder einer kleinen Admin-Oberfläche arbeiten – ohne den vollen Headless-Stack zu installieren.",
+      },
+    ],
+  },
+  {
+    slug: "wie-viel-inhalt-mittelstandswebsite",
+    title:
+      "Wie viel Inhalt braucht eine Mittelstandswebsite? Der 3-Seiten-Mythos",
+    category: "Websites",
+    date: "25. April 2026",
+    dateIso: "2026-04-25",
+    readingTime: "4 min",
+    excerpt:
+      "Drei Seiten? Dreißig? Drei pro Leistung? Eine ehrliche Einordnung, wie viel Inhalt 2026 wirklich gebraucht wird – ohne Padding und ohne Marketing-Floskeln.",
+    image: "/images/projects/demnaechst.png",
+    author: AUTHOR,
+    available: true,
+    sections: [
+      {
+        type: "paragraph",
+        content:
+          "Die alte Faustregel 'Drei Seiten reichen für Mittelständler' stimmt 2026 nicht mehr. Aber das Gegenteil – möglichst viele Seiten für SEO – stimmt auch nicht. Es kommt auf die Substanz an, nicht auf die Anzahl.",
+      },
+      { type: "heading", content: "Was unbedingt eigene Seiten verdient" },
+      {
+        type: "list",
+        items: [
+          "Jede Kernleistung mit klarem Suchvolumen-Profil.",
+          "Eine echte Über-uns-Seite, die mehr ist als Stockfoto und drei Sätze.",
+          "Eine Kontaktseite mit klarem Anfrage-Prozess.",
+          "Ein Blog-Bereich für fachliche Tiefe und Suchanfragen jenseits der Markenkeywords.",
+          "Pflicht: Impressum und Datenschutz.",
+        ],
+      },
+      { type: "heading", content: "Was selten zusätzliche Seiten braucht" },
+      {
+        type: "paragraph",
+        content:
+          "Künstliche Spaltung von Themen führt zu dünnen Seiten und schwacher Autorität. 'Über uns', 'Unsere Werte', 'Unsere Vision', 'Unsere Geschichte' als vier Einzelseiten ist klassisches Padding – Google bewertet sowas eher kritisch.",
+      },
+      { type: "heading", content: "Die richtige Frage" },
+      {
+        type: "paragraph",
+        content:
+          "Statt 'Wie viele Seiten brauche ich?' lohnt es sich zu fragen: 'Welche Suchanfragen hat meine Zielgruppe – und für welche habe ich substanziellen Inhalt?' Daraus ergibt sich die richtige Anzahl, oft zwischen 8 und 25.",
+      },
+    ],
+  },
+  {
+    slug: "mobile-reality-2026",
+    title:
+      "Mobile First ist nicht mehr genug – was Mobile Reality 2026 bedeutet",
+    category: "Websites",
+    date: "25. April 2026",
+    dateIso: "2026-04-25",
+    readingTime: "4 min",
+    excerpt:
+      "Mobile First ist seit zehn Jahren Best Practice. 2026 reicht das nicht mehr. Was sich verschoben hat – und was Mittelständler bei jeder neuen Website beachten sollten.",
+    image: "/images/projects/demnaechst.png",
+    author: AUTHOR,
+    available: true,
+    sections: [
+      {
+        type: "paragraph",
+        content:
+          "Mobile First war die Antwort auf die Smartphone-Revolution: Designe zuerst für die kleine Bildschirmgröße, danach skalierst du nach oben. Heute reicht das nicht mehr. Die Realität auf mobilen Geräten ist komplexer als die Größe des Bildschirms.",
+      },
+      { type: "heading", content: "Was Mobile Reality 2026 ausmacht" },
+      {
+        type: "list",
+        items: [
+          "Variable Netzqualität: 5G in der Stadt, 3G im Pendlerzug – die Website muss überall funktionieren.",
+          "Touch-Targets, die fingerfreundlich sind, auch bei kleinen Bildschirmen.",
+          "Energieeffizienz: aufwendige Animationen verkürzen die Akkulaufzeit, wenn sie unkontrolliert laufen.",
+          "Kontextspezifisches Verhalten: ein Restaurant-Besucher abends will Reservierung, kein Imagefilm.",
+        ],
+      },
+      { type: "heading", content: "Was zu prüfen ist" },
+      {
+        type: "list",
+        items: [
+          "Performance auf einer simulierten 4G-Verbindung, nicht im WLAN.",
+          "Lesbarkeit ohne Zoom auch bei kleinen Schriften.",
+          "Anrufe und Mails aus der Website sollten mit einem Tap funktionieren.",
+          "Layout-Shifts während des Ladens vermeiden – Cumulative Layout Shift bleibt eine zentrale Metrik.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "technische-seo-2026",
+    title:
+      "Technische SEO 2026: Welche Hebel heute wirklich Wirkung zeigen",
+    category: "SEO",
+    date: "25. April 2026",
+    dateIso: "2026-04-25",
+    readingTime: "6 min",
+    excerpt:
+      "Technische SEO hat sich in den letzten Jahren stark verschoben. Was 2026 Pflichtprogramm ist, was zur Kür gehört – und welche Hebel überschätzt werden.",
+    image: "/images/projects/demnaechst.png",
+    author: AUTHOR,
+    available: true,
+    sections: [
+      {
+        type: "paragraph",
+        content:
+          "Technische SEO war früher gleichbedeutend mit Meta-Tags, Sitemap und ein paar serverseitigen Tricks. 2026 ist die Disziplin breiter geworden – und gleichzeitig wieder pragmatischer. Drei Bereiche zählen wirklich.",
+      },
+      { type: "heading", content: "Pflichtprogramm: Foundation" },
+      {
+        type: "list",
+        items: [
+          "HTTPS überall, mit gültigem Zertifikat und korrekten Redirects.",
+          "Saubere URL-Struktur ohne überflüssige Parameter.",
+          "Korrekte canonical-Tags – jede Seite verweist auf ihre eigene URL.",
+          "robots.txt und sitemap.xml gepflegt und in der Search Console eingereicht.",
+          "Mobile Usability ohne kritische Fehler.",
+        ],
+      },
+      { type: "heading", content: "Wichtig: Performance" },
+      {
+        type: "paragraph",
+        content:
+          "Core Web Vitals sind kein Ranking-Wundermittel, aber sie sind ein klares Signal. LCP unter 2,5 Sekunden, CLS unter 0,1, INP unter 200 Millisekunden. Wer diese Werte erreicht, hat einen messbaren Vorteil gegenüber Anbietern, die sich auf Optik konzentriert haben.",
+      },
+      { type: "heading", content: "Aufkommend: Strukturierte Daten" },
+      {
+        type: "paragraph",
+        content:
+          "JSON-LD wird wichtiger, nicht nur für Rich Results, sondern für KI-Suchmaschinen. Organization, LocalBusiness, BlogPosting, BreadcrumbList und Service sind die Schemas, die für Mittelständler den größten Hebel bringen.",
+      },
+      { type: "heading", content: "Überschätzt" },
+      {
+        type: "list",
+        items: [
+          "Keyword-Density als Stellschraube – Google rechnet längst anders.",
+          "Massen-Linkbuilding aus Verzeichnissen.",
+          "Mikro-Optimierungen an Meta-Descriptions, wenn die Substanz fehlt.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "core-web-vitals-2026",
+    title:
+      "Core Web Vitals nach 2025: Was sich für Mittelständler geändert hat",
+    category: "SEO",
+    date: "25. April 2026",
+    dateIso: "2026-04-25",
+    readingTime: "5 min",
+    excerpt:
+      "INP hat FID 2024 abgelöst, die Schwellenwerte werden härter. Was Mittelständler 2026 zu Core Web Vitals wissen müssen – ohne Tech-Jargon.",
+    image: "/images/projects/demnaechst.png",
+    author: AUTHOR,
+    available: true,
+    sections: [
+      {
+        type: "paragraph",
+        content:
+          "Core Web Vitals sind drei Messwerte, mit denen Google die wahrgenommene Qualität einer Website beurteilt: wie schnell sie lädt, wie reaktiv sie wirkt, wie stabil sie sich aufbaut. Seit März 2024 hat INP den älteren FID-Messwert abgelöst – das hat viele Websites kalt erwischt.",
+      },
+      { type: "heading", content: "Die drei Messwerte heute" },
+      {
+        type: "list",
+        items: [
+          "LCP (Largest Contentful Paint) – wie schnell das größte Element sichtbar ist. Ziel: unter 2,5 Sekunden.",
+          "INP (Interaction to Next Paint) – wie schnell die Seite auf Klicks oder Eingaben reagiert. Ziel: unter 200 Millisekunden.",
+          "CLS (Cumulative Layout Shift) – wie stabil das Layout während des Ladens ist. Ziel: unter 0,1.",
+        ],
+      },
+      { type: "heading", content: "Wo Mittelständler typisch scheitern" },
+      {
+        type: "paragraph",
+        content:
+          "Schlechtes LCP liegt fast immer an unkomprimierten Hero-Bildern. Schlechtes INP an überladenen JavaScript-Bundles, oft durch Tracking- und Plugin-Wirrwarr. Schlechtes CLS an spät geladenen Webfonts oder Bildern ohne festgelegte Größen.",
+      },
+      { type: "heading", content: "Drei Quick-Wins" },
+      {
+        type: "list",
+        items: [
+          "Hero-Bild als WebP/AVIF, mit width/height und priority eingebunden.",
+          "Tracking-Skripte und Plugins regelmäßig ausmisten – jeder Schnipsel kostet INP.",
+          "Webfonts mit font-display: swap und vorgewählten Fallbacks einbinden.",
+        ],
+      },
+      {
+        type: "quote",
+        content:
+          "Die Core Web Vitals sind kein Ranking-Wundermittel – aber sie sind das ehrlichste Frühwarnsystem für eine technisch verschleppte Website.",
+      },
+    ],
+  },
+  {
+    slug: "strukturierte-daten-json-ld",
+    title:
+      "Strukturierte Daten richtig einsetzen: Vom JSON-LD zum Rich Result",
+    category: "SEO",
+    date: "25. April 2026",
+    dateIso: "2026-04-25",
+    readingTime: "6 min",
+    excerpt:
+      "JSON-LD ist Pflichtprogramm für moderne Websites – aber die meisten Implementierungen sind Stückwerk. Welche Schemas wirklich Wirkung zeigen und wie man sie sauber einsetzt.",
+    image: "/images/projects/demnaechst.png",
+    author: AUTHOR,
+    available: true,
+    sections: [
+      {
+        type: "paragraph",
+        content:
+          "Strukturierte Daten sind das Format, in dem eine Website Suchmaschinen und KI-Modellen sagt, was eine Seite konkret ist. Statt nur Text zu liefern, deklariert man: Das hier ist ein Unternehmen mit dieser Adresse, das hier ist ein Blogartikel von diesem Autor, das hier ist eine Dienstleistung mit diesem Anbieter. JSON-LD ist das empfohlene Format, weil es im head separat platziert wird und nicht den Inhalt verschmutzt.",
+      },
+      { type: "heading", content: "Schemas mit hohem Hebel für Mittelständler" },
+      {
+        type: "list",
+        items: [
+          "Organization oder LocalBusiness – Pflicht für jede Unternehmenswebsite.",
+          "Service – pro Leistungsseite, mit Beschreibung und Anbieter-Verknüpfung.",
+          "BlogPosting bzw. Article – pro Blogartikel, mit Autor, Datum und Bild.",
+          "BreadcrumbList – verbessert Navigation in den Suchergebnissen.",
+          "FAQPage – wenn Frage-Antwort-Blöcke vorhanden sind.",
+          "Review oder AggregateRating – nur, wenn echte Bewertungen vorliegen.",
+        ],
+      },
+      { type: "heading", content: "Häufige Fehler" },
+      {
+        type: "list",
+        items: [
+          "Schema, das nicht zur Seite passt – z. B. Product-Schema auf einer Service-Seite.",
+          "Felder mit falschen Datenformaten – Datum als String statt ISO-8601.",
+          "Mehrere widersprüchliche Schemas auf derselben Seite.",
+          "AggregateRating ohne reale Bewertungsbasis – verstößt gegen Google-Richtlinien.",
+        ],
+      },
+      { type: "heading", content: "Verifikation" },
+      {
+        type: "paragraph",
+        content:
+          "Google bietet das Rich Results Tool an, das Schemas in Echtzeit prüft. Wer mehrere Schemas einsetzt, sollte zusätzlich den Schema.org-Validator verwenden – der ist strenger und findet Probleme, die das Google-Tool durchwinkt.",
+      },
+    ],
+  },
+  {
+    slug: "content-cluster-aufbauen",
+    title:
+      "Content-Cluster bauen: Wie thematische Tiefe Ranking-Sprünge auslöst",
+    category: "SEO",
+    date: "25. April 2026",
+    dateIso: "2026-04-25",
+    readingTime: "6 min",
+    excerpt:
+      "Einzelne Blogartikel ranken selten dauerhaft. Content-Cluster – also thematisch verknüpfte Artikelgruppen mit Hub-Seite – sind 2026 die wirksamste SEO-Architektur.",
+    image: "/images/projects/demnaechst.png",
+    author: AUTHOR,
+    available: true,
+    sections: [
+      {
+        type: "paragraph",
+        content:
+          "Ein einzelner gut geschriebener Blogpost rankt selten langfristig stabil – Google bewertet inzwischen das Themenfeld einer Website. Wer zu einem Thema zwanzig substanzielle Artikel veröffentlicht, signalisiert Autorität, die einzelne Artikel niemals erreichen.",
+      },
+      { type: "heading", content: "Was ein Cluster ist" },
+      {
+        type: "paragraph",
+        content:
+          "Ein Cluster besteht aus einer zentralen Hub-Seite zum übergeordneten Thema und mehreren detaillierten Artikeln zu Unterthemen. Alle verlinken untereinander – die Hub-Seite verlinkt zu allen Artikeln, jeder Artikel zur Hub-Seite. Das erzeugt eine deutliche thematische Architektur.",
+      },
+      { type: "heading", content: "Beispiel" },
+      {
+        type: "list",
+        items: [
+          "Hub: Lokale SEO für Schwäbisch Gmünd.",
+          "Sub: Google Business Profile für Schwäbisch Gmünd.",
+          "Sub: Branchenverzeichnisse im Ostalbkreis.",
+          "Sub: Lokale Bewertungen aufbauen.",
+          "Alle Subs verlinken zurück zum Hub, der Hub bündelt sie.",
+        ],
+      },
+      { type: "heading", content: "Was beim Aufbau zählt" },
+      {
+        type: "list",
+        items: [
+          "Klare Hub-Seite mit Übersicht und Verlinkung zu allen Cluster-Artikeln.",
+          "Subartikel mit echter Substanz, nicht oberflächliche Wiederholungen.",
+          "Konsistente interne Links – jeder Artikel führt zurück zum Hub.",
+          "Über die Zeit stetig erweitern – Cluster zeigen Wirkung nach 6 bis 12 Monaten.",
+        ],
+      },
+      {
+        type: "quote",
+        content:
+          "Einzelne Artikel ranken auf Glück. Cluster ranken auf System.",
+      },
+    ],
+  },
+  {
+    slug: "internal-linking-architektur",
+    title:
+      "Internal Linking: Die unsichtbare Architektur erfolgreicher Websites",
+    category: "SEO",
+    date: "25. April 2026",
+    dateIso: "2026-04-25",
+    readingTime: "5 min",
+    excerpt:
+      "Externe Backlinks bekommen die Aufmerksamkeit, interne Links bekommen das Ranking. Wie eine bewusste Verlinkungsarchitektur Suchmaschinen zeigt, was wirklich wichtig ist.",
+    image: "/images/projects/demnaechst.png",
+    author: AUTHOR,
+    available: true,
+    sections: [
+      {
+        type: "paragraph",
+        content:
+          "Interne Verlinkung ist eines der unterschätztesten SEO-Werkzeuge. Sie verteilt Autorität innerhalb der Website, signalisiert thematische Schwerpunkte und hilft Google beim Crawlen. Trotzdem entstehen die meisten internen Links zufällig statt strategisch.",
+      },
+      { type: "heading", content: "Drei Prinzipien" },
+      {
+        type: "list",
+        items: [
+          "Wichtige Seiten bekommen mehr eingehende Links als unwichtige.",
+          "Anchor-Texte beschreiben das Linkziel – kein 'hier klicken' oder 'mehr erfahren'.",
+          "Jede neue Seite wird in mindestens drei bestehende Seiten eingebunden.",
+        ],
+      },
+      { type: "heading", content: "Häufige Fehler" },
+      {
+        type: "list",
+        items: [
+          "Hauptnavigation als einzige interne Verlinkung.",
+          "Wichtigste Leistungsseiten haben weniger Links als der Datenschutz.",
+          "Verwaiste Seiten – nirgendwo verlinkt, nur über die Sitemap auffindbar.",
+          "Zu viele Links pro Seite – ab 100 internen Links wird der Effekt verwässert.",
+        ],
+      },
+      { type: "heading", content: "Pragmatischer Workflow" },
+      {
+        type: "paragraph",
+        content:
+          "Vor jedem neuen Beitrag eine kurze Suche: Welche bestehenden Inhalte passen thematisch? Mindestens drei davon im neuen Artikel verlinken, und in mindestens zwei dieser bestehenden Artikel einen Link zum neuen einbauen. Das ist mühsam, aber wirksam.",
+      },
+    ],
+  },
+  {
+    slug: "seo-audit-checkliste",
+    title:
+      "SEO-Audit selbst durchführen: Eine Checkliste in 30 Minuten",
+    category: "SEO",
+    date: "25. April 2026",
+    dateIso: "2026-04-25",
+    readingTime: "5 min",
+    excerpt:
+      "Ein vollständiges SEO-Audit kostet leicht vierstellig. Eine ehrliche Selbst-Prüfung in 30 Minuten findet 80 % der typischen Probleme – ohne Tool-Abo.",
+    image: "/images/projects/demnaechst.png",
+    author: AUTHOR,
+    available: true,
+    sections: [
+      {
+        type: "paragraph",
+        content:
+          "Ein professionelles SEO-Audit hat seinen Wert – aber für die ersten Aufräumarbeiten reicht eine strukturierte Selbst-Prüfung. Diese Checkliste deckt die wichtigsten Punkte ab, die auf einer Mittelstandswebsite typisch problematisch sind.",
+      },
+      { type: "heading", content: "Crawling und Indexierung (10 min)" },
+      {
+        type: "list",
+        items: [
+          "robots.txt aufrufen: Erreichbar? Keine wichtigen Pfade gesperrt?",
+          "sitemap.xml aufrufen: Aktuell? Alle wichtigen Seiten enthalten?",
+          "Search Console: Anzahl indexierter Seiten plausibel?",
+          "Per site:domain.de in Google: Sind die wichtigsten Seiten gelistet?",
+        ],
+      },
+      { type: "heading", content: "On-Page-Grundlagen (10 min)" },
+      {
+        type: "list",
+        items: [
+          "Hat jede wichtige Seite einen einzigartigen Title und Description?",
+          "Heading-Struktur (H1 einmal, H2/H3 logisch verschachtelt)?",
+          "Bilder mit alt-Text und sinnvollen Dateinamen?",
+          "Canonical-Tags vorhanden und korrekt?",
+        ],
+      },
+      { type: "heading", content: "Performance und Mobile (10 min)" },
+      {
+        type: "list",
+        items: [
+          "Pagespeed Insights für Homepage und 2-3 wichtige Unterseiten – Werte über 80?",
+          "Core Web Vitals im Search-Console-Bericht überwiegend grün?",
+          "Auf dem Smartphone alle Inhalte gut lesbar, Touch-Targets groß genug?",
+          "Mobiles Menü funktioniert in der Praxis?",
+        ],
+      },
+      { type: "heading", content: "Wann externe Hilfe sinnvoll ist" },
+      {
+        type: "paragraph",
+        content:
+          "Wenn diese 30 Minuten viele rote Punkte aufdecken – und wenn die Website wirtschaftlich relevant ist – lohnt sich danach ein professionelles Audit, das tiefer in Technik, Content und Wettbewerb einsteigt.",
+      },
+    ],
+  },
+  {
+    slug: "long-tail-seo-dienstleister",
+    title:
+      "Long-Tail-SEO für Dienstleister: Die ehrliche Anleitung",
+    category: "SEO",
+    date: "25. April 2026",
+    dateIso: "2026-04-25",
+    readingTime: "5 min",
+    excerpt:
+      "Konkurrenz auf den Hauptbegriffen ist oft erdrückend. Long-Tail-Keywords sind der realistische Weg für mittelständische Dienstleister – mit klarem Fokus statt Massenstrategie.",
+    image: "/images/projects/demnaechst.png",
+    author: AUTHOR,
+    available: true,
+    sections: [
+      {
+        type: "paragraph",
+        content:
+          "Auf 'Webdesign Stuttgart' gegen 50 etablierte Anbieter zu kämpfen ist als kleiner Mittelständler verlorene Zeit. Long-Tail-Keywords – also längere, spezifischere Suchanfragen – sind der pragmatische Weg, sichtbar zu werden, wo die Konkurrenz dünner ist.",
+      },
+      { type: "heading", content: "Was ein gutes Long-Tail-Keyword ist" },
+      {
+        type: "list",
+        items: [
+          "Drei oder mehr Wörter, oft eine konkrete Frage.",
+          "Klare Suchintention erkennbar (Informieren, Vergleichen, Kaufen).",
+          "Suchvolumen niedrig, aber konstant.",
+          "Zielgruppe schon weit im Entscheidungsprozess.",
+        ],
+      },
+      { type: "heading", content: "Beispiele für Dienstleister" },
+      {
+        type: "list",
+        items: [
+          "Statt 'Webagentur' – 'Webagentur für Handwerksbetriebe Schwäbisch Gmünd'.",
+          "Statt 'KI-Beratung' – 'KI-Workflow für Familienbetrieb'.",
+          "Statt 'Steuerberater' – 'Steuerberater für freiberufliche Designer Stuttgart'.",
+        ],
+      },
+      { type: "heading", content: "Wie man sie findet" },
+      {
+        type: "list",
+        items: [
+          "Google-Autocomplete: Typischen Begriff eintippen und Vorschläge sammeln.",
+          "Bereich 'Verwandte Suchanfragen' am Ende der Google-Ergebnisse.",
+          "AnswerThePublic, Search Console-Berichte, eigene Kundenfragen.",
+          "Wettbewerber-Inhalte: Welche spezifischen Themen behandeln sie?",
+        ],
+      },
+      {
+        type: "quote",
+        content:
+          "Zehn Long-Tail-Keywords mit jeweils 50 Suchen im Monat schlagen ein einziges Hauptkeyword, an dem man nie rankt.",
+      },
+    ],
+  },
+  {
+    slug: "page-speed-optimierung-praxis",
+    title:
+      "Page-Speed-Optimierung: 5 technische Hebel jenseits der Bildoptimierung",
+    category: "SEO",
+    date: "25. April 2026",
+    dateIso: "2026-04-25",
+    readingTime: "5 min",
+    excerpt:
+      "Bildoptimierung ist nur die offensichtliche Page-Speed-Maßnahme. Fünf weniger bekannte Hebel, die bei Mittelstands-Websites oft den größten Sprung bringen.",
+    image: "/images/projects/demnaechst.png",
+    author: AUTHOR,
+    available: true,
+    sections: [
+      {
+        type: "paragraph",
+        content:
+          "Page-Speed-Optimierung beginnt fast immer bei den Bildern – zu Recht. Aber wer dort fertig ist, lässt oft noch deutliches Potenzial liegen. Fünf technische Hebel, die für Mittelstands-Websites typisch unterausgenutzt sind.",
+      },
+      { type: "heading", content: "1. Webfont-Strategie überarbeiten" },
+      {
+        type: "paragraph",
+        content:
+          "Drei verschiedene Webfonts mit jeweils vier Schnitten ergeben zwölf Dateien – und blockieren das initiale Rendering. Lösung: Auf maximal zwei Schriften reduzieren, font-display: swap setzen, Fallback-Fonts vorab passend skalieren.",
+      },
+      { type: "heading", content: "2. Tracking-Skripte konsolidieren" },
+      {
+        type: "paragraph",
+        content:
+          "Google Analytics, Tag Manager, Facebook Pixel, Hotjar, Cookie-Banner-Skript: jedes davon kostet Performance. Welche tatsächlich genutzt werden? Welche lassen sich serverside einbauen? Oft halbiert sich der JavaScript-Footprint allein durch das Aufräumen alter Tracker.",
+      },
+      { type: "heading", content: "3. Render-blocking CSS reduzieren" },
+      {
+        type: "paragraph",
+        content:
+          "Riesige globale Stylesheets blockieren das First Paint. Critical-CSS-Inlining oder ein moderner Build-Prozess mit echtem Code-Splitting bringen messbare Verbesserung. Tailwind in Verbindung mit Tree-Shaking erzeugt typischerweise CSS unter 30 KB.",
+      },
+      { type: "heading", content: "4. JavaScript-Bundling überprüfen" },
+      {
+        type: "paragraph",
+        content:
+          "Viele Mittelstands-Websites laden 500 KB JavaScript für Funktionen, die 50 KB benötigen würden. Bundle-Analyse macht sichtbar, welche Bibliotheken den größten Anteil haben – und welche entfernt oder ersetzt werden können.",
+      },
+      { type: "heading", content: "5. Caching und Preloading nutzen" },
+      {
+        type: "list",
+        items: [
+          "HTTP-Cache-Header für statische Assets auf 1 Jahr setzen.",
+          "rel='preload' für kritische Ressourcen wie Schriften und Hero-Bild.",
+          "rel='preconnect' für Drittanbieter-Domains, die früh geladen werden.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "llm-optimierung-grundlagen",
+    title:
+      "LLM-Optimierung: Wie Websites in ChatGPT, Perplexity & Claude zitiert werden",
+    category: "LLM-Optimierung",
+    date: "25. April 2026",
+    dateIso: "2026-04-25",
+    readingTime: "7 min",
+    excerpt:
+      "Suchverhalten verschiebt sich Richtung KI-Assistenten. Wer dort zitiert werden will, muss seine Inhalte anders strukturieren als für klassisches Google-SEO. Eine ehrliche Einführung.",
+    image: "/images/projects/demnaechst.png",
+    author: AUTHOR,
+    available: true,
+    sections: [
+      {
+        type: "paragraph",
+        content:
+          "ChatGPT Search, Perplexity, Claude, Google AI Overviews – KI-Assistenten beantworten zunehmend Fragen direkt, statt zu zehn Suchergebnissen zu führen. Wer als Unternehmen zitiert oder erwähnt werden will, muss seine Website anders aufbauen als nur für klassisches Google-SEO.",
+      },
+      { type: "heading", content: "Was sich gegenüber klassischer SEO unterscheidet" },
+      {
+        type: "list",
+        items: [
+          "KI-Modelle ziehen kurze, klar formulierte Aussagen vor – keine SEO-aufgeplusterten Texte.",
+          "Strukturierte Inhalte (Listen, FAQ, Zwischenüberschriften) werden bevorzugt zitiert.",
+          "Quellen mit Autorität (eigene Domain, klares Unternehmensprofil) erscheinen häufiger.",
+          "JSON-LD-Schemas helfen Modellen, Inhalte korrekt zuzuordnen.",
+        ],
+      },
+      { type: "heading", content: "Drei konkrete Maßnahmen für Websites" },
+      {
+        type: "paragraph",
+        content:
+          "Erstens: Eine llms.txt im Root anlegen, die Schlüsselseiten und Themen kuratiert auflistet. Zweitens: Wichtige Antworten in einem Satz formulieren und mit klarer Überschrift ankündigen. Drittens: Eine Über-uns-Seite mit klarer Beschreibung des Unternehmens, der Standorte und der Spezialisierung – Modelle nutzen das als Reverenzpunkt.",
+      },
+      { type: "heading", content: "Was nicht funktioniert" },
+      {
+        type: "list",
+        items: [
+          "Versteckte Texte oder Keyword-Spam – KI-Modelle erkennen das mittlerweile zuverlässig.",
+          "AI-generierter Massentext ohne menschliche Substanz wird abgewertet.",
+          "Behauptungen ohne Belege – Modelle bevorzugen Quellen, die ihre Aussagen einordnen.",
+        ],
+      },
+      { type: "heading", content: "Wie man Wirkung misst" },
+      {
+        type: "paragraph",
+        content:
+          "Klassische Analytics-Tools zeigen LLM-Traffic noch unzuverlässig. Pragmatisch: regelmäßig in ChatGPT, Perplexity und Google AI Overviews die typischen Suchanfragen der eigenen Branche stellen und prüfen, ob und wie die eigene Marke auftaucht.",
+      },
+      {
+        type: "quote",
+        content:
+          "LLM-Optimierung ist nicht das nächste SEO – sie ist eine ergänzende Disziplin mit eigenen Regeln.",
+      },
+    ],
+  },
+  {
+    slug: "geo-generative-engine-optimization",
+    title:
+      "Was ist GEO (Generative Engine Optimization) – und für wen lohnt sich das?",
+    category: "LLM-Optimierung",
+    date: "25. April 2026",
+    dateIso: "2026-04-25",
+    readingTime: "5 min",
+    excerpt:
+      "GEO ist das Schlagwort der Stunde. Was sich dahinter verbirgt, wie es sich von SEO unterscheidet und welche Mittelständler sich aktiv damit beschäftigen sollten.",
+    image: "/images/projects/demnaechst.png",
+    author: AUTHOR,
+    available: true,
+    sections: [
+      {
+        type: "paragraph",
+        content:
+          "GEO – Generative Engine Optimization – ist die Disziplin, Inhalte für KI-Modelle so aufzubereiten, dass sie als Quelle in deren Antworten zitiert oder genutzt werden. Klingt wie SEO, ist aber strukturell anders.",
+      },
+      { type: "heading", content: "Die wichtigsten Unterschiede" },
+      {
+        type: "list",
+        items: [
+          "Ziel: nicht der Klick, sondern die Erwähnung in der KI-Antwort.",
+          "Optimiert wird auf Verständlichkeit für Modelle, nicht für Crawler.",
+          "Erfolg lässt sich schwer messen – keine klassischen Position-Tracker.",
+          "Inhalt zählt mehr als Backlinks oder klassische technische Tricks.",
+        ],
+      },
+      { type: "heading", content: "Wer GEO ernst nehmen sollte" },
+      {
+        type: "list",
+        items: [
+          "Marken im B2B, deren Käufer LLM-gestützt recherchieren.",
+          "Anbieter spezieller Leistungen, bei denen Konsumenten Vergleichsfragen stellen.",
+          "Unternehmen mit fachlicher Tiefe, die in komplexen Antworten zitiert werden können.",
+        ],
+      },
+      { type: "heading", content: "Wer es vorerst ignorieren kann" },
+      {
+        type: "paragraph",
+        content:
+          "Lokale Dienstleister mit klarem geografischem Fokus profitieren weiterhin mehr von Google Business Profile und klassischer lokaler SEO als von GEO. Das wird sich ändern, aber in 2026 ist die Priorität noch klar.",
+      },
+      { type: "heading", content: "Konkrete Einstiegspunkte" },
+      {
+        type: "list",
+        items: [
+          "llms.txt im Root anlegen.",
+          "FAQ-Bereiche aufbauen mit kurzen, präzisen Antworten.",
+          "Strukturierte Daten konsequent einsetzen.",
+          "Über-uns-Seite konkret und faktenreich gestalten.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "llms-txt-erklaert",
+    title:
+      "llms.txt: Die kommende Standard-Datei für KI-Suchmaschinen erklärt",
+    category: "LLM-Optimierung",
+    date: "25. April 2026",
+    dateIso: "2026-04-25",
+    readingTime: "5 min",
+    excerpt:
+      "llms.txt ist das, was sitemap.xml für Google war: ein simpler, kuratiertes Inhaltsindex – aber für KI-Modelle. Was drin steht, wo es hingehört, und welche Wirkung es schon zeigt.",
+    image: "/images/projects/demnaechst.png",
+    author: AUTHOR,
+    available: true,
+    sections: [
+      {
+        type: "paragraph",
+        content:
+          "llms.txt ist ein vorgeschlagener Standard, vergleichbar mit sitemap.xml oder robots.txt. Eine simple Markdown-Datei im Root einer Domain, die KI-Modellen einen kuratierten Überblick über die wichtigsten Inhalte gibt – ohne sie durch tausende Seiten Webseiten-HTML kämpfen zu lassen.",
+      },
+      { type: "heading", content: "Was die Datei enthält" },
+      {
+        type: "list",
+        items: [
+          "Eine Kurzbeschreibung des Unternehmens oder der Website.",
+          "Eine kuratierte Liste der wichtigsten Seiten mit Beschreibungen.",
+          "Optional: Hinweise zur Nutzung, Lizenz oder Kontaktdaten.",
+        ],
+      },
+      { type: "heading", content: "Wo sie liegt" },
+      {
+        type: "paragraph",
+        content:
+          "Im Root der Domain unter /llms.txt – also analog zu /robots.txt oder /sitemap.xml. Manche Implementierungen verweisen zusätzlich aus der robots.txt auf die Datei.",
+      },
+      { type: "heading", content: "Welche Modelle sie nutzen" },
+      {
+        type: "paragraph",
+        content:
+          "Stand April 2026 ist llms.txt noch nicht universell etabliert. Anthropic, OpenAI und Perplexity haben Interesse signalisiert, eine offizielle Spezifikation ist von verschiedenen Seiten in Arbeit. Vorhandene Dateien werden bereits ausgelesen, der Effekt auf Zitationen ist messbar – wenn auch noch nicht riesig.",
+      },
+      { type: "heading", content: "Pragmatische Empfehlung" },
+      {
+        type: "paragraph",
+        content:
+          "Eine llms.txt anzulegen kostet eine halbe Stunde und schadet nichts. Wer eine Website mit klarem Profil hat, kann den frühen Aufwand investieren – die Wahrscheinlichkeit, dass sich der Standard etabliert, ist hoch.",
+      },
+    ],
+  },
+  {
+    slug: "strukturierte-inhalte-fuer-llms",
+    title:
+      "Strukturierte Inhalte für LLMs: Welche Formate KI-Modelle wirklich bevorzugen",
+    category: "LLM-Optimierung",
+    date: "25. April 2026",
+    dateIso: "2026-04-25",
+    readingTime: "5 min",
+    excerpt:
+      "KI-Modelle lesen anders als Menschen. Welche Inhaltsformate sie zuverlässig erfassen, welche sie überspringen – und wie man Texte beidseitig optimiert.",
+    image: "/images/projects/demnaechst.png",
+    author: AUTHOR,
+    available: true,
+    sections: [
+      {
+        type: "paragraph",
+        content:
+          "Wer Inhalte für KI-Modelle optimiert, denkt zuerst an Schlüsselwörter. Tatsächlich entscheidet aber die Struktur. Modelle erfassen klare, hierarchische Texte deutlich besser als wandartige Absätze – und zitieren sie öfter.",
+      },
+      { type: "heading", content: "Formate, die Modelle bevorzugen" },
+      {
+        type: "list",
+        items: [
+          "Fragen mit klaren Ein-Satz-Antworten direkt darunter.",
+          "Listen mit kurzen, eigenständigen Punkten.",
+          "Definitorische Sätze: 'X ist ...' oder 'X bedeutet ...'.",
+          "Tabellen mit Vergleichsdaten.",
+          "Klare Zwischenüberschriften, die das Thema benennen.",
+        ],
+      },
+      { type: "heading", content: "Formate, die Modelle übersehen" },
+      {
+        type: "list",
+        items: [
+          "Lange Absätze mit verschachtelten Gedankengängen.",
+          "Absatz-erste Sätze, die nichts inhaltlich sagen ('Lassen Sie uns zunächst betrachten ...').",
+          "Inhalte, die nur in Bildern stehen, ohne alt-Text oder Beschreibung.",
+          "Erzähltexte ohne klare Faktenträger.",
+        ],
+      },
+      { type: "heading", content: "Praktische Anpassungen" },
+      {
+        type: "list",
+        items: [
+          "Zwischenüberschrift formulieren wie eine direkte Frage, die der Leser stellen würde.",
+          "Pro Absatz nur ein Hauptgedanke.",
+          "Der erste Satz eines Abschnitts sollte die Kernaussage bereits enthalten.",
+          "Wo möglich, Zahlen oder konkrete Beispiele einbauen.",
+        ],
+      },
+      {
+        type: "quote",
+        content:
+          "Texte für Mensch und Maschine zu schreiben heißt: jeden Absatz so beginnen, als wäre er ein eigener Tweet.",
+      },
+    ],
+  },
+  {
+    slug: "citations-statt-klicks",
+    title:
+      "Citations statt Klicks: Was sich ändert, wenn die KI antwortet statt zu verlinken",
+    category: "LLM-Optimierung",
+    date: "25. April 2026",
+    dateIso: "2026-04-25",
+    readingTime: "5 min",
+    excerpt:
+      "Wenn Nutzer ihre Antwort in der KI-Oberfläche bekommen, klicken sie nicht mehr auf zehn Suchergebnisse. Was das für Mittelständler bedeutet – und welche Strategie 2026 funktioniert.",
+    image: "/images/projects/demnaechst.png",
+    author: AUTHOR,
+    available: true,
+    sections: [
+      {
+        type: "paragraph",
+        content:
+          "Klassische SEO hat ein klares Erfolgskriterium: ein Klick auf das Suchergebnis. KI-Antworten verändern dieses Modell grundlegend. Der Nutzer bekommt seine Antwort direkt in der Oberfläche von ChatGPT, Perplexity oder Google AI Overviews – und klickt oft gar nicht mehr auf eine Quelle.",
+      },
+      { type: "heading", content: "Was das praktisch bedeutet" },
+      {
+        type: "list",
+        items: [
+          "Reichweite ohne Traffic: die Marke wird gesehen, generiert aber keinen Website-Besuch.",
+          "Vertrauensaufbau verlagert sich vor den Klick: zitiert zu werden zählt mehr als Klickraten.",
+          "Klassische Tracking-Tools werden blind – LLM-Erwähnungen erscheinen nicht in Analytics.",
+        ],
+      },
+      { type: "heading", content: "Wie Mittelständler darauf reagieren" },
+      {
+        type: "list",
+        items: [
+          "Zitationsfähige Inhalte produzieren: kurze, präzise, faktenstarke Aussagen.",
+          "Markenpräsenz aufbauen, die in der Antwort erkennbar ist – nicht nur als beiläufige Quelle.",
+          "Branchen-Reports oder eigene Daten veröffentlichen, die Modelle gerne zitieren.",
+          "Klare Über-uns-Seite, damit das Modell die Quelle einordnen kann.",
+        ],
+      },
+      { type: "heading", content: "Was unverändert bleibt" },
+      {
+        type: "paragraph",
+        content:
+          "Gute Inhalte sind weiterhin gute Inhalte. Wer Substanz liefert, wird sowohl in Google als auch in KI-Antworten Wirkung haben. Was sich verändert hat, ist der Hebel: Sichtbarkeit zählt jetzt nicht mehr nur über Klicks, sondern auch über Zitationen.",
+      },
+    ],
+  },
+  {
+    slug: "brand-sichtbarkeit-ki-antworten",
+    title:
+      "Brand-Sichtbarkeit in KI-Antworten: Wie Unternehmen erwähnt werden – oder eben nicht",
+    category: "LLM-Optimierung",
+    date: "25. April 2026",
+    dateIso: "2026-04-25",
+    readingTime: "5 min",
+    excerpt:
+      "KI-Modelle erwähnen einige Marken regelmäßig, andere nie – warum? Welche Faktoren entscheiden, und welche Hebel Unternehmen aktiv beeinflussen können.",
+    image: "/images/projects/demnaechst.png",
+    author: AUTHOR,
+    available: true,
+    sections: [
+      {
+        type: "paragraph",
+        content:
+          "Wer ChatGPT oder Perplexity nach 'beste Webagentur in Schwäbisch Gmünd' fragt, bekommt drei bis fünf Namen genannt. Andere Anbieter werden nie erwähnt – obwohl sie technisch und wirtschaftlich vergleichbar sind. Was entscheidet?",
+      },
+      { type: "heading", content: "Faktoren, die KI-Sichtbarkeit beeinflussen" },
+      {
+        type: "list",
+        items: [
+          "Häufigkeit der Markenerwähnung in indexierten Quellen (Branchenartikel, Verzeichnisse, Presse).",
+          "Konsistenz der Daten über mehrere Quellen hinweg.",
+          "Klare Spezialisierung – Modelle bevorzugen erkennbare Profile.",
+          "Eigene Inhalte, die das Modell als verlässliche Quelle einstuft.",
+        ],
+      },
+      { type: "heading", content: "Was Unternehmen aktiv beeinflussen können" },
+      {
+        type: "list",
+        items: [
+          "Eintragung in relevanten lokalen Verzeichnissen mit konsistenten Daten.",
+          "Pressearbeit oder Gastartikel in Fachmedien der Region.",
+          "Eigene fachliche Inhalte, die zitierfähig sind.",
+          "Aktive Präsenz auf Plattformen wie Wikipedia oder Wikidata, sofern relevant.",
+        ],
+      },
+      { type: "heading", content: "Was nicht funktioniert" },
+      {
+        type: "paragraph",
+        content:
+          "Versuche, KI-Modelle direkt zu manipulieren – etwa durch Prompt-Injection, versteckte Anweisungen oder gefälschte Quellen – werden zuverlässig erkannt und führen langfristig zu schlechterer Sichtbarkeit. Modelle vergleichen Quellen untereinander, Unstimmigkeiten fallen auf.",
+      },
+    ],
+  },
+  {
+    slug: "ki-suchmaschinen-2026-vergleich",
+    title:
+      "KI-Suchmaschinen 2026 im Vergleich: ChatGPT Search, Perplexity, Google AI Overviews",
+    category: "LLM-Optimierung",
+    date: "25. April 2026",
+    dateIso: "2026-04-25",
+    readingTime: "6 min",
+    excerpt:
+      "Die wichtigsten KI-Suchmaschinen unterscheiden sich deutlich in Quellenqualität, Tonalität und Optimierungslogik. Eine Übersicht für Unternehmen, die ihre Sichtbarkeit aktiv steuern wollen.",
+    image: "/images/projects/demnaechst.png",
+    author: AUTHOR,
+    available: true,
+    sections: [
+      {
+        type: "paragraph",
+        content:
+          "Anders als der einheitliche Google-Index sind KI-Suchmaschinen heterogen. Jede hat ihre Datenbasis, ihre Modelle und ihre Eigenheiten. Drei Akteure dominieren 2026 das Feld in Europa: ChatGPT Search, Perplexity und Google AI Overviews.",
+      },
+      { type: "heading", content: "ChatGPT Search" },
+      {
+        type: "paragraph",
+        content:
+          "Stark in der Synthese komplexer Antworten, oft mit ausgewogenen Quellenangaben. Tendiert zu autoritativen Quellen wie Wikipedia, etablierten Medien und Fachseiten. Für Mittelständler bedeutet das: Eigene Domain mit klarer Spezialisierung wird bevorzugt zitiert, Verzeichnisse weniger.",
+      },
+      { type: "heading", content: "Perplexity" },
+      {
+        type: "paragraph",
+        content:
+          "Stärker als reine Suchmaschine konzipiert, mit explizit ausgewiesenen Quellen pro Aussage. Aktualität ist hier oft besser als bei den anderen. Für lokale Themen liefert Perplexity überraschend präzise Ergebnisse, sofern die lokalen Quellen sauber strukturiert sind.",
+      },
+      { type: "heading", content: "Google AI Overviews" },
+      {
+        type: "paragraph",
+        content:
+          "Der direkte Konkurrent zur klassischen Google-Suche – die KI-Antwort steht oben, die zehn blauen Links darunter. Die Quellenwahl gleicht oft den Top-3-Suchergebnissen. Wer in der klassischen Google-Suche stark ist, wird auch in den AI Overviews überdurchschnittlich oft zitiert.",
+      },
+      { type: "heading", content: "Was sich für die Optimierung ergibt" },
+      {
+        type: "list",
+        items: [
+          "Klassische SEO bleibt die Basis – Google AI Overviews zitiert in den Top-3-Ergebnissen.",
+          "Klare Markenpositionierung wirkt in ChatGPT besonders.",
+          "Aktualität der Inhalte ist für Perplexity wichtig.",
+          "Strukturierte Daten und FAQ-Blöcke wirken plattformübergreifend.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "eeat-2026-was-google-erwartet",
+    title:
+      "E-E-A-T 2026: Was Google heute wirklich von Unternehmenswebsites erwartet",
+    category: "Authority",
+    date: "25. April 2026",
+    dateIso: "2026-04-25",
+    readingTime: "6 min",
+    excerpt:
+      "Experience, Expertise, Authoritativeness, Trust – die vier Buchstaben hinter Googles Qualitätsbewertung. Was sie für Mittelständler bedeuten und welche Signale 2026 wirklich zählen.",
+    image: "/images/projects/demnaechst.png",
+    author: AUTHOR,
+    available: true,
+    sections: [
+      {
+        type: "paragraph",
+        content:
+          "E-E-A-T ist kein direkter Ranking-Faktor, aber das Raster, mit dem Google Qualität bewertet. Vier Buchstaben, die in den Quality Rater Guidelines stehen: Experience, Expertise, Authoritativeness, Trust. Und sie werden 2026 wichtiger denn je.",
+      },
+      { type: "heading", content: "Experience: Erfahrung mit dem Thema" },
+      {
+        type: "paragraph",
+        content:
+          "Hat der Autor das Thema selbst erlebt? Eigene Praxis schlägt allgemeines Wissen. Für Mittelständler heißt das: Eigene Erfahrungen, konkrete Projekte, persönliche Stimme. Generische Texte ohne Erlebnis-Spuren werden abgewertet.",
+      },
+      { type: "heading", content: "Expertise: Fachliche Tiefe" },
+      {
+        type: "paragraph",
+        content:
+          "Verfügt die Quelle über echte fachliche Tiefe? Erkennbare Spezialisierung, sichtbarer Autor, konkrete Belege. Wer einen Themenbereich mit zwanzig substanziellen Artikeln abdeckt, signalisiert Expertise – wer drei oberflächliche Seiten zum Thema hat, signalisiert das Gegenteil.",
+      },
+      { type: "heading", content: "Authoritativeness: Autorität" },
+      {
+        type: "paragraph",
+        content:
+          "Wird die Quelle von anderen anerkannt? Backlinks von relevanten Seiten, Erwähnungen in Fachmedien, Einträge in seriösen Verzeichnissen. Eine kleine Site mit einem Backlink von einer renommierten Quelle wirkt autoritativer als eine große Site mit hundert Verzeichniseinträgen.",
+      },
+      { type: "heading", content: "Trust: Vertrauen" },
+      {
+        type: "list",
+        items: [
+          "Vollständiges Impressum mit Verantwortlichen.",
+          "HTTPS, ohne unsichere Eingaben.",
+          "Echte Kontaktangaben, kein Webformular ohne Adresse.",
+          "Transparente Datenschutzerklärung.",
+          "Saubere Bewertungen ohne offensichtliche Manipulation.",
+        ],
+      },
+      {
+        type: "quote",
+        content:
+          "E-E-A-T entscheidet sich nicht durch ein Plugin, sondern durch konsistente Substanz – und die kann man nicht über Nacht aufbauen.",
+      },
+    ],
+  },
+  {
+    slug: "trust-signale-author-bylines",
+    title:
+      "Author Bylines, Über-uns-Seiten, Trust-Signale: Was zählt, was nicht",
+    category: "Authority",
+    date: "25. April 2026",
+    dateIso: "2026-04-25",
+    readingTime: "5 min",
+    excerpt:
+      "Trust-Signale sind oft Bauchgefühl statt Wissenschaft. Welche Signale Google und KI-Modelle wirklich auswerten – und welche eher Eitelkeit als Wirkung sind.",
+    image: "/images/projects/demnaechst.png",
+    author: AUTHOR,
+    available: true,
+    sections: [
+      {
+        type: "paragraph",
+        content:
+          "Trust-Signale sind oft das letzte Aufräumen vor dem Launch – oder werden komplett ignoriert. Dabei entscheiden sie nicht selten, ob ein Besucher konvertiert und ob Google die Seite überhaupt als seriös bewertet. Was zählt, was ist Schmuck?",
+      },
+      { type: "heading", content: "Signale mit echter Wirkung" },
+      {
+        type: "list",
+        items: [
+          "Author Byline auf Blogartikeln, mit Foto und Bio – signalisiert eine echte Person dahinter.",
+          "Über-uns-Seite mit Adresse, Personen, Geschichte – nicht generisch.",
+          "Klare Kontaktdaten im Footer und auf jeder Seite.",
+          "Echte Referenzen mit Namen, nicht anonyme Sterne.",
+          "Vollständiges Impressum mit Verantwortlichen.",
+        ],
+      },
+      { type: "heading", content: "Signale ohne messbaren Effekt" },
+      {
+        type: "list",
+        items: [
+          "Drittanbieter-Trust-Badges ohne tatsächliche Verifikation.",
+          "Stockfoto-Teamfotos – sie wirken eher abschreckend als vertrauensbildend.",
+          "Marketing-Phrasen ohne Substanz ('Wir sind führend in ...').",
+          "Endlose Auflistungen von Auszeichnungen, die niemand kennt.",
+        ],
+      },
+      { type: "heading", content: "Eine pragmatische Reihenfolge" },
+      {
+        type: "list",
+        items: [
+          "Erst Über-uns-Seite konkret machen.",
+          "Dann Author Bylines auf jedem Blogartikel ergänzen.",
+          "Dann echte Stimmen oder Fallbeispiele aufbauen.",
+          "Dann erst über externe Auszeichnungen nachdenken.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "wikipedia-wikidata-knowledge-graph",
+    title:
+      "Wikipedia, Wikidata, Knowledge Graph: Wie Marken digital echt werden",
+    category: "Authority",
+    date: "25. April 2026",
+    dateIso: "2026-04-25",
+    readingTime: "5 min",
+    excerpt:
+      "Eine Marke wird für Google und KI-Modelle erst dann eindeutig, wenn sie in strukturierten Quellen wie Wikidata oder Knowledge Graph existiert. Was Mittelständler dort tun können – und was nicht.",
+    image: "/images/projects/demnaechst.png",
+    author: AUTHOR,
+    available: true,
+    sections: [
+      {
+        type: "paragraph",
+        content:
+          "Eine Marke ist für Suchmaschinen erst dann eindeutig, wenn sie in mehreren strukturierten Quellen existiert. Wikipedia ist die bekannteste, aber nur eine von mehreren Stellen, an denen Identität digital verankert wird. Knowledge Graph, Wikidata und einige Fachregister entscheiden mit, ob eine Marke als Entität anerkannt wird.",
+      },
+      { type: "heading", content: "Wikipedia – streng, aber wirkungsvoll" },
+      {
+        type: "paragraph",
+        content:
+          "Wikipedia hat klare Relevanzkriterien. Kleine Mittelständler erfüllen sie in der Regel nicht – und das ist auch in Ordnung. Wer einen eigenen Wikipedia-Artikel rechtfertigen kann (öffentliches Interesse, mediale Berichterstattung, historische Bedeutung), profitiert deutlich. Wer es erzwingt, scheitert meistens.",
+      },
+      { type: "heading", content: "Wikidata – pragmatischer Einstieg" },
+      {
+        type: "paragraph",
+        content:
+          "Wikidata hat niedrigere Hürden als Wikipedia. Hier können auch kleinere Organisationen einen Eintrag mit strukturierten Daten anlegen: Standort, Gründungsjahr, Branche, offizielle Website. KI-Modelle und Google nutzen Wikidata aktiv als Quelle.",
+      },
+      { type: "heading", content: "Knowledge Graph" },
+      {
+        type: "paragraph",
+        content:
+          "Der Knowledge Graph ist Googles eigene Wissensdatenbank. Einträge entstehen, wenn Google eine Marke aus mehreren Quellen konsistent als Entität erkennt. Direkten Edit-Zugang gibt es nicht – aber konsistente Daten in Schema.org, Google Business Profile und Wikidata erhöhen die Wahrscheinlichkeit.",
+      },
+      { type: "heading", content: "Pragmatische Schritte" },
+      {
+        type: "list",
+        items: [
+          "Konsistente Stammdaten: Firmenname, Adresse, Gründungsjahr überall identisch.",
+          "Wikidata-Eintrag anlegen, wenn eigene Substanz dafür reicht.",
+          "Eine eigene Marken-FAQ auf der Website, die Modellen klare Fakten liefert.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "texte-fuer-google-und-chatgpt",
+    title:
+      "Texte, die Google UND ChatGPT lieben: Drei Prinzipien für 2026",
+    category: "Content",
+    date: "25. April 2026",
+    dateIso: "2026-04-25",
+    readingTime: "5 min",
+    excerpt:
+      "Klassisches SEO und LLM-Optimierung sind keine Gegensätze. Drei Prinzipien, die Texte sowohl in der Google-Suche als auch in KI-Antworten sichtbar machen.",
+    image: "/images/projects/demnaechst.png",
+    author: AUTHOR,
+    available: true,
+    sections: [
+      {
+        type: "paragraph",
+        content:
+          "Es kursiert die Idee, dass man Texte entweder für Google oder für KI-Suchmaschinen schreibt. Das ist falsch. Beide Systeme honorieren am Ende dieselbe Substanz – sie haben nur unterschiedliche Hebel, mit denen sie Qualität erkennen.",
+      },
+      { type: "heading", content: "Prinzip 1: Hauptaussage in den ersten Satz" },
+      {
+        type: "paragraph",
+        content:
+          "Suchmaschinen und KI-Modelle erfassen den Anfang eines Absatzes überproportional stark. Wer dort die Kernaussage platziert, wird häufiger zitiert und besser zusammengefasst. Erzählerische Vorbemerkungen kosten Sichtbarkeit.",
+      },
+      { type: "heading", content: "Prinzip 2: Strukturen statt Wortwüsten" },
+      {
+        type: "paragraph",
+        content:
+          "Listen, klare Zwischenüberschriften, kurze Absätze – beide Systeme bevorzugen das. Auf der menschlichen Seite ist Lesbarkeit der Effekt, auf der technischen Seite die bessere Erfassbarkeit der Inhaltsstruktur.",
+      },
+      { type: "heading", content: "Prinzip 3: Konkrete Beispiele und Zahlen" },
+      {
+        type: "paragraph",
+        content:
+          "Allgemeine Aussagen werden seltener zitiert als belegbare Fakten. Wer Zahlen oder Beispiele hat, sollte sie einbauen – auch wenn es konservativer ist als 'wir sind die schnellste Agentur Deutschlands'. Modelle bevorzugen Aussagen, die sich bestätigen lassen.",
+      },
+      { type: "heading", content: "Was zu vermeiden ist" },
+      {
+        type: "list",
+        items: [
+          "Keyword-Stuffing – wirkt unnatürlich und wird sowohl von Google als auch von Modellen abgewertet.",
+          "Generische Eröffnungssätze ('In der heutigen schnelllebigen Zeit ...').",
+          "Fluff-Wörter ohne Inhalt.",
+          "Recycelte AI-Texte ohne menschliche Substanz.",
+        ],
+      },
+      {
+        type: "quote",
+        content:
+          "Was Menschen klar lesen, lesen Maschinen meistens auch klar.",
+      },
+    ],
+  },
+  {
+    slug: "themen-cluster-architektur",
+    title:
+      "Themen-Cluster statt Keyword-Liste: Die neue Inhalts-Architektur",
+    category: "Content",
+    date: "25. April 2026",
+    dateIso: "2026-04-25",
+    readingTime: "5 min",
+    excerpt:
+      "Keyword-Listen waren das Werkzeug der 2010er. Themen-Cluster sind die Inhalts-Architektur der 2020er. Was sich konkret verändert hat – und wie eine moderne Content-Planung aussieht.",
+    image: "/images/projects/demnaechst.png",
+    author: AUTHOR,
+    available: true,
+    sections: [
+      {
+        type: "paragraph",
+        content:
+          "In den 2010er-Jahren begann jede SEO-Strategie mit einer Keyword-Liste in einer Tabelle. Heute ist das Werkzeug zwar noch da, aber es taugt nicht mehr als Strategie-Grundlage. Suchmaschinen denken in Themen, nicht mehr in einzelnen Suchbegriffen – und Content-Planung sollte sich entsprechend anpassen.",
+      },
+      { type: "heading", content: "Was ein Themen-Cluster ist" },
+      {
+        type: "paragraph",
+        content:
+          "Ein Themenfeld – etwa 'Lokale SEO' – wird durch eine Hub-Seite und mehrere zugeordnete Detailartikel beschrieben. Suchmaschinen erkennen die Verknüpfung, bewerten die Tiefe und ranken die Hub-Seite und ihre Subartikel im Verbund.",
+      },
+      { type: "heading", content: "Wie man von Keywords zu Themen kommt" },
+      {
+        type: "list",
+        items: [
+          "Liste der wichtigsten Suchbegriffe weiterhin erstellen.",
+          "Begriffe nach inhaltlicher Verwandtschaft gruppieren.",
+          "Pro Gruppe ein zentrales Thema definieren – das wird zur Hub-Seite.",
+          "Subartikel pro Gruppe planen und schrittweise veröffentlichen.",
+        ],
+      },
+      { type: "heading", content: "Was sich konkret verändert" },
+      {
+        type: "list",
+        items: [
+          "Statt 30 isolierter Artikel zu zusammenhanglosen Begriffen entstehen 5 starke Cluster.",
+          "Internal Linking wird Teil der Strategie, nicht Nebeneffekt.",
+          "Autorität baut sich pro Themenfeld auf, nicht pro Keyword.",
+          "Erfolge werden langsamer, aber nachhaltiger.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "ai-generierte-texte-und-seo",
+    title:
+      "AI-generierte Texte und SEO: Wann sie helfen, wann sie schaden",
+    category: "Content",
+    date: "25. April 2026",
+    dateIso: "2026-04-25",
+    readingTime: "5 min",
+    excerpt:
+      "AI-Texte sind weder Wundermittel noch Tabu. Wann sie SEO-mäßig helfen, wann sie aktiv schaden – und welche Mischform sich bewährt hat.",
+    image: "/images/projects/demnaechst.png",
+    author: AUTHOR,
+    available: true,
+    sections: [
+      {
+        type: "paragraph",
+        content:
+          "Seit ChatGPT und ähnliche Modelle massenmarktfähig sind, fluten AI-Texte das Web. Google hat klargestellt: AI-generierte Inhalte werden nicht pauschal abgewertet – aber AI-generierter Massenmüll schon. Die Linie verläuft entlang der Substanz, nicht der Erstellungsmethode.",
+      },
+      { type: "heading", content: "Wann AI-Texte helfen" },
+      {
+        type: "list",
+        items: [
+          "Als Strukturentwurf, der dann fachlich überarbeitet wird.",
+          "Als Übersetzung mit menschlicher Endkontrolle.",
+          "Als Zusammenfassung längerer Texte.",
+          "Als Variation einer schon vorhandenen Aussage.",
+        ],
+      },
+      { type: "heading", content: "Wann sie schaden" },
+      {
+        type: "list",
+        items: [
+          "Reine Keyword-Farmen ohne menschliche Tiefe.",
+          "Inhalte, die nur 'irgendwas' zu einem Thema sagen, ohne echte Position.",
+          "Endlose Listen-Wiederholungen ohne neuen Mehrwert.",
+          "Posts, die mit AI generiert und ohne Prüfung veröffentlicht werden.",
+        ],
+      },
+      { type: "heading", content: "Bewährte Mischform" },
+      {
+        type: "paragraph",
+        content:
+          "Erst die These, die Position oder das eigene Argument – dann AI als Werkzeug zum Strukturieren, Glätten oder Variieren. Niemals umgekehrt. Wer einen AI-Text nimmt und sich überlegt, ob er die Aussage wirklich teilt, hat fast immer einen schwächeren Beitrag als jemand, der seine Position vorher klar hatte.",
+      },
+      {
+        type: "quote",
+        content:
+          "AI ist ein Verstärker. Wer Substanz hat, multipliziert sie. Wer keine hat, verstärkt das Fehlen.",
+      },
+    ],
+  },
+  {
+    slug: "microcopy-ux-text",
+    title:
+      "Microcopy: Die unterschätzte Disziplin zwischen Text und UX",
+    category: "Content",
+    date: "25. April 2026",
+    dateIso: "2026-04-25",
+    readingTime: "4 min",
+    excerpt:
+      "Buttons, Fehlermeldungen, Bestätigungen, Hinweise – die kleinen Texte einer Website entscheiden überproportional über Conversion. Was Microcopy ist und warum sie so oft vernachlässigt wird.",
+    image: "/images/projects/demnaechst.png",
+    author: AUTHOR,
+    available: true,
+    sections: [
+      {
+        type: "paragraph",
+        content:
+          "Microcopy sind die kleinen Textbausteine zwischen den großen Inhalten: Button-Beschriftungen, Fehlermeldungen, Bestätigungen, Hinweistexte, Platzhalter in Formularfeldern. Sie machen oft 5 % des Wortvolumens aus – und 50 % der Conversion-Wirkung.",
+      },
+      { type: "heading", content: "Was gute Microcopy auszeichnet" },
+      {
+        type: "list",
+        items: [
+          "Klar formuliert, ohne Marketing-Phrase.",
+          "Aktiv statt passiv: 'Anfrage senden' statt 'Anfrage wird gesendet'.",
+          "Konkret statt allgemein: 'Antwort innerhalb 24 Stunden' statt 'Wir melden uns'.",
+          "Empathisch bei Fehlern: erklären, was passiert ist und was zu tun ist.",
+        ],
+      },
+      { type: "heading", content: "Häufig übersehene Stellen" },
+      {
+        type: "list",
+        items: [
+          "Bestätigungs-Seiten nach dem Absenden eines Formulars.",
+          "Fehlermeldungen bei falsch ausgefüllten Feldern.",
+          "Tooltip-Texte in Formularen.",
+          "404-Seiten – oft nur ein 'Seite nicht gefunden' statt einer hilfreichen Weiterführung.",
+        ],
+      },
+      { type: "heading", content: "Wer Microcopy schreiben sollte" },
+      {
+        type: "paragraph",
+        content:
+          "Idealerweise jemand, der sowohl die Marke als auch die Nutzungsabläufe kennt. Designer schreiben Microcopy oft nebenbei, Texter erstellen sie isoliert – beide Wege führen zu Reibung. Ein gemeinsamer Workflow zwischen UX und Text ist deshalb der einzige, der konsistent gute Ergebnisse liefert.",
+      },
+    ],
+  },
+  {
     slug: "website-fuer-lokale-suchanfragen",
     title:
       "Wie Unternehmen ihre Website für lokale Suchanfragen strategisch nutzen können",
