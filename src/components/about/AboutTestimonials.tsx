@@ -12,42 +12,42 @@ const ITEMS: T[] = [
       "Nedim denkt mit statt nur umzusetzen. Das Ergebnis war nicht nur technisch sauber, sondern wirtschaftlich spürbar — unsere Anfragen haben sich nach dem Relaunch merklich erhöht.",
     name: "Marc P.",
     role: "Geschäftsführer, Dienstleistung",
-    img: "/images/breit/portrait-1.png",
+    img: "/images/breit/portrait-1.webp",
   },
   {
     quote:
       "Endlich jemand, der Automatisierung nicht als Buzzword verkauft, sondern als echtes Werkzeug einsetzt. Der gebaute Workflow läuft seit Monaten ohne Zwischenfälle.",
     name: "Madeleine v. H.",
     role: "Mitgründerin, E-Commerce",
-    img: "/images/breit/portrait-2.png",
+    img: "/images/breit/portrait-2.webp",
   },
   {
     quote:
       "Wir bekommen einen festen Ansprechpartner, klare Dokumentation und ein System, das wir auch selbst bedienen können. Genau so soll Agentur-Arbeit heute laufen.",
     name: "Ege G.",
     role: "CEO, SaaS",
-    img: "/images/breit/portrait-3.png",
+    img: "/images/breit/portrait-3.webp",
   },
   {
     quote:
       "Der KI-Assistent, den Nesani für uns gebaut hat, übernimmt heute Routinefragen unserer Kunden — unser Support-Team hat endlich wieder Kapazität für das, was wirklich zählt.",
     name: "Norman S.",
     role: "Gründer, Energiewirtschaft",
-    img: "/images/breit/portrait-4.png",
+    img: "/images/breit/portrait-4.webp",
   },
   {
     quote:
       "Wir haben vorher mit zwei Agenturen gearbeitet. Bei Nesani reicht ein Ansprechpartner — und die Geschwindigkeit ist ein anderes Level.",
     name: "Marius H.",
     role: "Steuerberater",
-    img: "/images/breit/portrait-5.png",
+    img: "/images/breit/portrait-5.webp",
   },
   {
     quote:
       "Unser interner Prozess zur Angebotserstellung dauerte 40 Minuten pro Kunde. Nach der Automatisierung durch Nesani sind es drei. Das ist der Unterschied, den wir gesucht haben.",
     name: "Charlotte P.",
     role: "Mitgründerin, B2B Services",
-    img: "/images/breit/portrait-6.png",
+    img: "/images/breit/portrait-6.webp",
   },
 ];
 

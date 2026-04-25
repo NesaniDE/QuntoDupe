@@ -19,7 +19,7 @@ const QUOTES: Quote[] = [
       "Wir haben rund 40 % unserer manuellen Arbeit automatisiert — ohne, dass Kunden etwas davon merken. Nur die Reaktionszeit ist deutlich kürzer.",
     author: "Jens B.",
     role: "Geschäftsführer, Beratung",
-    image: "/images/breit/portrait-1.png",
+    image: "/images/breit/portrait-1.webp",
     label: "NESANI | BERATUNG",
   },
   {
@@ -27,7 +27,7 @@ const QUOTES: Quote[] = [
       "Der neue Auftritt wirkt nicht wie ein Template, sondern wie unser Unternehmen. Genau das war der Punkt.",
     author: "Laura K.",
     role: "Gründerin, Studio",
-    image: "/images/breit/portrait-2.png",
+    image: "/images/breit/portrait-2.webp",
     label: "NESANI | STUDIO",
   },
   {
@@ -35,7 +35,7 @@ const QUOTES: Quote[] = [
       "Von der ersten Skizze bis zum Livegang war der Prozess klar und ohne Reibung. Wir haben nur noch entschieden, nicht mehr verwaltet.",
     author: "Tobias M.",
     role: "CEO, B2B Software",
-    image: "/images/breit/portrait-3.png",
+    image: "/images/breit/portrait-3.webp",
     label: "NESANI | B2B SOFTWARE",
   },
   {
@@ -43,7 +43,7 @@ const QUOTES: Quote[] = [
       "Wir waren skeptisch, ob KI in unserem Umfeld wirklich greift. Heute übernimmt der Assistent rund 70 % der Erstanfragen — 24/7.",
     author: "Sarah H.",
     role: "Geschäftsführerin, Online-Handel",
-    image: "/images/breit/portrait-4.png",
+    image: "/images/breit/portrait-4.webp",
     label: "NESANI | ONLINE-HANDEL",
   },
   {
@@ -51,7 +51,7 @@ const QUOTES: Quote[] = [
       "Individuelle Entwicklung statt Baukasten — genau das hat bei uns den Unterschied gemacht. Die Lösung wächst jetzt mit dem Geschäft mit.",
     author: "Andreas V.",
     role: "Geschäftsführer, Industrie",
-    image: "/images/breit/portrait-5.png",
+    image: "/images/breit/portrait-5.webp",
     label: "NESANI | INDUSTRIE",
   },
 ];
@@ -72,16 +72,23 @@ export function Testimonials() {
           </h2>
         </Reveal>
 
-        <div className="relative overflow-hidden rounded-3xl aspect-[4/5] sm:aspect-[16/11] md:aspect-[16/9] lg:aspect-[16/8]">
-          <Image
-            key={current.image}
-            src={current.image}
-            alt={current.author}
-            fill
-            sizes="(min-width: 1024px) 1344px, 100vw"
-            className="object-cover object-[85%_center] md:object-center testimonial-image"
-            priority={idx === 0}
-          />
+        <div className="relative overflow-hidden rounded-3xl aspect-[4/5] sm:aspect-[16/11] md:aspect-[16/9] lg:aspect-[16/8] bg-[#0a0a0a]">
+          {QUOTES.map((q, i) => (
+            <Image
+              key={q.image}
+              src={q.image}
+              alt={q.author}
+              fill
+              sizes="(min-width: 1024px) 1344px, 100vw"
+              className={[
+                "object-cover object-[85%_center] md:object-center transition-opacity duration-500 ease-out",
+                i === idx ? "opacity-100" : "opacity-0",
+              ].join(" ")}
+              priority={i === 0}
+              loading="eager"
+              fetchPriority={i === 0 ? "high" : "auto"}
+            />
+          ))}
           <div
             className="absolute inset-0 pointer-events-none md:hidden"
             style={{
