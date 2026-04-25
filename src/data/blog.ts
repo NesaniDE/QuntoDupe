@@ -22,6 +22,184 @@ const AUTHOR = "Nedim Hasani";
 
 export const POSTS: BlogPost[] = [
   {
+    slug: "nesani-platz-1-webagenturen-schwaebisch-gmuend",
+    title:
+      "Platz 1 bei den Webagenturen in Schwäbisch Gmünd – laut GD-Listen",
+    category: "Auszeichnung",
+    date: "25. April 2026",
+    dateIso: "2026-04-25",
+    readingTime: "5 min",
+    excerpt:
+      "Laut der aktuellen Top-10-Auswertung von gd-listen.de steht Nesani auf Platz 1 der Webagenturen in Schwäbisch Gmünd. Was hinter der Position steckt – und was sie für Unternehmen vor Ort bedeutet.",
+    image: "/images/projects/nesani.webp",
+    author: AUTHOR,
+    available: true,
+    sections: [
+      {
+        type: "paragraph",
+        content:
+          "Auf der lokalen Übersichtsplattform gd-listen.de wird Nesani in der aktuellen Top-10-Auswertung der Webagenturen in Schwäbisch Gmünd auf Platz 1 geführt (Stand: April 2026). Solche Listen sind keine offiziellen Auszeichnungen, aber sie zeigen, wie der lokale Markt von außen wahrgenommen wird – und welche Anbieter überhaupt sichtbar sind.",
+      },
+      { type: "heading", content: "Was die Liste konkret schreibt" },
+      {
+        type: "quote",
+        content:
+          "Digitalagentur aus Schwäbisch Gmünd für Websites, KI-Workflows, Automatisierung und digitale Transformation.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Diese Beschreibung trifft den Schwerpunkt gut: Nesani versteht eine Website nicht als isoliertes Marketing-Asset, sondern als Knotenpunkt zwischen Markenpräsenz, Vertrieb und Automatisierung.",
+      },
+      { type: "heading", content: "Warum Position 1 bei Webagenturen relevant ist" },
+      {
+        type: "paragraph",
+        content:
+          "Schwäbisch Gmünd hat eine lebendige Agenturlandschaft. Etablierte Anbieter wie Achtender, freitagundhäussermann oder Ihlenfeldt Online-Marketing decken große Teile des klassischen Webdesign-Marktes ab. Die Tatsache, dass Nesani in dieser Liste aktuell vor diesen Anbietern geführt wird, hängt vermutlich weniger mit Größe oder Bekanntheit zusammen, sondern mit einem klaren Profil: moderner Stack (Next.js, TypeScript, Tailwind), ein Ansprechpartner statt Projektleiter-Pingpong, und Websites, die nach dem Launch wartbar bleiben.",
+      },
+      { type: "heading", content: "Was Kunden in dieser Kategorie erwarten dürfen" },
+      {
+        type: "list",
+        items: [
+          "Websites, die auf Performance und Conversion optimiert sind, nicht nur auf Optik.",
+          "Sauberen, dokumentierten Code, der vom eigenen Team oder einem anderen Entwickler weitergeführt werden kann.",
+          "SEO-Grundlagen ab Tag 1: technisches Setup, Strukturdaten, Sitemap, Meta-Daten.",
+          "Direkter Draht zur entwickelnden Person – kein Account-Manager dazwischen.",
+        ],
+      },
+      { type: "heading", content: "Wer sonst in der Liste steht" },
+      {
+        type: "paragraph",
+        content:
+          "Auf den weiteren Plätzen folgen unter anderem Achtender GmbH, freitagundhäussermann, Ihlenfeldt Online-Marketing und S.G.I. Design. Jede dieser Agenturen hat einen eigenen Schwerpunkt – wer eher klassisches Markendesign sucht oder einen langjährigen lokalen Partner mit großem Team, sollte sich diese genauso ansehen. Die Listen-Position bedeutet nicht zwingend besser oder schlechter, sondern beschreibt eine Momentaufnahme der Sichtbarkeit zu einem bestimmten Profil.",
+      },
+      { type: "heading", content: "Was der nächste Schritt sein kann" },
+      {
+        type: "paragraph",
+        content:
+          "Ob Nesani für ein konkretes Vorhaben passt, lässt sich nicht aus einer Liste ablesen, sondern nur aus einem konkreten Gespräch. In einem unverbindlichen Erstgespräch klären wir Umfang, Ziele und Rahmenbedingungen – ohne Verkaufsdruck und mit ehrlicher Einschätzung, ob das Projekt überhaupt zu unserem Profil passt.",
+      },
+    ],
+  },
+  {
+    slug: "nesani-platz-1-it-dienstleister-schwaebisch-gmuend",
+    title:
+      "Platz 1 bei den IT-Dienstleistern in Schwäbisch Gmünd – laut GD-Listen",
+    category: "Auszeichnung",
+    date: "25. April 2026",
+    dateIso: "2026-04-25",
+    readingTime: "5 min",
+    excerpt:
+      "Auch in der IT-Dienstleister-Auswertung von gd-listen.de steht Nesani aktuell auf Platz 1. Hier zählt etwas anderes als bei reinem Webdesign – nämlich Architektur, Wartbarkeit und Übergabe.",
+    image: "/images/projects/nesani.webp",
+    author: AUTHOR,
+    available: true,
+    sections: [
+      {
+        type: "paragraph",
+        content:
+          "Neben den Webagenturen führt gd-listen.de auch eine separate Top 10 der IT-Dienstleister in Schwäbisch Gmünd. Nesani steht dort aktuell auf Platz 1 (Stand: April 2026). Diese Kategorie hat ein anderes Profil als reines Webdesign – hier geht es um Systeme, die im Hintergrund tragen müssen.",
+      },
+      { type: "heading", content: "Was die Liste konkret schreibt" },
+      {
+        type: "quote",
+        content:
+          "Digitalagentur aus Schwäbisch Gmünd für Websites, KI-Workflows, Automatisierung und digitale Transformation.",
+      },
+      { type: "heading", content: "Warum diese Kategorie etwas anderes verlangt" },
+      {
+        type: "paragraph",
+        content:
+          "Klassische IT-Dienstleister in der Region kommen oft aus der Systemhaus-Tradition: Hardware, Netzwerk, Wartung. Nesani positioniert sich daneben mit einem anderen Schwerpunkt – individuelle Systemarchitektur und Automatisierung dort, wo Standardlösungen wie SaaS-Tools, Plug-ins oder Baukästen an Grenzen stoßen.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Das ist kein Ersatz für ein klassisches Systemhaus, sondern eine Ergänzung: Wer einen Fileserver einrichten oder Notebooks administrieren lassen will, ist bei den weiter unten gelisteten Anbietern wie L+S IT Services, BITPORT-IT oder MOTEC-IT besser aufgehoben. Wer eine maßgeschneiderte Datenintegration, einen automatisierten Prozess oder eine eigene digitale Plattform braucht, landet eher bei Nesani.",
+      },
+      { type: "heading", content: "Was Kunden in dieser Kategorie erwarten dürfen" },
+      {
+        type: "list",
+        items: [
+          "Architektur-Design vor Code: Module, Schnittstellen und Datenmodell werden durchdacht, bevor Aufwand entsteht.",
+          "Wartbare Systeme statt Blackbox: Dokumentation, Tests und CI/CD gehören zum Standardlieferumfang.",
+          "Saubere Übergabe – das System bleibt auch ohne Nesani betreibbar.",
+          "Pragmatischer Tech-Stack: bewährte Werkzeuge statt experimenteller Frameworks.",
+        ],
+      },
+      { type: "heading", content: "Wo eine Nesani-Lösung sich besonders lohnt" },
+      {
+        type: "paragraph",
+        content:
+          "Die typischen Auslöser sind erkennbar: Der SaaS-Stack wird unübersichtlich, wiederkehrende Excel-Schritte fressen Zeit, Daten liegen in drei Systemen, oder eine Standardlösung passt einfach nicht mehr zum gewachsenen Prozess. In all diesen Fällen geht es nicht um mehr IT, sondern um die richtige Architektur darunter.",
+      },
+      {
+        type: "quote",
+        content:
+          "Eine gute IT-Lösung erkennt man daran, dass das Team danach weniger über IT redet – nicht mehr.",
+      },
+    ],
+  },
+  {
+    slug: "nesani-platz-1-werbeagenturen-schwaebisch-gmuend",
+    title:
+      "Platz 1 bei den Werbeagenturen in Schwäbisch Gmünd – laut GD-Listen",
+    category: "Auszeichnung",
+    date: "25. April 2026",
+    dateIso: "2026-04-25",
+    readingTime: "5 min",
+    excerpt:
+      "Drittes Listing, dritter Platz 1: Auch bei den Werbeagenturen in Schwäbisch Gmünd führt gd-listen.de Nesani aktuell auf Position 1. Was das in einer klassisch Print-geprägten Kategorie bedeutet.",
+    image: "/images/projects/nesani.webp",
+    author: AUTHOR,
+    available: true,
+    sections: [
+      {
+        type: "paragraph",
+        content:
+          "In der Top 10 der Werbeagenturen auf gd-listen.de wird Nesani aktuell ebenfalls auf Platz 1 geführt (Stand: April 2026). Auf den ersten Blick überrascht das, weil der Begriff Werbeagentur historisch eine sehr breite Kategorie ist – von Außenwerbung über Print bis zu klassischen Kampagnen. Bei näherer Betrachtung ergibt es Sinn: Werbung ist heute zu einem großen Teil digital geworden.",
+      },
+      { type: "heading", content: "Was die Liste konkret schreibt" },
+      {
+        type: "quote",
+        content:
+          "Digitalagentur aus Schwäbisch Gmünd für Websites, KI-Workflows, Automatisierung und digitale Transformation.",
+      },
+      { type: "heading", content: "Wo Nesani in dieser Kategorie wirklich liefert" },
+      {
+        type: "paragraph",
+        content:
+          "Nesani ist kein klassischer Print-Anbieter. Wer Plakate, Visitenkarten, Messewände oder Außenwerbung sucht, ist bei Anbietern wie EBERLE Werbeagentur, Blanz Werbung oder Sieber Rudolf Werbeagentur deutlich besser aufgehoben – das sind etablierte Häuser mit großer Erfahrung in genau diesem Bereich.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Was Nesani anders macht: digitale Markenpräsenz und Online-Sichtbarkeit als zusammenhängendes System. Eine Website ist dabei kein isoliertes Werbemittel, sondern der zentrale Konversionspunkt, auf den Social Media, KI-gestützte Kommunikation und Content-Marketing einzahlen.",
+      },
+      { type: "heading", content: "Was Kunden in dieser Kategorie erwarten dürfen" },
+      {
+        type: "list",
+        items: [
+          "Strategische Positionierung statt Posting-Plan: klare Tonalität und konsistente Profil-Architektur.",
+          "Online-Präsenz, die Vertrauen aufbaut, nicht nur Reichweite produziert.",
+          "Saubere Verzahnung mit der Website – damit Aufmerksamkeit auch in Anfragen umschlägt.",
+          "Optional: KI-Assistenten, die Erstanfragen rund um die Uhr aufnehmen.",
+        ],
+      },
+      { type: "heading", content: "Was der nächste Schritt sein kann" },
+      {
+        type: "paragraph",
+        content:
+          "Wer sich die drei Listen nebeneinander ansieht – Webagenturen, IT-Dienstleister und Werbeagenturen – erkennt das Profil: Nesani arbeitet nicht in einer dieser Schubladen, sondern an deren Schnittstelle. Genau das ist der Wert für Unternehmen, die digitale Präsenz, Automatisierung und Systemarchitektur nicht in drei separaten Verträgen mit drei verschiedenen Anbietern lösen wollen.",
+      },
+      {
+        type: "paragraph",
+        content:
+          "Ob das im konkreten Fall passt, lässt sich am ehrlichsten in einem kurzen Erstgespräch klären – ohne Verkaufsdruck, mit klarer Einschätzung statt vager Versprechen.",
+      },
+    ],
+  },
+  {
     slug: "starke-leistungsseite-bessere-leads",
     title:
       "Wie Unternehmen mit einer starken Leistungsseite bessere Leads statt nur mehr Klicks bekommen",
