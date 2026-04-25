@@ -9,6 +9,7 @@ import { ServiceTestimonial } from "@/components/service/ServiceTestimonial";
 import { ServiceProcessBanner } from "@/components/service/ServiceProcessBanner";
 import { ServiceProcessCards } from "@/components/service/ServiceProcessCards";
 import { ServiceCta } from "@/components/service/ServiceCta";
+import { ServiceJsonLd } from "@/components/seo/ServiceJsonLd";
 import {
   CompassIcon,
   LayersIcon,
@@ -27,6 +28,11 @@ export const metadata: Metadata = {
 export default function SocialMediaPage() {
   return (
     <>
+      <ServiceJsonLd
+        name="Social Media & Online-Präsenz"
+        description="Strategische digitale Markenwirkung – klare Tonalität, konsistente Profilarchitektur und vertrauensaufbauende Inhalte statt Posting-Pläne."
+        slug="social-media"
+      />
       <Header />
       <main>
         <ServiceHero

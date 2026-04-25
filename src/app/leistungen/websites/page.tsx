@@ -9,6 +9,7 @@ import { FinTestimonial } from "@/components/financing/FinTestimonial";
 import { PartnersBanner } from "@/components/financing/PartnersBanner";
 import { PartnerCards } from "@/components/financing/PartnerCards";
 import { FinCta } from "@/components/financing/FinCta";
+import { ServiceJsonLd } from "@/components/seo/ServiceJsonLd";
 
 export const metadata: Metadata = {
   title: "Websites – Nesani",
@@ -20,6 +21,11 @@ export const metadata: Metadata = {
 export default function FinancingPage() {
   return (
     <>
+      <ServiceJsonLd
+        name="Websites"
+        description="Moderne, schnelle und konvertierende Websites auf Next.js. Performance, Core Web Vitals, Conversion-Design und saubere Übergabe – von einem Ansprechpartner."
+        slug="websites"
+      />
       <Header />
       <main>
         <FinHero />

@@ -93,10 +93,21 @@ export default function DatenschutzPage() {
               Wenn Sie uns über ein Kontaktformular oder per E-Mail
               Anfragen zukommen lassen, werden Ihre Angaben (Name, E-Mail,
               Unternehmen, Nachricht) zur Bearbeitung der Anfrage gespeichert.
-              Die Daten werden nicht ohne Ihre Einwilligung an Dritte
-              weitergegeben. Die Speicherdauer beträgt maximal 6 Monate nach
-              Abschluss der Bearbeitung, sofern keine gesetzlichen
-              Aufbewahrungspflichten entgegenstehen.
+              Rechtsgrundlage ist Art. 6 Abs. 1 lit. b und f DSGVO. Die Daten
+              werden nicht ohne Ihre Einwilligung an Dritte weitergegeben. Die
+              Speicherdauer beträgt maximal 6 Monate nach Abschluss der
+              Bearbeitung, sofern keine gesetzlichen Aufbewahrungspflichten
+              entgegenstehen.
+            </p>
+            <p>
+              Für den technischen Versand der Formularnachrichten setzen wir
+              den Dienstleister Resend (Resend, Inc., 2261 Market Street #5039,
+              San Francisco, CA 94114, USA) als Auftragsverarbeiter ein. Dabei
+              werden die im Formular eingegebenen Daten kurzzeitig auf
+              Servern von Resend verarbeitet, um die E-Mail an uns zuzustellen.
+              Eine Übermittlung in die USA erfolgt auf Grundlage der
+              EU-Standardvertragsklauseln; Resend ist zudem unter dem
+              EU-U.S. Data Privacy Framework zertifiziert.
             </p>
           </LegalSection>
 

@@ -9,6 +9,7 @@ import { ServiceTestimonial } from "@/components/service/ServiceTestimonial";
 import { ServiceProcessBanner } from "@/components/service/ServiceProcessBanner";
 import { ServiceProcessCards } from "@/components/service/ServiceProcessCards";
 import { ServiceCta } from "@/components/service/ServiceCta";
+import { ServiceJsonLd } from "@/components/seo/ServiceJsonLd";
 import {
   BookIcon,
   StopwatchIcon,
@@ -26,6 +27,11 @@ export const metadata: Metadata = {
 export default function KiAssistentenPage() {
   return (
     <>
+      <ServiceJsonLd
+        name="KI-Assistenten & Chatbots"
+        description="KI, die für Sie kommuniziert. Intelligente Assistenten übernehmen Erstanfragen, entlasten Teams und beantworten Kundenfragen rund um die Uhr."
+        slug="ki-assistenten"
+      />
       <Header />
       <main>
         <ServiceHero

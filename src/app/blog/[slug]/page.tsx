@@ -48,8 +48,36 @@ export default async function BlogPostPage({
   if (!post) notFound();
   const related = getRelatedPosts(slug, 3);
 
+  const url = `${BASE_URL}/blog/${post.slug}`;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    headline: post.title,
+    description: post.excerpt,
+    image: `${BASE_URL}${post.image}`,
+    datePublished: post.dateIso,
+    dateModified: post.dateIso,
+    author: {
+      "@type": "Person",
+      name: post.author,
+      url: `${BASE_URL}/ueber-uns`,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Nesani",
+      logo: { "@type": "ImageObject", url: `${BASE_URL}/icon-512.png` },
+    },
+    articleSection: post.category,
+    inLanguage: "de-DE",
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       <main>
         <BlogArticle post={post} related={related} />

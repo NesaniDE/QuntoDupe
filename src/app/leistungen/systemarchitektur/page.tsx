@@ -9,6 +9,7 @@ import { ServiceTestimonial } from "@/components/service/ServiceTestimonial";
 import { ServiceProcessBanner } from "@/components/service/ServiceProcessBanner";
 import { ServiceProcessCards } from "@/components/service/ServiceProcessCards";
 import { ServiceCta } from "@/components/service/ServiceCta";
+import { ServiceJsonLd } from "@/components/seo/ServiceJsonLd";
 import {
   LayersIcon,
   CodeIcon,
@@ -27,6 +28,11 @@ export const metadata: Metadata = {
 export default function SystemarchitekturPage() {
   return (
     <>
+      <ServiceJsonLd
+        name="Individuelle Systemarchitektur"
+        description="Maßgeschneiderte digitale Infrastruktur. Wenn Standardlösungen an ihre Grenzen stoßen, entwerfen wir Architekturen, die zu Ihren Prozessen passen – nicht umgekehrt."
+        slug="systemarchitektur"
+      />
       <Header />
       <main>
         <ServiceHero

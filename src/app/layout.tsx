@@ -124,6 +124,8 @@ const jsonLd = {
   sameAs: [
     "https://www.instagram.com/nesani.de",
     "https://www.linkedin.com/company/nesani",
+    "https://www.tiktok.com/@nesani.de",
+    "https://www.facebook.com/profile.php?id=61567359321825",
   ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
@@ -134,6 +136,7 @@ const jsonLd = {
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "KI-Workflows & Automatisierung" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "KI-Assistenten & Chatbots" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Autonome Agenten" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Individuelle Systemarchitektur" } },
     ],
   },
 };

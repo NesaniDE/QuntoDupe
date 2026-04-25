@@ -9,6 +9,7 @@ import { ServiceTestimonial } from "@/components/service/ServiceTestimonial";
 import { ServiceProcessBanner } from "@/components/service/ServiceProcessBanner";
 import { ServiceProcessCards } from "@/components/service/ServiceProcessCards";
 import { ServiceCta } from "@/components/service/ServiceCta";
+import { ServiceJsonLd } from "@/components/seo/ServiceJsonLd";
 import {
   NetworkIcon,
   PlugIcon,
@@ -27,6 +28,11 @@ export const metadata: Metadata = {
 export default function AutonomeAgentenPage() {
   return (
     <>
+      <ServiceJsonLd
+        name="Autonome Agenten"
+        description="Systeme, die selbstständig arbeiten. Autonome Agenten planen, entscheiden und handeln innerhalb klar definierter Grenzen – nicht nur nach festen Regeln."
+        slug="autonome-agenten"
+      />
       <Header />
       <main>
         <ServiceHero

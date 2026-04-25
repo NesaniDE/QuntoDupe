@@ -9,6 +9,7 @@ import { ServiceTestimonial } from "@/components/service/ServiceTestimonial";
 import { ServiceProcessBanner } from "@/components/service/ServiceProcessBanner";
 import { ServiceProcessCards } from "@/components/service/ServiceProcessCards";
 import { ServiceCta } from "@/components/service/ServiceCta";
+import { ServiceJsonLd } from "@/components/seo/ServiceJsonLd";
 import {
   MagnifierIcon,
   CogIcon,
@@ -27,6 +28,11 @@ export const metadata: Metadata = {
 export default function KiWorkflowsPage() {
   return (
     <>
+      <ServiceJsonLd
+        name="KI-Workflows & Automatisierung"
+        description="Intelligente Prozesse, die Zeit zurückgeben. Wiederkehrende Abläufe automatisieren, Teams entlasten und Wachstum ohne Mehraufwand ermöglichen."
+        slug="ki-workflows"
+      />
       <Header />
       <main>
         <ServiceHero
