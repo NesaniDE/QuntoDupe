@@ -2,7 +2,8 @@ export type BlogSection =
   | { type: "paragraph"; content: string }
   | { type: "heading"; content: string }
   | { type: "list"; items: string[] }
-  | { type: "quote"; content: string };
+  | { type: "quote"; content: string }
+  | { type: "cta"; href: string; label: string; external?: boolean };
 
 export type BlogPost = {
   slug: string;
@@ -79,6 +80,12 @@ export const POSTS: BlogPost[] = [
         content:
           "Ob Nesani für ein konkretes Vorhaben passt, lässt sich nicht aus einer Liste ablesen, sondern nur aus einem konkreten Gespräch. In einem unverbindlichen Erstgespräch klären wir Umfang, Ziele und Rahmenbedingungen – ohne Verkaufsdruck und mit ehrlicher Einschätzung, ob das Projekt überhaupt zu unserem Profil passt.",
       },
+      {
+        type: "cta",
+        href: "https://www.gd-listen.de/top10/top-10-webagenturen-in-schwaebisch-gmuend",
+        label: "Liste auf gd-listen.de ansehen",
+        external: true,
+      },
     ],
   },
   {
@@ -138,6 +145,12 @@ export const POSTS: BlogPost[] = [
         content:
           "Eine gute IT-Lösung erkennt man daran, dass das Team danach weniger über IT redet – nicht mehr.",
       },
+      {
+        type: "cta",
+        href: "https://www.gd-listen.de/top10/top-10-it-dienstleister-in-schwaebisch-gmuend",
+        label: "Liste auf gd-listen.de ansehen",
+        external: true,
+      },
     ],
   },
   {
@@ -196,6 +209,12 @@ export const POSTS: BlogPost[] = [
         type: "paragraph",
         content:
           "Ob das im konkreten Fall passt, lässt sich am ehrlichsten in einem kurzen Erstgespräch klären – ohne Verkaufsdruck, mit klarer Einschätzung statt vager Versprechen.",
+      },
+      {
+        type: "cta",
+        href: "https://www.gd-listen.de/top10/top-10-werbeagenturen-in-schwaebisch-gmuend",
+        label: "Liste auf gd-listen.de ansehen",
+        external: true,
       },
     ],
   },

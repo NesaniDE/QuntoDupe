@@ -140,8 +140,44 @@ function renderSections(sections: BlogSection[]): ReactNode {
             ))}
           </BlogList>
         );
+      case "cta":
+        return (
+          <BlogCta
+            key={key}
+            href={section.href}
+            label={section.label}
+            external={section.external}
+          />
+        );
     }
   });
+}
+
+export function BlogCta({
+  href,
+  label,
+  external,
+}: {
+  href: string;
+  label: string;
+  external?: boolean;
+}) {
+  const cls =
+    "not-prose mt-8 inline-flex items-center gap-1.5 rounded-full bg-[#050505] text-white text-[15px] font-semibold px-5 py-3 hover:bg-black/85 transition";
+  if (external) {
+    return (
+      <a href={href} target="_blank" rel="noreferrer noopener" className={cls}>
+        {label}
+        <ArrowUpRightIcon className="w-4 h-4" />
+      </a>
+    );
+  }
+  return (
+    <Link href={href} className={cls}>
+      {label}
+      <ArrowUpRightIcon className="w-4 h-4" />
+    </Link>
+  );
 }
 
 export function BlogParagraph({ children }: { children: ReactNode }) {
