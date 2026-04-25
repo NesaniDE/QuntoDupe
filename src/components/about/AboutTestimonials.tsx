@@ -119,14 +119,22 @@ export function AboutTestimonials() {
 
           <div className="lg:col-span-6 order-1 lg:order-2">
             <div className="relative aspect-[4/3] md:aspect-[3/2] rounded-2xl md:rounded-3xl overflow-hidden bg-[#F5F2EB]">
-              <Image
-                key={t.img}
-                src={t.img}
-                alt={t.name}
-                fill
-                sizes="(min-width:1024px) 640px, 100vw"
-                className="object-cover object-[70%_center] testimonial-image"
-              />
+              {ITEMS.map((it, idx) => (
+                <Image
+                  key={it.img}
+                  src={it.img}
+                  alt={it.name}
+                  fill
+                  sizes="(min-width:1024px) 640px, 100vw"
+                  className={[
+                    "object-cover object-[95%_center] scale-110 transition-opacity duration-500 ease-out",
+                    idx === i ? "opacity-100" : "opacity-0",
+                  ].join(" ")}
+                  priority={idx === 0}
+                  loading="eager"
+                  fetchPriority={idx === 0 ? "high" : "auto"}
+                />
+              ))}
             </div>
           </div>
         </div>
