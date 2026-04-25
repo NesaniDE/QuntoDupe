@@ -8,6 +8,7 @@ import { ArrowUpRightIcon } from "@/components/icons";
 type Role = "user" | "assistant";
 type ChatMessage = { id: string; role: Role; content: string };
 type Status = "idle" | "sending" | "streaming" | "blocked";
+type BlockedReason = "maintenance" | "rate";
 
 const newId = () =>
   typeof crypto !== "undefined" && "randomUUID" in crypto
@@ -20,6 +21,7 @@ export function ChatWidget() {
   const [animateIn, setAnimateIn] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [status, setStatus] = useState<Status>("idle");
+  const [blockedReason, setBlockedReason] = useState<BlockedReason>("maintenance");
   const [draft, setDraft] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
   const bodyRef = useRef<HTMLDivElement>(null);
@@ -97,7 +99,13 @@ export function ChatWidget() {
         signal: controller.signal,
       });
 
+      if (res.status === 429) {
+        setBlockedReason("rate");
+        setStatus("blocked");
+        return;
+      }
       if (res.status === 503 || !res.ok || !res.body) {
+        setBlockedReason("maintenance");
         setStatus("blocked");
         return;
       }
@@ -129,6 +137,7 @@ export function ChatWidget() {
     } catch (err) {
       if ((err as Error).name === "AbortError") return;
       console.error("[chat] fetch error:", err);
+      setBlockedReason("maintenance");
       setStatus("blocked");
     } finally {
       abortRef.current = null;
@@ -278,10 +287,21 @@ export function ChatWidget() {
               <div className="mt-3">
                 <BotRow>
                   <div className="bg-[#F4F1EA] rounded-2xl rounded-tl-md px-3.5 py-3 text-[14px] leading-[1.5] max-w-[260px] chat-pop">
-                    Unser Chat-Tool wird gerade gewartet und ist aktuell
-                    leider nicht verfügbar. Schreib uns deine Anfrage gern
-                    direkt über das Kontaktformular — wir melden uns innerhalb
-                    von 24 Stunden.
+                    {blockedReason === "rate" ? (
+                      <>
+                        Es gehen gerade besonders viele Anfragen ein — bitte
+                        versuch es in ein paar Minuten noch einmal oder schreib
+                        uns direkt über das Kontaktformular. Wir melden uns
+                        innerhalb von 24 Stunden.
+                      </>
+                    ) : (
+                      <>
+                        Unser Chat-Tool wird gerade gewartet und ist aktuell
+                        leider nicht verfügbar. Schreib uns deine Anfrage gern
+                        direkt über das Kontaktformular — wir melden uns
+                        innerhalb von 24 Stunden.
+                      </>
+                    )}
                     <div className="mt-3 flex flex-col gap-2">
                       <Link
                         href="/kontakt"

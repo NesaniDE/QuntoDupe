@@ -5,6 +5,67 @@ import { NESANI_KNOWLEDGE } from "@/data/chat-knowledge";
 export const runtime = "nodejs";
 export const maxDuration = 30;
 
+// Stop-Loss-Limits: schützen vor Bot-Spam und Kostenexplosion.
+// Hard cap: max 30.000 Konversations-Turns/Monat (~ 1.000/Tag).
+// Liegen über den Anthropic-Dashboard-Limits (Backstop) und über typischer Realnutzung.
+const IP_WINDOW_MS = 5 * 60 * 1000; // 5 Minuten
+const IP_MAX_REQUESTS = 20;
+const DAILY_MAX_REQUESTS = 1000;
+
+const ipBuckets = new Map<string, number[]>();
+const dailyCounter = { day: "", count: 0 };
+
+function getClientIp(req: Request): string {
+  const xff = req.headers.get("x-forwarded-for");
+  if (xff) return xff.split(",")[0].trim();
+  const real = req.headers.get("x-real-ip");
+  if (real) return real.trim();
+  return "unknown";
+}
+
+function checkRateLimit(ip: string): {
+  ok: boolean;
+  reason?: "ip" | "daily";
+  retryAfter?: number;
+} {
+  const now = Date.now();
+
+  // Daily global cap
+  const today = new Date().toISOString().slice(0, 10);
+  if (dailyCounter.day !== today) {
+    dailyCounter.day = today;
+    dailyCounter.count = 0;
+  }
+  if (dailyCounter.count >= DAILY_MAX_REQUESTS) {
+    return { ok: false, reason: "daily", retryAfter: 3600 };
+  }
+
+  // Per-IP sliding window
+  const bucket = (ipBuckets.get(ip) ?? []).filter(
+    (t) => now - t < IP_WINDOW_MS,
+  );
+  if (bucket.length >= IP_MAX_REQUESTS) {
+    const retryAfter = Math.ceil((IP_WINDOW_MS - (now - bucket[0])) / 1000);
+    ipBuckets.set(ip, bucket);
+    return { ok: false, reason: "ip", retryAfter };
+  }
+
+  bucket.push(now);
+  ipBuckets.set(ip, bucket);
+  dailyCounter.count++;
+
+  // Lazy GC: gelegentlich tote Buckets aufräumen
+  if (Math.random() < 0.02 && ipBuckets.size > 500) {
+    for (const [k, v] of ipBuckets) {
+      if (v.length === 0 || now - v[v.length - 1] > IP_WINDOW_MS) {
+        ipBuckets.delete(k);
+      }
+    }
+  }
+
+  return { ok: true };
+}
+
 const SYSTEM_RULES = `Du bist der Chat-Assistent auf der Website von Nesani.
 
 Verhaltensregeln:
@@ -28,6 +89,20 @@ export async function POST(req: Request) {
     return NextResponse.json(
       { unavailable: true, reason: "disabled" },
       { status: 503 },
+    );
+  }
+
+  const ip = getClientIp(req);
+  const limit = checkRateLimit(ip);
+  if (!limit.ok) {
+    return NextResponse.json(
+      { unavailable: true, reason: `rate-${limit.reason}` },
+      {
+        status: 429,
+        headers: limit.retryAfter
+          ? { "Retry-After": String(limit.retryAfter) }
+          : {},
+      },
     );
   }
 
