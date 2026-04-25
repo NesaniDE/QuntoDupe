@@ -182,6 +182,20 @@ export function KontaktForm() {
                   placeholder="+49 …"
                 />
               </div>
+              <div className="md:col-span-2">
+                <label htmlFor="website" className={LABEL_CLASSES}>
+                  Website
+                </label>
+                <input
+                  id="website"
+                  name="website"
+                  type="url"
+                  inputMode="url"
+                  autoComplete="url"
+                  className={INPUT_CLASSES}
+                  placeholder="https://ihre-website.de"
+                />
+              </div>
 
               <div>
                 <label htmlFor="service" className={LABEL_CLASSES}>

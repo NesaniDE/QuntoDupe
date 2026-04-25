@@ -8,6 +8,7 @@ type Body = {
   company?: string;
   email?: string;
   phone?: string;
+  website?: string;
   service?: string;
   phase?: string;
   budget?: string;
@@ -35,6 +36,7 @@ export async function POST(request: Request) {
       company,
       email,
       phone,
+      website,
       service,
       phase,
       budget,
@@ -60,6 +62,7 @@ export async function POST(request: Request) {
         company,
         email,
         phone,
+        website,
         service,
         phase,
         budget,
@@ -91,6 +94,7 @@ function buildHtml(b: {
   description: string;
   company?: string;
   phone?: string;
+  website?: string;
   service?: string;
   phase?: string;
   budget?: string;
@@ -105,6 +109,7 @@ function buildHtml(b: {
         <table style="width:100%; border-collapse:collapse;">
           ${row("E-Mail", `<a href="mailto:${encodeURIComponent(b.email)}" style="color:#050505;">${escapeHtml(b.email)}</a>`)}
           ${b.phone ? row("Telefon", escapeHtml(b.phone)) : ""}
+          ${b.website ? row("Website", `<a href="${escapeAttr(b.website)}" style="color:#050505;" target="_blank" rel="noreferrer">${escapeHtml(b.website)}</a>`) : ""}
           ${b.service ? row("Gewünschte Leistung", escapeHtml(b.service)) : ""}
           ${b.phase ? row("Projektphase", escapeHtml(b.phase)) : ""}
           ${b.budget ? row("Budgetrahmen", escapeHtml(b.budget)) : ""}
@@ -145,4 +150,11 @@ function escapeHtml(str: string) {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
+}
+
+function escapeAttr(str: string) {
+  // Nur sichere URL-Schemata zulassen, sonst Link entschärfen
+  const trimmed = str.trim();
+  const safe = /^(https?:\/\/|mailto:|tel:)/i.test(trimmed) ? trimmed : "#";
+  return safe.replace(/&/g, "&amp;").replace(/"/g, "&quot;");
 }
