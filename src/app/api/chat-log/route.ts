@@ -84,9 +84,9 @@ export async function POST(req: Request) {
     const resend = new Resend(apiKey);
     const firstUserMsg =
       messages.find((m) => m.role === "user")?.content.slice(0, 60) ?? "";
-    await resend.emails.send({
+    const { error } = await resend.emails.send({
       from: "Nesani Chat-Log <onboarding@resend.dev>",
-      to: ["nedim@nesani.de"],
+      to: ["assistent@nesani.de"],
       subject: `Chat-Log: ${firstUserMsg || conversationId}`,
       html: buildHtml({
         conversationId,
@@ -94,6 +94,10 @@ export async function POST(req: Request) {
         messages,
       }),
     });
+    if (error) {
+      console.error("[chat-log] resend rejected:", error);
+      return NextResponse.json({ ok: true, logged: false });
+    }
     return NextResponse.json({ ok: true, logged: true });
   } catch (err) {
     console.error("[chat-log] send error:", err);
