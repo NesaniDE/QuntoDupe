@@ -80,7 +80,7 @@ export function ChatWidget() {
         type="button"
         aria-label={open ? "Chat schließen" : "Chat öffnen"}
         onClick={() => setOpen((v) => !v)}
-        className="fixed bottom-5 right-5 md:bottom-6 md:right-6 z-50 w-14 h-14 rounded-full bg-[#050505] text-white shadow-[0_8px_24px_rgba(0,0,0,0.25)] hover:scale-[1.04] active:scale-[0.96] transition-transform duration-200 flex items-center justify-center"
+        className="fixed bottom-5 right-5 md:bottom-6 md:right-6 z-50 w-14 h-14 rounded-full bg-[#050505] text-white ring-1 ring-white/25 shadow-[0_8px_24px_rgba(0,0,0,0.25)] hover:scale-[1.04] active:scale-[0.96] transition-transform duration-200 flex items-center justify-center"
       >
         <span className="relative w-7 h-7 flex items-center justify-center">
           <span
