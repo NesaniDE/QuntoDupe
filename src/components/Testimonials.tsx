@@ -18,7 +18,7 @@ const QUOTES: Quote[] = [
     quote:
       "Wir haben rund 40 % unserer manuellen Arbeit automatisiert — ohne, dass Kunden etwas davon merken. Nur die Reaktionszeit ist deutlich kürzer.",
     author: "Jens B.",
-    role: "Geschäftsführer, Beratung",
+    role: "Beispielrezension",
     image: "/images/breit/portrait-1.webp",
     label: "NESANI | BERATUNG",
   },
@@ -26,7 +26,7 @@ const QUOTES: Quote[] = [
     quote:
       "Der neue Auftritt wirkt nicht wie ein Template, sondern wie unser Unternehmen. Genau das war der Punkt.",
     author: "Laura K.",
-    role: "Gründerin, Studio",
+    role: "Beispielrezension",
     image: "/images/breit/portrait-2.webp",
     label: "NESANI | STUDIO",
   },
@@ -34,7 +34,7 @@ const QUOTES: Quote[] = [
     quote:
       "Von der ersten Skizze bis zum Livegang war der Prozess klar und ohne Reibung. Wir haben nur noch entschieden, nicht mehr verwaltet.",
     author: "Tobias M.",
-    role: "CEO, B2B Software",
+    role: "Beispielrezension",
     image: "/images/breit/portrait-3.webp",
     label: "NESANI | B2B SOFTWARE",
   },
@@ -42,7 +42,7 @@ const QUOTES: Quote[] = [
     quote:
       "Wir waren skeptisch, ob KI in unserem Umfeld wirklich greift. Heute übernimmt der Assistent rund 70 % der Erstanfragen — 24/7.",
     author: "Sarah H.",
-    role: "Geschäftsführerin, Online-Handel",
+    role: "Beispielrezension",
     image: "/images/breit/portrait-4.webp",
     label: "NESANI | ONLINE-HANDEL",
   },
@@ -50,7 +50,7 @@ const QUOTES: Quote[] = [
     quote:
       "Individuelle Entwicklung statt Baukasten — genau das hat bei uns den Unterschied gemacht. Die Lösung wächst jetzt mit dem Geschäft mit.",
     author: "Andreas V.",
-    role: "Geschäftsführer, Industrie",
+    role: "Beispielrezension",
     image: "/images/breit/portrait-5.webp",
     label: "NESANI | INDUSTRIE",
   },

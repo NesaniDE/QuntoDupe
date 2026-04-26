@@ -87,7 +87,7 @@ export default function AutonomeAgentenPage() {
           h2="So wirken Agenten nach Nesani"
           quote="Unsere Agenten übernehmen Aufgaben, bei denen wir vorher immer einen Mitarbeitenden brauchten – und liefern in einer Konsistenz, die vorher gar nicht möglich war."
           name="Philipp M."
-          role="CTO, Tech-Unternehmen"
+          role="Beispielrezension"
         />
         <ServiceProcessBanner
           h2="So entsteht Ihr Agenten-System."

@@ -87,7 +87,7 @@ export default function SocialMediaPage() {
           h2="So wirkt Online-Präsenz nach Nesani"
           quote="Unser Auftritt war vorher nur ein Feed. Nach dem Projekt hat unsere Marke eine klare Stimme – und Kunden merken das beim ersten Kontakt."
           name="Madeleine v. H."
-          role="Mitgründerin, E-Commerce"
+          role="Beispielrezension"
         />
         <ServiceProcessBanner
           h2="So entsteht Ihre Online-Präsenz."

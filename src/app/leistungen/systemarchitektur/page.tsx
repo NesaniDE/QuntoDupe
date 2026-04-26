@@ -87,7 +87,7 @@ export default function SystemarchitekturPage() {
           h2="So wirkt Architektur nach Nesani"
           quote="Unsere Plattform trägt heute Lasten, bei denen die alte Lösung längst gescheitert wäre – und unser Team kann sie wirklich selbst betreiben. Das war uns am wichtigsten."
           name="Daniela K."
-          role="Head of Engineering, Industrie"
+          role="Beispielrezension"
         />
         <ServiceProcessBanner
           h2="So entsteht Ihre Architektur."

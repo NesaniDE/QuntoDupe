@@ -23,7 +23,7 @@ export function FinTestimonial() {
                 Marc P.
               </div>
               <div className="text-[14px] text-[#050505]/70">
-                Geschäftsführer, Dienstleistung
+                Beispielrezension
               </div>
             </div>
             <a

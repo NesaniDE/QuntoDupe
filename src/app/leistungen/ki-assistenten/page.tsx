@@ -86,7 +86,7 @@ export default function KiAssistentenPage() {
           h2="So wirken Assistenten nach Nesani"
           quote="Unser Support beantwortet inzwischen nur noch die Fälle, die wirklich Aufmerksamkeit brauchen. Der Rest läuft zuverlässig über den Assistenten – und Kunden merken den Unterschied kaum."
           name="Tobias R."
-          role="Head of Operations, SaaS"
+          role="Beispielrezension"
         />
         <ServiceProcessBanner
           h2="So entsteht Ihr KI-Assistent."

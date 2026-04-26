@@ -87,7 +87,7 @@ export default function KiWorkflowsPage() {
           h2="So wirken KI-Workflows nach Nesani"
           quote="Wir haben rund 40 % unserer manuellen Arbeit automatisiert – ohne, dass Kunden etwas davon merken. Nur die Reaktionszeit ist deutlich kürzer."
           name="Jens B."
-          role="Geschäftsführer, Dienstleistungsunternehmen"
+          role="Beispielrezension"
         />
         <ServiceProcessBanner
           h2="So entsteht Ihre Automatisierung."
