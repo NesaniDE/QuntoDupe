@@ -50,12 +50,12 @@ const FEATURES = [
 export default function LpWebsitesPage() {
   return (
     <>
-      <Header />
+      <Header variant="transparent" />
       <main>
         {/* HERO — dark */}
         <section className="relative bg-[#050505] text-white overflow-hidden">
-          <div className="mx-auto max-w-[1344px] px-5 md:px-8 lg:px-12 pt-28 md:pt-36 lg:pt-44 pb-20 md:pb-28 lg:pb-32">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          <div className="mx-auto max-w-[1344px] px-5 md:px-8 lg:px-12 pt-28 md:pt-32 lg:pt-36 pb-10 md:pb-14 lg:pb-16">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
               <div className="lg:col-span-6 order-2 lg:order-1">
                 <Reveal>
                   <div className="text-[12px] uppercase tracking-[0.18em] font-semibold text-white/55">
@@ -63,7 +63,7 @@ export default function LpWebsitesPage() {
                   </div>
                 </Reveal>
                 <Reveal delay={80}>
-                  <h1 className="mt-5 font-sans font-semibold text-[44px] sm:text-[56px] md:text-[68px] lg:text-[80px] leading-[1.02] tracking-[-0.025em]">
+                  <h1 className="mt-5 font-sans font-semibold text-[36px] sm:text-[44px] md:text-[56px] lg:text-[68px] leading-[1.02] tracking-[-0.025em]">
                     Websites,<br />die verkaufen.
                   </h1>
                 </Reveal>
@@ -114,9 +114,9 @@ export default function LpWebsitesPage() {
           </div>
         </section>
 
-        {/* FEATURES — white background, cream cards */}
-        <section className="bg-white text-[#050505]">
-          <div className="mx-auto max-w-[1344px] px-5 md:px-8 lg:px-12 py-20 md:py-28 lg:py-32">
+        {/* FEATURES — white background, cream cards. Leicht über Hero gezogen. */}
+        <section className="bg-white text-[#050505] -mt-8 md:-mt-12 lg:-mt-16 relative z-10 rounded-t-[28px] md:rounded-t-[40px]">
+          <div className="mx-auto max-w-[1344px] px-5 md:px-8 lg:px-12 pt-16 md:pt-24 pb-20 md:pb-28 lg:pb-32">
             <Reveal>
               <div className="text-[12px] uppercase tracking-[0.18em] font-semibold text-[#050505]/60">
                 Was Sie bekommen
