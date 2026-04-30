@@ -99,13 +99,25 @@ export default function LpWebsitesPage() {
                 direction="left"
                 className="lg:col-span-6 order-1 lg:order-2"
               >
-                <div className="relative aspect-[19/10] rounded-2xl md:rounded-3xl overflow-hidden bg-[#050505]">
+                {/* Mobile: portrait-Bild ohne Leerflächen */}
+                <div className="relative aspect-square sm:aspect-[19/10] rounded-2xl md:rounded-3xl overflow-hidden bg-[#050505] lg:hidden">
+                  <Image
+                    src="/images/lp/websites-hero-mobile.webp"
+                    alt="Nesani Website auf Laptop und Smartphone"
+                    fill
+                    priority
+                    sizes="100vw"
+                    className="object-cover object-center"
+                  />
+                </div>
+                {/* Desktop: wide-Bild */}
+                <div className="relative aspect-[19/10] rounded-2xl md:rounded-3xl overflow-hidden bg-[#050505] hidden lg:block">
                   <Image
                     src="/images/lp/websites-hero.webp"
                     alt="Nesani Website auf Laptop und Smartphone"
                     fill
                     priority
-                    sizes="(min-width:1024px) 640px, 100vw"
+                    sizes="640px"
                     className="object-contain object-center"
                   />
                 </div>
