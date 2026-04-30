@@ -1,15 +1,14 @@
+import { HeroVideo } from "@/components/HeroVideo";
+
 export function AboutHero() {
   return (
     <section className="relative h-svh min-h-[640px] lg:h-screen lg:min-h-[780px] bg-[#050505] text-white overflow-hidden">
-      <video
+      <HeroVideo
+        desktop="/videos/hero.mp4"
+        mobile="/videos/hero-mobile.mp4"
+        poster="/images/hero-poster.jpg"
         className="absolute inset-0 z-10 w-full h-full object-cover [object-position:85%_center] md:[object-position:center]"
-        autoPlay
-        loop
-        muted
-        playsInline
-      >
-        <source src="/videos/hero.mp4" type="video/mp4" />
-      </video>
+      />
 
       <div
         className="absolute inset-0 z-30 pointer-events-none"

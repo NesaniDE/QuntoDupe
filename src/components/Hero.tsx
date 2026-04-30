@@ -1,17 +1,15 @@
 import { Reveal } from "@/components/Reveal";
+import { HeroVideo } from "@/components/HeroVideo";
 
 export function Hero() {
   return (
     <section className="relative w-full min-h-[100svh] overflow-hidden bg-[#050505] text-white">
-      <video
+      <HeroVideo
+        desktop="/videos/hero.mp4"
+        mobile="/videos/hero-mobile.mp4"
+        poster="/images/hero-poster.jpg"
         className="absolute inset-0 z-10 w-full h-full object-cover [object-position:85%_center] md:[object-position:center]"
-        autoPlay
-        loop
-        muted
-        playsInline
-      >
-        <source src="/videos/hero.mp4" type="video/mp4" />
-      </video>
+      />
       {/* Bottom scrim gradient (z-30) */}
       <div
         className="absolute inset-0 z-30 pointer-events-none"
