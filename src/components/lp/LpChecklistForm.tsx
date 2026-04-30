@@ -25,12 +25,17 @@ export function LpChecklistForm({ source }: { source: string }) {
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (status === "sending") return;
-    const data = new FormData(e.currentTarget);
+    // Form-Referenz vor await sichern — React nullt e.currentTarget sonst.
+    const form = e.currentTarget;
+    const data = new FormData(form);
     const email = (data.get("email") || "").toString().trim();
     if (!email) return;
 
     setStatus("sending");
     setError("");
+
+    let ok = false;
+    let errMsg = "";
     try {
       const res = await fetch("/api/checklist", {
         method: "POST",
@@ -39,17 +44,25 @@ export function LpChecklistForm({ source }: { source: string }) {
       });
       const json = (await res.json().catch(() => ({}))) as { error?: string };
       if (!res.ok) {
-        setStatus("error");
-        setError(json.error ?? "Bitte erneut versuchen.");
-        return;
+        errMsg = json.error ?? "Bitte erneut versuchen.";
+      } else {
+        ok = true;
       }
-      setStatus("success");
-      e.currentTarget.reset();
-      // Auto-Download direkt nach Erfolg
-      window.setTimeout(triggerDownload, 250);
     } catch {
+      errMsg = "Netzwerkfehler. Bitte erneut versuchen.";
+    }
+
+    if (ok) {
+      setStatus("success");
+      try {
+        form.reset();
+      } catch {
+        // form unmounted — egal
+      }
+      window.setTimeout(triggerDownload, 250);
+    } else {
       setStatus("error");
-      setError("Netzwerkfehler. Bitte erneut versuchen.");
+      setError(errMsg);
     }
   }
 
