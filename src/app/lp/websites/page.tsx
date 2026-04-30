@@ -54,7 +54,7 @@ export default function LpWebsitesPage() {
       <main>
         {/* HERO — dark */}
         <section className="relative bg-[#050505] text-white overflow-hidden">
-          <div className="mx-auto max-w-[1344px] px-5 md:px-8 lg:px-12 pt-28 md:pt-32 lg:pt-36 pb-10 md:pb-14 lg:pb-16">
+          <div className="mx-auto max-w-[1344px] px-5 md:px-8 lg:px-12 pt-28 md:pt-32 lg:pt-36 pb-24 md:pb-28 lg:pb-32">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
               <div className="lg:col-span-6 order-2 lg:order-1">
                 <Reveal>
