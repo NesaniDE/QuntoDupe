@@ -96,29 +96,40 @@ export function LpChecklistForm({ source }: { source: string }) {
   }
 
   return (
-    <form
-      onSubmit={onSubmit}
-      className="flex flex-col sm:flex-row gap-3 max-w-[520px]"
-    >
-      <input
-        type="email"
-        name="email"
-        required
-        placeholder="Ihre E-Mail-Adresse"
-        autoComplete="email"
-        disabled={status === "sending"}
-        className="flex-1 rounded-full bg-white/[0.06] border border-white/15 px-5 py-3 text-[15px] text-white placeholder:text-white/40 focus:outline-none focus:border-white/40 transition disabled:opacity-50"
-      />
-      <button
-        type="submit"
-        disabled={status === "sending"}
-        className="inline-flex items-center justify-center gap-1.5 rounded-full bg-white text-[#050505] text-[15px] font-semibold px-6 py-3 hover:bg-white/90 transition disabled:opacity-60 disabled:cursor-not-allowed"
-      >
-        {status === "sending" ? "Wird gesendet…" : "Checkliste herunterladen"}
-        {status !== "sending" && <ArrowUpRightIcon className="w-4 h-4" />}
-      </button>
+    <form onSubmit={onSubmit} className="max-w-[520px]">
+      <div className="flex flex-col sm:flex-row gap-3">
+        <input
+          type="email"
+          name="email"
+          required
+          placeholder="Ihre E-Mail-Adresse"
+          autoComplete="email"
+          disabled={status === "sending"}
+          className="flex-1 rounded-full bg-white/[0.06] border border-white/15 px-5 py-3 text-[15px] text-white placeholder:text-white/40 focus:outline-none focus:border-white/40 transition disabled:opacity-50"
+        />
+        <button
+          type="submit"
+          disabled={status === "sending"}
+          className="inline-flex items-center justify-center gap-1.5 rounded-full bg-white text-[#050505] text-[15px] font-semibold px-6 py-3 hover:bg-white/90 transition disabled:opacity-60 disabled:cursor-not-allowed"
+        >
+          {status === "sending" ? "Wird gesendet…" : "Checkliste herunterladen"}
+          {status !== "sending" && <ArrowUpRightIcon className="w-4 h-4" />}
+        </button>
+      </div>
+      <p className="mt-3 text-[12px] leading-[1.5] text-white/55">
+        Mit dem Absenden willigen Sie ein, dass Nesani Sie per E-Mail zu
+        eigenen Leistungen kontaktieren darf. Diese Einwilligung können Sie
+        jederzeit formlos widerrufen. Mehr in der{" "}
+        <a
+          href="/datenschutz"
+          className="underline underline-offset-2 hover:text-white"
+        >
+          Datenschutzerklärung
+        </a>
+        .
+      </p>
       {status === "error" && (
-        <p className="sm:basis-full text-[13px] text-red-300">{error}</p>
+        <p className="mt-2 text-[13px] text-red-300">{error}</p>
       )}
     </form>
   );

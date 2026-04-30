@@ -110,15 +110,15 @@ export default function LpWebsitesPage() {
                     className="object-cover object-center"
                   />
                 </div>
-                {/* Desktop: wide-Bild */}
-                <div className="relative aspect-[19/10] rounded-2xl md:rounded-3xl overflow-hidden bg-[#050505] hidden lg:block">
+                {/* Desktop: wide-Bild — leicht beschnitten, damit kein dunkler Studiorand übrigbleibt */}
+                <div className="relative aspect-[5/4] rounded-2xl md:rounded-3xl overflow-hidden bg-[#050505] hidden lg:block">
                   <Image
                     src="/images/lp/websites-hero.webp"
                     alt="Nesani Website auf Laptop und Smartphone"
                     fill
                     priority
                     sizes="640px"
-                    className="object-contain object-center"
+                    className="object-cover object-right"
                   />
                 </div>
               </Reveal>
