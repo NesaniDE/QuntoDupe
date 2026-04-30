@@ -141,7 +141,7 @@ export default function LpWebsitesPage() {
                     fill
                     priority
                     sizes="(min-width:1024px) 640px, 100vw"
-                    className="object-cover object-center"
+                    className="object-cover object-right"
                   />
                 </div>
               </Reveal>
