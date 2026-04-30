@@ -52,8 +52,8 @@ export default function LpWebsitesPage() {
     <>
       <Header variant="transparent" />
       <main>
-        {/* HERO — Bild ersetzt komplett den schwarzen Hintergrund */}
-        <section className="relative text-white overflow-hidden min-h-[640px] md:min-h-[720px] lg:min-h-[760px]">
+        {/* HERO + STATS in einer Sektion mit gemeinsamem Bild-Hintergrund */}
+        <section className="relative text-white overflow-hidden">
           {/* Hintergrund-Bild — Mobile: portrait, Desktop: wide */}
           <Image
             src="/images/lp/websites-hero-mobile.webp"
@@ -72,9 +72,10 @@ export default function LpWebsitesPage() {
             className="absolute inset-0 z-0 object-cover object-center hidden lg:block"
           />
           {/* Gradient damit Text lesbar bleibt */}
-          <div className="absolute inset-0 z-[1] bg-gradient-to-t from-[#050505] via-[#050505]/40 to-[#050505]/30 lg:bg-gradient-to-r lg:from-[#050505] lg:via-[#050505]/65 lg:to-transparent" />
+          <div className="absolute inset-0 z-[1] bg-gradient-to-t from-[#050505] via-[#050505]/55 to-[#050505]/35 lg:bg-gradient-to-r lg:from-[#050505] lg:via-[#050505]/70 lg:to-[#050505]/15" />
 
-          <div className="relative z-10 mx-auto max-w-[1344px] px-5 md:px-8 lg:px-12 pt-28 md:pt-36 lg:pt-44 pb-16 md:pb-20 lg:pb-32 min-h-[640px] md:min-h-[720px] lg:min-h-[760px] flex flex-col justify-end lg:justify-center">
+          {/* HERO content */}
+          <div className="relative z-10 mx-auto max-w-[1344px] px-5 md:px-8 lg:px-12 pt-28 md:pt-36 lg:pt-44 pb-12 md:pb-16 lg:pb-20">
             <div className="max-w-[680px]">
               <Reveal>
                 <div className="text-[12px] uppercase tracking-[0.18em] font-semibold text-white/65">
@@ -113,13 +114,11 @@ export default function LpWebsitesPage() {
               </Reveal>
             </div>
           </div>
-        </section>
 
-        {/* STATS-STRIP unter dem Hero, drei nebeneinander */}
-        <section className="bg-[#050505] text-white">
-          <div className="mx-auto max-w-[1344px] px-5 md:px-8 lg:px-12 pb-20 md:pb-28">
+          {/* STATS-STRIP — gleicher Bild-Hintergrund */}
+          <div className="relative z-10 mx-auto max-w-[1344px] px-5 md:px-8 lg:px-12 pb-20 md:pb-28">
             <Reveal>
-              <div className="grid grid-cols-3 divide-x divide-white/10 rounded-2xl md:rounded-3xl bg-white/[0.04] border border-white/10 px-2 py-5 md:px-4 md:py-8">
+              <div className="grid grid-cols-3 divide-x divide-white/10 rounded-2xl md:rounded-3xl bg-black/40 backdrop-blur-md border border-white/15 px-2 py-5 md:px-4 md:py-8">
                 <StatInline big="100%" label="Zufriedenheit" />
                 <StatInline big="1:1" label="Direkter Kontakt" />
                 <StatInline big="2–3×" label="Performance" />
