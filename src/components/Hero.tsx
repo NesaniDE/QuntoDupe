@@ -3,7 +3,7 @@ import { HeroVideo } from "@/components/HeroVideo";
 
 export function Hero() {
   return (
-    <section className="relative w-full min-h-[100svh] overflow-hidden bg-[#050505] text-white">
+    <section className="relative w-full min-h-[78svh] md:min-h-[100svh] overflow-hidden bg-[#050505] text-white">
       <HeroVideo
         desktop="/videos/hero.mp4"
         mobile="/videos/hero-mobile.mp4"
@@ -20,7 +20,7 @@ export function Hero() {
       />
 
       {/* Content grid */}
-      <div className="relative z-40 flex h-full min-h-[100svh] flex-col justify-end pb-12 pt-28 px-5 lg:px-12">
+      <div className="relative z-40 flex h-full min-h-[78svh] md:min-h-[100svh] flex-col justify-end pb-12 pt-28 px-5 lg:px-12">
         <div className="flex-1" />
 
         {/* Headline + CTA */}

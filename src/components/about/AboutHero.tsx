@@ -2,7 +2,7 @@ import { HeroVideo } from "@/components/HeroVideo";
 
 export function AboutHero() {
   return (
-    <section className="relative h-svh min-h-[640px] lg:h-screen lg:min-h-[780px] bg-[#050505] text-white overflow-hidden">
+    <section className="relative h-[78svh] min-h-[520px] lg:h-screen lg:min-h-[780px] bg-[#050505] text-white overflow-hidden">
       <HeroVideo
         desktop="/videos/hero.mp4"
         mobile="/videos/hero-mobile.mp4"
