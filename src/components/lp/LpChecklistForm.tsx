@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { ArrowUpRightIcon } from "@/components/icons";
+import { ArrowUpRightIcon, CheckIcon } from "@/components/icons";
 
 type Status = "idle" | "sending" | "success" | "error";
 
@@ -40,9 +40,18 @@ export function LpChecklistForm({ source }: { source: string }) {
 
   if (status === "success") {
     return (
-      <p className="rounded-xl bg-white text-[#050505] px-4 py-3 text-[14px] inline-block">
-        Danke! Wir senden Ihnen die Checkliste in Kürze per E-Mail.
-      </p>
+      <div className="rounded-2xl bg-white text-[#050505] px-5 py-4 max-w-[520px] flex items-start gap-3">
+        <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#050505] text-white">
+          <CheckIcon className="h-3 w-3" />
+        </span>
+        <div>
+          <div className="font-semibold text-[15px]">Vielen Dank!</div>
+          <div className="text-[14px] leading-[1.5] text-[#050505]/75 mt-0.5">
+            Die Checkliste wurde an Ihre E-Mail-Adresse gesendet. Schauen Sie
+            ggf. auch im Spam-Ordner nach.
+          </div>
+        </div>
+      </div>
     );
   }
 
