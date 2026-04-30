@@ -52,73 +52,98 @@ export default function LpWebsitesPage() {
     <>
       <Header variant="transparent" />
       <main>
-        {/* HERO + STATS in einer Sektion mit gemeinsamem Bild-Hintergrund */}
-        <section className="relative text-white overflow-hidden">
-          {/* Hintergrund-Bild — Mobile: portrait, Desktop: wide */}
-          <Image
-            src="/images/lp/websites-hero-mobile.webp"
-            alt=""
-            fill
-            priority
-            sizes="100vw"
-            className="absolute inset-0 z-0 object-cover object-center lg:hidden"
-          />
-          <Image
-            src="/images/lp/websites-hero.webp"
-            alt=""
-            fill
-            priority
-            sizes="100vw"
-            className="absolute inset-0 z-0 object-cover object-center hidden lg:block"
-          />
-          {/* Gradient damit Text lesbar bleibt */}
-          <div className="absolute inset-0 z-[1] bg-gradient-to-t from-[#050505] via-[#050505]/55 to-[#050505]/35 lg:bg-gradient-to-r lg:from-[#050505] lg:via-[#050505]/70 lg:to-[#050505]/15" />
+        {/* HERO — Mobile: 2-Block-Layout. Desktop: Bild als Full-Bleed-Hintergrund */}
+        <section className="relative bg-[#050505] text-white overflow-hidden">
+          {/* Desktop: Bild als full-bleed Hintergrund */}
+          <div className="absolute inset-0 z-0 hidden lg:block">
+            <Image
+              src="/images/lp/websites-hero.webp"
+              alt=""
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-center"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/70 to-[#050505]/15" />
+          </div>
 
-          {/* HERO content */}
-          <div className="relative z-10 mx-auto max-w-[1344px] px-5 md:px-8 lg:px-12 pt-28 md:pt-36 lg:pt-44 pb-12 md:pb-16 lg:pb-20">
-            <div className="max-w-[680px]">
-              <Reveal>
-                <div className="text-[12px] uppercase tracking-[0.18em] font-semibold text-white/65">
-                  Landingpage · Websites
-                </div>
-              </Reveal>
-              <Reveal delay={80}>
-                <h1 className="mt-5 font-sans font-semibold text-[36px] sm:text-[44px] md:text-[56px] lg:text-[68px] leading-[1.02] tracking-[-0.025em]">
-                  Websites,<br />die verkaufen.
-                </h1>
-              </Reveal>
-              <Reveal delay={160}>
-                <p className="mt-6 md:mt-8 text-[16px] md:text-[18px] leading-[1.55] text-white/85 max-w-[52ch]">
-                  Modern, schnell und strategisch aufgebaut – für Unternehmen,
-                  die online professionell auftreten und mehr Anfragen
-                  gewinnen wollen.
-                </p>
-              </Reveal>
-              <Reveal delay={240}>
-                <div className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-3">
-                  <a
-                    href="/kontakt"
-                    className="inline-flex items-center justify-center gap-1.5 rounded-full bg-white text-[#050505] text-[15px] font-semibold px-6 py-3.5 hover:bg-white/90 transition"
-                  >
-                    Projekt anfragen
-                    <ArrowUpRightIcon className="w-4 h-4" />
-                  </a>
-                  <a
-                    href="#checkliste"
-                    className="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 bg-black/30 backdrop-blur-sm text-white text-[15px] font-semibold px-6 py-3.5 hover:bg-white/10 transition"
-                  >
-                    <ChecklistIcon className="w-4 h-4" />
-                    Kostenlose Checkliste
-                  </a>
+          <div className="relative z-10 mx-auto max-w-[1344px] px-5 md:px-8 lg:px-12 pt-28 md:pt-32 lg:pt-44 pb-14 md:pb-16 lg:pb-20">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+              <div className="lg:col-span-6 order-2 lg:order-1">
+                <Reveal>
+                  <div className="text-[12px] uppercase tracking-[0.18em] font-semibold text-white/55">
+                    Landingpage · Websites
+                  </div>
+                </Reveal>
+                <Reveal delay={80}>
+                  <h1 className="mt-5 font-sans font-semibold text-[36px] sm:text-[44px] md:text-[56px] lg:text-[68px] leading-[1.02] tracking-[-0.025em]">
+                    Websites,<br />die verkaufen.
+                  </h1>
+                </Reveal>
+                <Reveal delay={160}>
+                  <p className="mt-7 md:mt-9 text-[16px] md:text-[18px] leading-[1.55] text-white/75 max-w-[52ch]">
+                    Modern, schnell und strategisch aufgebaut – für
+                    Unternehmen, die online professionell auftreten und mehr
+                    Anfragen gewinnen wollen.
+                  </p>
+                </Reveal>
+                <Reveal delay={240}>
+                  <div className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-3">
+                    <a
+                      href="/kontakt"
+                      className="inline-flex items-center justify-center gap-1.5 rounded-full bg-white text-[#050505] text-[15px] font-semibold px-6 py-3.5 hover:bg-white/90 transition"
+                    >
+                      Projekt anfragen
+                      <ArrowUpRightIcon className="w-4 h-4" />
+                    </a>
+                    <a
+                      href="#checkliste"
+                      className="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 text-white text-[15px] font-semibold px-6 py-3.5 hover:bg-white/10 transition"
+                    >
+                      <ChecklistIcon className="w-4 h-4" />
+                      Kostenlose Checkliste
+                    </a>
+                  </div>
+                </Reveal>
+              </div>
+
+              {/* Mobile: portrait-Bild als eigene Spalte (Desktop nutzt Hintergrund) */}
+              <Reveal
+                delay={120}
+                direction="left"
+                className="order-1 lg:hidden"
+              >
+                <div className="relative aspect-square sm:aspect-[19/10] rounded-2xl md:rounded-3xl overflow-hidden bg-[#050505]">
+                  <Image
+                    src="/images/lp/websites-hero-mobile.webp"
+                    alt="Nesani Website auf Laptop und Smartphone"
+                    fill
+                    priority
+                    sizes="100vw"
+                    className="object-cover object-center"
+                  />
                 </div>
               </Reveal>
             </div>
           </div>
+        </section>
 
-          {/* STATS-STRIP — gleicher Bild-Hintergrund */}
+        {/* STATS-STRIP unter dem Hero */}
+        <section className="relative bg-[#050505] text-white overflow-hidden">
+          {/* Desktop: Bild läuft optisch weiter (gleicher Bg wie Hero) */}
+          <div className="absolute inset-0 z-0 hidden lg:block">
+            <Image
+              src="/images/lp/websites-hero.webp"
+              alt=""
+              fill
+              sizes="100vw"
+              className="object-cover object-center"
+            />
+            <div className="absolute inset-0 bg-[#050505]/80" />
+          </div>
           <div className="relative z-10 mx-auto max-w-[1344px] px-5 md:px-8 lg:px-12 pb-20 md:pb-28">
             <Reveal>
-              <div className="grid grid-cols-3 divide-x divide-white/10 rounded-2xl md:rounded-3xl bg-black/40 backdrop-blur-md border border-white/15 px-2 py-5 md:px-4 md:py-8">
+              <div className="grid grid-cols-3 divide-x divide-white/10 rounded-2xl md:rounded-3xl bg-white/[0.04] border border-white/10 px-2 py-5 md:px-4 md:py-8 backdrop-blur-sm">
                 <StatInline big="100%" label="Zufriedenheit" />
                 <StatInline big="1:1" label="Direkter Kontakt" />
                 <StatInline big="2–3×" label="Performance" />
