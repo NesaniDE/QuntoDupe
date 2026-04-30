@@ -20,8 +20,9 @@ export type BlogPost = {
 };
 
 const AUTHOR = "Nedim Hasani";
+const PLACEHOLDER_IMAGE = "/images/projects/demnaechst.png";
 
-export const POSTS: BlogPost[] = [
+const RAW_POSTS: BlogPost[] = [
   {
     slug: "starke-leistungsseite-bessere-leads",
     title:
@@ -3905,6 +3906,12 @@ export const POSTS: BlogPost[] = [
     ],
   },
 ];
+
+export const POSTS: BlogPost[] = RAW_POSTS.map((post) =>
+  post.image === PLACEHOLDER_IMAGE
+    ? { ...post, image: `/images/blog/${post.slug}.png` }
+    : post,
+);
 
 export function getPost(slug: string): BlogPost | undefined {
   return POSTS.find((p) => p.slug === slug);
