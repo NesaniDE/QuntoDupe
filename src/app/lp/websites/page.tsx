@@ -89,60 +89,63 @@ export default function LpWebsitesPage() {
       <main>
         {/* HERO — dark */}
         <section className="relative bg-[#050505] text-white overflow-hidden">
-          <div className="mx-auto max-w-[1344px] px-5 md:px-8 lg:px-12 pt-28 md:pt-36 lg:pt-44 pb-12 md:pb-16 lg:pb-20">
-            <div className="max-w-[860px]">
-              <Reveal>
-                <div className="text-[12px] uppercase tracking-[0.18em] font-semibold text-white/55">
-                  Landingpage · Websites
-                </div>
-              </Reveal>
-              <Reveal delay={80}>
-                <h1 className="mt-5 font-sans font-semibold text-[44px] sm:text-[56px] md:text-[72px] lg:text-[88px] leading-[1.02] tracking-[-0.025em]">
-                  Websites,<br />die verkaufen.
-                </h1>
-              </Reveal>
-              <Reveal delay={160}>
-                <p className="mt-7 md:mt-9 text-[16px] md:text-[18px] leading-[1.55] text-white/75 max-w-[52ch]">
-                  Modern, schnell und strategisch aufgebaut – für Unternehmen,
-                  die online professionell auftreten und mehr Anfragen
-                  gewinnen wollen.
-                </p>
-              </Reveal>
-              <Reveal delay={240}>
-                <div className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-3">
-                  <a
-                    href="/kontakt"
-                    className="inline-flex items-center justify-center gap-1.5 rounded-full bg-white text-[#050505] text-[15px] font-semibold px-6 py-3.5 hover:bg-white/90 transition"
-                  >
-                    Projekt anfragen
-                    <ArrowUpRightIcon className="w-4 h-4" />
-                  </a>
-                  <a
-                    href="#checkliste"
-                    className="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 text-white text-[15px] font-semibold px-6 py-3.5 hover:bg-white/10 transition"
-                  >
-                    <ChecklistIcon className="w-4 h-4" />
-                    Kostenlose Checkliste
-                  </a>
+          <div className="mx-auto max-w-[1344px] px-5 md:px-8 lg:px-12 pt-28 md:pt-36 lg:pt-44 pb-20 md:pb-28 lg:pb-32">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+              <div className="lg:col-span-6 order-2 lg:order-1">
+                <Reveal>
+                  <div className="text-[12px] uppercase tracking-[0.18em] font-semibold text-white/55">
+                    Landingpage · Websites
+                  </div>
+                </Reveal>
+                <Reveal delay={80}>
+                  <h1 className="mt-5 font-sans font-semibold text-[44px] sm:text-[56px] md:text-[68px] lg:text-[80px] leading-[1.02] tracking-[-0.025em]">
+                    Websites,<br />die verkaufen.
+                  </h1>
+                </Reveal>
+                <Reveal delay={160}>
+                  <p className="mt-7 md:mt-9 text-[16px] md:text-[18px] leading-[1.55] text-white/75 max-w-[52ch]">
+                    Modern, schnell und strategisch aufgebaut – für
+                    Unternehmen, die online professionell auftreten und mehr
+                    Anfragen gewinnen wollen.
+                  </p>
+                </Reveal>
+                <Reveal delay={240}>
+                  <div className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-3">
+                    <a
+                      href="/kontakt"
+                      className="inline-flex items-center justify-center gap-1.5 rounded-full bg-white text-[#050505] text-[15px] font-semibold px-6 py-3.5 hover:bg-white/90 transition"
+                    >
+                      Projekt anfragen
+                      <ArrowUpRightIcon className="w-4 h-4" />
+                    </a>
+                    <a
+                      href="#checkliste"
+                      className="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 text-white text-[15px] font-semibold px-6 py-3.5 hover:bg-white/10 transition"
+                    >
+                      <ChecklistIcon className="w-4 h-4" />
+                      Kostenlose Checkliste
+                    </a>
+                  </div>
+                </Reveal>
+              </div>
+
+              <Reveal
+                delay={120}
+                direction="left"
+                className="lg:col-span-6 order-1 lg:order-2"
+              >
+                <div className="relative aspect-[19/10] rounded-2xl md:rounded-3xl overflow-hidden bg-[#050505]">
+                  <Image
+                    src="/images/lp/websites-hero.webp"
+                    alt="Nesani Website auf Laptop und Smartphone"
+                    fill
+                    priority
+                    sizes="(min-width:1024px) 640px, 100vw"
+                    className="object-contain object-center"
+                  />
                 </div>
               </Reveal>
             </div>
-          </div>
-
-          {/* Hero-Image unter dem Text, volle Breite */}
-          <div className="mx-auto max-w-[1344px] px-5 md:px-8 lg:px-12 pb-20 md:pb-28 lg:pb-32">
-            <Reveal delay={200}>
-              <div className="relative aspect-[19/10] rounded-2xl md:rounded-3xl overflow-hidden bg-[#050505]">
-                <Image
-                  src="/images/lp/websites-hero.webp"
-                  alt="Nesani Website auf Laptop und Smartphone"
-                  fill
-                  priority
-                  sizes="100vw"
-                  className="object-contain object-center"
-                />
-              </div>
-            </Reveal>
           </div>
         </section>
 
