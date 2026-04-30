@@ -134,14 +134,14 @@ export default function LpWebsitesPage() {
                 direction="left"
                 className="lg:col-span-6 order-1 lg:order-2"
               >
-                <div className="relative aspect-[4/3] md:aspect-[16/10] rounded-2xl md:rounded-3xl overflow-hidden">
+                <div className="relative aspect-[19/10] rounded-2xl md:rounded-3xl overflow-hidden bg-[#050505]">
                   <Image
                     src="/images/lp/websites-hero.webp"
                     alt="Nesani Website auf Laptop und Smartphone"
                     fill
                     priority
                     sizes="(min-width:1024px) 640px, 100vw"
-                    className="object-cover object-right"
+                    className="object-contain object-center"
                   />
                 </div>
               </Reveal>
