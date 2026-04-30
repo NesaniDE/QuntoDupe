@@ -5,6 +5,19 @@ import { ArrowUpRightIcon, CheckIcon } from "@/components/icons";
 
 type Status = "idle" | "sending" | "success" | "error";
 
+const PDF_URL = "/downloads/checkliste-website.pdf";
+const PDF_FILENAME = "Nesani-Website-Checkliste.pdf";
+
+function triggerDownload() {
+  const a = document.createElement("a");
+  a.href = PDF_URL;
+  a.download = PDF_FILENAME;
+  a.rel = "noopener";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+
 export function LpChecklistForm({ source }: { source: string }) {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
@@ -32,6 +45,8 @@ export function LpChecklistForm({ source }: { source: string }) {
       }
       setStatus("success");
       e.currentTarget.reset();
+      // Auto-Download direkt nach Erfolg
+      window.setTimeout(triggerDownload, 250);
     } catch {
       setStatus("error");
       setError("Netzwerkfehler. Bitte erneut versuchen.");
@@ -40,16 +55,28 @@ export function LpChecklistForm({ source }: { source: string }) {
 
   if (status === "success") {
     return (
-      <div className="rounded-2xl bg-white text-[#050505] px-5 py-4 max-w-[520px] flex items-start gap-3">
-        <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#050505] text-white">
-          <CheckIcon className="h-3 w-3" />
-        </span>
-        <div>
-          <div className="font-semibold text-[15px]">Vielen Dank!</div>
-          <div className="text-[14px] leading-[1.5] text-[#050505]/75 mt-0.5">
-            Die Checkliste wurde an Ihre E-Mail-Adresse gesendet. Schauen Sie
-            ggf. auch im Spam-Ordner nach.
+      <div className="rounded-2xl bg-white text-[#050505] px-5 py-5 max-w-[520px]">
+        <div className="flex items-start gap-3">
+          <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#050505] text-white">
+            <CheckIcon className="h-3 w-3" />
+          </span>
+          <div>
+            <div className="font-semibold text-[15px]">Vielen Dank!</div>
+            <div className="text-[14px] leading-[1.5] text-[#050505]/75 mt-0.5">
+              Ihr Download startet automatisch. Falls nicht, nutzen Sie den
+              Button unten.
+            </div>
           </div>
+        </div>
+        <div className="mt-4 flex flex-wrap gap-3">
+          <a
+            href={PDF_URL}
+            download={PDF_FILENAME}
+            className="inline-flex items-center justify-center gap-1.5 rounded-full bg-[#050505] text-white text-[14px] font-semibold px-5 py-2.5 hover:bg-black/85 transition"
+          >
+            Checkliste herunterladen
+            <ArrowUpRightIcon className="w-3.5 h-3.5" />
+          </a>
         </div>
       </div>
     );
@@ -74,7 +101,7 @@ export function LpChecklistForm({ source }: { source: string }) {
         disabled={status === "sending"}
         className="inline-flex items-center justify-center gap-1.5 rounded-full bg-white text-[#050505] text-[15px] font-semibold px-6 py-3 hover:bg-white/90 transition disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        {status === "sending" ? "Wird gesendet…" : "Checkliste sichern"}
+        {status === "sending" ? "Wird gesendet…" : "Checkliste herunterladen"}
         {status !== "sending" && <ArrowUpRightIcon className="w-4 h-4" />}
       </button>
       {status === "error" && (
