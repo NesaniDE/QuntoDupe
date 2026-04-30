@@ -15,7 +15,7 @@ export function LegalPage({ eyebrow, title, updated, children }: Props) {
           <p className="text-[13px] font-medium tracking-widest text-[#050505]/55 uppercase">
             {eyebrow}
           </p>
-          <h1 className="mt-4 font-sans font-semibold text-[40px] md:text-[56px] lg:text-[72px] leading-[1.05] tracking-[-0.02em] max-w-[20ch]">
+          <h1 className="mt-4 font-sans font-semibold text-[32px] sm:text-[40px] md:text-[56px] lg:text-[72px] leading-[1.05] tracking-[-0.02em] max-w-[20ch] break-words hyphens-auto">
             {title}
           </h1>
           {updated && (
