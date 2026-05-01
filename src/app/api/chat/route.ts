@@ -7,23 +7,25 @@ import { checkRateLimit, getClientIp } from "@/lib/rate-limit";
 export const runtime = "nodejs";
 export const maxDuration = 30;
 
-// Stop-Loss-Limits: schützen vor Bot-Spam und Kostenexplosion.
-// HINWEIS: Rate-Limit-State ist Lambda-instanzweise. Bei Vercel-Skalierung
-// kann der tagesglobale Cap pro Instanz separat zählen. Wahre Sicherung
-// ist deshalb das OpenAI-Dashboard-Spend-Limit (Pflicht-Setup).
+// Stop-Loss-Limits — auf $10-Budget für 3+ Monate ausgelegt.
+// Worst Case 100/Tag × 30 × ~$0.0007 ≈ $2.10/Monat → $10 hält ~5 Monate.
+// Realistisch (10–30/Tag) hält das Budget 12+ Monate.
+// HINWEIS: Rate-Limit-State ist Lambda-instanzweise. Bei Skalierung
+// kann der Cap pro Instanz separat zählen — OpenAI-Dashboard-Hard-Cap
+// ist deshalb der wahre Backstop (Pflicht-Setup).
 const RATE_CONFIG = {
   bucketName: "chat",
   windowMs: 5 * 60 * 1000,
-  maxPerIp: 15,
-  maxPerDay: 500,
+  maxPerIp: 10,
+  maxPerDay: 100,
 };
 
 // Body-Größenlimit auf API-Route-Ebene. Vercel akzeptiert per Default bis
 // 4.5 MB — viel zu groß für Chat. 50 KB reichen für 12 Nachrichten × 4 KB.
 const MAX_BODY_BYTES = 50 * 1024;
-const MAX_HISTORY = 8;
+const MAX_HISTORY = 6;
 const MAX_MESSAGE_CHARS = 1000;
-const MAX_OUTPUT_TOKENS = 300;
+const MAX_OUTPUT_TOKENS = 200;
 
 const SYSTEM_RULES = `Du bist der Chat-Assistent auf der Website von Nesani.
 
