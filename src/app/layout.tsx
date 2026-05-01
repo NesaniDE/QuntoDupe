@@ -95,6 +95,7 @@ const jsonLd = {
   "@id": `${BASE_URL}/#organization`,
   name: "Nesani",
   alternateName: "NESANI",
+  legalName: "Nesani UG (haftungsbeschränkt)",
   url: BASE_URL,
   logo: `${BASE_URL}/icon-512.png`,
   image: `${BASE_URL}/og-image.png`,
@@ -103,11 +104,20 @@ const jsonLd = {
   email: "info@nesani.de",
   address: {
     "@type": "PostalAddress",
+    streetAddress: "Basilikumweg 8",
     addressLocality: "Schwäbisch Gmünd",
     postalCode: "73527",
     addressCountry: "DE",
     addressRegion: "Baden-Württemberg",
   },
+  identifier: [
+    {
+      "@type": "PropertyValue",
+      name: "HRB",
+      value: "751868",
+      description: "Amtsgericht Ulm",
+    },
+  ],
   geo: {
     "@type": "GeoCoordinates",
     latitude: 48.7993,
