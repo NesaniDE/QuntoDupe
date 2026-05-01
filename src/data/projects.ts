@@ -31,8 +31,8 @@ export const PROJECTS: Project[] = [
     year: "2026",
     summary:
       "Aufbau einer konsistenten Online-Präsenz und Content-Strategie über mehrere Kanäle – mit Fokus auf Wiedererkennung, Reichweite und echten Berührungspunkten mit der Zielgruppe.",
-    image: "/images/projects/demnaechst.png",
-    available: false,
+    image: "/images/projects/christian-jungwirth.webp",
+    available: true,
   },
   {
     slug: "ki-workflows-case",
