@@ -8,6 +8,8 @@
  * https://www.nesani.de/<KEY>.txt erreichbar sein.
  */
 
+// Eine einzige Quelle der Wahrheit für den IndexNow-Key liegt in src/lib/site.ts;
+// dieses Standalone-Script duplliziert die Werte bewusst, damit es ohne Build laufen kann.
 const HOST = "www.nesani.de";
 const KEY = "da9aaf5e1e0a4792836ed2b67dacd9c0";
 const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;

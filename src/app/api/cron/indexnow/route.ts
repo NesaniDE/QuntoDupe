@@ -1,27 +1,38 @@
 import { NextResponse } from "next/server";
-import { BASE_URL } from "@/lib/site";
+import { timingSafeEqual } from "node:crypto";
+import { BASE_URL, INDEXNOW_KEY } from "@/lib/site";
 
 export const runtime = "nodejs";
 export const maxDuration = 30;
-
-const KEY = "da9aaf5e1e0a4792836ed2b67dacd9c0";
 
 /**
  * Vercel Cron Job — reicht alle Sitemap-URLs bei IndexNow
  * (Bing, Yandex, Seznam, Naver) ein.
  *
  * Schutz: Vercel Cron schickt den Header `Authorization: Bearer <CRON_SECRET>`
- *         automatisch mit. Manuelle Aufrufe ohne richtigen Secret werden geblockt.
+ *         automatisch mit. Vergleich erfolgt timing-safe.
  */
-export async function GET(req: Request) {
-  // Security: Vercel-Cron-Header prüfen
+function verifyCronAuth(req: Request): boolean {
+  const secret = process.env.CRON_SECRET;
+  if (!secret) return false;
   const auth = req.headers.get("authorization");
-  if (auth !== `Bearer ${process.env.CRON_SECRET}`) {
+  if (!auth) return false;
+  const expected = `Bearer ${secret}`;
+  // Längen müssen übereinstimmen, sonst wirft timingSafeEqual.
+  if (auth.length !== expected.length) return false;
+  try {
+    return timingSafeEqual(Buffer.from(auth), Buffer.from(expected));
+  } catch {
+    return false;
+  }
+}
+
+export async function GET(req: Request) {
+  if (!verifyCronAuth(req)) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
   try {
-    // Sitemap holen
     const sitemapRes = await fetch(`${BASE_URL}/sitemap.xml`, {
       cache: "no-store",
     });
@@ -38,15 +49,14 @@ export async function GET(req: Request) {
       return NextResponse.json({ ok: true, submitted: 0 });
     }
 
-    // An IndexNow-API senden
     const host = new URL(BASE_URL).host;
     const submitRes = await fetch("https://api.indexnow.org/IndexNow", {
       method: "POST",
       headers: { "Content-Type": "application/json; charset=utf-8" },
       body: JSON.stringify({
         host,
-        key: KEY,
-        keyLocation: `${BASE_URL}/${KEY}.txt`,
+        key: INDEXNOW_KEY,
+        keyLocation: `${BASE_URL}/${INDEXNOW_KEY}.txt`,
         urlList: urls,
       }),
     });

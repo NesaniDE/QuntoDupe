@@ -1,20 +1,49 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
+import { FROM_CONTACT, SUPPORT_EMAIL } from "@/lib/site";
+import { checkRateLimit, getClientIp } from "@/lib/rate-limit";
+import {
+  asString,
+  escapeAttr,
+  escapeHtml,
+  isValidEmail,
+} from "@/lib/email-helpers";
 
 export const runtime = "nodejs";
 
-type Body = {
-  name?: string;
-  company?: string;
-  email?: string;
-  phone?: string;
-  website?: string;
-  service?: string;
-  phase?: string;
-  budget?: string;
-  timeline?: string;
-  goal?: string;
-  description?: string;
+// Strenger als der Chat — Kontaktanfragen sind selten und teuer.
+const RATE_CONFIG = {
+  bucketName: "contact",
+  windowMs: 15 * 60 * 1000,
+  maxPerIp: 3,
+  maxPerDay: 50,
+};
+
+// Längen-Caps schützen vor Spam-Floods und überlangen Resend-Payloads.
+const FIELD_LIMITS = {
+  short: 200,
+  medium: 500,
+  long: 5000,
+};
+
+let resendInstance: Resend | null = null;
+function getResend(apiKey: string): Resend {
+  if (!resendInstance) resendInstance = new Resend(apiKey);
+  return resendInstance;
+}
+
+type ContactPayload = {
+  name: string;
+  email: string;
+  goal: string;
+  description: string;
+  company: string;
+  phone: string;
+  website: string;
+  service: string;
+  phase: string;
+  budget: string;
+  timeline: string;
 };
 
 export async function POST(request: Request) {
@@ -27,49 +56,62 @@ export async function POST(request: Request) {
     );
   }
 
-  const resend = new Resend(apiKey);
+  // Rate-Limit-Check vor dem teuren Body-Parse
+  const ip = getClientIp(request);
+  const limit = checkRateLimit(ip, RATE_CONFIG);
+  if (!limit.ok) {
+    return NextResponse.json(
+      { error: "Zu viele Anfragen. Bitte später erneut versuchen." },
+      {
+        status: 429,
+        headers: { "Retry-After": String(limit.retryAfter) },
+      },
+    );
+  }
+
+  let raw: Record<string, unknown>;
+  try {
+    raw = (await request.json()) as Record<string, unknown>;
+  } catch {
+    return NextResponse.json({ error: "Ungültige Anfrage." }, { status: 400 });
+  }
+
+  const payload: ContactPayload = {
+    name: asString(raw.name, FIELD_LIMITS.short),
+    email: asString(raw.email, FIELD_LIMITS.short),
+    goal: asString(raw.goal, FIELD_LIMITS.medium),
+    description: asString(raw.description, FIELD_LIMITS.long),
+    company: asString(raw.company, FIELD_LIMITS.short),
+    phone: asString(raw.phone, FIELD_LIMITS.short),
+    website: asString(raw.website, FIELD_LIMITS.short),
+    service: asString(raw.service, FIELD_LIMITS.short),
+    phase: asString(raw.phase, FIELD_LIMITS.short),
+    budget: asString(raw.budget, FIELD_LIMITS.short),
+    timeline: asString(raw.timeline, FIELD_LIMITS.short),
+  };
+
+  if (!payload.name || !payload.goal || !payload.description) {
+    return NextResponse.json(
+      { error: "Pflichtfelder fehlen." },
+      { status: 400 },
+    );
+  }
+
+  if (!isValidEmail(payload.email)) {
+    return NextResponse.json(
+      { error: "Bitte eine gültige E-Mail-Adresse eingeben." },
+      { status: 400 },
+    );
+  }
 
   try {
-    const body = (await request.json()) as Body;
-    const {
-      name,
-      company,
-      email,
-      phone,
-      website,
-      service,
-      phase,
-      budget,
-      timeline,
-      goal,
-      description,
-    } = body;
-
-    if (!name || !email || !goal || !description) {
-      return NextResponse.json(
-        { error: "Pflichtfelder fehlen." },
-        { status: 400 },
-      );
-    }
-
+    const resend = getResend(apiKey);
     const { error } = await resend.emails.send({
-      from: "Nesani Kontaktformular <onboarding@resend.dev>",
-      to: ["nedim@nesani.de"],
-      replyTo: email,
-      subject: `Neue Projektanfrage von ${name}${company ? ` (${company})` : ""}`,
-      html: buildHtml({
-        name,
-        company,
-        email,
-        phone,
-        website,
-        service,
-        phase,
-        budget,
-        timeline,
-        goal,
-        description,
-      }),
+      from: FROM_CONTACT,
+      to: [SUPPORT_EMAIL],
+      replyTo: payload.email,
+      subject: `Neue Projektanfrage von ${payload.name}${payload.company ? ` (${payload.company})` : ""}`,
+      html: buildHtml(payload),
     });
 
     if (error) {
@@ -87,19 +129,7 @@ export async function POST(request: Request) {
   }
 }
 
-function buildHtml(b: {
-  name: string;
-  email: string;
-  goal: string;
-  description: string;
-  company?: string;
-  phone?: string;
-  website?: string;
-  service?: string;
-  phase?: string;
-  budget?: string;
-  timeline?: string;
-}) {
+function buildHtml(b: ContactPayload) {
   return `
     <div style="font-family: -apple-system, Segoe UI, Helvetica, Arial, sans-serif; background:#fafafa; color:#050505; padding:32px;">
       <div style="max-width:600px; margin:0 auto; background:#fff; border:1px solid #eee; border-radius:16px; padding:32px;">
@@ -107,7 +137,7 @@ function buildHtml(b: {
         <p style="font-size:20px; font-weight:700; margin:0 0 24px;">${escapeHtml(b.name)}${b.company ? ` — ${escapeHtml(b.company)}` : ""}</p>
 
         <table style="width:100%; border-collapse:collapse;">
-          ${row("E-Mail", `<a href="mailto:${encodeURIComponent(b.email)}" style="color:#050505;">${escapeHtml(b.email)}</a>`)}
+          ${row("E-Mail", `<a href="${escapeAttr("mailto:" + b.email)}" style="color:#050505;">${escapeHtml(b.email)}</a>`)}
           ${b.phone ? row("Telefon", escapeHtml(b.phone)) : ""}
           ${b.website ? row("Website", `<a href="${escapeAttr(b.website)}" style="color:#050505;" target="_blank" rel="noreferrer">${escapeHtml(b.website)}</a>`) : ""}
           ${b.service ? row("Gewünschte Leistung", escapeHtml(b.service)) : ""}
@@ -141,27 +171,4 @@ function row(label: string, value: string) {
       <td style="color:#050505; font-size:14px; padding:6px 0;">${value}</td>
     </tr>
   `;
-}
-
-function escapeHtml(str: string) {
-  return str
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;");
-}
-
-function escapeAttr(str: string) {
-  const trimmed = str.trim();
-  // Nur http(s), mailto und tel als Link erlauben
-  if (/^(https?:\/\/|mailto:|tel:)/i.test(trimmed)) {
-    return trimmed.replace(/&/g, "&amp;").replace(/"/g, "&quot;");
-  }
-  // Nutzer hat z. B. "www.beispiel.de" oder "beispiel.de" eingegeben
-  // → automatisch mit https:// ergänzen, wenn es plausibel wie eine Domain aussieht
-  if (/^[\w-]+(\.[\w-]+)+([/?#].*)?$/i.test(trimmed)) {
-    return ("https://" + trimmed).replace(/&/g, "&amp;").replace(/"/g, "&quot;");
-  }
-  return "#";
 }

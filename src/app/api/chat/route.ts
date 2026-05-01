@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { streamText, type ModelMessage } from "ai";
 import { NESANI_KNOWLEDGE } from "@/data/chat-knowledge";
+import { checkRateLimit, getClientIp } from "@/lib/rate-limit";
 
 export const runtime = "nodejs";
 export const maxDuration = 30;
@@ -9,63 +10,12 @@ export const maxDuration = 30;
 // Default-Modell: openai/gpt-5-nano (~$0.05/MTok input, $0.40/MTok output).
 // Pro Nachricht ca. $0.0002 → 800 Nachrichten/Tag = 24.000/Monat ≈ 4 €/Monat
 // im absoluten Worst Case. Dashboard-Spend-Cap (OpenAI/Vercel) als Backstop.
-const IP_WINDOW_MS = 5 * 60 * 1000; // 5 Minuten
-const IP_MAX_REQUESTS = 15;
-const DAILY_MAX_REQUESTS = 800;
-
-const ipBuckets = new Map<string, number[]>();
-const dailyCounter = { day: "", count: 0 };
-
-function getClientIp(req: Request): string {
-  const xff = req.headers.get("x-forwarded-for");
-  if (xff) return xff.split(",")[0].trim();
-  const real = req.headers.get("x-real-ip");
-  if (real) return real.trim();
-  return "unknown";
-}
-
-function checkRateLimit(ip: string): {
-  ok: boolean;
-  reason?: "ip" | "daily";
-  retryAfter?: number;
-} {
-  const now = Date.now();
-
-  // Daily global cap
-  const today = new Date().toISOString().slice(0, 10);
-  if (dailyCounter.day !== today) {
-    dailyCounter.day = today;
-    dailyCounter.count = 0;
-  }
-  if (dailyCounter.count >= DAILY_MAX_REQUESTS) {
-    return { ok: false, reason: "daily", retryAfter: 3600 };
-  }
-
-  // Per-IP sliding window
-  const bucket = (ipBuckets.get(ip) ?? []).filter(
-    (t) => now - t < IP_WINDOW_MS,
-  );
-  if (bucket.length >= IP_MAX_REQUESTS) {
-    const retryAfter = Math.ceil((IP_WINDOW_MS - (now - bucket[0])) / 1000);
-    ipBuckets.set(ip, bucket);
-    return { ok: false, reason: "ip", retryAfter };
-  }
-
-  bucket.push(now);
-  ipBuckets.set(ip, bucket);
-  dailyCounter.count++;
-
-  // Lazy GC: gelegentlich tote Buckets aufräumen
-  if (Math.random() < 0.02 && ipBuckets.size > 500) {
-    for (const [k, v] of ipBuckets) {
-      if (v.length === 0 || now - v[v.length - 1] > IP_WINDOW_MS) {
-        ipBuckets.delete(k);
-      }
-    }
-  }
-
-  return { ok: true };
-}
+const RATE_CONFIG = {
+  bucketName: "chat",
+  windowMs: 5 * 60 * 1000,
+  maxPerIp: 15,
+  maxPerDay: 800,
+};
 
 const SYSTEM_RULES = `Du bist der Chat-Assistent auf der Website von Nesani.
 
@@ -95,15 +45,13 @@ export async function POST(req: Request) {
   }
 
   const ip = getClientIp(req);
-  const limit = checkRateLimit(ip);
+  const limit = checkRateLimit(ip, RATE_CONFIG);
   if (!limit.ok) {
     return NextResponse.json(
       { unavailable: true, reason: `rate-${limit.reason}` },
       {
         status: 429,
-        headers: limit.retryAfter
-          ? { "Retry-After": String(limit.retryAfter) }
-          : {},
+        headers: { "Retry-After": String(limit.retryAfter) },
       },
     );
   }

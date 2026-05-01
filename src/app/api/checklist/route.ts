@@ -2,10 +2,47 @@ import { Resend } from "resend";
 import { NextResponse } from "next/server";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
+import {
+  FROM_CHECKLIST,
+  FROM_DELIVERY,
+  SUPPORT_EMAIL,
+} from "@/lib/site";
+import { checkRateLimit, getClientIp } from "@/lib/rate-limit";
+import {
+  asString,
+  escapeHtml,
+  isValidEmail,
+} from "@/lib/email-helpers";
 
 export const runtime = "nodejs";
 
-type Body = { email?: string; source?: string };
+const RATE_CONFIG = {
+  bucketName: "checklist",
+  windowMs: 15 * 60 * 1000,
+  maxPerIp: 3,
+  maxPerDay: 200,
+};
+
+let resendInstance: Resend | null = null;
+function getResend(apiKey: string): Resend {
+  if (!resendInstance) resendInstance = new Resend(apiKey);
+  return resendInstance;
+}
+
+// PDF einmalig pro Lambda-Lifetime einlesen statt bei jedem Request.
+let pdfBufferPromise: Promise<Buffer> | null = null;
+function getPdfBuffer(): Promise<Buffer> {
+  if (!pdfBufferPromise) {
+    const pdfPath = path.join(
+      process.cwd(),
+      "public",
+      "downloads",
+      "checkliste-website.pdf",
+    );
+    pdfBufferPromise = readFile(pdfPath);
+  }
+  return pdfBufferPromise;
+}
 
 export async function POST(request: Request) {
   const apiKey = process.env.RESEND_API_KEY;
@@ -16,31 +53,42 @@ export async function POST(request: Request) {
     );
   }
 
-  let body: Body;
+  const ip = getClientIp(request);
+  const limit = checkRateLimit(ip, RATE_CONFIG);
+  if (!limit.ok) {
+    return NextResponse.json(
+      { error: "Zu viele Anfragen. Bitte später erneut versuchen." },
+      {
+        status: 429,
+        headers: { "Retry-After": String(limit.retryAfter) },
+      },
+    );
+  }
+
+  let raw: Record<string, unknown>;
   try {
-    body = (await request.json()) as Body;
+    raw = (await request.json()) as Record<string, unknown>;
   } catch {
     return NextResponse.json({ error: "Ungültige Anfrage." }, { status: 400 });
   }
 
-  const email = (body.email ?? "").toString().trim();
-  const source = (body.source ?? "unbekannt").toString().slice(0, 64);
+  const email = asString(raw.email, 254);
+  const source = asString(raw.source, 64) || "unbekannt";
 
-  // Minimale Email-Validierung
-  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 200) {
+  if (!isValidEmail(email)) {
     return NextResponse.json(
       { error: "Bitte eine gültige E-Mail-Adresse eingeben." },
       { status: 400 },
     );
   }
 
-  const resend = new Resend(apiKey);
+  const resend = getResend(apiKey);
 
   try {
     // 1) Notification an Nesani
     const { error: notifyErr } = await resend.emails.send({
-      from: "Nesani Checkliste <onboarding@resend.dev>",
-      to: ["nedim@nesani.de"],
+      from: FROM_CHECKLIST,
+      to: [SUPPORT_EMAIL],
       replyTo: email,
       subject: "Landingpage Website",
       html: buildNotifyHtml(email, source),
@@ -53,20 +101,12 @@ export async function POST(request: Request) {
       );
     }
 
-    // 2) Liefer-Mail an Empfänger mit PDF im Anhang.
-    //    Im Resend-Testmodus wird das nur akzeptiert, wenn die Empfänger-Adresse
-    //    der verifizierte Account-Owner ist — Fehler werden hier still
-    //    geschluckt, damit das Frontend trotzdem Erfolg zeigt.
+    // 2) Liefer-Mail mit PDF — Resend-Testmodus blockiert externe
+    //    Empfänger; Fehler still schlucken, damit das Frontend Erfolg zeigt.
     try {
-      const pdfPath = path.join(
-        process.cwd(),
-        "public",
-        "downloads",
-        "checkliste-website.pdf",
-      );
-      const pdfBuf = await readFile(pdfPath);
+      const pdfBuf = await getPdfBuffer();
       const { error: deliverErr } = await resend.emails.send({
-        from: "Nesani <onboarding@resend.dev>",
+        from: FROM_DELIVERY,
         to: [email],
         subject: "Ihre Nesani Website-Checkliste",
         html: buildDeliveryHtml(),
@@ -121,13 +161,4 @@ function buildDeliveryHtml() {
       </div>
     </div>
   `;
-}
-
-function escapeHtml(str: string) {
-  return str
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;");
 }
