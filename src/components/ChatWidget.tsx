@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRightIcon } from "@/components/icons";
+import { BotMessage } from "@/components/chat/BotMessage";
 
 type Role = "user" | "assistant";
 type ChatMessage = { id: string; role: Role; content: string };
@@ -262,8 +263,15 @@ export function ChatWidget() {
               ) : (
                 <div key={m.id} className="mt-3">
                   <BotRow>
-                    <div className="bg-[#F4F1EA] rounded-2xl rounded-tl-md px-3.5 py-2.5 text-[14px] leading-[1.5] max-w-[260px] break-words chat-pop whitespace-pre-wrap">
-                      {m.content || <TypingDots />}
+                    <div className="bg-[#F4F1EA] rounded-2xl rounded-tl-md px-3.5 py-2.5 text-[14px] leading-[1.5] max-w-[260px] break-words chat-pop">
+                      {m.content ? (
+                        <BotMessage
+                          content={m.content}
+                          onClose={() => setOpen(false)}
+                        />
+                      ) : (
+                        <TypingDots />
+                      )}
                       {status === "streaming" && i === messages.length - 1 && (
                         <span className="chat-caret" />
                       )}
