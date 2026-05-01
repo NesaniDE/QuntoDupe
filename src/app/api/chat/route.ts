@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { streamText, type ModelMessage } from "ai";
+import { openai } from "@ai-sdk/openai";
 import { NESANI_KNOWLEDGE } from "@/data/chat-knowledge";
 import { checkRateLimit, getClientIp } from "@/lib/rate-limit";
 
@@ -81,19 +82,13 @@ export async function POST(req: Request) {
   }
 
   try {
+    // Direkter OpenAI-Aufruf via OPENAI_API_KEY env var.
+    // Modell-Override per CHAT_MODEL möglich (default: gpt-4o-mini, günstig + zuverlässig).
+    const modelName = process.env.CHAT_MODEL ?? "gpt-4o-mini";
     const result = streamText({
-      model: process.env.CHAT_MODEL ?? "openai/gpt-5-nano",
-      // Ephemeral cache: identische System-Prompts werden für 5 Minuten serverseitig
-      // bei Anthropic gecacht und nicht erneut bezahlt. Spart bei dauerhaftem
-      // Traffic ~90 % der Input-Token-Kosten der Wissensbasis.
+      model: openai(modelName),
       messages: [
-        {
-          role: "system",
-          content: SYSTEM_RULES,
-          providerOptions: {
-            anthropic: { cacheControl: { type: "ephemeral" } },
-          },
-        },
+        { role: "system", content: SYSTEM_RULES },
         ...cleaned,
       ] satisfies ModelMessage[],
       temperature: 0.4,
