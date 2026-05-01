@@ -8,15 +8,22 @@ export const runtime = "nodejs";
 export const maxDuration = 30;
 
 // Stop-Loss-Limits: schützen vor Bot-Spam und Kostenexplosion.
-// Default-Modell: openai/gpt-5-nano (~$0.05/MTok input, $0.40/MTok output).
-// Pro Nachricht ca. $0.0002 → 800 Nachrichten/Tag = 24.000/Monat ≈ 4 €/Monat
-// im absoluten Worst Case. Dashboard-Spend-Cap (OpenAI/Vercel) als Backstop.
+// HINWEIS: Rate-Limit-State ist Lambda-instanzweise. Bei Vercel-Skalierung
+// kann der tagesglobale Cap pro Instanz separat zählen. Wahre Sicherung
+// ist deshalb das OpenAI-Dashboard-Spend-Limit (Pflicht-Setup).
 const RATE_CONFIG = {
   bucketName: "chat",
   windowMs: 5 * 60 * 1000,
   maxPerIp: 15,
-  maxPerDay: 800,
+  maxPerDay: 500,
 };
+
+// Body-Größenlimit auf API-Route-Ebene. Vercel akzeptiert per Default bis
+// 4.5 MB — viel zu groß für Chat. 50 KB reichen für 12 Nachrichten × 4 KB.
+const MAX_BODY_BYTES = 50 * 1024;
+const MAX_HISTORY = 8;
+const MAX_MESSAGE_CHARS = 1000;
+const MAX_OUTPUT_TOKENS = 300;
 
 const SYSTEM_RULES = `Du bist der Chat-Assistent auf der Website von Nesani.
 
@@ -57,6 +64,12 @@ export async function POST(req: Request) {
     );
   }
 
+  // Content-Length-Pre-Check: blockiert oversized Bodies vor JSON-Parse
+  const contentLength = Number(req.headers.get("content-length") ?? 0);
+  if (contentLength > MAX_BODY_BYTES) {
+    return NextResponse.json({ error: "Payload too large" }, { status: 413 });
+  }
+
   let messages: IncomingMessage[] = [];
   try {
     const body = (await req.json()) as { messages?: IncomingMessage[] };
@@ -74,8 +87,11 @@ export async function POST(req: Request) {
         typeof m.content === "string" &&
         m.content.trim().length > 0,
     )
-    .slice(-8)
-    .map((m) => ({ role: m.role, content: m.content.slice(0, 1000) }));
+    .slice(-MAX_HISTORY)
+    .map((m) => ({
+      role: m.role,
+      content: m.content.slice(0, MAX_MESSAGE_CHARS),
+    }));
 
   if (cleaned.length === 0) {
     return NextResponse.json({ error: "Empty messages" }, { status: 400 });
@@ -92,7 +108,10 @@ export async function POST(req: Request) {
         ...cleaned,
       ] satisfies ModelMessage[],
       temperature: 0.4,
-      maxOutputTokens: 300,
+      maxOutputTokens: MAX_OUTPUT_TOKENS,
+      // Wenn der Client die Verbindung schließt, brechen wir die OpenAI-Generation
+      // ab — kein Token-Verbrauch mehr für niemanden, der zuhört.
+      abortSignal: req.signal,
     });
     return result.toTextStreamResponse();
   } catch (err) {
