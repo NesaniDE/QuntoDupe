@@ -32,6 +32,7 @@ export const PROJECTS: Project[] = [
     summary:
       "Aufbau einer konsistenten Online-Präsenz und Content-Strategie über mehrere Kanäle – mit Fokus auf Wiedererkennung, Reichweite und echten Berührungspunkten mit der Zielgruppe.",
     image: "/images/projects/christian-jungwirth.webp",
+    href: "https://www.instagram.com/chris_the_kelt_mma/",
     available: true,
   },
   {
