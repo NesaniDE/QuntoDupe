@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Header } from "@/components/Header";
+import { LpHeader } from "@/components/lp/LpHeader";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
 import { LpChecklistForm } from "@/components/lp/LpChecklistForm";
@@ -50,7 +50,7 @@ const FEATURES = [
 export default function LpWebsitesPage() {
   return (
     <>
-      <Header variant="transparent" />
+      <LpHeader variant="transparent" />
       <main>
         {/* HERO — Mobile: 2-Block-Layout. Desktop: Bild als Full-Bleed-Hintergrund */}
         <section className="relative bg-[#050505] text-white overflow-hidden">
