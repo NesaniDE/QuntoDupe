@@ -369,3 +369,17 @@
   vertical-align: -2px;
   animation: chat-caret-blink 0.9s steps(1) infinite;
 }
+
+/* Chat-Trigger sanfter Bounce, wenn Teaser aktiv ist */
+@keyframes chat-trigger-bounce {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-4px); }
+}
+.animate-chat-bounce {
+  animation: chat-trigger-bounce 1.6s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-chat-bounce {
+    animation: none;
+  }
+}

@@ -16,6 +16,9 @@ const newId = () =>
     ? crypto.randomUUID()
     : Math.random().toString(36).slice(2);
 
+const TEASER_STORAGE_KEY = "nesani-chat-teaser-dismissed";
+const TEASER_DELAY_MS = 5000;
+
 export function ChatWidget() {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -24,9 +27,45 @@ export function ChatWidget() {
   const [status, setStatus] = useState<Status>("idle");
   const [blockedReason, setBlockedReason] = useState<BlockedReason>("maintenance");
   const [draft, setDraft] = useState("");
+  const [teaserVisible, setTeaserVisible] = useState(false);
+  const [teaserDismissed, setTeaserDismissed] = useState(true);
   const inputRef = useRef<HTMLInputElement>(null);
   const bodyRef = useRef<HTMLDivElement>(null);
   const abortRef = useRef<AbortController | null>(null);
+
+  // Teaser-Bubble: erst nach 5 Sek einblenden, ein einziges Mal pro Session.
+  useEffect(() => {
+    let dismissed = false;
+    try {
+      dismissed = window.sessionStorage.getItem(TEASER_STORAGE_KEY) === "1";
+    } catch {
+      // sessionStorage nicht verfügbar – Teaser einmal zeigen, ohne Persistenz.
+    }
+    setTeaserDismissed(dismissed);
+    if (dismissed) return;
+
+    const id = window.setTimeout(() => setTeaserVisible(true), TEASER_DELAY_MS);
+    return () => window.clearTimeout(id);
+  }, []);
+
+  function dismissTeaser() {
+    setTeaserVisible(false);
+    setTeaserDismissed(true);
+    try {
+      window.sessionStorage.setItem(TEASER_STORAGE_KEY, "1");
+    } catch {
+      // ignore
+    }
+  }
+
+  // Sobald der Chat geöffnet wird, Teaser unsichtbar + dauerhaft dismissed.
+  useEffect(() => {
+    if (open && (teaserVisible || !teaserDismissed)) {
+      dismissTeaser();
+    }
+    // dismissTeaser ist stabil genug — nur auf open reagieren.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [open]);
 
   // Mount + open animation lifecycle
   useEffect(() => {
@@ -154,16 +193,87 @@ export function ChatWidget() {
 
   const inputDisabled = status !== "idle";
 
+  const showTeaser = teaserVisible && !open && !teaserDismissed;
+
   return (
     <>
+      {/* Teaser-Sprechblase */}
+      <div
+        aria-hidden={!showTeaser}
+        className={[
+          "fixed bottom-7 right-24 md:bottom-8 md:right-[6.25rem] z-50 max-w-[260px]",
+          "transition-[opacity,transform] duration-300 ease-out",
+          showTeaser
+            ? "opacity-100 translate-x-0 pointer-events-auto"
+            : "opacity-0 translate-x-2 pointer-events-none",
+        ].join(" ")}
+      >
+        <div className="relative rounded-2xl bg-white text-[#050505] shadow-[0_12px_30px_rgba(0,0,0,0.18)] ring-1 ring-black/10 pl-4 pr-9 py-3">
+          <button
+            type="button"
+            aria-label="Sprechblase schließen"
+            onClick={(e) => {
+              e.stopPropagation();
+              dismissTeaser();
+            }}
+            className="absolute top-1.5 right-1.5 w-6 h-6 rounded-full text-[#050505]/50 hover:text-[#050505] hover:bg-black/5 transition flex items-center justify-center"
+          >
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden
+            >
+              <line x1="6" y1="6" x2="18" y2="18" />
+              <line x1="6" y1="18" x2="18" y2="6" />
+            </svg>
+          </button>
+          <button
+            type="button"
+            onClick={() => setOpen(true)}
+            className="block text-left w-full"
+          >
+            <div className="text-[13px] font-semibold leading-tight">
+              Hi 👋 Fragen zu Nesani?
+            </div>
+            <div className="mt-0.5 text-[12px] leading-snug text-[#050505]/65">
+              Schreib mir – ich antworte direkt.
+            </div>
+          </button>
+          {/* Pfeil rechts */}
+          <span
+            aria-hidden
+            className="absolute -right-1.5 bottom-5 w-3 h-3 rotate-45 bg-white ring-1 ring-black/10"
+            style={{ clipPath: "polygon(100% 0, 100% 100%, 0 100%)" }}
+          />
+        </div>
+      </div>
+
       {/* Trigger button */}
       <button
         type="button"
         aria-label={open ? "Chat schließen" : "Chat öffnen"}
         onClick={() => setOpen((v) => !v)}
-        className="fixed bottom-5 right-5 md:bottom-6 md:right-6 z-50 w-14 h-14 rounded-full bg-[#050505] text-white ring-1 ring-white/25 shadow-[0_8px_24px_rgba(0,0,0,0.25)] hover:scale-[1.04] active:scale-[0.96] transition-transform duration-200 flex items-center justify-center"
+        className={[
+          "fixed bottom-5 right-5 md:bottom-6 md:right-6 z-50 w-14 h-14 rounded-full bg-[#050505] text-white ring-1 ring-white/25 shadow-[0_8px_24px_rgba(0,0,0,0.25)] hover:scale-[1.04] active:scale-[0.96] transition-transform duration-200 flex items-center justify-center",
+          showTeaser ? "animate-chat-bounce" : "",
+        ].join(" ")}
       >
+        {/* Sanfter Pulse-Ring solange Teaser sichtbar */}
+        <span
+          aria-hidden
+          className={[
+            "absolute inset-0 rounded-full ring-2 ring-white/40",
+            showTeaser ? "animate-ping" : "opacity-0",
+          ].join(" ")}
+        />
         <span className="relative w-7 h-7 flex items-center justify-center">
+          {/* Chat-Bubble Icon (geschlossen) */}
           <span
             className={[
               "absolute inset-0 flex items-center justify-center transition-all duration-200 ease-out",
@@ -173,15 +283,23 @@ export function ChatWidget() {
             ].join(" ")}
             aria-hidden={open}
           >
-            <Image
-              src="/images/shm-logo-white.png"
-              alt=""
-              width={28}
-              height={28}
-              className="w-7 h-7 object-contain"
-              priority
-            />
+            <svg
+              width="26"
+              height="26"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M21 12a8 8 0 0 1-11.6 7.13L4 20l1-4.4A8 8 0 1 1 21 12z" />
+              <circle cx="9" cy="12" r="0.9" fill="currentColor" stroke="none" />
+              <circle cx="12.5" cy="12" r="0.9" fill="currentColor" stroke="none" />
+              <circle cx="16" cy="12" r="0.9" fill="currentColor" stroke="none" />
+            </svg>
           </span>
+          {/* X Icon (geöffnet) */}
           <span
             className={[
               "absolute inset-0 flex items-center justify-center transition-all duration-200 ease-out",
