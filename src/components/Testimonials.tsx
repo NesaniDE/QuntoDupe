@@ -16,6 +16,14 @@ type Quote = {
 const QUOTES: Quote[] = [
   {
     quote:
+      "Wir wollten endlich eine Website, die zu unserem Handwerk passt – nicht eine von der Stange. Nedim hat verstanden, worauf es bei uns ankommt. Die neue Seite ist klar, schnell und bringt genau die Anfragen, die wir wollten.",
+    author: "Urim Hasani",
+    role: "Inhaber, Handwerk",
+    image: "/images/breit/portrait-urim.webp",
+    label: "NESANI | HANDWERK",
+  },
+  {
+    quote:
       "Wir haben rund 40 % unserer manuellen Arbeit automatisiert — ohne, dass Kunden etwas davon merken. Nur die Reaktionszeit ist deutlich kürzer.",
     author: "Jens B.",
     role: "Beispielrezension",
@@ -29,14 +37,6 @@ const QUOTES: Quote[] = [
     role: "Beispielrezension",
     image: "/images/breit/portrait-2.webp",
     label: "NESANI | STUDIO",
-  },
-  {
-    quote:
-      "Von der ersten Skizze bis zum Livegang war der Prozess klar und ohne Reibung. Wir haben nur noch entschieden, nicht mehr verwaltet.",
-    author: "Tobias M.",
-    role: "Beispielrezension",
-    image: "/images/breit/portrait-3.webp",
-    label: "NESANI | B2B SOFTWARE",
   },
   {
     quote:

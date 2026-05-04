@@ -9,6 +9,13 @@ type T = { quote: string; name: string; role: string; img: string };
 const ITEMS: T[] = [
   {
     quote:
+      "Wir wollten endlich eine Website, die zu unserem Handwerk passt – nicht eine von der Stange. Nedim hat verstanden, worauf es bei uns ankommt. Die neue Seite ist klar, schnell und bringt genau die Anfragen, die wir wollten.",
+    name: "Urim Hasani",
+    role: "Inhaber, Handwerk",
+    img: "/images/breit/portrait-urim.webp",
+  },
+  {
+    quote:
       "Nedim denkt mit statt nur umzusetzen. Das Ergebnis war nicht nur technisch sauber, sondern wirtschaftlich spürbar — unsere Anfragen haben sich nach dem Relaunch merklich erhöht.",
     name: "Marc P.",
     role: "Beispielrezension",
