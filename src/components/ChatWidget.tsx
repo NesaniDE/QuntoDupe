@@ -239,10 +239,10 @@ export function ChatWidget() {
             className="block text-left w-full"
           >
             <div className="text-[13px] font-semibold leading-tight">
-              Hi 👋 Fragen zu Nesani?
+              Fragen zu Nesani?
             </div>
             <div className="mt-0.5 text-[12px] leading-snug text-[#050505]/65">
-              Schreib mir – ich antworte direkt.
+              Schreiben Sie uns – wir antworten direkt.
             </div>
           </button>
           {/* Pfeil rechts */}
@@ -351,7 +351,7 @@ export function ChatWidget() {
                 Nesani
               </div>
               <div className="text-[12px] text-white/70 leading-tight">
-                Schreib uns eine Nachricht
+                Schreiben Sie uns eine Nachricht
               </div>
             </div>
           </div>
