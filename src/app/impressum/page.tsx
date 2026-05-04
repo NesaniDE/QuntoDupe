@@ -98,21 +98,16 @@ export default function ImpressumPage() {
             </p>
           </LegalSection>
 
-          <LegalSection heading="Streitbeilegung">
+          <LegalSection heading="Verbraucherstreitbeilegung">
             <p>
-              Die Europäische Kommission stellt eine Plattform zur
-              Online-Streitbeilegung (OS) bereit:{" "}
-              <a
-                href="https://ec.europa.eu/consumers/odr"
-                className="underline underline-offset-4 hover:opacity-80"
-                target="_blank"
-                rel="noreferrer"
-              >
-                ec.europa.eu/consumers/odr
-              </a>
-              . Wir sind nicht bereit oder verpflichtet, an
+              Wir sind nicht bereit oder verpflichtet, an
               Streitbeilegungsverfahren vor einer
-              Verbraucherschlichtungsstelle teilzunehmen.
+              Verbraucherschlichtungsstelle teilzunehmen (§ 36 VSBG).
+            </p>
+            <p className="mt-3 text-[13px] opacity-70">
+              Hinweis: Die Online-Streitbeilegungsplattform der Europäischen
+              Kommission (OS-Plattform) wurde zum 20. Juli 2025 eingestellt.
+              Eine Verlinkung ist daher nicht mehr möglich.
             </p>
           </LegalSection>
         </LegalPage>
