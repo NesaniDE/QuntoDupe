@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/_next/", "/private/", "/lp/"],
+        disallow: ["/api/", "/_next/", "/private/", "/lp/", "/game"],
       },
       {
         userAgent: "GPTBot",
