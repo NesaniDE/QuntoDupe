@@ -24,6 +24,18 @@ export const PROJECTS: Project[] = [
     available: true,
   },
   {
+    slug: "handwerk-urim",
+    title: "Handwerk Urim – Website",
+    client: "Urim Hasani",
+    service: "Websites",
+    year: "2026",
+    summary:
+      "Moderne Handwerks-Website mit klarer Positionierung – performant, mobil-optimiert und auf lokale Anfragen aus Schwäbisch Gmünd und Umgebung ausgerichtet. Entwickelt mit Next.js, sauber strukturiert und übergabefähig.",
+    image: "/images/projects/handwerk-urim.webp",
+    href: "https://www.handwerk-urim.de",
+    available: true,
+  },
+  {
     slug: "christian-jungwirth",
     title: "Christian Jungwirth – Online-Präsenz",
     client: "Christian Jungwirth",
