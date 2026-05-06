@@ -74,6 +74,27 @@ type FloatingText = {
   text: string;
   life: number;
   maxLife: number;
+  big?: boolean;
+};
+
+type Fragment = {
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+  size: number;
+  rot: number;
+  rotSpeed: number;
+  life: number;
+  maxLife: number;
+  color: string;
+};
+
+type TrailPoint = {
+  x: number;
+  y: number;
+  rot: number;
+  life: number;
 };
 
 type Building = {
@@ -99,12 +120,25 @@ type GameState = {
   pickups: Pickup[];
   stars: Star[];
   particles: Particle[];
+  fragments: Fragment[];
+  trail: TrailPoint[];
   floatingTexts: FloatingText[];
   buildings: Building[];
   scoreFloat: number;
+  distanceM: number;
+  comboCount: number;
+  comboTimer: number;
   jumpHeld: boolean;
+  jumpBuffer: number;
+  coyoteTimer: number;
+  shakeAmount: number;
+  flashAmount: number;
+  deathTimer: number;
   nextSpawnX: number;
+  lastHazardX: number;
+  pendulumCooldown: number;
   rngSeed: number;
+  newBest: boolean;
 };
 
 const CANVAS_W = 1200;
@@ -123,6 +157,11 @@ function padScore(n: number): string {
 }
 
 const PICKUP_SCORE = 50;
+const COMBO_WINDOW = 220; // frames at 60fps ≈ 3.6 s
+const COYOTE_FRAMES = 6;
+const JUMP_BUFFER_FRAMES = 8;
+const DEATH_HOLD_FRAMES = 60;
+const PIXELS_PER_METER = 32;
 
 function createInitialState(): GameState {
   return {
@@ -140,12 +179,25 @@ function createInitialState(): GameState {
     pickups: [],
     stars: [],
     particles: [],
+    fragments: [],
+    trail: [],
     floatingTexts: [],
     buildings: [],
     scoreFloat: 0,
+    distanceM: 0,
+    comboCount: 0,
+    comboTimer: 0,
     jumpHeld: false,
+    jumpBuffer: 0,
+    coyoteTimer: 0,
+    shakeAmount: 0,
+    flashAmount: 0,
+    deathTimer: 0,
     nextSpawnX: CANVAS_W + 280,
+    lastHazardX: 0,
+    pendulumCooldown: 0,
     rngSeed: 1,
+    newBest: false,
   };
 }
 
@@ -158,6 +210,16 @@ function obstacleX(o: Obstacle): number {
   return o.x;
 }
 
+function pushSpike(state: GameState, x: number): void {
+  state.obstacles.push({ type: "spike", x, size: 32 });
+  state.lastHazardX = x + 32;
+}
+
+function pushCrate(state: GameState, x: number, y: number, size: number): void {
+  state.obstacles.push({ type: "crate", x, y, w: size, h: size });
+  state.lastHazardX = x + size;
+}
+
 function spawnElement(state: GameState): void {
   const x = state.nextSpawnX;
   const r = nextRand(state);
@@ -166,23 +228,20 @@ function spawnElement(state: GameState): void {
   const diff = rampRaw * rampRaw;
   const gapBase = 290 - diff * 70;
 
-  // Warmup phase: only easy single obstacles + free diamonds
+  // Force a breather if we're stacking hazards too close together
+  const sinceLast = x - state.lastHazardX;
+  const tooClose = sinceLast < 200;
+  if (state.pendulumCooldown > 0) state.pendulumCooldown--;
+
+  // Warmup phase: only easy singles + free diamonds
   if (state.scroll < 1400) {
-    if (r < 0.4) {
-      state.obstacles.push({ type: "spike", x, size: 32 });
+    if (r < 0.4 && !tooClose) {
+      pushSpike(state, x);
       state.nextSpawnX = x + gapBase + 60 + nextRand(state) * 90;
-    } else if (r < 0.78) {
-      const size = 38;
-      state.obstacles.push({
-        type: "crate",
-        x,
-        y: GROUND_Y - size,
-        w: size,
-        h: size,
-      });
+    } else if (r < 0.78 && !tooClose) {
+      pushCrate(state, x, GROUND_Y - 38, 38);
       state.nextSpawnX = x + gapBase + 50 + nextRand(state) * 90;
     } else {
-      // Free pickup at jump height — invites the first jump
       state.pickups.push({
         x,
         y: GROUND_Y - 90 - nextRand(state) * 50,
@@ -193,79 +252,55 @@ function spawnElement(state: GameState): void {
     return;
   }
 
+  // After a hazard, sometimes just a free diamond as a breather
+  if (tooClose) {
+    state.pickups.push({
+      x,
+      y: GROUND_Y - 90 - nextRand(state) * 70,
+      collected: false,
+    });
+    state.nextSpawnX = x + 220 + nextRand(state) * 60;
+    return;
+  }
+
   if (r < 0.2) {
-    state.obstacles.push({ type: "spike", x, size: 32 });
+    pushSpike(state, x);
     state.nextSpawnX = x + gapBase + nextRand(state) * 80;
   } else if (r < 0.32 && diff > 0.2) {
-    // Double spike
     state.obstacles.push({ type: "spike", x, size: 32 });
     state.obstacles.push({ type: "spike", x: x + 32, size: 32 });
-    state.nextSpawnX = x + gapBase + 60 + nextRand(state) * 80;
+    state.lastHazardX = x + 64;
+    state.nextSpawnX = x + gapBase + 70 + nextRand(state) * 80;
   } else if (r < 0.4 && diff > 0.55) {
     // Triple spike — late game
     state.obstacles.push({ type: "spike", x, size: 32 });
     state.obstacles.push({ type: "spike", x: x + 32, size: 32 });
     state.obstacles.push({ type: "spike", x: x + 64, size: 32 });
-    state.nextSpawnX = x + gapBase + 110;
+    state.lastHazardX = x + 96;
+    state.nextSpawnX = x + gapBase + 130;
   } else if (r < 0.55) {
-    // Single crate
-    const size = 38;
-    state.obstacles.push({
-      type: "crate",
-      x,
-      y: GROUND_Y - size,
-      w: size,
-      h: size,
-    });
+    pushCrate(state, x, GROUND_Y - 38, 38);
     state.nextSpawnX = x + gapBase + nextRand(state) * 70;
   } else if (r < 0.66 && diff > 0.3) {
-    // Two crates side by side
     const size = 38;
-    state.obstacles.push({
-      type: "crate",
-      x,
-      y: GROUND_Y - size,
-      w: size,
-      h: size,
-    });
-    state.obstacles.push({
-      type: "crate",
-      x: x + size,
-      y: GROUND_Y - size,
-      w: size,
-      h: size,
-    });
-    state.nextSpawnX = x + gapBase + size + 30;
+    state.obstacles.push({ type: "crate", x, y: GROUND_Y - size, w: size, h: size });
+    state.obstacles.push({ type: "crate", x: x + size, y: GROUND_Y - size, w: size, h: size });
+    state.lastHazardX = x + size * 2;
+    state.nextSpawnX = x + gapBase + size + 40;
   } else if (r < 0.74 && diff > 0.55) {
-    // Stacked crates — needs precise timing, late game
+    // Stacked crates — needs precise timing
     const size = 38;
-    state.obstacles.push({
-      type: "crate",
-      x,
-      y: GROUND_Y - size,
-      w: size,
-      h: size,
-    });
-    state.obstacles.push({
-      type: "crate",
-      x,
-      y: GROUND_Y - size * 2,
-      w: size,
-      h: size,
-    });
-    state.nextSpawnX = x + gapBase + 30;
+    state.obstacles.push({ type: "crate", x, y: GROUND_Y - size, w: size, h: size });
+    state.obstacles.push({ type: "crate", x, y: GROUND_Y - size * 2, w: size, h: size });
+    state.lastHazardX = x + size;
+    state.nextSpawnX = x + gapBase + 40;
   } else if (r < 0.83 && diff > 0.4) {
-    // Spike + crate combo
+    // Spike + crate combo (jump spike, land on crate)
     const size = 38;
     state.obstacles.push({ type: "spike", x, size: 32 });
-    state.obstacles.push({
-      type: "crate",
-      x: x + 70,
-      y: GROUND_Y - size,
-      w: size,
-      h: size,
-    });
-    state.nextSpawnX = x + gapBase + 80;
+    state.obstacles.push({ type: "crate", x: x + 78, y: GROUND_Y - size, w: size, h: size });
+    state.lastHazardX = x + 78 + size;
+    state.nextSpawnX = x + gapBase + 90;
   } else if (r < 0.93) {
     // Floating platform with diamond
     const w = 160 + nextRand(state) * 110;
@@ -274,8 +309,8 @@ function spawnElement(state: GameState): void {
     state.obstacles.push({ type: "block", x, y, w, h });
     state.pickups.push({ x: x + w / 2 - 14, y: y - 50, collected: false });
     state.nextSpawnX = x + w + 180;
-  } else if (r < 0.98 && diff > 0.6) {
-    // Pendulum hazard
+  } else if (r < 0.98 && diff > 0.6 && state.pendulumCooldown === 0) {
+    // Pendulum hazard (gated by cooldown so they don't cluster)
     state.obstacles.push({
       type: "pendulum",
       x,
@@ -284,7 +319,9 @@ function spawnElement(state: GameState): void {
       size: 34,
       phase: nextRand(state) * Math.PI * 2,
     });
-    state.nextSpawnX = x + 320 + nextRand(state) * 100;
+    state.lastHazardX = x + 30;
+    state.pendulumCooldown = 4;
+    state.nextSpawnX = x + 360 + nextRand(state) * 100;
   } else {
     // Standalone diamond at jump height
     state.pickups.push({
@@ -341,6 +378,10 @@ export function GameSection() {
   const [score, setScore] = useState(0);
   const [progress, setProgress] = useState(0);
   const [best, setBest] = useState(0);
+  const [distance, setDistance] = useState(0);
+  const [combo, setCombo] = useState(0);
+  const [overlayVisible, setOverlayVisible] = useState(true);
+  const [newBest, setNewBest] = useState(false);
 
   const setStatusBoth = useCallback((s: GameStatus) => {
     statusRef.current = s;
@@ -375,6 +416,10 @@ export function GameSection() {
     stateRef.current = fresh;
     setScore(0);
     setProgress(0);
+    setDistance(0);
+    setCombo(0);
+    setNewBest(false);
+    setOverlayVisible(true);
   }, []);
 
   const startGame = useCallback(() => {
@@ -397,13 +442,10 @@ export function GameSection() {
   }, [persistBest]);
 
   const triggerJump = useCallback(() => {
-    const st = stateRef.current;
     if (statusRef.current !== "running") return;
-    if (st.player.onGround) {
-      st.player.vy = JUMP_VELOCITY;
-      st.player.onGround = false;
-      st.player.rotSpeed = 0.18;
-    }
+    // Set jump buffer; the update loop will execute it once we're on ground
+    // (or within the coyote window).
+    stateRef.current.jumpBuffer = JUMP_BUFFER_FRAMES;
   }, []);
 
   // Initial mount: load best, generate world, load logo
@@ -439,9 +481,67 @@ export function GameSection() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    const update = (dt: number) => {
-      if (statusRef.current !== "running") return;
+    const tickEffects = (dt: number) => {
       const st = stateRef.current;
+
+      // Screen shake decay
+      if (st.shakeAmount > 0) {
+        st.shakeAmount = Math.max(0, st.shakeAmount - 0.6 * dt);
+      }
+      // Flash decay
+      if (st.flashAmount > 0) {
+        st.flashAmount = Math.max(0, st.flashAmount - 0.04 * dt);
+      }
+      // Death pause timer
+      if (statusRef.current === "gameover" && st.deathTimer > 0) {
+        st.deathTimer = Math.max(0, st.deathTimer - dt);
+      }
+
+      // Particles
+      for (const part of st.particles) {
+        part.x += part.vx * dt;
+        part.y += part.vy * dt;
+        part.vy += 0.2 * dt;
+        part.life -= dt;
+      }
+      st.particles = st.particles.filter((part) => part.life > 0);
+
+      // Fragments
+      for (const f of st.fragments) {
+        f.x += f.vx * dt;
+        f.y += f.vy * dt;
+        f.vy += 0.4 * dt;
+        f.rot += f.rotSpeed * dt;
+        f.life -= dt;
+      }
+      st.fragments = st.fragments.filter((f) => f.life > 0);
+
+      // Trail
+      for (const tp of st.trail) tp.life -= dt;
+      st.trail = st.trail.filter((t) => t.life > 0);
+
+      // Floating texts
+      for (const ft of st.floatingTexts) {
+        ft.y -= 1.4 * dt;
+        ft.life -= dt;
+      }
+      st.floatingTexts = st.floatingTexts.filter((ft) => ft.life > 0);
+
+      // Stars (subtle background motion even on game over)
+      for (const s of st.stars) {
+        s.x -= s.speed * dt * (statusRef.current === "running" ? 1 : 0.2);
+        if (s.x < 0) {
+          s.x = CANVAS_W + Math.random() * 40;
+          s.y = Math.random() * (GROUND_Y - 40);
+        }
+      }
+    };
+
+    const update = (dt: number) => {
+      tickEffects(dt);
+
+      const st = stateRef.current;
+      if (statusRef.current !== "running") return;
       const p = st.player;
 
       // Smooth ease-out speed ramp from BASE_SPEED to MAX_SPEED
@@ -449,15 +549,50 @@ export function GameSection() {
       const eased = 1 - (1 - ramp) * (1 - ramp);
       st.speed = BASE_SPEED + (MAX_SPEED - BASE_SPEED) * eased;
       st.scroll += st.speed * dt;
+      st.distanceM = st.scroll / PIXELS_PER_METER;
       st.scoreFloat += dt * 0.6 * (0.7 + eased * 0.6);
+
+      // Combo timer decays
+      if (st.comboTimer > 0) {
+        st.comboTimer -= dt;
+        if (st.comboTimer <= 0) {
+          st.comboCount = 0;
+        }
+      }
 
       ensureWorldAhead(st);
 
-      // Variable jump: hold space → keep jumping when on ground
-      if (st.jumpHeld && p.onGround) {
+      // Coyote time
+      if (p.onGround) {
+        st.coyoteTimer = COYOTE_FRAMES;
+      } else if (st.coyoteTimer > 0) {
+        st.coyoteTimer = Math.max(0, st.coyoteTimer - dt);
+      }
+
+      // Jump buffer
+      if (st.jumpBuffer > 0) {
+        st.jumpBuffer = Math.max(0, st.jumpBuffer - dt);
+      }
+
+      // Execute buffered jump if grounded or within coyote window
+      const canJump = p.onGround || st.coyoteTimer > 0;
+      if ((st.jumpBuffer > 0 || st.jumpHeld) && canJump) {
         p.vy = JUMP_VELOCITY;
         p.onGround = false;
+        st.coyoteTimer = 0;
+        st.jumpBuffer = 0;
         p.rotSpeed = 0.18;
+      }
+
+      // Trail emission
+      if (!p.onGround) {
+        st.trail.push({
+          x: p.x + PLAYER_SIZE / 2,
+          y: p.y + PLAYER_SIZE / 2,
+          rot: p.rot,
+          life: 14,
+        });
+        if (st.trail.length > 14) st.trail.shift();
       }
 
       // Physics
@@ -469,7 +604,6 @@ export function GameSection() {
 
       // Determine ground level (default = floor; blocks/crates can override)
       let ground = GROUND_Y - PLAYER_SIZE;
-      let landedOnSolid = false;
       for (const o of st.obstacles) {
         if (o.type !== "block" && o.type !== "crate") continue;
         const ox = o.x - st.scroll;
@@ -492,14 +626,11 @@ export function GameSection() {
 
         const prevBottom = playerBottom - p.vy * dt;
         if (p.vy >= 0 && prevBottom <= top + 4) {
-          // Landing on top — safe
           if (top - PLAYER_SIZE < ground) {
             ground = top - PLAYER_SIZE;
-            landedOnSolid = true;
           }
         } else {
-          // Side / under impact — death
-          handleDeath();
+          handleDeath(o);
           return;
         }
       }
@@ -508,7 +639,8 @@ export function GameSection() {
         p.y = ground;
         p.vy = 0;
         if (!p.onGround) {
-          p.rot = 0;
+          // Snap rotation to nearest 90° on landing for that GD feel
+          p.rot = Math.round(p.rot / (Math.PI / 2)) * (Math.PI / 2);
           p.rotSpeed = 0;
         }
         p.onGround = true;
@@ -516,9 +648,7 @@ export function GameSection() {
         p.onGround = false;
       }
 
-      void landedOnSolid;
-
-      // Obstacle collisions
+      // Hazard collisions
       const px = p.x + 6;
       const py = p.y + 6;
       const pw = PLAYER_SIZE - 12;
@@ -532,7 +662,7 @@ export function GameSection() {
           const sw = o.size - 12;
           const sh = o.size - 10;
           if (px < sx + sw && px + pw > sx && py < sy + sh && py + ph > sy) {
-            handleDeath();
+            handleDeath(o);
             return;
           }
         } else if (o.type === "pendulum") {
@@ -548,7 +678,7 @@ export function GameSection() {
             py < wy + o.size - 4 &&
             py + ph > wy + 4
           ) {
-            handleDeath();
+            handleDeath(o);
             return;
           }
         }
@@ -561,66 +691,151 @@ export function GameSection() {
         if (x < -50 || x > CANVAS_W + 50) continue;
         if (px < x + 26 && px + pw > x + 4 && py < pk.y + 26 && py + ph > pk.y + 4) {
           pk.collected = true;
-          st.scoreFloat += PICKUP_SCORE;
+          st.comboCount += 1;
+          st.comboTimer = COMBO_WINDOW;
+          const bonus = Math.min(st.comboCount - 1, 4) * 25;
+          const points = PICKUP_SCORE + bonus;
+          st.scoreFloat += points;
           spawnParticles(x + 14, pk.y + 14);
           st.floatingTexts.push({
-            x: x + 14,
+            // World-space x; render translates by scroll
+            x: pk.x + 14,
             y: pk.y + 6,
-            text: `+${PICKUP_SCORE}`,
+            text: st.comboCount > 1 ? `+${points} ×${st.comboCount}` : `+${points}`,
             life: 60,
             maxLife: 60,
+            big: st.comboCount > 1,
           });
         }
       }
-
-      // Stars parallax
-      for (const s of st.stars) {
-        s.x -= s.speed * dt;
-        if (s.x < 0) {
-          s.x = CANVAS_W + Math.random() * 40;
-          s.y = Math.random() * (GROUND_Y - 40);
-        }
-      }
-
-      // Particles
-      for (const part of st.particles) {
-        part.x += part.vx * dt;
-        part.y += part.vy * dt;
-        part.vy += 0.2 * dt;
-        part.life -= dt;
-      }
-      st.particles = st.particles.filter((p) => p.life > 0);
-
-      // Floating texts
-      for (const ft of st.floatingTexts) {
-        ft.y -= 1.4 * dt;
-        ft.x -= st.speed * dt;
-        ft.life -= dt;
-      }
-      st.floatingTexts = st.floatingTexts.filter((ft) => ft.life > 0);
     };
 
-    const handleDeath = () => {
+    const spawnObstacleFragments = (st: GameState, o: Obstacle) => {
+      if (o.type === "spike") {
+        const sx = o.x - st.scroll;
+        for (let i = 0; i < 7; i++) {
+          st.fragments.push({
+            x: sx + Math.random() * o.size,
+            y: GROUND_Y - Math.random() * o.size,
+            vx: (Math.random() - 0.5) * 9,
+            vy: -3 - Math.random() * 6,
+            size: 4 + Math.random() * 6,
+            rot: Math.random() * Math.PI * 2,
+            rotSpeed: (Math.random() - 0.5) * 0.5,
+            life: 55,
+            maxLife: 55,
+            color: "#fff",
+          });
+        }
+      } else if (o.type === "crate" || o.type === "block") {
+        const ox = o.x - st.scroll;
+        const cw = o.w;
+        const ch = o.h;
+        const cols = 3;
+        const rows = Math.max(2, Math.round(ch / (cw / cols)));
+        for (let r = 0; r < rows; r++) {
+          for (let c = 0; c < cols; c++) {
+            st.fragments.push({
+              x: ox + (cw / cols) * (c + 0.5),
+              y: o.y + (ch / rows) * (r + 0.5),
+              vx: (c - (cols - 1) / 2) * 4 + (Math.random() - 0.5) * 4,
+              vy: -3 + (r - rows / 2) * 1.5 + (Math.random() - 0.5) * 3,
+              size: Math.min(cw / cols, ch / rows) * 0.85,
+              rot: 0,
+              rotSpeed: (Math.random() - 0.5) * 0.4,
+              life: 55,
+              maxLife: 55,
+              color: "#fff",
+            });
+          }
+        }
+      } else {
+        // pendulum tip
+        const ox = o.x - st.scroll;
+        const angle = Math.sin(st.scroll * 0.004 + o.phase) * 0.5;
+        const tipX = ox + Math.sin(angle) * o.length;
+        const tipY = o.length * Math.cos(angle);
+        for (let i = 0; i < 8; i++) {
+          st.fragments.push({
+            x: tipX,
+            y: tipY,
+            vx: (Math.random() - 0.5) * 8,
+            vy: -2 + (Math.random() - 0.5) * 6,
+            size: 6 + Math.random() * 4,
+            rot: Math.random() * Math.PI * 2,
+            rotSpeed: (Math.random() - 0.5) * 0.5,
+            life: 55,
+            maxLife: 55,
+            color: "#fff",
+          });
+        }
+      }
+    };
+
+    const handleDeath = (o?: Obstacle) => {
       const st = stateRef.current;
-      for (let i = 0; i < 18; i++) {
+
+      // Player explosion (radial particles)
+      for (let i = 0; i < 28; i++) {
+        const a = (Math.PI * 2 * i) / 28 + Math.random() * 0.4;
+        const v = 4 + Math.random() * 9;
         st.particles.push({
           x: st.player.x + PLAYER_SIZE / 2,
           y: st.player.y + PLAYER_SIZE / 2,
-          vx: (Math.random() - 0.5) * 8,
-          vy: (Math.random() - 0.5) * 8 - 2,
-          life: 30 + Math.random() * 20,
-          maxLife: 50,
+          vx: Math.cos(a) * v,
+          vy: Math.sin(a) * v - 3,
+          life: 50 + Math.random() * 30,
+          maxLife: 80,
         });
       }
+
+      // Player splits into 4 quadrant fragments
+      const px = st.player.x;
+      const py = st.player.y;
+      const half = PLAYER_SIZE / 2;
+      const corners: ReadonlyArray<readonly [number, number]> = [
+        [-1, -1],
+        [1, -1],
+        [-1, 1],
+        [1, 1],
+      ];
+      for (const [sx, sy] of corners) {
+        st.fragments.push({
+          x: px + half + (sx * half) / 2,
+          y: py + half + (sy * half) / 2,
+          vx: sx * 5 + (Math.random() - 0.5) * 4,
+          vy: sy * 5 - 4 + (Math.random() - 0.5) * 3,
+          size: half - 4,
+          rot: 0,
+          rotSpeed: (Math.random() - 0.5) * 0.5,
+          life: 60,
+          maxLife: 60,
+          color: "#fff",
+        });
+      }
+
+      // Shatter the obstacle that killed us, then remove it
+      if (o) {
+        spawnObstacleFragments(st, o);
+        st.obstacles = st.obstacles.filter((other) => other !== o);
+      }
+
+      st.shakeAmount = 16;
+      st.flashAmount = 0.55;
+      st.deathTimer = DEATH_HOLD_FRAMES;
+
       const final = Math.floor(st.scoreFloat);
       setScore(final);
+      if (final > bestRef.current) {
+        st.newBest = true;
+      }
       commitBest(final);
       setStatusBoth("gameover");
     };
 
     const spawnParticles = (x: number, y: number) => {
       const st = stateRef.current;
-      for (let i = 0; i < 10; i++) {
+      for (let i = 0; i < 12; i++) {
         st.particles.push({
           x,
           y,
@@ -694,9 +909,13 @@ export function GameSection() {
     };
 
     const drawDiamond = (x: number, y: number, t: number) => {
+      const pulse = 0.85 + 0.15 * Math.sin(t * 0.07);
       ctx.save();
       ctx.translate(x + 14, y + 14);
       ctx.rotate(t * 0.04);
+      ctx.shadowColor = "rgba(255,255,255,0.85)";
+      ctx.shadowBlur = 14 + pulse * 8;
+      ctx.scale(pulse, pulse);
       ctx.beginPath();
       ctx.moveTo(0, -14);
       ctx.lineTo(11, 0);
@@ -710,6 +929,41 @@ export function GameSection() {
       ctx.moveTo(-11, 0);
       ctx.lineTo(11, 0);
       ctx.stroke();
+      ctx.restore();
+    };
+
+    const drawFragment = (f: Fragment) => {
+      const a = Math.max(0, f.life / f.maxLife);
+      ctx.save();
+      ctx.translate(f.x, f.y);
+      ctx.rotate(f.rot);
+      ctx.globalAlpha = a;
+      ctx.strokeStyle = f.color;
+      ctx.lineWidth = 1.6;
+      ctx.shadowColor = "rgba(255,255,255,0.5)";
+      ctx.shadowBlur = 6;
+      ctx.strokeRect(-f.size / 2, -f.size / 2, f.size, f.size);
+      ctx.restore();
+      ctx.globalAlpha = 1;
+    };
+
+    const drawTrail = (st: GameState) => {
+      if (st.trail.length === 0) return;
+      ctx.save();
+      ctx.shadowBlur = 6;
+      ctx.shadowColor = "rgba(255,255,255,0.4)";
+      for (const tp of st.trail) {
+        const a = Math.max(0, tp.life / 14) * 0.4;
+        ctx.globalAlpha = a;
+        ctx.translate(tp.x, tp.y);
+        ctx.rotate(tp.rot);
+        ctx.strokeStyle = "#fff";
+        ctx.lineWidth = 1.4;
+        ctx.strokeRect(-PLAYER_SIZE / 2, -PLAYER_SIZE / 2, PLAYER_SIZE, PLAYER_SIZE);
+        ctx.rotate(-tp.rot);
+        ctx.translate(-tp.x, -tp.y);
+      }
+      ctx.globalAlpha = 1;
       ctx.restore();
     };
 
@@ -777,27 +1031,37 @@ export function GameSection() {
     const render = () => {
       const st = stateRef.current;
 
+      ctx.save();
+
+      // Screen shake offset
+      let shakeX = 0;
+      let shakeY = 0;
+      if (st.shakeAmount > 0) {
+        shakeX = (Math.random() - 0.5) * st.shakeAmount;
+        shakeY = (Math.random() - 0.5) * st.shakeAmount;
+        ctx.translate(shakeX, shakeY);
+      }
+
       // Background
       ctx.fillStyle = "#050505";
-      ctx.fillRect(0, 0, CANVAS_W, CANVAS_H);
+      ctx.fillRect(-30, -30, CANVAS_W + 60, CANVAS_H + 60);
 
-      // Subtle vertical gradient (vignette via fill)
       const grad = ctx.createLinearGradient(0, 0, 0, CANVAS_H);
       grad.addColorStop(0, "rgba(255,255,255,0.02)");
       grad.addColorStop(1, "rgba(0,0,0,0.4)");
       ctx.fillStyle = grad;
-      ctx.fillRect(0, 0, CANVAS_W, CANVAS_H);
+      ctx.fillRect(-30, -30, CANVAS_W + 60, CANVAS_H + 60);
 
-      // Stars
-      ctx.fillStyle = "rgba(255,255,255,0.55)";
+      // Stars with subtle flicker
+      const tNow = st.scroll * 0.05;
       for (const s of st.stars) {
+        const flicker = 0.45 + 0.35 * Math.sin(tNow + s.x * 0.03);
+        ctx.fillStyle = `rgba(255,255,255,${flicker})`;
         ctx.fillRect(s.x, s.y, s.size, s.size);
       }
 
-      // City silhouette
       drawCity(st.scroll);
 
-      // Glow defaults for foreground
       ctx.strokeStyle = "#ffffff";
       ctx.lineWidth = 2;
       ctx.shadowColor = "rgba(255,255,255,0.55)";
@@ -805,9 +1069,12 @@ export function GameSection() {
 
       // Ground line
       ctx.beginPath();
-      ctx.moveTo(0, GROUND_Y);
-      ctx.lineTo(CANVAS_W, GROUND_Y);
+      ctx.moveTo(-30, GROUND_Y);
+      ctx.lineTo(CANVAS_W + 30, GROUND_Y);
       ctx.stroke();
+
+      // Player trail (behind obstacles, before player)
+      drawTrail(st);
 
       // Obstacles
       for (const o of st.obstacles) {
@@ -830,7 +1097,9 @@ export function GameSection() {
         }
       }
 
-      // Pickups
+      // Pickups (with pulse glow)
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = "#ffffff";
       for (const pk of st.pickups) {
         if (pk.collected) continue;
         const x = pk.x - st.scroll;
@@ -838,31 +1107,48 @@ export function GameSection() {
         drawDiamond(x, pk.y, st.scroll);
       }
 
-      // Player
-      drawPlayerLogo(st.player.x, st.player.y, PLAYER_SIZE, st.player.rot);
+      // Player (only while alive — death replaces it with fragments)
+      if (statusRef.current !== "gameover") {
+        drawPlayerLogo(st.player.x, st.player.y, PLAYER_SIZE, st.player.rot);
+      }
+
+      // Fragments
+      for (const f of st.fragments) {
+        drawFragment(f);
+      }
 
       // Particles
       ctx.shadowBlur = 6;
       for (const part of st.particles) {
         const a = Math.max(0, part.life / part.maxLife);
         ctx.fillStyle = `rgba(255,255,255,${a})`;
-        ctx.fillRect(part.x - 1, part.y - 1, 2, 2);
+        const sz = 2 + a * 1.5;
+        ctx.fillRect(part.x - sz / 2, part.y - sz / 2, sz, sz);
       }
 
-      // Floating texts
+      // Floating texts (world-space)
       ctx.shadowBlur = 8;
-      ctx.font = "600 16px ui-monospace, SFMono-Regular, Menlo, monospace";
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
       for (const ft of st.floatingTexts) {
         const a = Math.max(0, ft.life / ft.maxLife);
         ctx.fillStyle = `rgba(255,255,255,${a})`;
-        ctx.fillText(ft.text, ft.x, ft.y);
+        ctx.font = ft.big
+          ? "700 20px ui-monospace, SFMono-Regular, Menlo, monospace"
+          : "600 16px ui-monospace, SFMono-Regular, Menlo, monospace";
+        ctx.fillText(ft.text, ft.x - st.scroll, ft.y);
       }
       ctx.textAlign = "left";
       ctx.textBaseline = "alphabetic";
-
       ctx.shadowBlur = 0;
+
+      ctx.restore();
+
+      // Red flash (drawn over everything, no shake)
+      if (st.flashAmount > 0) {
+        ctx.fillStyle = `rgba(255,72,72,${st.flashAmount})`;
+        ctx.fillRect(0, 0, CANVAS_W, CANVAS_H);
+      }
     };
 
     const tick = (now: number) => {
@@ -886,10 +1172,20 @@ export function GameSection() {
     const id = window.setInterval(() => {
       const st = stateRef.current;
       setScore(Math.floor(st.scoreFloat));
+      setDistance(Math.floor(st.distanceM));
+      setCombo(st.comboCount);
+      setNewBest(st.newBest);
       const ramp = Math.min(1, st.scroll / SPEED_RAMP_DISTANCE);
       const eased = 1 - (1 - ramp) * (1 - ramp);
       setProgress(Math.round(eased * 100));
-    }, 90);
+
+      // Hide overlay during death-hold for a clean splatter moment
+      if (statusRef.current === "gameover") {
+        setOverlayVisible(st.deathTimer <= 0);
+      } else {
+        setOverlayVisible(true);
+      }
+    }, 60);
     return () => window.clearInterval(id);
   }, []);
 
@@ -937,7 +1233,8 @@ export function GameSection() {
   }, []);
 
   const showOverlay =
-    status === "idle" || status === "paused" || status === "gameover";
+    overlayVisible &&
+    (status === "idle" || status === "paused" || status === "gameover");
 
   const tempoMultiplier = 1 + (progress / 100) * 1.3;
 
@@ -966,12 +1263,18 @@ export function GameSection() {
 
         <div className="mt-10 md:mt-14 rounded-2xl border border-white/12 bg-[#08080b] overflow-hidden shadow-[0_30px_80px_-30px_rgba(0,0,0,0.8)]">
           <div className="flex items-center gap-3 md:gap-6 px-4 md:px-7 py-4 border-b border-white/10">
-            <div className="min-w-[68px]">
+            <div className="min-w-[78px]">
               <div className="text-[10px] uppercase tracking-[0.18em] text-white/50">
                 Punkte
               </div>
-              <div className="font-mono text-[20px] md:text-[22px] tabular-nums text-white">
+              <div className="font-mono text-[20px] md:text-[22px] tabular-nums text-white leading-tight">
                 {padScore(score)}
+              </div>
+              <div className="font-mono text-[10px] tabular-nums text-white/55 leading-tight">
+                {distance} m
+                {combo > 1 ? (
+                  <span className="ml-2 text-white/85">×{combo}</span>
+                ) : null}
               </div>
             </div>
 
@@ -990,12 +1293,15 @@ export function GameSection() {
               </div>
             </div>
 
-            <div className="min-w-[68px] text-right">
+            <div className="min-w-[78px] text-right">
               <div className="text-[10px] uppercase tracking-[0.18em] text-white/50">
                 Beste
               </div>
-              <div className="font-mono text-[20px] md:text-[22px] tabular-nums text-white">
+              <div className="font-mono text-[20px] md:text-[22px] tabular-nums text-white leading-tight">
                 {padScore(best)}
+              </div>
+              <div className="font-mono text-[10px] tabular-nums text-white/0 leading-tight">
+                .
               </div>
             </div>
 
@@ -1062,10 +1368,38 @@ export function GameSection() {
                       <div className="mt-3 text-[28px] md:text-[34px] font-semibold tracking-[-0.01em]">
                         Wieder rein.
                       </div>
-                      <p className="mt-3 text-[14px] text-white/70">
-                        Punkte: <span className="font-mono">{padScore(score)}</span> · Beste: <span className="font-mono">{padScore(best)}</span>
-                      </p>
-                      <p className="mt-2 text-[12px] text-white/45">
+                      {newBest && (
+                        <div className="mt-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white text-[#050505] text-[11px] font-semibold uppercase tracking-[0.18em]">
+                          Neuer Bestwert
+                        </div>
+                      )}
+                      <div className="mt-4 grid grid-cols-3 gap-3 text-center">
+                        <div>
+                          <div className="text-[10px] uppercase tracking-[0.18em] text-white/45">
+                            Distanz
+                          </div>
+                          <div className="font-mono text-[16px] tabular-nums text-white mt-1">
+                            {distance} m
+                          </div>
+                        </div>
+                        <div>
+                          <div className="text-[10px] uppercase tracking-[0.18em] text-white/45">
+                            Punkte
+                          </div>
+                          <div className="font-mono text-[16px] tabular-nums text-white mt-1">
+                            {padScore(score)}
+                          </div>
+                        </div>
+                        <div>
+                          <div className="text-[10px] uppercase tracking-[0.18em] text-white/45">
+                            Beste
+                          </div>
+                          <div className="font-mono text-[16px] tabular-nums text-white mt-1">
+                            {padScore(best)}
+                          </div>
+                        </div>
+                      </div>
+                      <p className="mt-5 text-[12px] text-white/45">
                         Leertaste oder Klick für einen neuen Versuch.
                       </p>
                     </>
