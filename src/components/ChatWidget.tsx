@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRightIcon } from "@/components/icons";
 import { BotMessage } from "@/components/chat/BotMessage";
-import { CHAT_WIGGLE_EVENT } from "@/lib/chat-events";
+import { CHAT_OPEN_EVENT } from "@/lib/chat-events";
 
 type Role = "user" | "assistant";
 type ChatMessage = { id: string; role: Role; content: string };
@@ -30,8 +30,6 @@ export function ChatWidget() {
   const [draft, setDraft] = useState("");
   const [teaserVisible, setTeaserVisible] = useState(false);
   const [teaserDismissed, setTeaserDismissed] = useState(true);
-  const [wiggle, setWiggle] = useState(false);
-  const [externalTeaser, setExternalTeaser] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const bodyRef = useRef<HTMLDivElement>(null);
   const abortRef = useRef<AbortController | null>(null);
@@ -100,26 +98,13 @@ export function ChatWidget() {
     return () => window.removeEventListener("keydown", onKey);
   }, [open]);
 
-  // Wackel-Trigger von außen (z.B. /projekte → "Nesani Chatbot"-Karte)
+  // Externer Open-Trigger (z.B. /projekte → "Nesani Chatbot"-Karte)
   useEffect(() => {
-    let wiggleTimer = 0;
-    let teaserTimer = 0;
-    const onWiggle = () => {
-      if (open) return;
-      setWiggle(true);
-      setExternalTeaser(true);
-      window.clearTimeout(wiggleTimer);
-      window.clearTimeout(teaserTimer);
-      wiggleTimer = window.setTimeout(() => setWiggle(false), 900);
-      teaserTimer = window.setTimeout(() => setExternalTeaser(false), 6000);
-    };
-    window.addEventListener(CHAT_WIGGLE_EVENT, onWiggle as EventListener);
-    return () => {
-      window.removeEventListener(CHAT_WIGGLE_EVENT, onWiggle as EventListener);
-      window.clearTimeout(wiggleTimer);
-      window.clearTimeout(teaserTimer);
-    };
-  }, [open]);
+    const onOpen = () => setOpen(true);
+    window.addEventListener(CHAT_OPEN_EVENT, onOpen as EventListener);
+    return () =>
+      window.removeEventListener(CHAT_OPEN_EVENT, onOpen as EventListener);
+  }, []);
 
   // Auto-scroll body when messages or status change
   useEffect(() => {
@@ -217,8 +202,7 @@ export function ChatWidget() {
 
   const inputDisabled = status !== "idle";
 
-  const showTeaser =
-    !open && (externalTeaser || (teaserVisible && !teaserDismissed));
+  const showTeaser = teaserVisible && !open && !teaserDismissed;
 
   return (
     <>
@@ -286,11 +270,7 @@ export function ChatWidget() {
         onClick={() => setOpen((v) => !v)}
         className={[
           "fixed bottom-5 right-5 md:bottom-6 md:right-6 z-50 w-14 h-14 rounded-full bg-[#050505] text-white ring-1 ring-white/25 shadow-[0_8px_24px_rgba(0,0,0,0.25)] hover:scale-[1.04] active:scale-[0.96] transition-transform duration-200 flex items-center justify-center",
-          wiggle
-            ? "animate-chat-wiggle"
-            : showTeaser
-              ? "animate-chat-bounce"
-              : "",
+          showTeaser ? "animate-chat-bounce" : "",
         ].join(" ")}
       >
         {/* Sanfter Pulse-Ring solange Teaser sichtbar */}

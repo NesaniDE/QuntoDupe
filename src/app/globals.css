@@ -378,22 +378,8 @@
 .animate-chat-bounce {
   animation: chat-trigger-bounce 1.6s ease-in-out infinite;
 }
-
-/* Chat-Trigger wackelt kurz, wenn von außen getriggert (z.B. /projekte) */
-@keyframes chat-trigger-wiggle {
-  0%, 100%        { transform: translate3d(0, 0, 0) rotate(0deg); }
-  10%, 30%, 50%   { transform: translate3d(-5px, 0, 0) rotate(-6deg); }
-  20%, 40%, 60%   { transform: translate3d(5px, 0, 0) rotate(6deg); }
-  70%             { transform: translate3d(-3px, 0, 0) rotate(-3deg); }
-  80%             { transform: translate3d(3px, 0, 0) rotate(3deg); }
-}
-.animate-chat-wiggle {
-  animation: chat-trigger-wiggle 850ms cubic-bezier(0.36, 0.07, 0.19, 0.97);
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .animate-chat-bounce,
-  .animate-chat-wiggle {
+  .animate-chat-bounce {
     animation: none;
   }
 }
