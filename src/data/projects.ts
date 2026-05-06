@@ -67,8 +67,8 @@ export const PROJECTS: Project[] = [
     service: "KI-Assistenten & Chatbots",
     year: "2026",
     summary:
-      "Eigener KI-Assistent, der Erstanfragen direkt im Browser beantwortet – auf Basis unserer Inhalte, in unserer Tonalität, mit klarer Übergabe an Menschen. Klicken Sie auf die Karte: das Widget unten rechts meldet sich.",
-    image: "/images/services/leistung-ki-assistenten.png",
+      "Eigener KI-Assistent, der Erstanfragen direkt im Browser beantwortet – auf Basis unserer Inhalte, in unserer Tonalität, mit klarer Übergabe an Menschen. Klicken Sie auf die Karte: das Widget unten rechts öffnet sich.",
+    image: "/images/projects/nesani-chatbot.webp",
     action: "open-chat",
     available: true,
   },
