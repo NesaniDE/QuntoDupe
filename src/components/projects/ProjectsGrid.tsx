@@ -2,6 +2,7 @@ import Image from "next/image";
 import { PROJECTS } from "@/data/projects";
 import { ArrowUpRightIcon } from "@/components/icons";
 import { Reveal } from "@/components/Reveal";
+import { ChatTriggerCard } from "@/components/projects/ChatTriggerCard";
 
 export function ProjectsGrid() {
   return (
@@ -19,7 +20,7 @@ export function ProjectsGrid() {
                     sizes="(min-width:1024px) 420px, (min-width:768px) 50vw, 100vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                   />
-                  {p.available && p.href && (
+                  {p.available && (p.href || p.action) && (
                     <span className="absolute top-3 right-3 inline-flex items-center justify-center w-9 h-9 rounded-full bg-white/95 text-[#050505]">
                       <ArrowUpRightIcon className="w-4 h-4" />
                     </span>
@@ -45,6 +46,13 @@ export function ProjectsGrid() {
               </article>
             );
 
+            if (p.available && p.action === "open-chat") {
+              return (
+                <Reveal key={p.slug} delay={(i % 3) * 100}>
+                  <ChatTriggerCard>{card}</ChatTriggerCard>
+                </Reveal>
+              );
+            }
             if (p.available && p.href) {
               return (
                 <Reveal key={p.slug} delay={(i % 3) * 100}>

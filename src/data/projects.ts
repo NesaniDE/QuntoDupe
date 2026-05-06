@@ -7,6 +7,8 @@ export type Project = {
   summary: string;
   image: string;
   href?: string;
+  /** Spezial-Aktion: bei Klick öffnet/wackelt das Chat-Widget statt zu navigieren. */
+  action?: "open-chat";
   available: boolean;
 };
 
@@ -59,15 +61,16 @@ export const PROJECTS: Project[] = [
     available: false,
   },
   {
-    slug: "ki-assistent-case",
-    title: "KI-Assistent Case Study",
-    client: "In Vorbereitung",
+    slug: "nesani-chatbot",
+    title: "Nesani Chatbot – Live auf dieser Seite",
+    client: "Nesani",
     service: "KI-Assistenten & Chatbots",
     year: "2026",
     summary:
-      "Ein eigener Assistent, der Routineanfragen übernimmt und das Team spürbar entlastet. Details folgen nach Freigabe durch den Kunden.",
-    image: "/images/projects/demnaechst.png",
-    available: false,
+      "Eigener KI-Assistent, der Erstanfragen direkt im Browser beantwortet – auf Basis unserer Inhalte, in unserer Tonalität, mit klarer Übergabe an Menschen. Klicken Sie auf die Karte: das Widget unten rechts meldet sich.",
+    image: "/images/services/leistung-ki-assistenten.png",
+    action: "open-chat",
+    available: true,
   },
   {
     slug: "autonome-agenten-case",
