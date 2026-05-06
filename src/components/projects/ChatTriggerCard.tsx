@@ -2,12 +2,12 @@
 
 import type { ReactNode } from "react";
 
-import { CHAT_WIGGLE_EVENT } from "@/lib/chat-events";
+import { CHAT_OPEN_EVENT } from "@/lib/chat-events";
 
 export function ChatTriggerCard({ children }: { children: ReactNode }) {
   function handle() {
     if (typeof window === "undefined") return;
-    window.dispatchEvent(new CustomEvent(CHAT_WIGGLE_EVENT));
+    window.dispatchEvent(new CustomEvent(CHAT_OPEN_EVENT));
   }
 
   return (
