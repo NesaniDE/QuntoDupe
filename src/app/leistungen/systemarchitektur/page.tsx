@@ -11,6 +11,7 @@ import { ServiceProcessCards } from "@/components/service/ServiceProcessCards";
 import { ServiceCta } from "@/components/service/ServiceCta";
 import { ServiceJsonLd } from "@/components/seo/ServiceJsonLd";
 import { ServiceFaqJsonLd } from "@/components/seo/ServiceFaqJsonLd";
+import { ServiceHowToJsonLd } from "@/components/seo/ServiceHowToJsonLd";
 import {
   LayersIcon,
   CodeIcon,
@@ -24,6 +25,11 @@ export const metadata: Metadata = {
   description:
     "Maßgeschneiderte digitale Infrastruktur. Wenn Standardlösungen an ihre Grenzen stoßen, entwerfen wir Architekturen, die zu Ihren Prozessen passen – nicht umgekehrt.",
   alternates: { canonical: `${BASE_URL}/leistungen/systemarchitektur` },
+  openGraph: {
+    url: `${BASE_URL}/leistungen/systemarchitektur`,
+    type: "website",
+    images: [{ url: "/images/services/leistung-systemarchitektur.png", width: 1448, height: 1086 }],
+  },
 };
 
 export default function SystemarchitekturPage() {
@@ -35,6 +41,7 @@ export default function SystemarchitekturPage() {
         slug="systemarchitektur"
       />
       <ServiceFaqJsonLd slug="systemarchitektur" />
+      <ServiceHowToJsonLd slug="systemarchitektur" />
       <Header />
       <main>
         <ServiceHero

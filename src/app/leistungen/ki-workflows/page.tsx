@@ -11,6 +11,7 @@ import { ServiceProcessCards } from "@/components/service/ServiceProcessCards";
 import { ServiceCta } from "@/components/service/ServiceCta";
 import { ServiceJsonLd } from "@/components/seo/ServiceJsonLd";
 import { ServiceFaqJsonLd } from "@/components/seo/ServiceFaqJsonLd";
+import { ServiceHowToJsonLd } from "@/components/seo/ServiceHowToJsonLd";
 import {
   MagnifierIcon,
   CogIcon,
@@ -24,6 +25,11 @@ export const metadata: Metadata = {
   description:
     "Intelligente Prozesse, die Zeit zurückgeben. Wiederkehrende Abläufe automatisieren, Teams entlasten und Wachstum ohne Mehraufwand ermöglichen.",
   alternates: { canonical: `${BASE_URL}/leistungen/ki-workflows` },
+  openGraph: {
+    url: `${BASE_URL}/leistungen/ki-workflows`,
+    type: "website",
+    images: [{ url: "/images/services/leistung-ki-workflows.png", width: 1448, height: 1086 }],
+  },
 };
 
 export default function KiWorkflowsPage() {
@@ -35,6 +41,7 @@ export default function KiWorkflowsPage() {
         slug="ki-workflows"
       />
       <ServiceFaqJsonLd slug="ki-workflows" />
+      <ServiceHowToJsonLd slug="ki-workflows" />
       <Header />
       <main>
         <ServiceHero

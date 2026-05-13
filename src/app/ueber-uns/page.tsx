@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { BASE_URL } from "@/lib/site";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { AboutHero } from "@/components/about/AboutHero";
 import { StatsStrip } from "@/components/about/StatsStrip";
 import { MissionBanner } from "@/components/about/MissionBanner";
@@ -30,6 +31,7 @@ export default function AboutPage() {
   return (
     <>
       <PersonJsonLd />
+      <BreadcrumbJsonLd trail={[{"name":"Über uns","path":"/ueber-uns"}]} />
       <Header variant="transparent" />
       <main>
         <AboutHero />

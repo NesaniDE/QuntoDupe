@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { BASE_URL } from "@/lib/site";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { OaHero } from "@/components/openaccount/OaHero";
 import { OaAllInOne } from "@/components/openaccount/OaAllInOne";
 import { OaFaqTop } from "@/components/openaccount/OaFaqTop";
@@ -30,6 +31,7 @@ export const metadata: Metadata = {
 export default function OpenAccountPage() {
   return (
     <>
+      <BreadcrumbJsonLd trail={[{"name":"Leistungen","path":"/leistungen"}]} />
       <Header />
       <main>
         <OaHero />

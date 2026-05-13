@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { BASE_URL } from "@/lib/site";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { BlogHero } from "@/components/blog/BlogHero";
 import { BlogFeatured } from "@/components/blog/BlogFeatured";
 import { BlogGrid } from "@/components/blog/BlogGrid";
@@ -30,6 +31,7 @@ export default function BlogPage() {
 
   return (
     <>
+      <BreadcrumbJsonLd trail={[{"name":"Blog","path":"/blog"}]} />
       <Header />
       <main>
         <BlogHero />
