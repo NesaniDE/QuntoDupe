@@ -11,6 +11,7 @@ import { ServiceProcessCards } from "@/components/service/ServiceProcessCards";
 import { ServiceCta } from "@/components/service/ServiceCta";
 import { ServiceJsonLd } from "@/components/seo/ServiceJsonLd";
 import { ServiceFaqJsonLd } from "@/components/seo/ServiceFaqJsonLd";
+import { ServiceHowToJsonLd } from "@/components/seo/ServiceHowToJsonLd";
 import {
   CompassIcon,
   LayersIcon,
@@ -24,6 +25,11 @@ export const metadata: Metadata = {
   description:
     "Strategische digitale Markenwirkung – klare Tonalität, konsistente Profilarchitektur und vertrauensaufbauende Inhalte statt Posting-Pläne.",
   alternates: { canonical: `${BASE_URL}/leistungen/social-media` },
+  openGraph: {
+    url: `${BASE_URL}/leistungen/social-media`,
+    type: "website",
+    images: [{ url: "/images/services/leistung-social-media.png", width: 1448, height: 1086 }],
+  },
 };
 
 export default function SocialMediaPage() {
@@ -35,6 +41,7 @@ export default function SocialMediaPage() {
         slug="social-media"
       />
       <ServiceFaqJsonLd slug="social-media" />
+      <ServiceHowToJsonLd slug="social-media" />
       <Header />
       <main>
         <ServiceHero

@@ -11,6 +11,7 @@ import { ServiceProcessCards } from "@/components/service/ServiceProcessCards";
 import { ServiceCta } from "@/components/service/ServiceCta";
 import { ServiceJsonLd } from "@/components/seo/ServiceJsonLd";
 import { ServiceFaqJsonLd } from "@/components/seo/ServiceFaqJsonLd";
+import { ServiceHowToJsonLd } from "@/components/seo/ServiceHowToJsonLd";
 import {
   BookIcon,
   StopwatchIcon,
@@ -23,6 +24,11 @@ export const metadata: Metadata = {
   description:
     "KI, die für Sie kommuniziert. Intelligente Assistenten übernehmen Erstanfragen, entlasten Teams und beantworten Kundenfragen rund um die Uhr.",
   alternates: { canonical: `${BASE_URL}/leistungen/ki-assistenten` },
+  openGraph: {
+    url: `${BASE_URL}/leistungen/ki-assistenten`,
+    type: "website",
+    images: [{ url: "/images/services/leistung-ki-assistenten.png", width: 1448, height: 1086 }],
+  },
 };
 
 export default function KiAssistentenPage() {
@@ -34,6 +40,7 @@ export default function KiAssistentenPage() {
         slug="ki-assistenten"
       />
       <ServiceFaqJsonLd slug="ki-assistenten" />
+      <ServiceHowToJsonLd slug="ki-assistenten" />
       <Header />
       <main>
         <ServiceHero

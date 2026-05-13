@@ -11,6 +11,7 @@ import { ServiceProcessCards } from "@/components/service/ServiceProcessCards";
 import { ServiceCta } from "@/components/service/ServiceCta";
 import { ServiceJsonLd } from "@/components/seo/ServiceJsonLd";
 import { ServiceFaqJsonLd } from "@/components/seo/ServiceFaqJsonLd";
+import { ServiceHowToJsonLd } from "@/components/seo/ServiceHowToJsonLd";
 import {
   NetworkIcon,
   PlugIcon,
@@ -24,6 +25,11 @@ export const metadata: Metadata = {
   description:
     "Systeme, die selbstständig arbeiten. Autonome Agenten planen, entscheiden und handeln innerhalb klar definierter Grenzen – nicht nur nach festen Regeln.",
   alternates: { canonical: `${BASE_URL}/leistungen/autonome-agenten` },
+  openGraph: {
+    url: `${BASE_URL}/leistungen/autonome-agenten`,
+    type: "website",
+    images: [{ url: "/images/services/leistung-autonome-agenten.png", width: 1448, height: 1086 }],
+  },
 };
 
 export default function AutonomeAgentenPage() {
@@ -35,6 +41,7 @@ export default function AutonomeAgentenPage() {
         slug="autonome-agenten"
       />
       <ServiceFaqJsonLd slug="autonome-agenten" />
+      <ServiceHowToJsonLd slug="autonome-agenten" />
       <Header />
       <main>
         <ServiceHero

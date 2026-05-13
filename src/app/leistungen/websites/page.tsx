@@ -11,12 +11,18 @@ import { PartnerCards } from "@/components/financing/PartnerCards";
 import { FinCta } from "@/components/financing/FinCta";
 import { ServiceJsonLd } from "@/components/seo/ServiceJsonLd";
 import { ServiceFaqJsonLd } from "@/components/seo/ServiceFaqJsonLd";
+import { ServiceHowToJsonLd } from "@/components/seo/ServiceHowToJsonLd";
 
 export const metadata: Metadata = {
   title: "Websites",
   description:
     "Moderne, schnelle und konvertierende Websites auf Next.js. Performance, Core Web Vitals, Conversion-Design und saubere Übergabe – von einem Ansprechpartner.",
   alternates: { canonical: `${BASE_URL}/leistungen/websites` },
+  openGraph: {
+    url: `${BASE_URL}/leistungen/websites`,
+    type: "website",
+    images: [{ url: "/images/services/leistung-websites.png", width: 1448, height: 1086 }],
+  },
 };
 
 export default function FinancingPage() {
@@ -28,6 +34,7 @@ export default function FinancingPage() {
         slug="websites"
       />
       <ServiceFaqJsonLd slug="websites" />
+      <ServiceHowToJsonLd slug="websites" />
       <Header />
       <main>
         <FinHero />

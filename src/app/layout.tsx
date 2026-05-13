@@ -44,6 +44,11 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: BASE_URL,
+    languages: {
+      de: BASE_URL,
+      "de-DE": BASE_URL,
+      "x-default": BASE_URL,
+    },
     types: {
       "application/rss+xml": [
         { url: `${BASE_URL}/feed.xml`, title: "NESANI – Blog (RSS)" },
@@ -154,6 +159,29 @@ const organizationJsonLd = {
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Autonome Agenten" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Individuelle Systemarchitektur" } },
     ],
+  },
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      contactType: "customer support",
+      email: "info@nesani.de",
+      areaServed: "DE",
+      availableLanguage: ["de", "en"],
+      url: `${BASE_URL}/kontakt`,
+    },
+    {
+      "@type": "ContactPoint",
+      contactType: "sales",
+      email: "info@nesani.de",
+      areaServed: "DE",
+      availableLanguage: ["de", "en"],
+      url: `${BASE_URL}/kontakt`,
+    },
+  ],
+  potentialAction: {
+    "@type": "ContactAction",
+    name: "Projekt anfragen",
+    target: `${BASE_URL}/kontakt`,
   },
 };
 
