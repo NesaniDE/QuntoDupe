@@ -10,6 +10,7 @@ import { AtYourSide } from "@/components/about/AtYourSide";
 import { AboutTestimonials } from "@/components/about/AboutTestimonials";
 import { Sustainability } from "@/components/about/Sustainability";
 import { AboutCta } from "@/components/about/AboutCta";
+import { PersonJsonLd } from "@/components/seo/PersonJsonLd";
 
 export const metadata: Metadata = {
   title: "Über uns — Wer hinter Nesani steckt",
@@ -28,6 +29,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
+      <PersonJsonLd />
       <Header variant="transparent" />
       <main>
         <AboutHero />

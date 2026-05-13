@@ -10,6 +10,7 @@ import { ServiceProcessBanner } from "@/components/service/ServiceProcessBanner"
 import { ServiceProcessCards } from "@/components/service/ServiceProcessCards";
 import { ServiceCta } from "@/components/service/ServiceCta";
 import { ServiceJsonLd } from "@/components/seo/ServiceJsonLd";
+import { ServiceFaqJsonLd } from "@/components/seo/ServiceFaqJsonLd";
 import {
   NetworkIcon,
   PlugIcon,
@@ -33,6 +34,7 @@ export default function AutonomeAgentenPage() {
         description="Systeme, die selbstständig arbeiten. Autonome Agenten planen, entscheiden und handeln innerhalb klar definierter Grenzen – nicht nur nach festen Regeln."
         slug="autonome-agenten"
       />
+      <ServiceFaqJsonLd slug="autonome-agenten" />
       <Header />
       <main>
         <ServiceHero

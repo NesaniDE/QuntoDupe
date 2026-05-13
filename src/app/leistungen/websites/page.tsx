@@ -10,6 +10,7 @@ import { PartnersBanner } from "@/components/financing/PartnersBanner";
 import { PartnerCards } from "@/components/financing/PartnerCards";
 import { FinCta } from "@/components/financing/FinCta";
 import { ServiceJsonLd } from "@/components/seo/ServiceJsonLd";
+import { ServiceFaqJsonLd } from "@/components/seo/ServiceFaqJsonLd";
 
 export const metadata: Metadata = {
   title: "Websites",
@@ -26,6 +27,7 @@ export default function FinancingPage() {
         description="Moderne, schnelle und konvertierende Websites auf Next.js. Performance, Core Web Vitals, Conversion-Design und saubere Übergabe – von einem Ansprechpartner."
         slug="websites"
       />
+      <ServiceFaqJsonLd slug="websites" />
       <Header />
       <main>
         <FinHero />

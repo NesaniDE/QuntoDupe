@@ -10,6 +10,7 @@ import { ServiceProcessBanner } from "@/components/service/ServiceProcessBanner"
 import { ServiceProcessCards } from "@/components/service/ServiceProcessCards";
 import { ServiceCta } from "@/components/service/ServiceCta";
 import { ServiceJsonLd } from "@/components/seo/ServiceJsonLd";
+import { ServiceFaqJsonLd } from "@/components/seo/ServiceFaqJsonLd";
 import {
   CompassIcon,
   LayersIcon,
@@ -33,6 +34,7 @@ export default function SocialMediaPage() {
         description="Strategische digitale Markenwirkung – klare Tonalität, konsistente Profilarchitektur und vertrauensaufbauende Inhalte statt Posting-Pläne."
         slug="social-media"
       />
+      <ServiceFaqJsonLd slug="social-media" />
       <Header />
       <main>
         <ServiceHero

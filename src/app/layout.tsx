@@ -89,8 +89,7 @@ export const metadata: Metadata = {
   category: "technology",
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
+const organizationJsonLd = {
   "@type": "LocalBusiness",
   "@id": `${BASE_URL}/#organization`,
   name: "Nesani",
@@ -156,6 +155,31 @@ const jsonLd = {
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Individuelle Systemarchitektur" } },
     ],
   },
+};
+
+const websiteJsonLd = {
+  "@type": "WebSite",
+  "@id": `${BASE_URL}/#website`,
+  url: BASE_URL,
+  name: "Nesani",
+  alternateName: "NESANI",
+  description:
+    "Nesani entwickelt digitale Präsenz, KI-Integration und autonome Systeme für Unternehmen mit Anspruch.",
+  publisher: { "@id": `${BASE_URL}/#organization` },
+  inLanguage: "de-DE",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: `${BASE_URL}/blog?q={search_term_string}`,
+    },
+    "query-input": "required name=search_term_string",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [organizationJsonLd, websiteJsonLd],
 };
 
 export default function RootLayout({

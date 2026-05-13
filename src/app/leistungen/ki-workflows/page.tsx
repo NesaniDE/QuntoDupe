@@ -10,6 +10,7 @@ import { ServiceProcessBanner } from "@/components/service/ServiceProcessBanner"
 import { ServiceProcessCards } from "@/components/service/ServiceProcessCards";
 import { ServiceCta } from "@/components/service/ServiceCta";
 import { ServiceJsonLd } from "@/components/seo/ServiceJsonLd";
+import { ServiceFaqJsonLd } from "@/components/seo/ServiceFaqJsonLd";
 import {
   MagnifierIcon,
   CogIcon,
@@ -33,6 +34,7 @@ export default function KiWorkflowsPage() {
         description="Intelligente Prozesse, die Zeit zurückgeben. Wiederkehrende Abläufe automatisieren, Teams entlasten und Wachstum ohne Mehraufwand ermöglichen."
         slug="ki-workflows"
       />
+      <ServiceFaqJsonLd slug="ki-workflows" />
       <Header />
       <main>
         <ServiceHero
