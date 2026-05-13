@@ -10,6 +10,7 @@ import { ServiceProcessBanner } from "@/components/service/ServiceProcessBanner"
 import { ServiceProcessCards } from "@/components/service/ServiceProcessCards";
 import { ServiceCta } from "@/components/service/ServiceCta";
 import { ServiceJsonLd } from "@/components/seo/ServiceJsonLd";
+import { ServiceFaqJsonLd } from "@/components/seo/ServiceFaqJsonLd";
 import {
   LayersIcon,
   CodeIcon,
@@ -33,6 +34,7 @@ export default function SystemarchitekturPage() {
         description="Maßgeschneiderte digitale Infrastruktur. Wenn Standardlösungen an ihre Grenzen stoßen, entwerfen wir Architekturen, die zu Ihren Prozessen passen – nicht umgekehrt."
         slug="systemarchitektur"
       />
+      <ServiceFaqJsonLd slug="systemarchitektur" />
       <Header />
       <main>
         <ServiceHero

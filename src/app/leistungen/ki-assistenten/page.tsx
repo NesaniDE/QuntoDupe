@@ -10,6 +10,7 @@ import { ServiceProcessBanner } from "@/components/service/ServiceProcessBanner"
 import { ServiceProcessCards } from "@/components/service/ServiceProcessCards";
 import { ServiceCta } from "@/components/service/ServiceCta";
 import { ServiceJsonLd } from "@/components/seo/ServiceJsonLd";
+import { ServiceFaqJsonLd } from "@/components/seo/ServiceFaqJsonLd";
 import {
   BookIcon,
   StopwatchIcon,
@@ -32,6 +33,7 @@ export default function KiAssistentenPage() {
         description="KI, die für Sie kommuniziert. Intelligente Assistenten übernehmen Erstanfragen, entlasten Teams und beantworten Kundenfragen rund um die Uhr."
         slug="ki-assistenten"
       />
+      <ServiceFaqJsonLd slug="ki-assistenten" />
       <Header />
       <main>
         <ServiceHero

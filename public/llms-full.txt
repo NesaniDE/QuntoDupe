@@ -1,0 +1,153 @@
+# Nesani
+
+> Nesani entwickelt digitale Strukturen für moderne Unternehmen: Websites, Social Media & Online-Präsenz, KI-Workflows, KI-Assistenten, autonome Agenten und individuelle Systemarchitektur. Eigenentwicklung, ein Ansprechpartner, sauberer Code – aus Schwäbisch Gmünd für den deutschsprachigen Raum.
+
+Nesani UG (haftungsbeschränkt) wird von Nedim Hasani aus Schwäbisch Gmünd geführt (Amtsgericht Ulm, HRB 751868). Statt Agentur-Overhead und Zwischendienstleistern arbeitet Nesani direkt mit dem Kunden, mit modernem Stack (Next.js, TypeScript, Tailwind), klarer Architektur und langfristig wartbarem Code. Schwerpunkte: messbare Wirkung, Conversion, Performance, Automatisierung und KI-Integration ohne Buzzwords.
+
+- Standort: Schwäbisch Gmünd, Baden-Württemberg, Deutschland
+- E-Mail: info@nesani.de
+- Website: https://www.nesani.de
+
+---
+
+## Leistungen
+
+### Websites
+
+URL: https://www.nesani.de/leistungen/websites
+
+Moderne, schnelle und konvertierende Websites auf Next.js. Eine Website als technisch performanter und inhaltlich überzeugender Eindruck, zugeschnitten auf Zielgruppe und Positionierung.
+
+Substanz:
+
+- Next.js mit TypeScript – moderner, typsicherer Stack, mobil-optimiert, wartbar.
+- Core Web Vitals – schnelle Ladezeiten und technische Qualität, die Google belohnt.
+- Conversion & SEO – Design folgt Funktion. Inhalte und Struktur sind auf Anfragen ausgelegt.
+
+Prozess (4 Schritte): Analyse & Strategie, Konzept & Design, Entwicklung, Launch & Übergabe.
+
+Typische Dauer: 4 bis 10 Wochen.
+
+Häufige Fragen:
+
+- Welcher Stack? Next.js, TypeScript, Tailwind CSS, Deployment auf Vercel.
+- Können wir die Seite selbst pflegen? Ja – Dokumentation und optional CMS oder KI-Editor.
+- Was kostet das? Typisch mittlerer vierstelliger Bereich, abhängig vom Umfang.
+
+### Social Media & Online-Präsenz
+
+URL: https://www.nesani.de/leistungen/social-media
+
+Strategische digitale Markenwirkung statt Posting-Akkord. Markenpräsenz, die durch klare Tonalität, konsistente Profilarchitektur und vertrauensaufbauende Inhalte funktioniert.
+
+Substanz:
+
+- Profil-Architektur – Plattformauswahl, technisches Setup, Bio-Optimierung.
+- Tonalität & Bildsprache – erkennbare Stimme und visuelle Handschrift.
+- Redaktionsstruktur – Themen, Formate, Rhythmus, dokumentiert im Styleguide.
+
+Prozess (4 Schritte): Positionierung, Kanal & Profil, Content-Konzept, Übergabe & Struktur.
+
+### KI-Workflows & Automatisierung
+
+URL: https://www.nesani.de/leistungen/ki-workflows
+
+Wiederkehrende Prozesse in automatisierte Abläufe überführen. Weniger Fleißarbeit, mehr Kapazität fürs Kerngeschäft. Wachstum ohne Skalierung des Aufwands.
+
+Substanz:
+
+- Prozessaufnahme – bestehende Abläufe sauber dokumentiert.
+- Automatisierungsdesign – klare Logik statt Werkzeug-Chaos.
+- Integration & Monitoring – Anbindung an bestehende Tools, Fehlerbehandlung, Überwachung.
+
+Prozess (4 Schritte): Prozessaufnahme, Automatisierungsdesign, Aufbau & Test, Übergabe & Monitoring.
+
+Eingesetzte Tools (Auswahl): n8n, Make, Zapier, OpenAI- und Anthropic-Modelle, Supabase/Postgres.
+
+### KI-Assistenten & Chatbots
+
+URL: https://www.nesani.de/leistungen/ki-assistenten
+
+Eigene Assistenten und Chatbots, die Routineanfragen übernehmen, 24/7 antworten und Teams entlasten. KI, die auf Basis Ihrer Inhalte kommuniziert.
+
+Substanz:
+
+- Eigene Wissensbasis – Antworten auf Basis Ihrer Inhalte, dokumentiert, aktualisierbar.
+- Design & Logik – Gesprächsführung, Tonalität, Eskalationswege.
+- Integration & Handover – Anbindung an Website, CRM, Messenger; saubere Übergabe an Menschen.
+
+Prozess (4 Schritte): Wissensbasis, Design & Logik, Integration, Test & Optimierung.
+
+Live-Beispiel: Der Chatbot rechts unten auf nesani.de ist genau ein solcher Assistent.
+
+### Autonome Agenten
+
+URL: https://www.nesani.de/leistungen/autonome-agenten
+
+Systeme, die selbstständig handeln: beobachten, entscheiden, ausführen. Aus klaren Zielen werden messbare Resultate. Geeignet für variable Abläufe jenseits einfacher Wenn-Dann-Regeln.
+
+Substanz:
+
+- Use-Case-Fokus – Autonomie nur, wo sie echten Mehrwert stiftet.
+- Kontrollierte Autonomie – klare Rollen, Rechte, Eskalationswege.
+- Beobachtbarkeit – Logs, Metriken, Audit-Trails.
+
+Prozess (4 Schritte): Use-Case-Definition, Architektur, Entwicklung & Tests, Deployment & Monitoring.
+
+Eingesetzte Modelle: Claude (Anthropic), GPT (OpenAI) – Auswahl je nach Anwendungsfall.
+
+### Individuelle Systemarchitektur
+
+URL: https://www.nesani.de/leistungen/systemarchitektur
+
+Maßgeschneiderte digitale Infrastruktur, wenn Standardlösungen an Grenzen stoßen. Skalierbar, sicher und wartbar.
+
+Substanz:
+
+- Klare Anforderungen – fachlich, technisch und organisatorisch abgestimmt.
+- Saubere Architektur – Module, Datenflüsse und Schnittstellen, die langfristig tragen.
+- Betrieb & Übergabe – CI/CD, Monitoring, Logging, Dokumentation und Schulung.
+
+Prozess (4 Schritte): Requirements, Architektur-Design, Entwicklung, Übergabe & Betrieb.
+
+Typische Stacks: TypeScript, Next.js, Node.js, Postgres/Supabase, Vercel oder eigene Cloud-Setups (AWS, Hetzner).
+
+---
+
+## Über Nesani
+
+URL: https://www.nesani.de/ueber-uns
+
+Nesani UG (haftungsbeschränkt) – geführt von Nedim Hasani. Sitz: Schwäbisch Gmünd, Baden-Württemberg. Eingetragen am Amtsgericht Ulm unter HRB 751868.
+
+Arbeitsweise: Ein Ansprechpartner. Klare Prozesse. Sauberer Code. Dokumentation und Übergabe statt Lock-in.
+
+---
+
+## Projekte
+
+URL: https://www.nesani.de/projekte
+
+Referenzen und laufende Arbeiten – darunter:
+
+- Handwerk Urim – Website-Relaunch für eine Handwerksfirma (https://www.handwerk-urim.de).
+- Nesani Chatbot – live auf nesani.de, eigener KI-Assistent, der Erstanfragen direkt im Browser beantwortet.
+
+---
+
+## Blog
+
+URL: https://www.nesani.de/blog
+
+Fachartikel zu Websites, KI-Integration, Automatisierung und digitaler Sichtbarkeit.
+
+---
+
+## Kontakt & Rechtliches
+
+- Kontakt: https://www.nesani.de/kontakt
+- Impressum: https://www.nesani.de/impressum
+- Datenschutz: https://www.nesani.de/datenschutz
+- E-Mail: info@nesani.de
+- Sitemap: https://www.nesani.de/sitemap.xml
+- Feed (RSS): https://www.nesani.de/feed.xml
