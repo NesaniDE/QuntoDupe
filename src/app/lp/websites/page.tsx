@@ -3,6 +3,7 @@ import Image from "next/image";
 import { LpHeader } from "@/components/lp/LpHeader";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
+import { LpAnalytics } from "@/components/lp/LpAnalytics";
 import { LpChecklistForm } from "@/components/lp/LpChecklistForm";
 import {
   ArrowUpRightIcon,
@@ -66,6 +67,7 @@ export default function LpWebsitesPage() {
           `,
         }}
       />
+      <LpAnalytics source="lp-websites" />
       <LpHeader variant="transparent" />
       <main>
         {/* HERO — Mobile: 2-Block-Layout. Desktop: Bild als Full-Bleed-Hintergrund */}

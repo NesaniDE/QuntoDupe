@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { ArrowUpRightIcon, CheckIcon } from "@/components/icons";
+import { trackEvent } from "@/lib/gtag";
 
 type Status = "idle" | "sending" | "success" | "error";
 
@@ -54,6 +55,10 @@ export function LpChecklistForm({ source }: { source: string }) {
 
     if (ok) {
       setStatus("success");
+      trackEvent("lp_checklist_submit", {
+        event_category: "conversion",
+        event_label: source,
+      });
       try {
         form.reset();
       } catch {
