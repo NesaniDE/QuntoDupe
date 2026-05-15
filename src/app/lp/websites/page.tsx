@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Script from "next/script";
 import { LpHeader } from "@/components/lp/LpHeader";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
@@ -51,19 +50,22 @@ const FEATURES = [
 export default function LpWebsitesPage() {
   return (
     <>
-      {/* Google Analytics — nur auf /lp/websites */}
-      <Script
+      {/* Google Analytics — nur auf /lp/websites. Raw <script>, damit
+          das Tag bereits im SSR-HTML steht (kein next/script-Defer). */}
+      <script
+        async
         src="https://www.googletagmanager.com/gtag/js?id=G-GPDFWK84JN"
-        strategy="afterInteractive"
       />
-      <Script id="ga-lp-websites" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-GPDFWK84JN');
-        `}
-      </Script>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-GPDFWK84JN');
+          `,
+        }}
+      />
       <LpHeader variant="transparent" />
       <main>
         {/* HERO — Mobile: 2-Block-Layout. Desktop: Bild als Full-Bleed-Hintergrund */}
