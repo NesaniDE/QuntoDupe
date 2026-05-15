@@ -4,95 +4,99 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* ===== Nesani Fonts ===== */
+/* ===== Nesani Fonts =====
+ * Self-hosted General Sans (Indian Type Foundry / Fontshare).
+ * CSS-Alias "NesaniSans" bleibt erhalten, damit der Rest des Repos
+ * (font-sans / font-heading) unverändert weiterfunktioniert.
+ */
 @font-face {
   font-family: "NesaniSans";
-  src: url("/fonts/nesanisans-light.woff2") format("woff2");
+  src: url("/fonts/generalsans-200.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NesaniSans";
+  src: url("/fonts/generalsans-200-italic.woff2") format("woff2");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NesaniSans";
+  src: url("/fonts/generalsans-300.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "NesaniSans";
-  src: url("/fonts/nesanisans-light-italic.woff2") format("woff2");
+  src: url("/fonts/generalsans-300-italic.woff2") format("woff2");
   font-weight: 300;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "NesaniSans";
-  src: url("/fonts/nesanisans-regular.woff2") format("woff2");
+  src: url("/fonts/generalsans-400.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "NesaniSans";
-  src: url("/fonts/nesanisans-regular-italic.woff2") format("woff2");
+  src: url("/fonts/generalsans-400-italic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "NesaniSans";
-  src: url("/fonts/nesanisans-semibold.woff2") format("woff2");
+  src: url("/fonts/generalsans-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NesaniSans";
+  src: url("/fonts/generalsans-500-italic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "NesaniSans";
+  src: url("/fonts/generalsans-600.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "NesaniSans";
-  src: url("/fonts/nesanisans-semibold-italic.woff2") format("woff2");
+  src: url("/fonts/generalsans-600-italic.woff2") format("woff2");
   font-weight: 600;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "NesaniSans";
-  src: url("/fonts/nesanisans-bold.woff2") format("woff2");
+  src: url("/fonts/generalsans-700.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "NesaniSans";
-  src: url("/fonts/nesanisans-bold-italic.woff2") format("woff2");
+  src: url("/fonts/generalsans-700-italic.woff2") format("woff2");
   font-weight: 700;
   font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: "NesaniSans";
-  src: url("/fonts/nesanisans-black.woff2") format("woff2");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "PolySans";
-  src: url("/fonts/polysans-slim.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "PolySans";
-  src: url("/fonts/polysans-neutral.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "PolySans";
-  src: url("/fonts/polysans-median.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
   font-display: swap;
 }
 
 @theme inline {
   --font-sans: "NesaniSans", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "PolySans", "NesaniSans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "NesaniSans", ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
   --font-heading: var(--font-sans);
 
