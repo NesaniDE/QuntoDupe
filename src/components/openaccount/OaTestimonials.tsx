@@ -93,6 +93,7 @@ export function OaTestimonials() {
                 alt={t.name}
                 fill
                 sizes="(min-width:1024px) 420px, 100vw"
+              quality={92}
                 className="object-cover testimonial-image"
               />
             </div>

@@ -80,6 +80,7 @@ export function Testimonials() {
               alt={q.author}
               fill
               sizes="(min-width: 1024px) 1344px, 100vw"
+              quality={92}
               className={[
                 "object-cover object-[85%_center] md:object-center transition-opacity duration-500 ease-out",
                 i === idx ? "opacity-100" : "opacity-0",
