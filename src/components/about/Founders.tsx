@@ -11,6 +11,7 @@ export function Founders() {
               alt="Nedim Hasani — Gründer von Nesani"
               fill
               sizes="(min-width:1024px) 640px, 100vw"
+              quality={92}
               className="object-cover object-center"
             />
           </div>

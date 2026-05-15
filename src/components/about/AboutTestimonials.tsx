@@ -133,6 +133,7 @@ export function AboutTestimonials() {
                   alt={it.name}
                   fill
                   sizes="(min-width:1024px) 640px, 100vw"
+              quality={92}
                   className={[
                     "object-cover object-[95%_center] scale-110 transition-opacity duration-500 ease-out",
                     idx === i ? "opacity-100" : "opacity-0",
