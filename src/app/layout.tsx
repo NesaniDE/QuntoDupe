@@ -92,6 +92,13 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.json",
   category: "technology",
+  other: {
+    // Microsoft/Bing-spezifische Tile-Icons (Windows-Pin, Edge Start)
+    "msapplication-config": "/browserconfig.xml",
+    "msapplication-TileColor": "#050505",
+    "msapplication-TileImage": "/icon-192.png",
+    "theme-color": "#050505",
+  },
 };
 
 const organizationJsonLd = {

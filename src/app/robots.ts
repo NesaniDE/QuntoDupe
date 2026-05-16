@@ -9,6 +9,10 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
         disallow: ["/api/", "/_next/", "/private/", "/lp/", "/game"],
       },
+      // Bing / Microsoft (auch für Favicon-Crawl)
+      { userAgent: "bingbot", allow: "/" },
+      { userAgent: "msnbot", allow: "/" },
+      { userAgent: "BingPreview", allow: "/" },
       // OpenAI
       { userAgent: "GPTBot", allow: "/" },
       { userAgent: "ChatGPT-User", allow: "/" },
